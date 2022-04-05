@@ -23,7 +23,7 @@ return new class extends Migration
             //Datos de autenticación base
             $table->string('name', 255);
             $table->string('email', 255)->unique();
-            $table->string('password', 25);
+            $table->string('password');
 
             //Datos añadidos
             $table->boolean('admin')->default(false);
