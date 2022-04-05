@@ -4,6 +4,9 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+
 return new class extends Migration
 {
     /**
@@ -14,14 +17,32 @@ return new class extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
+            //Id base de Laravel
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
+
+            //Datos de autenticación base
+            $table->string('name', 255);
+            $table->string('email', 255)->unique();
+            $table->string('password', 25);
+
+            //Datos añadidos
+            $table->bool('admin')->default(false);
+            $table->string('image')->nullable();
+
+            //Otros datos base
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });
+
+        DB::table('users')->insert(
+            array(
+                'name' => 'admin',
+                'email' => 'admin',
+                'password' => Hash::make('admin'),
+                'admin' => true,
+            )
+        );
     }
 
     /**
