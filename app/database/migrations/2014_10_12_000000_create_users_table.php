@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('password', 25);
 
             //Datos añadidos
-            $table->bool('admin')->default(false);
+            $table->boolean('admin')->default(false);
             $table->string('image')->nullable();
 
             //Otros datos base
