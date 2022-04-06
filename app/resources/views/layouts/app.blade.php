@@ -21,7 +21,11 @@
 </head>
 <body>
     <div id="app">
+<<<<<<< HEAD
         <nav class="navbar navbar-expand-md navbar-light bg-dark shadow-sm">
+=======
+        <nav class="navbar navbar-expand-md navbar-light bg-dark shadow-sm text-white">
+>>>>>>> refs/remotes/origin/main
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
