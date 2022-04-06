@@ -11286,3 +11286,8 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+.logo {
+  width: auto;
+  height: 50px;
+}
