@@ -37,6 +37,13 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">{{ __('Dashboard') }}</div>
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
         </div>
         <script>
             var myCarousel = document.querySelector('#myCarousel');
