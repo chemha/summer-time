@@ -38,12 +38,13 @@
 
                     <div class="card-body">
 
-                        <script>
-                            $('.carousel').carousel();
-                        </script>
+
                     </div>
                 </div>
             </div>
         </div>
+        <script>
+            $('.carousel').carousel();
+        </script>
     </div>
 @endsection
