@@ -27,27 +27,28 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
+                <script>
+                    const myCarousel = document.querySelector('#myCarousel');
+                    const carousel = new bootstrap.Carousel(myCarousel);
+                </script>
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-sm">
                 <div class="card">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
+                    <div class="card-header">Anuncio 1</div>
                     <div class="card-body">
                     </div>
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-sm">
                 <div class="card">
-                    <div class="card-header">{{ __('Dashboard') }}</div>
+                    <div class="card-header">Anuncio 2</div>
                     <div class="card-body">
                     </div>
                 </div>
             </div>
         </div>
-        <script>
-            var myCarousel = document.querySelector('#myCarousel');
-            var carousel = new bootstrap.Carousel(myCarousel);
-        </script>
+
     </div>
 @endsection
