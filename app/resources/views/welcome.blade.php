@@ -35,16 +35,26 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-sm">
-                <div class="card">
-                    <div class="card-header">Anuncio 1</div>
-                    <div class="card-body">
+                <div class="card bg-dark">
+                    <div class="card-header text-white">Anuncio 2</div>
+                    <div class="card-body text-white">
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum."
                     </div>
                 </div>
             </div>
-            <div class="col-sm">
-                <div class="card">
-                    <div class="card-header">Anuncio 2</div>
-                    <div class="card-body">
+            <div class="col-sm ">
+                <div class="card bg-dark">
+                    <div class="card-header text-white">Anuncio 2</div>
+                    <div class="card-body text-white">
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum."
                     </div>
                 </div>
             </div>
