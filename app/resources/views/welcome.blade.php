@@ -31,6 +31,9 @@
                                 <span class="sr-only">Next</span>
                             </a>
                         </div>
+                        <script>
+                            $('.carousel').carousel();
+                        </script>
                     </div>
                 </div>
             </div>
