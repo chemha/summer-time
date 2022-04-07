@@ -44,7 +44,7 @@
             </div>
         </div>
         <script>
-            $('.carousel').carousel();
+            document.querySelector('.carousel').carousel();
         </script>   
     </div>
 @endsection
