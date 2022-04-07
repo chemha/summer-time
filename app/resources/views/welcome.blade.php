@@ -45,6 +45,6 @@
         </div>
         <script>
             $('.carousel').carousel();
-        </script>
+        </script>   
     </div>
 @endsection
