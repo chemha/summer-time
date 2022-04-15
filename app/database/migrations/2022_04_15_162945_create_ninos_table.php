@@ -18,8 +18,8 @@ return new class extends Migration
             $table->id();
 
             //Datos añadidos
-            $table->string('nombre');
-            $table->string('apellidos');
+            $table->string('nombre', 100);
+            $table->string('apellidos', 100);
             $table->integer('edad')->unsigned();
             $table->integer('hermanos')->unsigned()->nullable();
             $table->boolean('medicacion');
