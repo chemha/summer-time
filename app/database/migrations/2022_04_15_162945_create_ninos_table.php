@@ -14,7 +14,36 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ninos', function (Blueprint $table) {
+            //Id base de Laravel
             $table->id();
+
+            //Datos añadidos
+            $table->string('nombre');
+            $table->string('apellidos');
+            $table->integer('edad')->unsigned();
+            $table->integer('hermanos')->unsigned()->nullable();
+            $table->boolean('medicacion');
+            $table->boolean('especial');
+            $table->string('observacionesMedicas')->nullable();
+
+            $table->string('tutor');
+            $table->string('telefono1', 20);
+            $table->string('telefono2', 20)->nullable();
+
+            $table->string('grupo', 20);
+            $table->string('horario', 20);
+
+            $table->boolean('quincena1');
+            $table->boolean('quincena2');
+            $table->boolean('quincena3');
+            $table->boolean('quincena4');
+
+            $table->string('anotaciones')->nullable();
+            
+            $table->float('pago');
+            $table->string('estadoRecibo', 20);
+
+            //Otros datos base
             $table->timestamps();
         });
     }
