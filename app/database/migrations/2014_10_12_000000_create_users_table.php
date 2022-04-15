@@ -35,6 +35,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
+        //Inserción de usuario administrador al hacer la migración
         DB::table('users')->insert(
             array(
                 'name' => 'admin',
