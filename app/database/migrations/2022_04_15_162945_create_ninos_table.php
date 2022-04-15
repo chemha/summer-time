@@ -30,7 +30,7 @@ return new class extends Migration
             $table->string('telefono1', 20);
             $table->string('telefono2', 20)->nullable();
 
-            $table->string('grupo', 20);
+            $table->foreignId('grupo')->references('id')->on('grupos');
             $table->string('horario', 20);
 
             $table->boolean('quincena1');
