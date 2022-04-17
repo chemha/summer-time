@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">Crear nuevo personaje</div>
                     <div class="card-body">
-                        <form enctype="multipart/form-data" method="POST" action="{{ route('personajes.store') }}">
+                        <form enctype="multipart/form-data" method="POST" action="{{ route('ninos.store') }}">
                             @csrf
                             <div class="row mb-3">
                                 <label for="nombre" class="col-md-4 col-form-label text-md-end">
