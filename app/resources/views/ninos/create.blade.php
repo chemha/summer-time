@@ -6,7 +6,8 @@
             <form enctype="multipart/form-data" method="POST" action="{{ route('ninos.store') }}">
                 @csrf
 
-                <div class="col-xxl">
+                <!-- Panel izquierdo -->
+                <div class="col">
                     <div class="row mb-3">
                         <label for="nombre" class="col-md-4 col-form-label text-md-end">
                             Nombre
@@ -225,7 +226,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xxl">
+
+                <!-- Panel derecho -->
+                <div class="col">
                     <div class="row mb-3">
                         <label for="nombre" class="col-md-4 col-form-label text-md-end">
                             Nombre
