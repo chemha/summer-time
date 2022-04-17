@@ -30,7 +30,8 @@ return new class extends Migration
             $table->string('telefono1', 20);
             $table->string('telefono2', 20)->nullable();
 
-            $table->foreignId('grupo')->references('id')->on('grupos');
+            //$table->foreignId('grupo')->references('id')->on('grupos');
+            $table->string('grupo')->nullable();
             $table->string('horario', 20);
 
             $table->boolean('quincena1');
@@ -39,7 +40,7 @@ return new class extends Migration
             $table->boolean('quincena4');
 
             $table->string('anotaciones')->nullable();
-            
+
             $table->float('pago');
             $table->string('estadoRecibo', 20);
 
