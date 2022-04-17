@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Nino;
 use Illuminate\Http\Request;
 
-class NinosController extends Controller
+class NinoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +24,7 @@ class NinosController extends Controller
      */
     public function create()
     {
-        //
+        return view('ninos.create');
     }
 
     /**
@@ -35,7 +35,6 @@ class NinosController extends Controller
      */
     public function store(Request $request)
     {
-        //
     }
 
     /**

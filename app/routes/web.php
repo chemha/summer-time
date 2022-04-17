@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NinoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Crear y guardar niños
+Route::get('/ninos/create', [NinoController::class, 'create'])->name('ninos.create');
+Route::post('/ninos', [NinoController::class, 'store'])->name('ninos.store');
