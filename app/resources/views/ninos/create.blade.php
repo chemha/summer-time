@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <form class="row justify-content-center" method="POST" action="{{ route('ninos.store') }}">
+        <form class="row justify-content-lg-evenly" method="POST" action="{{ route('ninos.store') }}">
             @csrf
 
             <!-- Panel izquierdo -->
