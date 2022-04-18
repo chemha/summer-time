@@ -197,16 +197,11 @@
 
                     <!-- Checkboxes de quincenas -->
                     <div class="row">
-                        <label for="quincena1" class="col-md-4 col-form-label text-md-end">
-                            Quincena 1
-                        </label>
-
-                        <label for="quincena2" class="col-md-4 col-form-label text-md-end">
-                            Quincena 2
-                        </label>
-
                         <div class="col">
-                            <input type="checkbox" class="form-check @error('quincena1') is-invalid @enderror"
+                            <label for="quincena1" class="form-check-label">
+                                Quincena 1
+                            </label>
+                            <input type="checkbox" class="form-check-input @error('quincena1') is-invalid @enderror"
                                 name="quincena1" value="{{ old('quincena1') }}" required autocomplete="quincena1"
                                 autofocus>
                             @error('quincena1')
@@ -215,7 +210,10 @@
                                 </span>
                             @enderror
 
-                            <input type="checkbox" class="form-check @error('quincena2') is-invalid @enderror"
+                            <label for="quincena2" class="form-check-label">
+                                Quincena 2
+                            </label>
+                            <input type="checkbox" class="form-check-input @error('quincena2') is-invalid @enderror"
                                 name="quincena2" value="{{ old('quincena2') }}" required autocomplete="quincena2"
                                 autofocus>
                             @error('quincena2')
