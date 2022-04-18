@@ -62,29 +62,28 @@
 
                     <!-- Checkboxes de medicacion y especial -->
                     <div class="row">
-
+                        <label for="medicacion" class="col col-form-label text-md-end">Medicación</label>
                         <div class="col">
-                            <div class=" form-check form-check-inline">
-                                <label for="medicacion" class="form-check-label">Medicación</label>
-                                <input type="checkbox" class="form-check-input @error('medicacion') is-invalid @enderror"
-                                    name="medicacion" value="{{ old('medicacion') }}" required autocomplete="medicacion"
-                                    autofocus>
-                                @error('medicacion')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
 
-                                <label for="especial" class="form-check-label">Especial</label>
-                                <input type="checkbox" class="form-check-input @error('especial') is-invalid @enderror"
-                                    name="especial" value="{{ old('especial') }}" required autocomplete="especial"
-                                    autofocus>
-                                @error('especial')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+                            <input type="checkbox" class="form-check @error('medicacion') is-invalid @enderror"
+                                name="medicacion" value="{{ old('medicacion') }}" required autocomplete="medicacion"
+                                autofocus>
+                            @error('medicacion')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
+                        <label for="especial" class="col col-form-label text-md-end">Especial</label>
+                        <div class="col">
+                            <input type="checkbox" class="form-check @error('especial') is-invalid @enderror"
+                                name="especial" value="{{ old('especial') }}" required autocomplete="especial" autofocus>
+                            @error('especial')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                     </div>
 
@@ -273,46 +272,39 @@
 
                 <!-- Panel inferior -->
                 <div class="row">
-                    <div class="row mb-3">
-                        <label for="grupo" class="col-md-4 col-form-label text-md-end">
-                            Grupo
+                    <div class="col">
+                        <label for="recibo">
+                            Estado del recibo
                         </label>
+                        <select class="form-select @error('recibo') is-invalid @enderror" name="recibo" id="recibo"
+                            value="{{ old('recibo') }}" required autocomplete="recibo" autofocus>
+                            <option value="1">Pagado</option>
+                            <option value="2">Pendiente</option>
+                        </select>
 
-                        <div class="col-md-6">
-                            <select class="form-control @error('grupo') is-invalid @enderror" name="grupo" id="grupo"
-                                value="{{ old('grupo') }}" required autocomplete="grupo" autofocus>
-                                <option value="1">Grupo 1</option>
-                                <option value="2">Grupo 2</option>
-                                <option value="3">Grupo 3</option>
-                                <option value="4">Grupo 4</option>
-                            </select>
-
-                            @error('grupo')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
+                        @error('recibo')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
                     <!-- Campo de edad y hermanos -->
-                    <div class="row mb-3">
-                        <label for="edad" class="col-md-4 col-form-label text-md-end">
+                    <div class="col">
+                        <label for="pago">
                             Edad
                         </label>
 
-                        <div class="col-md-6">
-                            <input value="0" type="number" class="form-control @error('edad') is-invalid @enderror"
-                                name="edad" value="{{ old('edad') }}" required autocomplete="edad" autofocus>
-                            @error('edad')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
+                        <input value="0" type="number" class="form-control @error('pago') is-invalid @enderror" name="pago"
+                            value="{{ old('pago') }}" required autocomplete="pago" autofocus>
+                        @error('pago')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
-                    <div class="col-md-8 offset-md-4">
+                    <div class="col">
                         <button type="submit" class="btn btn-primary">
-                            Crear personaje
+                            Crear registro
                         </button>
                     </div>
                 </div>
