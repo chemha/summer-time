@@ -197,7 +197,7 @@
 
                     <!-- Checkboxes de quincenas -->
                     <div class="row">
-                        <div class="form-check form-check-inline">
+                        <div class="row">
                             <label for="quincena1" class="form-check-label">
                                 Quincena 1
                             </label>
@@ -217,34 +217,6 @@
                                 name="quincena2" value="{{ old('quincena2') }}" required autocomplete="quincena2"
                                 autofocus>
                             @error('quincena2')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="form-check form-check-inline">
-                            <label for="quincena3" class="form-check-label">
-                                Quincena 3
-                            </label>
-                            <input type="checkbox" class="form-check-input @error('quincena3') is-invalid @enderror"
-                                name="quincena3" value="{{ old('quincena3') }}" required autocomplete="quincena3"
-                                autofocus>
-                            @error('quincena3')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-
-                            <label for="quincena4" class="form-check-label">
-                                Quincena 4
-                            </label>
-                            <input type="checkbox" class="form-check-input @error('quincena4') is-invalid @enderror"
-                                name="quincena4" value="{{ old('quincena4') }}" required autocomplete="quincena4"
-                                autofocus>
-                            @error('quincena4')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
