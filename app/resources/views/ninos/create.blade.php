@@ -48,7 +48,7 @@
                             @enderror
                         </div>
 
-                        <div class="col align-content-lg-end">
+                        <div class="col">
                             <label for="hermanos">Hermanos</label>
                             <input type="number" class="form-control w-25 @error('hermanos') is-invalid @enderror"
                                 name="hermanos" value="{{ old('hermanos') }}" autocomplete="hermanos" autofocus>
@@ -61,9 +61,9 @@
                     </div>
 
                     <!-- Checkboxes de medicacion y especial -->
-                    <div class="row"> 
+                    <div class="row">
                         <div class="col">
-                            <label for="medicacion">Medicación</label>
+                            <label for="medicacion" class="col-form-label text-md-end">Medicación</label>
                             <input type="checkbox" class="form-check @error('medicacion') is-invalid @enderror"
                                 name="medicacion" value="{{ old('medicacion') }}" required autocomplete="medicacion"
                                 autofocus>
@@ -75,7 +75,7 @@
                         </div>
 
                         <div class="col">
-                            <label for="especial">Especial</label>
+                            <label for="especial" class="col-form-label text-md-end">Especial</label>
                             <input type="checkbox" class="form-check @error('especial') is-invalid @enderror"
                                 name="especial" value="{{ old('especial') }}" required autocomplete="especial" autofocus>
                             @error('especial')
@@ -157,8 +157,8 @@
                 </div>
 
                 <!-- Panel derecho -->
-                <div class="col border-left">
-                    <div class="row mb-3">
+                <div class="col">
+                    <div class="row">
                         <label for="grupo" class="col-md-4 col-form-label text-md-end">
                             Grupo
                         </label>
