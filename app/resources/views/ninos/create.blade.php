@@ -225,15 +225,15 @@
                             @enderror
                         </div>
 
-
                         <label for="quincena3" class="col-md-4 col-form-label text-md-end">
                             Quincena 3
                         </label>
+
                         <label for="quincena4" class="col-md-4 col-form-label text-md-end">
                             Quincena 4
                         </label>
 
-                        <div class="col w-50">
+                        <div class="col">
                             <input type="checkbox" class="form-check @error('quincena3') is-invalid @enderror"
                                 name="quincena3" value="{{ old('quincena3') }}" required autocomplete="quincena3"
                                 autofocus>
