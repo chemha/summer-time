@@ -274,8 +274,8 @@
                         </div>
 
                         <div class="col">
-                            <input type="checkbox" class="form-check-input @error('fotos') is-invalid @enderror" name="fotos"
-                                value="{{ old('fotos') }}" required autocomplete="fotos" autofocus>
+                            <input type="checkbox" class="form-check-input @error('fotos') is-invalid @enderror"
+                                name="fotos" value="{{ old('fotos') }}" required autocomplete="fotos" autofocus>
                             @error('fotos')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -304,44 +304,43 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <!-- Panel inferior -->
+            <div class="row">
+                <div class="col">
+                    <label for="recibo">
+                        Estado del recibo
+                    </label>
+                    <select class="form-select @error('recibo') is-invalid @enderror" name="recibo" id="recibo"
+                        value="{{ old('recibo') }}" required autocomplete="recibo" autofocus>
+                        <option value="1">Pagado</option>
+                        <option value="2">Pendiente</option>
+                    </select>
 
-                <!-- Panel inferior -->
-                <div class="row">
-                    <div class="col">
-                        <label for="recibo">
-                            Estado del recibo
-                        </label>
-                        <select class="form-select @error('recibo') is-invalid @enderror" name="recibo" id="recibo"
-                            value="{{ old('recibo') }}" required autocomplete="recibo" autofocus>
-                            <option value="1">Pagado</option>
-                            <option value="2">Pendiente</option>
-                        </select>
+                    @error('recibo')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+                <!-- Campo de edad y hermanos -->
+                <div class="col">
+                    <label for="pago">
+                        Edad
+                    </label>
 
-                        @error('recibo')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
-                    <!-- Campo de edad y hermanos -->
-                    <div class="col">
-                        <label for="pago">
-                            Edad
-                        </label>
-
-                        <input value="0" type="number" class="form-control @error('pago') is-invalid @enderror" name="pago"
-                            value="{{ old('pago') }}" required autocomplete="pago" autofocus>
-                        @error('pago')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
-                    <div class="col">
-                        <button type="submit" class="btn btn-primary">
-                            Crear registro
-                        </button>
-                    </div>
+                    <input value="0" type="number" class="form-control @error('pago') is-invalid @enderror" name="pago"
+                        value="{{ old('pago') }}" required autocomplete="pago" autofocus>
+                    @error('pago')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary">
+                        Crear registro
+                    </button>
                 </div>
             </div>
         </form>
