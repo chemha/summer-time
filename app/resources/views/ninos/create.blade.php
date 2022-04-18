@@ -224,10 +224,10 @@
                 </div>
             </div>
 
-            <hr class="block-divisor visible-xs-block">
-            
+
+
             <!-- Panel derecho -->
-            <div class="col">
+            <div class="col border-left">
                 <div class="row mb-3">
                     <label for="nombre" class="col-md-4 col-form-label text-md-end">
                         Nombre
