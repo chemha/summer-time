@@ -133,7 +133,7 @@
                     <!-- Campos de telefonos -->
                     <div class="row">
                         <div class="col">
-                            <label for="telefono1">Telefono 1</label>
+                            <label for="telefono1">Teléfono 1</label>
                             <input type="tel" class="form-control @error('telefono1') is-invalid @enderror" name="telefono1"
                                 value="{{ old('telefono1') }}" required autocomplete="telefono1" autofocus>
                             @error('telefono1')
@@ -144,7 +144,7 @@
                         </div>
 
                         <div class="col">
-                            <label for="telefono2">Telefono 2</label>
+                            <label for="telefono2">Teléfono 2</label>
                             <input type="tel" class="form-control @error('telefono2') is-invalid @enderror"
                                 name="telefono2" value="{{ old('telefono2') }}" required autocomplete="telefono2"
                                 autofocus>
@@ -160,12 +160,9 @@
                 <!-- Panel derecho -->
                 <div class="col">
                     <div class="row">
-                        <label for="grupo" class="col-md-4 col-form-label text-md-end">
-                            Grupo
-                        </label>
-
-                        <div class="col-md-6">
-                            <select class="form-control @error('grupo') is-invalid @enderror" name="grupo" id="grupo"
+                        <div class="col">
+                            <label for="grupo">Grupo</label>
+                            <select class="form-select w-50 @error('grupo') is-invalid @enderror" name="grupo" id="grupo"
                                 value="{{ old('grupo') }}" required autocomplete="grupo" autofocus>
                                 <option value="1">Grupo 1</option>
                                 <option value="2">Grupo 2</option>
@@ -179,15 +176,10 @@
                                 </span>
                             @enderror
                         </div>
-                    </div>
 
-                    <div class="row mb-3">
-                        <label for="horario" class="col-md-4 col-form-label text-md-end">
-                            Horario
-                        </label>
-
-                        <div class="col-md-6">
-                            <select class="form-control @error('horario') is-invalid @enderror" name="horario" id="horario"
+                        <div class="col">
+                            <label for="horario">Horario</label>
+                            <select class="form-select w-50 @error('horario') is-invalid @enderror" name="horario" id="horario"
                                 value="{{ old('horario') }}" required autocomplete="horario" autofocus>
                                 <option value="1">1 - 2</option>
                                 <option value="2">2 - 3</option>
@@ -204,12 +196,12 @@
                     </div>
 
                     <!-- Checkboxes de quincenas -->
-                    <div class="row mb-3">
+                    <div class="row row-cols-2">
                         <label for="quincena1" class="col-md-4 col-form-label text-md-end">
                             Quincena 1
                         </label>
 
-                        <div class="col-md-6">
+                        <div class="col">
                             <input type="checkbox" class="form-check @error('quincena1') is-invalid @enderror"
                                 name="quincena1" value="{{ old('quincena1') }}" required autocomplete="quincena1"
                                 autofocus>
@@ -224,7 +216,7 @@
                             Quincena 2
                         </label>
 
-                        <div class="col-md-6">
+                        <div class="col">
                             <input type="checkbox" class="form-check @error('quincena2') is-invalid @enderror"
                                 name="quincena2" value="{{ old('quincena2') }}" required autocomplete="quincena2"
                                 autofocus>
@@ -239,7 +231,7 @@
                             Quincena 3
                         </label>
 
-                        <div class="col-md-6">
+                        <div class="col">
                             <input type="checkbox" class="form-check @error('quincena3') is-invalid @enderror"
                                 name="quincena3" value="{{ old('quincena3') }}" required autocomplete="quincena3"
                                 autofocus>
@@ -253,7 +245,7 @@
                         <label for="quincena4" class="col-md-4 col-form-label text-md-end">
                             Quincena 4
                         </label>
-                        <div class="col-md-6">
+                        <div class="col">
                             <input type="checkbox" class="form-check @error('quincena4') is-invalid @enderror"
                                 name="quincena4" value="{{ old('quincena4') }}" required autocomplete="quincena4"
                                 autofocus>
@@ -265,12 +257,12 @@
                         </div>
                     </div>
 
-                    <div class="row mb-3">
+                    <div class="row">
                         <label for="datos" class="col-md-4 col-form-label text-md-end">
                             Autorización datos
                         </label>
 
-                        <div class="col-md-6">
+                        <div class="col">
                             <input type="checkbox" class="form-check @error('datos') is-invalid @enderror" name="datos"
                                 value="{{ old('datos') }}" required autocomplete="datos" autofocus>
                             @error('datos')
@@ -284,7 +276,7 @@
                             Autorización fotos
                         </label>
 
-                        <div class="col-md-6">
+                        <div class="col">
                             <input type="checkbox" class="form-check @error('fotos') is-invalid @enderror" name="fotos"
                                 value="{{ old('fotos') }}" required autocomplete="fotos" autofocus>
                             @error('fotos')
@@ -295,12 +287,12 @@
                         </div>
                     </div>
 
-                    <div class="row mb-3">
+                    <div class="row">
                         <label for="anotaciones" class="col-md-4 col-form-label text-md-end">
                             Anotaciones
                         </label>
 
-                        <div class="col-md-6">
+                        <div class="col">
                             <textarea name="anotaciones" rows="5" cols="52" class="form-control @error('anotaciones') is-invalid @enderror"
                                 required autocomplete="anotaciones" autofocus></textarea>
 
@@ -311,10 +303,9 @@
                             @enderror
                         </div>
                     </div>
-                    <div class="row mb-0">
-
-                    </div>
                 </div>
+
+                <!-- Panel inferior -->
                 <div class="row">
                     <div class="row mb-3">
                         <label for="grupo" class="col-md-4 col-form-label text-md-end">
