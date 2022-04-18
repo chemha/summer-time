@@ -257,32 +257,32 @@
                     </div>
 
                     <div class="row">
-                        <label for="datos" class="col-md-4 col-form-label text-md-end">
-                            Autorización datos
-                        </label>
-
                         <div class="col">
-                            <input type="checkbox" class="form-check @error('datos') is-invalid @enderror" name="datos"
-                                value="{{ old('datos') }}" required autocomplete="datos" autofocus>
+                            <input type="checkbox" class="form-check-input @error('datos') is-invalid @enderror"
+                                name="datos" value="{{ old('datos') }}" required autocomplete="datos" autofocus>
                             @error('datos')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
+
+                            <label for="datos" class="form-check-label">
+                                Autorización datos
+                            </label>
                         </div>
 
-                        <label for="fotos" class="col-md-4 col-form-label text-md-end">
-                            Autorización fotos
-                        </label>
-
                         <div class="col">
-                            <input type="checkbox" class="form-check @error('fotos') is-invalid @enderror" name="fotos"
+                            <input type="checkbox" class="form-check-input @error('fotos') is-invalid @enderror" name="fotos"
                                 value="{{ old('fotos') }}" required autocomplete="fotos" autofocus>
                             @error('fotos')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
+
+                            <label for="fotos" class="form-check-label">
+                                Autorización fotos
+                            </label>
                         </div>
                     </div>
 
