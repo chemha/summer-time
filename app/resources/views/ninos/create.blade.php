@@ -201,7 +201,7 @@
 
                     <!-- Checkboxes de quincenas -->
                     <div class="row row-cols-2">
-                        <div class="col my-3">
+                        <div class="col my-1">
                             <input type="checkbox" class="form-check-input @error('quincena1') is-invalid @enderror"
                                 name="quincena1" value="{{ old('quincena1') }}" required autocomplete="quincena1"
                                 autofocus>
@@ -215,7 +215,7 @@
                                 Quincena 1
                             </label>
                         </div>
-                        <div class="col my-3">
+                        <div class="col my-1">
                             <input type="checkbox" class="form-check-input @error('quincena2') is-invalid @enderror"
                                 name="quincena2" value="{{ old('quincena2') }}" required autocomplete="quincena2"
                                 autofocus>
@@ -229,7 +229,7 @@
                                 Quincena 2
                             </label>
                         </div>
-                        <div class="col my-3">
+                        <div class="col my-1">
                             <input type="checkbox" class="form-check-input @error('quincena3') is-invalid @enderror"
                                 name="quincena3" value="{{ old('quincena3') }}" required autocomplete="quincena3"
                                 autofocus>
@@ -243,7 +243,7 @@
                                 Quincena 3
                             </label>
                         </div>
-                        <div class="col my-3">
+                        <div class="col my-1">
                             <input type="checkbox" class="form-check-input @error('quincena4') is-invalid @enderror"
                                 name="quincena4" value="{{ old('quincena4') }}" required autocomplete="quincena4"
                                 autofocus>
@@ -260,7 +260,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col my-3">
+                        <div class="col my-1">
                             <input type="checkbox" class="form-check-input @error('datos') is-invalid @enderror"
                                 name="datos" value="{{ old('datos') }}" required autocomplete="datos" autofocus>
                             @error('datos')
@@ -274,7 +274,7 @@
                             </label>
                         </div>
 
-                        <div class="col my-3">
+                        <div class="col my-1">
                             <input type="checkbox" class="form-check-input @error('fotos') is-invalid @enderror"
                                 name="fotos" value="{{ old('fotos') }}" required autocomplete="fotos" autofocus>
                             @error('fotos')
