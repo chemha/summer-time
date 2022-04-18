@@ -164,7 +164,7 @@
                     <div class="row my-2">
                         <div class="col">
                             <label for="grupo">Grupo</label>
-                            <select class="form-select w-50 float-right @error('grupo') is-invalid @enderror" name="grupo" id="grupo"
+                            <select class="form-select w-50 float-left @error('grupo') is-invalid @enderror" name="grupo" id="grupo"
                                 value="{{ old('grupo') }}" required autocomplete="off" autofocus>
                                 <option disabled selected value>Elige un grupo</option>
                                 <option value="1">Grupo 1</option>
