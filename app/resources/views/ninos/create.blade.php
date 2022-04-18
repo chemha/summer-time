@@ -197,7 +197,7 @@
 
                     <!-- Checkboxes de quincenas -->
                     <div class="row">
-                        <div class="row">
+                        <div class="col">
                             <label for="quincena1" class="form-check-label">
                                 Quincena 1
                             </label>
