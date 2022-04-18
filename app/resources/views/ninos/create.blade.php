@@ -164,7 +164,7 @@
                     <div class="row my-2">
                         <div class="col">
                             <label for="grupo">Grupo</label>
-                            <select class="form-select w-50 @error('grupo') is-invalid @enderror" name="grupo" id="grupo"
+                            <select class="form-select w-50 float-right @error('grupo') is-invalid @enderror" name="grupo" id="grupo"
                                 value="{{ old('grupo') }}" required autocomplete="off" autofocus>
                                 <option disabled selected value>Elige un grupo</option>
                                 <option value="1">Grupo 1</option>
@@ -182,7 +182,7 @@
 
                         <div class="col">
                             <label for="horario">Horario</label>
-                            <select class="form-select w-50 @error('horario') is-invalid @enderror" name="horario"
+                            <select class="form-select w-50 float-right @error('horario') is-invalid @enderror" name="horario"
                                 id="horario" value="{{ old('horario') }}" required autocomplete="off" autofocus>
                                 <option disabled selected value>Elige un horario</option>
                                 <option value="1">1 - 2</option>
