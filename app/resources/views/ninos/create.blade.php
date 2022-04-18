@@ -64,7 +64,7 @@
                     <div class="row">
                         <label for="medicacion" class="col col-form-label text-md-end">Medicación</label>
                         <div class="col">
-                            
+
                             <input type="checkbox" class="form-check @error('medicacion') is-invalid @enderror"
                                 name="medicacion" value="{{ old('medicacion') }}" required autocomplete="medicacion"
                                 autofocus>
@@ -76,7 +76,7 @@
                         </div>
 
                         <label for="especial" class="col col-form-label text-md-end">Especial</label>
-                        <div class="col">   
+                        <div class="col">
                             <input type="checkbox" class="form-check @error('especial') is-invalid @enderror"
                                 name="especial" value="{{ old('especial') }}" required autocomplete="especial" autofocus>
                             @error('especial')
@@ -179,8 +179,8 @@
 
                         <div class="col">
                             <label for="horario">Horario</label>
-                            <select class="form-select w-50 @error('horario') is-invalid @enderror" name="horario" id="horario"
-                                value="{{ old('horario') }}" required autocomplete="horario" autofocus>
+                            <select class="form-select w-50 @error('horario') is-invalid @enderror" name="horario"
+                                id="horario" value="{{ old('horario') }}" required autocomplete="horario" autofocus>
                                 <option value="1">1 - 2</option>
                                 <option value="2">2 - 3</option>
                                 <option value="3">3 - 4</option>
@@ -196,12 +196,16 @@
                     </div>
 
                     <!-- Checkboxes de quincenas -->
-                    <div class="row row-cols-2">
+                    <div class="row">
                         <label for="quincena1" class="col-md-4 col-form-label text-md-end">
                             Quincena 1
                         </label>
 
-                        <div class="col w-50">
+                        <label for="quincena2" class="col-md-4 col-form-label text-md-end">
+                            Quincena 2
+                        </label>
+
+                        <div class="col">
                             <input type="checkbox" class="form-check @error('quincena1') is-invalid @enderror"
                                 name="quincena1" value="{{ old('quincena1') }}" required autocomplete="quincena1"
                                 autofocus>
@@ -210,13 +214,7 @@
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                        </div>
 
-                        <label for="quincena2" class="col-md-4 col-form-label text-md-end">
-                            Quincena 2
-                        </label>
-
-                        <div class="col w-50">
                             <input type="checkbox" class="form-check @error('quincena2') is-invalid @enderror"
                                 name="quincena2" value="{{ old('quincena2') }}" required autocomplete="quincena2"
                                 autofocus>
@@ -227,8 +225,12 @@
                             @enderror
                         </div>
 
+
                         <label for="quincena3" class="col-md-4 col-form-label text-md-end">
                             Quincena 3
+                        </label>
+                        <label for="quincena4" class="col-md-4 col-form-label text-md-end">
+                            Quincena 4
                         </label>
 
                         <div class="col w-50">
@@ -240,12 +242,7 @@
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                        </div>
 
-                        <label for="quincena4" class="col-md-4 col-form-label text-md-end">
-                            Quincena 4
-                        </label>
-                        <div class="col w-50">
                             <input type="checkbox" class="form-check @error('quincena4') is-invalid @enderror"
                                 name="quincena4" value="{{ old('quincena4') }}" required autocomplete="quincena4"
                                 autofocus>
