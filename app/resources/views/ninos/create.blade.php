@@ -255,11 +255,10 @@
                     </div>
 
                     <div class="row">
-                        <label for="anotaciones" class="col-md-4 col-form-label text-md-end">
-                            Anotaciones
-                        </label>
-
                         <div class="col">
+                            <label for="anotaciones">
+                                Anotaciones
+                            </label>
                             <textarea name="anotaciones" rows="5" cols="52" class="form-control @error('anotaciones') is-invalid @enderror"
                                 required autocomplete="anotaciones" autofocus></textarea>
 
