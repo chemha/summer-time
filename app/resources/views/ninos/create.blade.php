@@ -67,7 +67,7 @@
                         <div class="col my-1">
 
                             <input type="checkbox" class="form-check-input @error('medicacion') is-invalid @enderror"
-                                name="medicacion" value="{{ old('medicacion') }}" required autocomplete="medicacion"
+                                name="medicacion" value="{{ old('medicacion') }}" autocomplete="medicacion"
                                 autofocus>
                             @error('medicacion')
                                 <span class="invalid-feedback" role="alert">
@@ -80,7 +80,7 @@
                         <div class="col my-1">
 
                             <input type="checkbox" class="form-check-input @error('especial') is-invalid @enderror"
-                                name="especial" value="{{ old('especial') }}" required autocomplete="especial" autofocus>
+                                name="especial" value="{{ old('especial') }}" autocomplete="especial" autofocus>
                             @error('especial')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -94,7 +94,7 @@
                         <div class="col">
                             <label for="observacionesMedicas">Observaciones médicas</label>
                             <input type="text" class="form-control @error('observacionesMedicas') is-invalid @enderror"
-                                name="observacionesMedicas" value="{{ old('observacionesMedicas') }}" required
+                                name="observacionesMedicas" value="{{ old('observacionesMedicas') }}"
                                 autocomplete="observacionesMedicas" autofocus>
                             @error('observacionesMedicas')
                                 <span class="invalid-feedback" role="alert">
@@ -123,7 +123,7 @@
                         <div class="col">
                             <label for="email">Email</label>
                             <input type="email" class="form-control @error('email') is-invalid @enderror" name="email"
-                                value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                value="{{ old('email') }}" autocomplete="email" autofocus>
                             @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -148,7 +148,7 @@
                         <div class="col">
                             <label for="telefono2">Teléfono 2</label>
                             <input type="tel" class="form-control @error('telefono2') is-invalid @enderror"
-                                name="telefono2" value="{{ old('telefono2') }}" required autocomplete="telefono2"
+                                name="telefono2" value="{{ old('telefono2') }}" autocomplete="telefono2"
                                 autofocus>
                             @error('telefono2')
                                 <span class="invalid-feedback" role="alert">
@@ -168,6 +168,7 @@
                             <label for="grupo">Grupo</label>
                             <select class="form-select w-50 @error('grupo') is-invalid @enderror" name="grupo" id="grupo"
                                 value="{{ old('grupo') }}" required autocomplete="grupo" autofocus>
+                                <option disabled selected value> -- Elige un grupo --</option>
                                 <option value="1">Grupo 1</option>
                                 <option value="2">Grupo 2</option>
                                 <option value="3">Grupo 3</option>
@@ -185,6 +186,7 @@
                             <label for="horario">Horario</label>
                             <select class="form-select w-50 @error('horario') is-invalid @enderror" name="horario"
                                 id="horario" value="{{ old('horario') }}" required autocomplete="horario" autofocus>
+                                <option disabled selected value> -- Elige un horario --</option>
                                 <option value="1">1 - 2</option>
                                 <option value="2">2 - 3</option>
                                 <option value="3">3 - 4</option>
