@@ -9,9 +9,7 @@
                 <!-- Panel izquierdo -->
                 <div class="col">
                     <div class="row">
-                        <label for="nombre" class="col col-form-label text-md-end">
-                            Nombre
-                        </label>
+                        <label for="nombre">Nombre</label>
 
                         <div class="col">
                             <input type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre"
@@ -25,13 +23,11 @@
                     </div>
 
                     <!-- Campo de apellidos -->
-                    <div class="row mb-3">
-                        <label for="apellidos" class="col-md-4 col-form-label text-md-end">
-                            Apellidos
-                        </label>
+                    <div class="row">
+                        <label for="apellidos">Apellidos</label>
 
-                        <div class="col-md-6">
-                            <input type="text" class="form-control @error('apellidos') is-invalid @enderror" name="nombre"
+                        <div class="col">
+                            <input type="text" class="form-control @error('apellidos') is-invalid @enderror" name="apellidos"
                                 value="{{ old('apellidos') }}" required autocomplete="apellidos" autofocus>
                             @error('apellidos')
                                 <span class="invalid-feedback" role="alert">
@@ -42,14 +38,12 @@
                     </div>
 
                     <!-- Campo de edad y hermanos -->
-                    <div class="row mb-3">
-                        <label for="edad" class="col-md-4 col-form-label text-md-end">
-                            Edad
-                        </label>
+                    <div class="row">
+                        <label for="edad">Edad</label>
 
-                        <div class="col-md-6">
-                            <input value="0" type="number" class="form-control @error('edad') is-invalid @enderror"
-                                name="edad" value="{{ old('edad') }}" required autocomplete="edad" autofocus>
+                        <div class="col">
+                            <input type="number" class="form-control @error('edad') is-invalid @enderror" name="edad"
+                                value="{{ old('edad') }}" required autocomplete="edad" autofocus>
                             @error('edad')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -57,13 +51,11 @@
                             @enderror
                         </div>
 
-                        <label for="hermanos" class="col-md-4 col-form-label text-md-end">
-                            Hermanos
-                        </label>
+                        <label for="hermanos">Hermanos</label>
 
-                        <div class="col-md-6">
-                            <input value="0" type="number" class="form-control @error('hermanos') is-invalid @enderror"
-                                name="hermanos" value="{{ old('hermanos') }}" required autocomplete="hermanos" autofocus>
+                        <div class="col">
+                            <input type="number" class="form-control @error('hermanos') is-invalid @enderror"
+                                name="hermanos" value="{{ old('hermanos') }}" autocomplete="hermanos" autofocus>
                             @error('hermanos')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -73,12 +65,10 @@
                     </div>
 
                     <!-- Checkboxes de medicacion y especial -->
-                    <div class="row mb-3">
-                        <label for="medicacion" class="col-md-4 col-form-label text-md-end">
-                            Medicación
-                        </label>
+                    <div class="row">
+                        <label for="medicacion">Medicación</label>
 
-                        <div class="col-md-6">
+                        <div class="col">
                             <input type="checkbox" class="form-check @error('medicacion') is-invalid @enderror"
                                 name="medicacion" value="{{ old('medicacion') }}" required autocomplete="medicacion"
                                 autofocus>
@@ -89,11 +79,9 @@
                             @enderror
                         </div>
 
-                        <label for="especial" class="col-md-4 col-form-label text-md-end">
-                            Especial
-                        </label>
+                        <label for="especial">Especial</label>
 
-                        <div class="col-md-6">
+                        <div class="col">
                             <input type="checkbox" class="form-check @error('especial') is-invalid @enderror"
                                 name="especial" value="{{ old('especial') }}" required autocomplete="especial" autofocus>
                             @error('especial')
@@ -104,12 +92,10 @@
                         </div>
                     </div>
 
-                    <div class="row mb-3">
-                        <label for="observacionesMedicas" class="col-md-4 col-form-label text-md-end">
-                            Observaciones médicas
-                        </label>
+                    <div class="row">
+                        <label for="observacionesMedicas">Observaciones médicas</label>
 
-                        <div class="col-md-6">
+                        <div class="col">
                             <textarea name="observacionesMedicas" rows="5" cols="52"
                                 class="form-control @error('observacionesMedicas') is-invalid @enderror" required
                                 autocomplete="observacionesMedicas" autofocus></textarea>
@@ -123,12 +109,10 @@
                     </div>
 
                     <!-- Campo de tutor -->
-                    <div class="row mb-3">
-                        <label for="tutor" class="col-md-4 col-form-label text-md-end">
-                            Tutor
-                        </label>
+                    <div class="row">
+                        <label for="tutor">Tutor</label>
 
-                        <div class="col-md-6">
+                        <div class="col">
                             <input type="text" class="form-control @error('tutor') is-invalid @enderror" name="tutor"
                                 value="{{ old('tutor') }}" required autocomplete="tutor" autofocus>
                             @error('tutor')
@@ -140,12 +124,10 @@
                     </div>
 
                     <!-- Campo de email -->
-                    <div class="row mb-3">
-                        <label for="email" class="col-md-4 col-form-label text-md-end">
-                            Email
-                        </label>
+                    <div class="row">
+                        <label for="email">Email</label>
 
-                        <div class="col-md-6">
+                        <div class="col">
                             <input type="email" class="form-control @error('email') is-invalid @enderror" name="email"
                                 value="{{ old('email') }}" required autocomplete="email" autofocus>
                             @error('email')
@@ -157,12 +139,10 @@
                     </div>
 
                     <!-- Campos de telefonos -->
-                    <div class="row mb-3">
-                        <label for="telefono1" class="col-md-4 col-form-label text-md-end">
-                            Telefono 1
-                        </label>
+                    <div class="row">
+                        <label for="telefono1">Telefono 1</label>
 
-                        <div class="col-md-6">
+                        <div class="col">
                             <input type="tel" class="form-control @error('telefono1') is-invalid @enderror" name="telefono1"
                                 value="{{ old('telefono1') }}" required autocomplete="telefono1" autofocus>
                             @error('telefono1')
@@ -172,11 +152,9 @@
                             @enderror
                         </div>
 
-                        <label for="telefono2" class="col-md-4 col-form-label text-md-end">
-                            Telefono 2
-                        </label>
+                        <label for="telefono2">Telefono 2</label>
 
-                        <div class="col-md-6">
+                        <div class="col">
                             <input type="tel" class="form-control @error('telefono2') is-invalid @enderror"
                                 name="telefono2" value="{{ old('telefono2') }}" required autocomplete="telefono2"
                                 autofocus>
