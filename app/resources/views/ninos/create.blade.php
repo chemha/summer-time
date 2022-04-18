@@ -222,7 +222,9 @@
                                 </span>
                             @enderror
                         </div>
-
+                    </div>
+                    
+                    <div class="row">
                         <div class="form-check form-check-inline">
                             <label for="quincena3" class="form-check-label">
                                 Quincena 3
