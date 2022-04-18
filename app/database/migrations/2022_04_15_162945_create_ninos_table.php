@@ -39,6 +39,9 @@ return new class extends Migration
             $table->boolean('quincena3');
             $table->boolean('quincena4');
 
+            $table->boolean('datos');
+            $table->boolean('fotos');
+
             $table->string('anotaciones')->nullable();
 
             $table->float('pago');
