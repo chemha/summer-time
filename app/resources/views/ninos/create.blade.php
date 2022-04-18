@@ -158,6 +158,8 @@
                     </div>
                 </div>
 
+                <div class="vr"></div>
+
                 <!-- Panel derecho -->
                 <div class="col">
                     <div class="row">
