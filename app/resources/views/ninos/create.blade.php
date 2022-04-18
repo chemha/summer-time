@@ -37,7 +37,7 @@
 
                     <!-- Campo de edad y hermanos -->
                     <div class="row">
-                        <div class="col">
+                        <div class="col col-">
                             <label for="edad">Edad</label>
                             <input type="number" class="form-control @error('edad') is-invalid @enderror" name="edad"
                                 value="{{ old('edad') }}" required autocomplete="edad" autofocus>
@@ -50,7 +50,7 @@
 
                         <label for="hermanos">Hermanos</label>
 
-                        <div class="col">
+                        <div class="col col-">
                             <input type="number" class="form-control @error('hermanos') is-invalid @enderror"
                                 name="hermanos" value="{{ old('hermanos') }}" autocomplete="hermanos" autofocus>
                             @error('hermanos')
