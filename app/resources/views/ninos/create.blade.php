@@ -62,36 +62,38 @@
 
                     <!-- Checkboxes de medicacion y especial -->
                     <div class="row">
-                        <label for="medicacion" class="col col-form-label text-md-end">Medicación</label>
-                        <div class="col">
 
-                            <input type="checkbox" class="form-check @error('medicacion') is-invalid @enderror"
-                                name="medicacion" value="{{ old('medicacion') }}" required autocomplete="medicacion"
-                                autofocus>
-                            @error('medicacion')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-
-                        <label for="especial" class="col col-form-label text-md-end">Especial</label>
                         <div class="col">
-                            <input type="checkbox" class="form-check @error('especial') is-invalid @enderror"
-                                name="especial" value="{{ old('especial') }}" required autocomplete="especial" autofocus>
-                            @error('especial')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <div class=" form-check form-check-inline">
+                                <label for="medicacion" class="form-check-label">Medicación</label>
+                                <input type="checkbox" class="form-check-input @error('medicacion') is-invalid @enderror"
+                                    name="medicacion" value="{{ old('medicacion') }}" required autocomplete="medicacion"
+                                    autofocus>
+                                @error('medicacion')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+
+                                <label for="especial" class="form-check-label">Especial</label>
+                                <input type="checkbox" class="form-check-input @error('especial') is-invalid @enderror"
+                                    name="especial" value="{{ old('especial') }}" required autocomplete="especial"
+                                    autofocus>
+                                @error('especial')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col">
                             <label for="observacionesMedicas">Observaciones médicas</label>
-                            <input type="text" class="form-control @error('observacionesMedicas') is-invalid @enderror" name="observacionesMedicas"
-                                value="{{ old('observacionesMedicas') }}" required autocomplete="observacionesMedicas" autofocus>
+                            <input type="text" class="form-control @error('observacionesMedicas') is-invalid @enderror"
+                                name="observacionesMedicas" value="{{ old('observacionesMedicas') }}" required
+                                autocomplete="observacionesMedicas" autofocus>
                             @error('observacionesMedicas')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
