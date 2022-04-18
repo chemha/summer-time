@@ -13,7 +13,7 @@
                         <div class="col">
                             <label for="nombre">Nombre</label>
                             <input type="text" class=" form-control @error('nombre') is-invalid @enderror" name="nombre"
-                                value="{{ old('nombre') }}" required autocomplete="nombre" autofocus>
+                                value="{{ old('nombre') }}" required autofocus>
                             @error('nombre')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -27,7 +27,7 @@
                         <div class="col">
                             <label for="apellidos">Apellidos</label>
                             <input type="text" class="form-control @error('apellidos') is-invalid @enderror" name="apellidos"
-                                value="{{ old('apellidos') }}" required autocomplete="apellidos" autofocus>
+                                value="{{ old('apellidos') }}" required autofocus>
                             @error('apellidos')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -41,7 +41,7 @@
                         <div class="col">
                             <label for="edad">Edad</label>
                             <input type="number" class="form-control w-25 @error('edad') is-invalid @enderror" name="edad"
-                                value="{{ old('edad') }}" required autocomplete="edad" autofocus>
+                                value="{{ old('edad') }}" required autofocus>
                             @error('edad')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -52,7 +52,7 @@
                         <div class="col">
                             <label for="hermanos">Hermanos</label>
                             <input type="number" class="form-control w-25 @error('hermanos') is-invalid @enderror"
-                                name="hermanos" value="{{ old('hermanos') }}" autocomplete="hermanos" autofocus>
+                                name="hermanos" value="{{ old('hermanos') }}" autofocus>
                             @error('hermanos')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -67,8 +67,7 @@
                         <div class="col my-1">
 
                             <input type="checkbox" class="form-check-input @error('medicacion') is-invalid @enderror"
-                                name="medicacion" value="{{ old('medicacion') }}" autocomplete="medicacion"
-                                autofocus>
+                                name="medicacion" value="{{ old('medicacion') }}" autofocus>
                             @error('medicacion')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -80,7 +79,7 @@
                         <div class="col my-1">
 
                             <input type="checkbox" class="form-check-input @error('especial') is-invalid @enderror"
-                                name="especial" value="{{ old('especial') }}" autocomplete="especial" autofocus>
+                                name="especial" value="{{ old('especial') }}" autofocus>
                             @error('especial')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -94,8 +93,7 @@
                         <div class="col">
                             <label for="observacionesMedicas">Observaciones médicas</label>
                             <input type="text" class="form-control @error('observacionesMedicas') is-invalid @enderror"
-                                name="observacionesMedicas" value="{{ old('observacionesMedicas') }}"
-                                autocomplete="observacionesMedicas" autofocus>
+                                name="observacionesMedicas" value="{{ old('observacionesMedicas') }}" autofocus>
                             @error('observacionesMedicas')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -109,7 +107,7 @@
                         <div class="col">
                             <label for="tutor">Tutor</label>
                             <input type="text" class="form-control @error('tutor') is-invalid @enderror" name="tutor"
-                                value="{{ old('tutor') }}" required autocomplete="tutor" autofocus>
+                                value="{{ old('tutor') }}" required autofocus>
                             @error('tutor')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -123,7 +121,7 @@
                         <div class="col">
                             <label for="email">Email</label>
                             <input type="email" class="form-control @error('email') is-invalid @enderror" name="email"
-                                value="{{ old('email') }}" autocomplete="email" autofocus>
+                                value="{{ old('email') }}" autofocus>
                             @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -137,7 +135,7 @@
                         <div class="col">
                             <label for="telefono1">Teléfono 1</label>
                             <input type="tel" class="form-control @error('telefono1') is-invalid @enderror" name="telefono1"
-                                value="{{ old('telefono1') }}" required autocomplete="telefono1" autofocus>
+                                value="{{ old('telefono1') }}" required autofocus>
                             @error('telefono1')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -148,8 +146,7 @@
                         <div class="col">
                             <label for="telefono2">Teléfono 2</label>
                             <input type="tel" class="form-control @error('telefono2') is-invalid @enderror"
-                                name="telefono2" value="{{ old('telefono2') }}" autocomplete="telefono2"
-                                autofocus>
+                                name="telefono2" value="{{ old('telefono2') }}" autofocus>
                             @error('telefono2')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -167,7 +164,7 @@
                         <div class="col">
                             <label for="grupo">Grupo</label>
                             <select class="form-select w-50 @error('grupo') is-invalid @enderror" name="grupo" id="grupo"
-                                value="{{ old('grupo') }}" required autocomplete="grupo" autofocus>
+                                value="{{ old('grupo') }}" required autofocus>
                                 <option disabled selected value>Elige un grupo</option>
                                 <option value="1">Grupo 1</option>
                                 <option value="2">Grupo 2</option>
@@ -185,7 +182,7 @@
                         <div class="col">
                             <label for="horario">Horario</label>
                             <select class="form-select w-50 @error('horario') is-invalid @enderror" name="horario"
-                                id="horario" value="{{ old('horario') }}" required autocomplete="horario" autofocus>
+                                id="horario" value="{{ old('horario') }}" required autofocus>
                                 <option disabled selected value>Elige un horario</option>
                                 <option value="1">1 - 2</option>
                                 <option value="2">2 - 3</option>
@@ -202,11 +199,10 @@
                     </div>
 
                     <!-- Checkboxes de quincenas -->
-                    <div class="row row-cols-2 my-2" >
+                    <div class="row row-cols-2 my-2">
                         <div class="col my-1">
                             <input type="checkbox" class="form-check-input @error('quincena1') is-invalid @enderror"
-                                name="quincena1" value="{{ old('quincena1') }}" required autocomplete="quincena1"
-                                autofocus>
+                                name="quincena1" value="{{ old('quincena1') }}" autofocus>
                             @error('quincena1')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -219,8 +215,7 @@
                         </div>
                         <div class="col my-1">
                             <input type="checkbox" class="form-check-input @error('quincena2') is-invalid @enderror"
-                                name="quincena2" value="{{ old('quincena2') }}" required autocomplete="quincena2"
-                                autofocus>
+                                name="quincena2" value="{{ old('quincena2') }}" autofocus>
                             @error('quincena1')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -233,8 +228,7 @@
                         </div>
                         <div class="col my-1">
                             <input type="checkbox" class="form-check-input @error('quincena3') is-invalid @enderror"
-                                name="quincena3" value="{{ old('quincena3') }}" required autocomplete="quincena3"
-                                autofocus>
+                                name="quincena3" value="{{ old('quincena3') }}" autofocus>
                             @error('quincena3')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -247,8 +241,7 @@
                         </div>
                         <div class="col my-1">
                             <input type="checkbox" class="form-check-input @error('quincena4') is-invalid @enderror"
-                                name="quincena4" value="{{ old('quincena4') }}" required autocomplete="quincena4"
-                                autofocus>
+                                name="quincena4" value="{{ old('quincena4') }}" autofocus>
                             @error('quincena4')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -264,7 +257,7 @@
                     <div class="row my-2">
                         <div class="col my-1">
                             <input type="checkbox" class="form-check-input @error('datos') is-invalid @enderror"
-                                name="datos" value="{{ old('datos') }}" required autocomplete="datos" autofocus>
+                                name="datos" value="{{ old('datos') }}" autofocus>
                             @error('datos')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -278,7 +271,7 @@
 
                         <div class="col my-1">
                             <input type="checkbox" class="form-check-input @error('fotos') is-invalid @enderror"
-                                name="fotos" value="{{ old('fotos') }}" required autocomplete="fotos" autofocus>
+                                name="fotos" value="{{ old('fotos') }}" autofocus>
                             @error('fotos')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -315,7 +308,7 @@
                         Estado del recibo
                     </label>
                     <select class="form-select @error('recibo') is-invalid @enderror" name="recibo" id="recibo"
-                        value="{{ old('recibo') }}" required autocomplete="recibo" autofocus>
+                        value="{{ old('recibo') }}" required autofocus>
                         <option value="1">Pagado</option>
                         <option value="2">Pendiente</option>
                     </select>
