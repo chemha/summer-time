@@ -90,10 +90,8 @@
                     <div class="row">
                         <div class="col">
                             <label for="observacionesMedicas">Observaciones médicas</label>
-                            <textarea name="observacionesMedicas" rows="5" cols="52"
-                                class="form-control @error('observacionesMedicas') is-invalid @enderror" required
-                                autocomplete="observacionesMedicas" autofocus></textarea>
-
+                            <input type="text" class="form-control @error('observacionesMedicas') is-invalid @enderror" name="observacionesMedicas"
+                                value="{{ old('observacionesMedicas') }}" required autocomplete="observacionesMedicas" autofocus>
                             @error('observacionesMedicas')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
