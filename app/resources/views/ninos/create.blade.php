@@ -36,7 +36,7 @@
                     </div>
 
                     <!-- Campo de edad y hermanos -->
-                    <div class="row">
+                    <div class="row justify-content-evenly">
                         <div class="col">
                             <label for="edad">Edad</label>
                             <input type="number" class="form-control w-50 @error('edad') is-invalid @enderror" name="edad"
