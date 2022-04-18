@@ -9,7 +9,7 @@
 
                 <!-- Panel izquierdo -->
                 <div class="col">
-                    <div class="row">
+                    <div class="row my-2">
                         <div class="col">
                             <label for="nombre">Nombre</label>
                             <input type="text" class=" form-control @error('nombre') is-invalid @enderror" name="nombre"
@@ -23,7 +23,7 @@
                     </div>
 
                     <!-- Campo de apellidos -->
-                    <div class="row">
+                    <div class="row my-2">
                         <div class="col">
                             <label for="apellidos">Apellidos</label>
                             <input type="text" class="form-control @error('apellidos') is-invalid @enderror" name="apellidos"
@@ -37,7 +37,7 @@
                     </div>
 
                     <!-- Campo de edad y hermanos -->
-                    <div class="row">
+                    <div class="row my-2">
                         <div class="col">
                             <label for="edad">Edad</label>
                             <input type="number" class="form-control w-25 @error('edad') is-invalid @enderror" name="edad"
@@ -62,9 +62,9 @@
                     </div>
 
                     <!-- Checkboxes de medicacion y especial -->
-                    <div class="row">
+                    <div class="row my-2">
 
-                        <div class="col">
+                        <div class="col my-1">
 
                             <input type="checkbox" class="form-check-input @error('medicacion') is-invalid @enderror"
                                 name="medicacion" value="{{ old('medicacion') }}" required autocomplete="medicacion"
@@ -77,7 +77,7 @@
                             <label for="medicacion" class="form-check-label">Medicación</label>
                         </div>
 
-                        <div class="col">
+                        <div class="col my-1">
 
                             <input type="checkbox" class="form-check-input @error('especial') is-invalid @enderror"
                                 name="especial" value="{{ old('especial') }}" required autocomplete="especial" autofocus>
@@ -90,7 +90,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row my-2">
                         <div class="col">
                             <label for="observacionesMedicas">Observaciones médicas</label>
                             <input type="text" class="form-control @error('observacionesMedicas') is-invalid @enderror"
@@ -105,7 +105,7 @@
                     </div>
 
                     <!-- Campo de tutor -->
-                    <div class="row">
+                    <div class="row my-2">
                         <div class="col">
                             <label for="tutor">Tutor</label>
                             <input type="text" class="form-control @error('tutor') is-invalid @enderror" name="tutor"
@@ -119,7 +119,7 @@
                     </div>
 
                     <!-- Campo de email -->
-                    <div class="row">
+                    <div class="row my-2">
                         <div class="col">
                             <label for="email">Email</label>
                             <input type="email" class="form-control @error('email') is-invalid @enderror" name="email"
@@ -133,7 +133,7 @@
                     </div>
 
                     <!-- Campos de telefonos -->
-                    <div class="row">
+                    <div class="row my-2">
                         <div class="col">
                             <label for="telefono1">Teléfono 1</label>
                             <input type="tel" class="form-control @error('telefono1') is-invalid @enderror" name="telefono1"
@@ -163,7 +163,7 @@
 
                 <!-- Panel derecho -->
                 <div class="col">
-                    <div class="row">
+                    <div class="row my-2">
                         <div class="col">
                             <label for="grupo">Grupo</label>
                             <select class="form-select w-50 @error('grupo') is-invalid @enderror" name="grupo" id="grupo"
