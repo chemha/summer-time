@@ -4,15 +4,16 @@
     <div class="container">
         <form method="POST" action="{{ route('ninos.store') }}">
             @csrf
+
             <div class="row">
                 <!-- Panel izquierdo -->
                 <div class="col">
-                    <div class="row mb-3">
-                        <label for="nombre" class="col-md-4 col-form-label text-md-end">
+                    <div class="row">
+                        <label for="nombre" class="col col-form-label text-md-end">
                             Nombre
                         </label>
 
-                        <div class="col-md-6">
+                        <div class="col">
                             <input type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre"
                                 value="{{ old('nombre') }}" required autocomplete="nombre" autofocus>
                             @error('nombre')
