@@ -11,7 +11,7 @@
                     <div class="row">
                         <div class="col">
                             <label for="nombre">Nombre</label>
-                            <input type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre"
+                            <input type="text" class=" form-control @error('nombre') is-invalid @enderror" name="nombre"
                                 value="{{ old('nombre') }}" required autocomplete="nombre" autofocus>
                             @error('nombre')
                                 <span class="invalid-feedback" role="alert">
@@ -77,7 +77,7 @@
                         </div>
 
                         <div class="col">
-                            
+
                             <input type="checkbox" class="form-check-input @error('especial') is-invalid @enderror"
                                 name="especial" value="{{ old('especial') }}" required autocomplete="especial" autofocus>
                             @error('especial')
@@ -197,11 +197,8 @@
                     </div>
 
                     <!-- Checkboxes de quincenas -->
-                    <div class="row">
-                        <div class="col form-check form-check-inline">
-                            <label for="quincena1" class="form-check-label">
-                                Quincena 1
-                            </label>
+                    <div class="row row-cols-2">
+                        <div class="col">
                             <input type="checkbox" class="form-check-input @error('quincena1') is-invalid @enderror"
                                 name="quincena1" value="{{ old('quincena1') }}" required autocomplete="quincena1"
                                 autofocus>
@@ -211,9 +208,11 @@
                                 </span>
                             @enderror
 
-                            <label for="quincena2" class="form-check-label">
-                                Quincena 2
+                            <label for="quincena1" class="form-check-label">
+                                Quincena 1
                             </label>
+                        </div>
+                        <div class="col">
                             <input type="checkbox" class="form-check-input @error('quincena2') is-invalid @enderror"
                                 name="quincena2" value="{{ old('quincena2') }}" required autocomplete="quincena2"
                                 autofocus>
@@ -222,6 +221,38 @@
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
+
+                            <label for="quincena2" class="form-check-label">
+                                Quincena 2
+                            </label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" class="form-check-input @error('quincena3') is-invalid @enderror"
+                                name="quincena3" value="{{ old('quincena3') }}" required autocomplete="quincena3"
+                                autofocus>
+                            @error('quincena3')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+
+                            <label for="quincena3" class="form-check-label">
+                                Quincena 3
+                            </label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" class="form-check-input @error('quincena4') is-invalid @enderror"
+                                name="quincena4" value="{{ old('quincena4') }}" required autocomplete="quincena4"
+                                autofocus>
+                            @error('quincena4')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+
+                            <label for="quincena4" class="form-check-label">
+                                Quincena 4
+                            </label>
                         </div>
                     </div>
 
