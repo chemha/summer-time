@@ -201,7 +201,7 @@
                             Quincena 1
                         </label>
 
-                        <div class="col">
+                        <div class="col w-50">
                             <input type="checkbox" class="form-check @error('quincena1') is-invalid @enderror"
                                 name="quincena1" value="{{ old('quincena1') }}" required autocomplete="quincena1"
                                 autofocus>
@@ -216,7 +216,7 @@
                             Quincena 2
                         </label>
 
-                        <div class="col">
+                        <div class="col w-50">
                             <input type="checkbox" class="form-check @error('quincena2') is-invalid @enderror"
                                 name="quincena2" value="{{ old('quincena2') }}" required autocomplete="quincena2"
                                 autofocus>
@@ -231,7 +231,7 @@
                             Quincena 3
                         </label>
 
-                        <div class="col">
+                        <div class="col w-50">
                             <input type="checkbox" class="form-check @error('quincena3') is-invalid @enderror"
                                 name="quincena3" value="{{ old('quincena3') }}" required autocomplete="quincena3"
                                 autofocus>
@@ -245,7 +245,7 @@
                         <label for="quincena4" class="col-md-4 col-form-label text-md-end">
                             Quincena 4
                         </label>
-                        <div class="col">
+                        <div class="col w-50">
                             <input type="checkbox" class="form-check @error('quincena4') is-invalid @enderror"
                                 name="quincena4" value="{{ old('quincena4') }}" required autocomplete="quincena4"
                                 autofocus>
