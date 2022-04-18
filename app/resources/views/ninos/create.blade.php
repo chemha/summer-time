@@ -64,8 +64,8 @@
                     <div class="row">
 
                         <div class="col">
-                            <label for="medicacion">Medicación</label>
-                            <input type="checkbox" class="form-check @error('medicacion') is-invalid @enderror"
+                            <label for="medicacion" class="form-check-label">Medicación</label>
+                            <input type="checkbox" class="form-check-input @error('medicacion') is-invalid @enderror"
                                 name="medicacion" value="{{ old('medicacion') }}" required autocomplete="medicacion"
                                 autofocus>
                             @error('medicacion')
@@ -76,8 +76,8 @@
                         </div>
 
                         <div class="col">
-                            <label for="especial">Especial</label>
-                            <input type="checkbox" class="form-check @error('especial') is-invalid @enderror"
+                            <label for="especial" class="form-check-label">Especial</label>
+                            <input type="checkbox" class="form-check-input @error('especial') is-invalid @enderror"
                                 name="especial" value="{{ old('especial') }}" required autocomplete="especial" autofocus>
                             @error('especial')
                                 <span class="invalid-feedback" role="alert">
