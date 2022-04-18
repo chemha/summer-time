@@ -62,7 +62,7 @@
 
                     <!-- Checkboxes de medicacion y especial -->
                     <div class="row">
-                        <label for="medicacion" class="col-md-4 col-form-label text-md-end">Medicación</label>
+                        <label for="medicacion" class="col col-form-label text-md-end">Medicación</label>
                         <div class="col">
                             
                             <input type="checkbox" class="form-check @error('medicacion') is-invalid @enderror"
@@ -75,7 +75,7 @@
                             @enderror
                         </div>
 
-                        <label for="especial" class="col-md-4 col-form-label text-md-end">Especial</label>
+                        <label for="especial" class="col col-form-label text-md-end">Especial</label>
                         <div class="col">   
                             <input type="checkbox" class="form-check @error('especial') is-invalid @enderror"
                                 name="especial" value="{{ old('especial') }}" required autocomplete="especial" autofocus>
