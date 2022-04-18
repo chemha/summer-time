@@ -162,7 +162,7 @@
                     </label>
 
                     <div class="col-md-6">
-                        <input type="checkbox" class="form-control @error('telefono1') is-invalid @enderror"
+                        <input type="tel" class="form-control @error('telefono1') is-invalid @enderror"
                             name="telefono1" value="{{ old('telefono1') }}" required autocomplete="telefono1" autofocus>
                         @error('telefono1')
                             <span class="invalid-feedback" role="alert">
@@ -176,7 +176,7 @@
                     </label>
 
                     <div class="col-md-6">
-                        <input type="checkbox" class="form-control @error('telefono2') is-invalid @enderror"
+                        <input type="tel" class="form-control @error('telefono2') is-invalid @enderror"
                             name="telefono2" value="{{ old('telefono2') }}" required autocomplete="telefono2" autofocus>
                         @error('telefono2')
                             <span class="invalid-feedback" role="alert">
