@@ -36,10 +36,10 @@
                     </div>
 
                     <!-- Campo de edad y hermanos -->
-                    <div class="row justify-content-evenly">
+                    <div class="row d-flex justify-content-evenly">
                         <div class="col">
                             <label for="edad">Edad</label>
-                            <input type="number" class="form-control w-50 @error('edad') is-invalid @enderror" name="edad"
+                            <input type="number" class="form-control w-25 @error('edad') is-invalid @enderror" name="edad"
                                 value="{{ old('edad') }}" required autocomplete="edad" autofocus>
                             @error('edad')
                                 <span class="invalid-feedback" role="alert">
@@ -50,7 +50,7 @@
 
                         <div class="col">
                             <label for="hermanos">Hermanos</label>
-                            <input type="number" class="form-control w-50 @error('hermanos') is-invalid @enderror"
+                            <input type="number" class="form-control w-25 @error('hermanos') is-invalid @enderror"
                                 name="hermanos" value="{{ old('hermanos') }}" autocomplete="hermanos" autofocus>
                             @error('hermanos')
                                 <span class="invalid-feedback" role="alert">
