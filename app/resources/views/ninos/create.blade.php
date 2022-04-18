@@ -223,16 +223,11 @@
                             @enderror
                         </div>
 
-                        <label for="quincena3" class="col-md-4 col-form-label text-md-end">
-                            Quincena 3
-                        </label>
-
-                        <label for="quincena4" class="col-md-4 col-form-label text-md-end">
-                            Quincena 4
-                        </label>
-
-                        <div class="col">
-                            <input type="checkbox" class="form-check @error('quincena3') is-invalid @enderror"
+                        <div class="col form-check form-check-inline">
+                            <label for="quincena3" class="form-check-label">
+                                Quincena 3
+                            </label>
+                            <input type="checkbox" class="form-check-input @error('quincena3') is-invalid @enderror"
                                 name="quincena3" value="{{ old('quincena3') }}" required autocomplete="quincena3"
                                 autofocus>
                             @error('quincena3')
@@ -241,7 +236,10 @@
                                 </span>
                             @enderror
 
-                            <input type="checkbox" class="form-check @error('quincena4') is-invalid @enderror"
+                            <label for="quincena4" class="form-check-label">
+                                Quincena 4
+                            </label>
+                            <input type="checkbox" class="form-check-input @error('quincena4') is-invalid @enderror"
                                 name="quincena4" value="{{ old('quincena4') }}" required autocomplete="quincena4"
                                 autofocus>
                             @error('quincena4')
