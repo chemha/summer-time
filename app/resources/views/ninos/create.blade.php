@@ -180,9 +180,9 @@
                             @enderror
                         </div>
 
-                        <div class="col">
+                        <div class="col float-right">
                             <label for="horario">Horario</label>
-                            <select class="form-select w-50 float-right @error('horario') is-invalid @enderror" name="horario"
+                            <select class="form-select w-50  @error('horario') is-invalid @enderror" name="horario"
                                 id="horario" value="{{ old('horario') }}" required autocomplete="off" autofocus>
                                 <option disabled selected value>Elige un horario</option>
                                 <option value="1">1 - 2</option>
