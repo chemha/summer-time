@@ -5,7 +5,7 @@
         <form method="POST" action="{{ route('ninos.store') }}">
             @csrf
 
-            <div class="row row-cols-3">
+            <div class="hstack gap-2">
                 <!-- Panel izquierdo -->
                 <div class="col">
                     <div class="row">
