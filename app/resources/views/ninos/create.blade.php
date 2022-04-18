@@ -224,6 +224,8 @@
                 </div>
             </div>
 
+            <hr class="block-divisor visible-xs-block">
+            
             <!-- Panel derecho -->
             <div class="col">
                 <div class="row mb-3">
