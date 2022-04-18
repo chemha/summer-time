@@ -168,7 +168,7 @@
                             <label for="grupo">Grupo</label>
                             <select class="form-select w-50 @error('grupo') is-invalid @enderror" name="grupo" id="grupo"
                                 value="{{ old('grupo') }}" required autocomplete="grupo" autofocus>
-                                <option disabled selected value> -- Elige un grupo --</option>
+                                <option disabled selected value>Elige un grupo</option>
                                 <option value="1">Grupo 1</option>
                                 <option value="2">Grupo 2</option>
                                 <option value="3">Grupo 3</option>
@@ -186,7 +186,7 @@
                             <label for="horario">Horario</label>
                             <select class="form-select w-50 @error('horario') is-invalid @enderror" name="horario"
                                 id="horario" value="{{ old('horario') }}" required autocomplete="horario" autofocus>
-                                <option disabled selected value> -- Elige un horario --</option>
+                                <option disabled selected value>Elige un horario</option>
                                 <option value="1">1 - 2</option>
                                 <option value="2">2 - 3</option>
                                 <option value="3">3 - 4</option>
