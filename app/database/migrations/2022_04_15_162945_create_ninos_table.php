@@ -45,7 +45,7 @@ return new class extends Migration
             $table->string('anotaciones')->nullable();
 
             $table->float('pago');
-            $table->string('estadoRecibo', 20);
+            $table->string('recibo', 20);
 
             //Otros datos base
             $table->timestamps();
