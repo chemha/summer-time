@@ -22,8 +22,8 @@ return new class extends Migration
             $table->string('apellidos', 100);
             $table->integer('edad')->unsigned();
             $table->integer('hermanos')->unsigned()->nullable();
-            $table->boolean('medicacion');
-            $table->boolean('especial');
+            $table->boolean('medicacion')->default(false);
+            $table->boolean('especial')->default(false);
             $table->string('observacionesMedicas')->nullable();
 
             $table->string('tutor');
@@ -35,13 +35,13 @@ return new class extends Migration
             $table->string('grupo')->nullable();
             $table->string('horario', 20);
 
-            $table->boolean('quincena1');
-            $table->boolean('quincena2');
-            $table->boolean('quincena3');
-            $table->boolean('quincena4');
+            $table->boolean('quincena1')->default(false);
+            $table->boolean('quincena2')->default(false);
+            $table->boolean('quincena3')->default(false);
+            $table->boolean('quincena4')->default(false);
 
-            $table->boolean('datos');
-            $table->boolean('fotos');
+            $table->boolean('datos')->default(false);
+            $table->boolean('fotos')->default(false);
 
             $table->string('anotaciones')->nullable();
 
