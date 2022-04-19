@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('observacionesMedicas')->nullable();
 
             $table->string('tutor');
+            $table->string('email')->nullable();
             $table->string('telefono1', 20);
             $table->string('telefono2', 20)->nullable();
 
