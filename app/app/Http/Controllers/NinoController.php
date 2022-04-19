@@ -14,10 +14,7 @@ class NinoController extends Controller
      */
     public function index()
     {
-        return view(
-            'ninos.index',
-            ['ninos' => Nino::all()]
-        );
+        return view('ninos.index', compact(Nino::all()));
     }
 
     /**
@@ -119,6 +116,10 @@ class NinoController extends Controller
      */
     public function destroy(Nino $nino)
     {
-        //
+        $nino->delete();
+        return redirect()->route('ninos.index')->with('alert', [
+            'type' => 'success',
+            'message' => "El registro se ha borrado correctamente.",
+        ]);
     }
 }
