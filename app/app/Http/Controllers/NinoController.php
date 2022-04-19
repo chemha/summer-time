@@ -35,6 +35,35 @@ class NinoController extends Controller
      */
     public function store(Request $request)
     {
+        Nino::create([
+            "nombre" => $request->nombre,
+            "apellidos" => $request->apellidos,
+            "edad" => $request->edad,
+            "hermanos" => $request->hermanos,
+
+            "medicacion" => $request->medicacion,
+            "especial" => $request->especial,
+            "observacionesMedicas" => $request->observacionesMedicas,
+
+            "tutor" => $request->tutor,
+            "email" => $request->email,
+            "telefono1" => $request->telefono1,
+            "telefono2" => $request->telefono2,
+
+            "grupo" => $request->grupo,
+            "horario" => $request->horario,
+            "quincena1" => $request->quincena1,
+            "quincena2" => $request->quincena2,
+            "quincena3" => $request->quincena3,
+            "quincena4" => $request->quincena4,
+
+            "datos" => $request->datos,
+            "fotos" => $request->fotos,
+            "recibo" => $request->recibo,
+            "pago" => $request->pago,
+        ]);
+
+        return view('ninos.index');
     }
 
     /**
