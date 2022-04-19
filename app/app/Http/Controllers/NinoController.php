@@ -14,7 +14,7 @@ class NinoController extends Controller
      */
     public function index()
     {
-        return view('ninos.index', compact(Nino::all()));
+        return view('ninos.index', ['ninos' => Nino::all()]);
     }
 
     /**
