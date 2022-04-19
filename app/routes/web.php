@@ -25,3 +25,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //Crear y guardar niños
 Route::get('/ninos/create', [NinoController::class, 'create'])->name('ninos.create');
 Route::post('/ninos', [NinoController::class, 'store'])->name('ninos.store');
+
+//Index de niños
+Route::get('/ninos', [NinoController::class, 'index'])->name('ninos.index');

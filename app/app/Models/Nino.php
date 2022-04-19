@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Nino extends Model
 {
-
+    //Campos rellenables
     protected $fillable = [
         'nombre',
         'apellidos',

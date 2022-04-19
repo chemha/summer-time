@@ -24,6 +24,7 @@ class NinoController extends Controller
      */
     public function create()
     {
+        //Redirección al formulario
         return view('ninos.create');
     }
 
@@ -35,12 +36,15 @@ class NinoController extends Controller
      */
     public function store(Request $request)
     {
+
+        //Inserción de datos
         Nino::create([
             "nombre" => $request->nombre,
             "apellidos" => $request->apellidos,
             "edad" => $request->edad,
             "hermanos" => $request->hermanos,
 
+            //En los campos booleanos es necesario usar has(), si no los checkboxes vacios devuelven null
             "medicacion" => $request->has('medicacion'),
             "especial" => $request->has('especial'),
             "observacionesMedicas" => $request->observacionesMedicas,
@@ -63,7 +67,11 @@ class NinoController extends Controller
             "pago" => $request->pago,
         ]);
 
-        return view('ninos.index');
+        //Vuelta al index con mensaje confirmando la creación
+        return redirect()->route('ninos.index')->with('alert', [
+            'type' => 'success',
+            'message' => "Registro guardado correctamente.",
+        ]);
     }
 
     /**
