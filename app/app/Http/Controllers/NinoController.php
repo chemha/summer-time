@@ -41,8 +41,8 @@ class NinoController extends Controller
             "edad" => $request->edad,
             "hermanos" => $request->hermanos,
 
-            "medicacion" => $request->medicacion,
-            "especial" => $request->especial,
+            "medicacion" => $request->has('medicacion'),
+            "especial" => $request->has('especial'),
             "observacionesMedicas" => $request->observacionesMedicas,
 
             "tutor" => $request->tutor,
@@ -52,13 +52,13 @@ class NinoController extends Controller
 
             "grupo" => $request->grupo,
             "horario" => $request->horario,
-            "quincena1" => $request->quincena1,
-            "quincena2" => $request->quincena2,
-            "quincena3" => $request->quincena3,
-            "quincena4" => $request->quincena4,
+            "quincena1" => $request->has('quincena1'),
+            "quincena2" => $request->has('quincena2'),
+            "quincena3" => $request->has('quincena3'),
+            "quincena4" => $request->has('quincena4'),
 
-            "datos" => $request->datos,
-            "fotos" => $request->fotos,
+            "datos" => $request->has('datos'),
+            "fotos" => $request->has('fotos'),
             "recibo" => $request->recibo,
             "pago" => $request->pago,
         ]);
