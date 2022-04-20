@@ -19,6 +19,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Añadir css especifico en cada pagina -->
+    <!-- Esto hace que la web sea más eficiente -->
+    @yield('css')
 </head>
 
 <body>
@@ -87,6 +91,10 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- Añadir scripts especificos para cada página -->
+    <!-- Esto hace que la web sea más eficiente -->
+    @yield('js')
 </body>
 
 </html>

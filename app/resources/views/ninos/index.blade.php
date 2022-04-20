@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+<!-- CSS para datatables -->
+@section('css')
+    <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+@endsection
+
 @section('content')
     <div class="container">
         @if (session('alert'))
@@ -8,7 +13,7 @@
             </div>
         @endif
         <a href="{{ route('ninos.create') }}" class="btn btn-primary">Crear nino</a>
-        <table class="table table-striped">
+        <table id="ninos" class="table table-striped">
             <thead>
                 <tr>
                     <th scope="col">Nombre</th>
@@ -55,4 +60,18 @@
             </tbody>
         </table>
     </div>
+@endsection
+
+
+<!-- Scripts para datatables -->
+@section('js')
+    <script src="https://code.jquery.com/jquery-3.5.1.js" />
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" />
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" />
+
+    <script>
+        $(document).ready(function() {
+            $('#ninos').DataTable();
+        });
+    </script>
 @endsection
