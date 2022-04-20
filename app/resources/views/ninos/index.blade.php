@@ -2,6 +2,7 @@
 
 <!-- CSS para datatables -->
 @section('css')
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
     <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
 @endsection
 
@@ -77,6 +78,7 @@
                     url: "//cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"
                 },
 
+                //Opciones para cuantos registros mostar
                 lengthMenu: [
                     [5, 10, 50, -1],
                     [5, 10, 50, "Mostrar todo"]
