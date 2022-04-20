@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-fluid ">
         <h1>Editar registro de niño</h1>
-        <form method="POST" action="{{ route('personajes.update', $nino->id) }}">
+        <form method="POST" action="{{ route('ninos.update', $nino->id) }}">
             @csrf
             @method('PUT')>
             <div class="d-flex gap-5">
