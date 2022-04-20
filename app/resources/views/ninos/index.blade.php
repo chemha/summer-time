@@ -2,7 +2,7 @@
 
 <!-- CSS para datatables -->
 @section('css')
-    <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+    <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -12,7 +12,9 @@
                 {{ session('alert')['message'] }}
             </div>
         @endif
+
         <a href="{{ route('ninos.create') }}" class="btn btn-primary">Crear nino</a>
+
         <table id="ninos" class="table table-striped table-bordered shadow-lg" style="width: 100%">
             <thead class="bg-primary text-white">
                 <tr>
