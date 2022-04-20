@@ -13,8 +13,8 @@
             </div>
         @endif
         <a href="{{ route('ninos.create') }}" class="btn btn-primary">Crear nino</a>
-        <table id="ninos" class="table table-striped">
-            <thead>
+        <table id="ninos" class="table table-striped table-bordered shadow-lg">
+            <thead class="bg-primary text-white">
                 <tr>
                     <th scope="col">Nombre</th>
                     <th scope="col">Apellidos</th>
@@ -71,7 +71,9 @@
 
     <script>
         $(document).ready(function() {
-            $('#ninos').DataTable();
+            $('#ninos').DataTable({
+                "lengthMenu": [[5, 10, 50, -1]], [5, 10, 50, "Mostrar todo"]]
+            });
         });
     </script>
 @endsection
