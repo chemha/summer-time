@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="container w-100">
         @if (session('alert'))
             <div class="alert alert-{{ session('alert')['type'] }}" role="alert">
                 {{ session('alert')['message'] }}
@@ -15,7 +15,7 @@
 
         <a href="{{ route('ninos.create') }}" class="btn btn-primary">Crear nino</a>
 
-        <table id="ninos" class="table table-striped table-bordered shadow-lg w-100">
+        <table id="ninos" class="table table-striped table-bordered shadow-lg">
             <thead class="">
                 <tr>
                     <th scope="col">Nombre</th>
