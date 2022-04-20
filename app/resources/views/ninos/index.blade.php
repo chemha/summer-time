@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid px-2">
+    <div class="container-fluid px-5">
         @if (session('alert'))
             <div class="alert alert-{{ session('alert')['type'] }}" role="alert">
                 {{ session('alert')['message'] }}
