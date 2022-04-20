@@ -93,7 +93,8 @@
                         <div class="col">
                             <label for="observacionesMedicas">Observaciones médicas</label>
                             <input type="text" class="form-control @error('observacionesMedicas') is-invalid @enderror"
-                                name="observacionesMedicas" value="{{ $nino->observacionesMedicas }}" autocomplete="off" autofocus>
+                                name="observacionesMedicas" value="{{ $nino->observacionesMedicas }}" autocomplete="off"
+                                autofocus>
                             @error('observacionesMedicas')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -164,12 +165,12 @@
                         <div class="col">
                             <label for="grupo">Grupo</label>
                             <select class="form-select w-50 float-left @error('grupo') is-invalid @enderror" name="grupo"
-                                id="grupo" value="{{ old('grupo') }}" required autocomplete="off" autofocus>
-                                <option disabled selected value>Elige un grupo</option>
-                                <option value="1">Grupo 1</option>
-                                <option value="2">Grupo 2</option>
-                                <option value="3">Grupo 3</option>
-                                <option value="4">Grupo 4</option>
+                                id="grupo" required autocomplete="off" autofocus>
+                                <option disabled value>Elige un grupo</option>
+                                <option value="1" {{ $nino->grupo == 1 ? 'selected' : '' }}>Grupo 1</option>
+                                <option value="2" {{ $nino->grupo == 2 ? 'selected' : '' }}>Grupo 2</option>
+                                <option value="3" {{ $nino->grupo == 3 ? 'selected' : '' }}>Grupo 3</option>
+                                <option value="4" {{ $nino->grupo == 4 ? 'selected' : '' }}>Grupo 4</option>
                             </select>
 
                             @error('grupo')
@@ -182,12 +183,12 @@
                         <div class="col">
                             <label for="horario">Horario</label>
                             <select class="form-select w-50  @error('horario') is-invalid @enderror" name="horario"
-                                id="horario" value="{{ old('horario') }}" required autocomplete="off" autofocus>
-                                <option disabled selected value>Elige un horario</option>
-                                <option value="1">1 - 2</option>
-                                <option value="2">2 - 3</option>
-                                <option value="3">3 - 4</option>
-                                <option value="4">5 - 6</option>
+                                id="horario" required autocomplete="off" autofocus>
+                                <option disabled value>Elige un horario</option>
+                                <option value="1" {{ $nino->horario == 1 ? 'selected' : '' }}>1 - 2</option>
+                                <option value="2" {{ $nino->horario == 2 ? 'selected' : '' }}>2 - 3</option>
+                                <option value="3" {{ $nino->horario == 3 ? 'selected' : '' }}>3 - 4</option>
+                                <option value="4" {{ $nino->horario == 4 ? 'selected' : '' }}>5 - 6</option>
                             </select>
 
                             @error('horario')
@@ -327,7 +328,7 @@
                     <label for="pago">Pago</label>
 
                     <input value="0" type="number" class="form-control @error('pago') is-invalid @enderror" name="pago"
-                       value="{{ $nino->pago }}" required autocomplete="off" autofocus>
+                        value="{{ $nino->pago }}" required autocomplete="off" autofocus>
                     @error('pago')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
