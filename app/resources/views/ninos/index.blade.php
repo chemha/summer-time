@@ -6,7 +6,10 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid px-5">
+    <div class="container-fluid p-5">
+
+        <h1>Listado de registros de niños</h1>
+
         @if (session('alert'))
             <div class="alert alert-{{ session('alert')['type'] }}" role="alert">
                 {{ session('alert')['message'] }}
