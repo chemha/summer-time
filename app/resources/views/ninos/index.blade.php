@@ -72,12 +72,15 @@
     <script>
         $(document).ready(function() {
             $('#ninos').DataTable({
-                lengthMenu: [[5, 10, 50, -1], [5, 10, 50, "Mostrar todo"]],
-
                 //Traducciones al español..
-                language: {
+                "language": {
                     url: "https//cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"
                 },
+
+                "lengthMenu": [
+                    [5, 10, 50, -1],
+                    [5, 10, 50, "Mostrar todo"]
+                ],
             });
         });
     </script>
