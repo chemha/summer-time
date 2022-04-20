@@ -321,7 +321,7 @@
                         autocomplete="off" autofocus>
                         <option disabled value>Elige un estado</option>
                         <option value="1" {{ $nino->recibo == 1 ? 'selected' : '' }}>Pagado</option>
-                        <option value="2" {{ $nino->recibo == 2 ? 'selected' : '' }}>>Pendiente</option>
+                        <option value="2" {{ $nino->recibo == 2 ? 'selected' : '' }}>Pendiente</option>
                     </select>
 
                     @error('recibo')
@@ -334,7 +334,7 @@
                 <div class="col">
                     <label for="pago">Pago</label>
 
-                    <input value="0" type="number" class="form-control @error('pago') is-invalid @enderror" name="pago"
+                    <input type="number" class="form-control @error('pago') is-invalid @enderror" name="pago"
                         value="{{ $nino->pago }}" required autocomplete="off" autofocus>
                     @error('pago')
                         <span class="invalid-feedback" role="alert">
