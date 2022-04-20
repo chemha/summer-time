@@ -297,7 +297,7 @@
                                 Anotaciones
                             </label>
                             <textarea name="anotaciones" rows="5" cols="52" class="form-control @error('anotaciones') is-invalid @enderror"
-                                autocomplete="off" autofocus value={{ $nino->anotaciones }}></textarea>
+                                autocomplete="off" autofocus>{{ $nino->anotaciones }}</textarea>
 
                             @error('anotaciones')
                                 <span class="invalid-feedback" role="alert">
