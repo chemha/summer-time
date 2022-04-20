@@ -314,6 +314,7 @@
                     </label>
                     <select class="form-select @error('recibo') is-invalid @enderror" name="recibo" id="recibo"
                         value="{{ old('recibo') }}" required autocomplete="off" autofocus>
+                        <option disabled selected value>Elige un estado</option>
                         <option value="1">Pagado</option>
                         <option value="2">Pendiente</option>
                     </select>

@@ -5,7 +5,8 @@
         <h1>Editar registro de niño</h1>
         <form method="POST" action="{{ route('ninos.update', $nino->id) }}">
             @csrf
-            @method('PUT')>
+            @method('PUT')
+
             <div class="d-flex gap-5">
                 <!-- Panel izquierdo -->
                 <div class="col">
@@ -318,10 +319,11 @@
                     <label for="recibo">
                         Estado del recibo
                     </label>
-                    <select class="form-select @error('recibo') is-invalid @enderror" name="recibo" id="recibo"
-                        value="{{ old('recibo') }}" required autocomplete="off" autofocus>
-                        <option value="1">Pagado</option>
-                        <option value="2">Pendiente</option>
+                    <select class="form-select @error('recibo') is-invalid @enderror" name="recibo" id="recibo" required
+                        autocomplete="off" autofocus>
+                        <option disabled value>Elige un estado</option>
+                        <option value="1" {{ $nino->recibo == 1 ? 'selected' : '' }}>Pagado</option>
+                        <option value="2" {{ $nino->recibo == 2 ? 'selected' : '' }}>>Pendiente</option>
                     </select>
 
                     @error('recibo')

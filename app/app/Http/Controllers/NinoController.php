@@ -63,6 +63,8 @@ class NinoController extends Controller
 
             "datos" => $request->has('datos'),
             "fotos" => $request->has('fotos'),
+            "anotaciones" => $request->anotaciones,
+
             "recibo" => $request->recibo,
             "pago" => $request->pago,
         ]);
@@ -105,7 +107,36 @@ class NinoController extends Controller
      */
     public function update(Request $request, Nino $nino)
     {
-        //
+        $nino->update([
+            "nombre" => $request->nombre,
+            "apellidos" => $request->apellidos,
+            "edad" => $request->edad,
+            "hermanos" => $request->hermanos,
+
+            //En los campos booleanos es necesario usar has(), si no los checkboxes vacios devuelven null
+            "medicacion" => $request->has('medicacion'),
+            "especial" => $request->has('especial'),
+            "observacionesMedicas" => $request->observacionesMedicas,
+
+            "tutor" => $request->tutor,
+            "email" => $request->email,
+            "telefono1" => $request->telefono1,
+            "telefono2" => $request->telefono2,
+
+            "grupo" => $request->grupo,
+            "horario" => $request->horario,
+            "quincena1" => $request->has('quincena1'),
+            "quincena2" => $request->has('quincena2'),
+            "quincena3" => $request->has('quincena3'),
+            "quincena4" => $request->has('quincena4'),
+
+            "datos" => $request->has('datos'),
+            "fotos" => $request->has('fotos'),
+            "anotaciones" => $request->anotaciones,
+
+            "recibo" => $request->recibo,
+            "pago" => $request->pago,
+        ]);
     }
 
     /**
