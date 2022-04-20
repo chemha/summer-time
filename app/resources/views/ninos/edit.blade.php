@@ -67,7 +67,8 @@
                         <div class="col my-1">
 
                             <input type="checkbox" class="form-check-input @error('medicacion') is-invalid @enderror"
-                                name="medicacion" value="{{ $nino->medicacion }}" autocomplete="off" autofocus>
+                                name="medicacion" autocomplete="off" autofocus
+                                {{ $nino->medicacion == 1 ? 'checked' : '' }}>
                             @error('medicacion')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -79,7 +80,7 @@
                         <div class="col my-1">
 
                             <input type="checkbox" class="form-check-input @error('especial') is-invalid @enderror"
-                                name="especial" value="{{ $nino->especial }}" autocomplete="off" autofocus>
+                                name="especial" autocomplete="off" autofocus {{ $nino->especial == 1 ? 'checked' : '' }}>
                             @error('especial')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -203,7 +204,8 @@
                     <div class="row row-cols-2 my-2">
                         <div class="col my-1">
                             <input type="checkbox" class="form-check-input @error('quincena1') is-invalid @enderror"
-                                name="quincena1" value="{{ $nino->quincena1 }}" autocomplete="off" autofocus>
+                                name="quincena1" autocomplete="off" autofocus
+                                {{ $nino->quincena1 == 1 ? 'checked' : '' }}>
                             @error('quincena1')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -216,7 +218,8 @@
                         </div>
                         <div class="col my-1">
                             <input type="checkbox" class="form-check-input @error('quincena2') is-invalid @enderror"
-                                name="quincena2" value="{{ $nino->quincena2 }}" autocomplete="off" autofocus>
+                                name="quincena2" autocomplete="off" autofocus
+                                {{ $nino->quincena2 == 1 ? 'checked' : '' }}>
                             @error('quincena1')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -229,7 +232,8 @@
                         </div>
                         <div class="col my-1">
                             <input type="checkbox" class="form-check-input @error('quincena3') is-invalid @enderror"
-                                name="quincena3" value="{{ $nino->quincena3 }}" autocomplete="off" autofocus>
+                                name="quincena3" autocomplete="off" autofocus
+                                {{ $nino->quincena3 == 1 ? 'checked' : '' }}>
                             @error('quincena3')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -242,7 +246,8 @@
                         </div>
                         <div class="col my-1">
                             <input type="checkbox" class="form-check-input @error('quincena4') is-invalid @enderror"
-                                name="quincena4" value="{{ $nino->quincena4 }}" autocomplete="off" autofocus>
+                                name="quincena4" autocomplete="off" autofocus
+                                {{ $nino->quincena4 == 1 ? 'checked' : '' }}>
                             @error('quincena4')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -258,7 +263,7 @@
                     <div class="row my-2">
                         <div class="col my-1">
                             <input type="checkbox" class="form-check-input @error('datos') is-invalid @enderror"
-                                name="datos" value="{{ $nino->datos }}" autocomplete="off" autofocus>
+                                name="datos" autocomplete="off" autofocus {{ $nino->datos == 1 ? 'checked' : '' }}>
                             @error('datos')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -272,7 +277,7 @@
 
                         <div class="col my-1">
                             <input type="checkbox" class="form-check-input @error('fotos') is-invalid @enderror"
-                                name="fotos" value="{{ $nino->fotos }}" autocomplete="off" autofocus>
+                                name="fotos" autocomplete="off" autofocus {{ $nino->fotos == 1 ? 'checked' : '' }}>
                             @error('fotos')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -291,7 +296,9 @@
                                 Anotaciones
                             </label>
                             <textarea name="anotaciones" rows="5" cols="52" class="form-control @error('anotaciones') is-invalid @enderror"
-                                autocomplete="off" autofocus value="{{ $nino->anotaciones }}"></textarea>
+                                autocomplete="off" autofocus>
+                                {{ $nino->anotaciones }}
+                            </textarea>
 
                             @error('anotaciones')
                                 <span class="invalid-feedback" role="alert">
