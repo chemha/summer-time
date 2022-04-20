@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container-fluid ">
+        <h1>Crear registro de niño</h1>
         <form method="POST" action="{{ route('ninos.store') }}">
             @csrf
 
