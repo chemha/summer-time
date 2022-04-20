@@ -93,7 +93,7 @@ class NinoController extends Controller
      */
     public function edit(Nino $nino)
     {
-        //
+        return view('nino.edit', compact('nino'));
     }
 
     /**
