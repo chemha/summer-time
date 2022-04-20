@@ -137,6 +137,11 @@ class NinoController extends Controller
             "recibo" => $request->recibo,
             "pago" => $request->pago,
         ]);
+
+        return redirect()->route('ninos.index')->with('alert', [
+            'type' => 'success',
+            'message' => "El registro se ha modificado correctamente.",
+        ]);
     }
 
     /**
