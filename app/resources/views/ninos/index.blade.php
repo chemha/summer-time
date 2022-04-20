@@ -73,11 +73,11 @@
         $(document).ready(function() {
             $('#ninos').DataTable({
                 //Traducciones al español..
-                "language": {
-                    url: "https//cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"
+                language: {
+                    url: "//cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"
                 },
 
-                "lengthMenu": [
+                lengthMenu: [
                     [5, 10, 50, -1],
                     [5, 10, 50, "Mostrar todo"]
                 ],
