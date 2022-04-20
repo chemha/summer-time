@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid px-5">
+    <div class="container-fluid">
 
         <h1>Listado de registros de niños</h1>
 

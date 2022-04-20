@@ -28,7 +28,7 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-dark shadow-sm">
-            <div class="container-fluid px-5">
+            <div class="container-fluid px-4">
                 <a class="navbar-brand text-white" href="{{ url('/') }}">
                     <!--{{ config('app.name', 'Laravel') }}-->
                     <img class="logo" src="{{ asset('img/logo.png') }}">
@@ -87,7 +87,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="p-4">
             @yield('content')
         </main>
     </div>
