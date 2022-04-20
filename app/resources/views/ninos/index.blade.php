@@ -2,7 +2,6 @@
 
 <!-- CSS para datatables -->
 @section('css')
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
     <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
 @endsection
 
@@ -14,7 +13,7 @@
             </div>
         @endif
         <a href="{{ route('ninos.create') }}" class="btn btn-primary">Crear nino</a>
-        <table id="ninos" class="table table-striped table-bordered shadow-lg">
+        <table id="ninos" class="table table-striped table-bordered shadow-lg" style="width: 100%">
             <thead class="bg-primary text-white">
                 <tr>
                     <th scope="col">Nombre</th>
@@ -63,7 +62,6 @@
     </div>
 @endsection
 
-
 <!-- Scripts para datatables -->
 @section('js')
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -73,7 +71,7 @@
     <script>
         $(document).ready(function() {
             $('#ninos').DataTable({
-                //Traducciones al español..
+                //Traducciones al español
                 language: {
                     url: "//cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"
                 },
