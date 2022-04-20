@@ -15,8 +15,8 @@
 
         <a href="{{ route('ninos.create') }}" class="btn btn-primary">Crear nino</a>
 
-        <table id="ninos" class="table table-striped table-bordered shadow-lg" style="width: 100%">
-            <thead class="bg-primary text-white">
+        <table id="ninos" class="table table-striped table-bordered shadow-lg w-100">
+            <thead class="">
                 <tr>
                     <th scope="col">Nombre</th>
                     <th scope="col">Apellidos</th>
@@ -80,8 +80,8 @@
 
                 //Opciones para cuantos registros mostar
                 lengthMenu: [
-                    [5, 10, 50, -1],
-                    [5, 10, 50, "Mostrar todo"]
+                    [7, 12, 50, -1],
+                    [7, 12, 50, "Mostrar todo"]
                 ],
             });
         });
