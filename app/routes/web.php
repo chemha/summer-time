@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+/*
 //Crear y guardar niños
 Route::get('/ninos/create', [NinoController::class, 'create'])->name('ninos.create');
 Route::post('/ninos', [NinoController::class, 'store'])->name('ninos.store');
@@ -33,3 +33,5 @@ Route::get('/ninos/{nino}/edit', [NinoController::class, 'edit'])->name('ninos.e
 Route::put('/ninos/{nino}', [NinoController::class, 'update'])->name('ninos.update');
 //Borrar niño
 Route::delete('/ninos/{nino}', [NinoController::class, 'destroy'])->name('ninos.destroy');
+*/
+Route::resource('ninos', NinoController::class);
