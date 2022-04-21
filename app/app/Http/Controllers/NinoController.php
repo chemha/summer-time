@@ -14,7 +14,11 @@ class NinoController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         //
+=======
+        return view('ninos.index', ['ninos' => Nino::all()]);
+>>>>>>> parent of b1ddc61 (Pruebas)
     }
 
     /**
@@ -24,7 +28,12 @@ class NinoController extends Controller
      */
     public function create()
     {
+<<<<<<< HEAD
         //
+=======
+        //Redirección al formulario
+        return view('ninos.create');
+>>>>>>> parent of b1ddc61 (Pruebas)
     }
 
     /**
@@ -35,7 +44,48 @@ class NinoController extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< HEAD
         //
+=======
+
+        //Inserción de datos
+        Nino::create([
+            "nombre" => $request->nombre,
+            "apellidos" => $request->apellidos,
+            "edad" => $request->edad,
+            "hermanos" => $request->hermanos,
+
+            //En los campos booleanos es necesario usar has(), si no los checkboxes vacios devuelven null
+            "medicacion" => $request->has('medicacion'),
+            "especial" => $request->has('especial'),
+            "observacionesMedicas" => $request->observacionesMedicas,
+
+            "tutor" => $request->tutor,
+            "email" => $request->email,
+            "telefono1" => $request->telefono1,
+            "telefono2" => $request->telefono2,
+
+            "grupo" => $request->grupo,
+            "horario" => $request->horario,
+            "quincena1" => $request->has('quincena1'),
+            "quincena2" => $request->has('quincena2'),
+            "quincena3" => $request->has('quincena3'),
+            "quincena4" => $request->has('quincena4'),
+
+            "datos" => $request->has('datos'),
+            "fotos" => $request->has('fotos'),
+            "anotaciones" => $request->anotaciones,
+
+            "recibo" => $request->recibo,
+            "pago" => $request->pago,
+        ]);
+
+        //Vuelta al index con mensaje confirmando la creación
+        return redirect()->route('ninos.index')->with('alert', [
+            'type' => 'success',
+            'message' => "Registro guardado correctamente.",
+        ]);
+>>>>>>> parent of b1ddc61 (Pruebas)
     }
 
     /**
@@ -57,7 +107,11 @@ class NinoController extends Controller
      */
     public function edit(Nino $nino)
     {
+<<<<<<< HEAD
         //
+=======
+        return view('ninos.edit', compact('nino'));
+>>>>>>> parent of b1ddc61 (Pruebas)
     }
 
     /**
@@ -69,7 +123,45 @@ class NinoController extends Controller
      */
     public function update(Request $request, Nino $nino)
     {
+<<<<<<< HEAD
         //
+=======
+        $nino->update([
+            "nombre" => $request->nombre,
+            "apellidos" => $request->apellidos,
+            "edad" => $request->edad,
+            "hermanos" => $request->hermanos,
+
+            //En los campos booleanos es necesario usar has(), si no los checkboxes vacios devuelven null
+            "medicacion" => $request->has('medicacion'),
+            "especial" => $request->has('especial'),
+            "observacionesMedicas" => $request->observacionesMedicas,
+
+            "tutor" => $request->tutor,
+            "email" => $request->email,
+            "telefono1" => $request->telefono1,
+            "telefono2" => $request->telefono2,
+
+            "grupo" => $request->grupo,
+            "horario" => $request->horario,
+            "quincena1" => $request->has('quincena1'),
+            "quincena2" => $request->has('quincena2'),
+            "quincena3" => $request->has('quincena3'),
+            "quincena4" => $request->has('quincena4'),
+
+            "datos" => $request->has('datos'),
+            "fotos" => $request->has('fotos'),
+            "anotaciones" => $request->anotaciones,
+
+            "recibo" => $request->recibo,
+            "pago" => $request->pago,
+        ]);
+
+        return redirect()->route('ninos.index')->with('alert', [
+            'type' => 'success',
+            'message' => "El registro se ha modificado correctamente.",
+        ]);
+>>>>>>> parent of b1ddc61 (Pruebas)
     }
 
     /**
@@ -80,6 +172,14 @@ class NinoController extends Controller
      */
     public function destroy(Nino $nino)
     {
+<<<<<<< HEAD
         //
+=======
+        $nino->delete();
+        return redirect()->route('ninos.index')->with('alert', [
+            'type' => 'success',
+            'message' => "El registro se ha borrado correctamente.",
+        ]);
+>>>>>>> parent of b1ddc61 (Pruebas)
     }
 }

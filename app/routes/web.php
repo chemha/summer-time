@@ -33,4 +33,3 @@ Route::get('/ninos/{nino}/edit', [NinoController::class, 'edit'])->name('ninos.e
 Route::put('/ninos/{nino}', [NinoController::class, 'update'])->name('ninos.update');
 //Borrar niño
 Route::delete('/ninos/{nino}', [NinoController::class, 'destroy'])->name('ninos.destroy');
-
