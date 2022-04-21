@@ -44,9 +44,6 @@ class NinoController extends Controller
      */
     public function store(Request $request)
     {
-<<<<<<< HEAD
-        //
-=======
 
         //Inserción de datos
         Nino::create([
@@ -85,7 +82,6 @@ class NinoController extends Controller
             'type' => 'success',
             'message' => "Registro guardado correctamente.",
         ]);
->>>>>>> parent of b1ddc61 (Pruebas)
     }
 
     /**
