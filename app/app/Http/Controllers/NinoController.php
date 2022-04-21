@@ -14,11 +14,7 @@ class NinoController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
-        //
-=======
         return view('ninos.index', ['ninos' => Nino::all()]);
->>>>>>> parent of b1ddc61 (Pruebas)
     }
 
     /**
@@ -28,12 +24,8 @@ class NinoController extends Controller
      */
     public function create()
     {
-<<<<<<< HEAD
-        //
-=======
         //Redirección al formulario
         return view('ninos.create');
->>>>>>> parent of b1ddc61 (Pruebas)
     }
 
     /**
