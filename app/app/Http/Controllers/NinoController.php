@@ -95,11 +95,7 @@ class NinoController extends Controller
      */
     public function edit(Nino $nino)
     {
-<<<<<<< HEAD
-        //
-=======
         return view('ninos.edit', compact('nino'));
->>>>>>> parent of b1ddc61 (Pruebas)
     }
 
     /**
@@ -111,9 +107,6 @@ class NinoController extends Controller
      */
     public function update(Request $request, Nino $nino)
     {
-<<<<<<< HEAD
-        //
-=======
         $nino->update([
             "nombre" => $request->nombre,
             "apellidos" => $request->apellidos,
@@ -149,7 +142,6 @@ class NinoController extends Controller
             'type' => 'success',
             'message' => "El registro se ha modificado correctamente.",
         ]);
->>>>>>> parent of b1ddc61 (Pruebas)
     }
 
     /**
@@ -160,14 +152,10 @@ class NinoController extends Controller
      */
     public function destroy(Nino $nino)
     {
-<<<<<<< HEAD
-        //
-=======
         $nino->delete();
         return redirect()->route('ninos.index')->with('alert', [
             'type' => 'success',
             'message' => "El registro se ha borrado correctamente.",
         ]);
->>>>>>> parent of b1ddc61 (Pruebas)
     }
 }
