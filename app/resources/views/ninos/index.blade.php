@@ -69,7 +69,7 @@
     <div id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div role="document">
             <div>
-                <form action="{{ route('ninos.destroy') }}" method="post">
+                <form action="{{-- route('ninos.destroy') --}}" method="post">
                     {{ csrf_field() }}
                     <div>
                         <button type=button data-dismiss="modal" aria-label="Close">

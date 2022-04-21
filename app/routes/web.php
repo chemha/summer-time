@@ -34,4 +34,6 @@ Route::put('/ninos/{nino}', [NinoController::class, 'update'])->name('ninos.upda
 //Borrar niño
 Route::delete('/ninos/{nino}', [NinoController::class, 'destroy'])->name('ninos.destroy');
 */
+
+//Solo esta linea sustituye a todas las demás
 Route::resource('ninos', NinoController::class);
