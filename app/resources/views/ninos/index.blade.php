@@ -129,8 +129,7 @@
                 dangerMode: true,
                 confirmButtonText: "Eliminar",
                 cancelButtonText: "Cancelar",
-            }).then((confimado) =>
-                if (confimado) form.submit());
+            }).then((confimado) => if (confimado) form.submit());
         });
     </script>
 @endsection
