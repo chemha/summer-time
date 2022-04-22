@@ -33,17 +33,17 @@
             <tbody>
                 @foreach ($ninos as $nino)
                     <tr>
+                        <!--
                         <td>{{ $nino->edad }}</td>
                         <td>{{ $nino->hermanos }}</td>
                         <td>{{ $nino->medicacion }}</td>
                         <td>{{ $nino->observacionesMedicas }}</td>
-                        <td>{{ $nino->nombre }}</td>
-                        <td>{{ $nino->nombre }}</td>
+                        -->
+
                         <td>{{ $nino->nombre }}</td>
                         <td>{{ $nino->apellidos }}</td>
                         <td>{{ $nino->tutor }}</td>
                         <td>{{ $nino->telefono1 }}</td>
-                        <td>{{ $nino->telefono2 }}</td>
 
                         <td>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalVer">
