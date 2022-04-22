@@ -118,12 +118,11 @@
                 title: "¿Estás seguro de que quieres eliminar este registro?",
                 text: "Estos cambios no pueden deshacerse",
                 icon: "warning",
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
+                buttons: true,
+                dangerMode: true,
 
-                confirmButtonText: 'Eliminar',
-                cancelButtonText: "Cancelar",
+                cancel: "Cancelar",
+                confirm: "Borrar"
             }).then((confimado) => {
                 if (confimado) form.submit();
             });
