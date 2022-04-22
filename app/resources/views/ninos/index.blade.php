@@ -49,7 +49,7 @@
                         <td>
                             <!-- Button trigger modal -->
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#modalBorrar">
+                                data-bs-target="#modalBorrar" data-id={{ $nino->id }}>
                                 Borrar
                             </button>
                         </td>
@@ -75,7 +75,7 @@
                     <form action="{{ route('ninos.destroy', 'id') }}">
                         @csrf
                         @method('DELETE')
-                        <button type="button" class="btn btn-danger">Borrar</button>
+                        <button type="submit" class="btn btn-danger">Borrar</button>
                     </form>
                 </div>
             </div>
