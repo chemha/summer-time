@@ -47,15 +47,11 @@
                             </a>
                         </td>
                         <td>
-                            <!--
-                                                    <form method="POST" action="{{ route('ninos.destroy', $nino->id) }}">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger">
-                                                            Eliminar
-                                                        </button>
-                                                    </form>
-                                                -->
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modalBorrar">
+                                Borrar
+                            </button>
                         </td>
                     </tr>
                 @endforeach
@@ -63,12 +59,7 @@
         </table>
     </div>
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBorrar">
-        Borrar
-    </button>
-
-    <!-- Modal -->
+    <!-- Modal para borrar -->
     <div class="modal fade" id="modalBorrar" tabindex="-1" aria-labelledby="modalBorrarLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -80,8 +71,12 @@
                     Esta acción no puede deshacerse.
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-danger">Borrar</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
+                    <form action="{{ route('ninos.destroy') }}">
+                        @csrf
+                        @method('DELETE')
+                        <button type="button" class="btn btn-danger">Borrar</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -109,11 +104,6 @@
                     [7, 12, 50, "Mostrar todo"]
                 ],
             });
-        });
-
-        $('.addAttr').click(function() {
-            const id = $(this).data('id');
-            $('#id').val(id);
         });
     </script>
 @endsection
