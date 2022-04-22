@@ -150,9 +150,10 @@ class NinoController extends Controller
      * @param  \App\Models\Nino  $nino
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Nino $nino)
+    public function destroy($id)
     {
-        $nino->delete();
+        Nino::find($id)->delete();
+        //$nino->delete();
         return redirect()->route('ninos.index')->with('alert', [
             'type' => 'success',
             'message' => "El registro se ha borrado correctamente.",
