@@ -121,8 +121,13 @@
                 buttons: true,
                 dangerMode: true,
 
-                cancel: "Cancelar",
-                confirm: "Borrar",
+                cancel: {
+                    text: "Cancelar",
+                },
+                
+                confirm: {
+                    text: "Confirmar".
+                },
             }).then((confimado) => {
                 if (confimado) form.submit();
             });
