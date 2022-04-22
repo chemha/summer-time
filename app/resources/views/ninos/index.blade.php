@@ -118,16 +118,8 @@
                 title: "¿Estás seguro de que quieres eliminar este registro?",
                 text: "Estos cambios no pueden deshacerse",
                 icon: "warning",
-                buttons: true,
+                buttons: ["Cancelar", "Eliminar"],
                 dangerMode: true,
-
-                cancel: {
-                    text: "Cancelar",
-                },
-
-                confirm: {
-                    text: "Confirmar",
-                },
             }).then((confimado) => {
                 if (confimado) form.submit();
             });
