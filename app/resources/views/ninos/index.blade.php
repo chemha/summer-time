@@ -56,12 +56,17 @@
                             </a>
                         </td>
                         <td>
+
+                            <a href="/ninos-delete/{{ $data->id }}" class="btn btn-danger delete-confirm"
+                                role="button">Delete</a>
+
                             <form method="POST" action="{{ route('ninos.destroy', $nino->id) }}">
                                 @csrf
                                 @method('DELETE')
-                                <button id="btnBorrar" class="btn btn-danger">
+                                <button id="btnBorrar" type="submit" class="btn btn-danger show-confirm">
                                     Eliminar
                                 </button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach
@@ -95,41 +100,42 @@
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="sweetalert2.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    <script type="text/javascript">
+        $('.show_confirm').click(function(event) {
+            var form = $(this).closest("form");
+            var name = $(this).data("name");
+            event.preventDefault();
+            swal({
+                    title: `Are you sure you want to delete this record?`,
+                    text: "If you delete this, it will be gone forever.",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        form.submit();
+                    }
+                });
+        });
 
-    <script>
-        //Preparación de datatables
-        $(document).ready(() => {
-            $('#ninos').DataTable({
-                //Traducciones al español
-                language: {
-                    url: "//cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"
-                },
+        <
+        script >
+            //Preparación de datatables
+            $(document).ready(() => {
+                $('#ninos').DataTable({
+                    //Traducciones al español
+                    language: {
+                        url: "//cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"
+                    },
 
-                //Opciones para cuantos registros mostar
-                lengthMenu: [
-                    [7, 12, 50, -1],
-                    [7, 12, 50, "Mostrar todo"]
-                ],
+                    //Opciones para cuantos registros mostar
+                    lengthMenu: [
+                        [7, 12, 50, -1],
+                        [7, 12, 50, "Mostrar todo"]
+                    ],
+                });
             });
-        });
-
-        $('#btnBorrar').click(function(event) {
-            const form = $(this).closest("form");
-            Swal.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    form.submit();
-                }
-            })
-        });
-    </script>
+    </>
 @endsection
