@@ -122,7 +122,7 @@
                 dangerMode: true,
 
                 cancel: "Cancelar",
-                confirm: "Borrar"
+                confirm: "Borrar",
             }).then((confimado) => {
                 if (confimado) form.submit();
             });
