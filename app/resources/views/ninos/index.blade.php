@@ -92,7 +92,7 @@
 
 <!-- Scripts para datatables y modales -->
 @section('js')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>-->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
@@ -115,12 +115,11 @@
         });
 
         $('.show_confirm').click(function(event) {
-            var form = $(this).closest("form");
-            var name = $(this).data("name");
+            const form = $(this).closest("form");
             event.preventDefault();
             swal({
-                    title: `Are you sure you want to delete this record?`,
-                    text: "If you delete this, it will be gone forever.",
+                    title: "¿Estás seguro de que quieres borrar este registro?",
+                    text: "Estos cambios no pueden deshacerse",
                     icon: "warning",
                     buttons: true,
                     dangerMode: true,
