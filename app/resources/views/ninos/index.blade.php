@@ -124,9 +124,9 @@
                 cancel: {
                     text: "Cancelar",
                 },
-                
+
                 confirm: {
-                    text: "Confirmar".
+                    text: "Confirmar",
                 },
             }).then((confimado) => {
                 if (confimado) form.submit();
