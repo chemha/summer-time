@@ -34,11 +34,11 @@
                 @foreach ($ninos as $nino)
                     <tr>
                         <!--
-                        <td>{{ $nino->edad }}</td>
-                        <td>{{ $nino->hermanos }}</td>
-                        <td>{{ $nino->medicacion }}</td>
-                        <td>{{ $nino->observacionesMedicas }}</td>
-                        -->
+                                    <td>{{ $nino->edad }}</td>
+                                    <td>{{ $nino->hermanos }}</td>
+                                    <td>{{ $nino->medicacion }}</td>
+                                    <td>{{ $nino->observacionesMedicas }}</td>
+                                    -->
 
                         <td>{{ $nino->nombre }}</td>
                         <td>{{ $nino->apellidos }}</td>
@@ -93,6 +93,7 @@
 <!-- Scripts para datatables y modales -->
 @section('js')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
@@ -114,21 +115,22 @@
             });
         });
 
+        //Preparación de evento para el modal
         $('.show_confirm').click(function(event) {
-            const form = $(this).closest("form");
             event.preventDefault();
+
+            const form = $(this).closest("form");
+
             swal({
-                    title: "¿Estás seguro de que quieres borrar este registro?",
-                    text: "Estos cambios no pueden deshacerse",
-                    icon: "warning",
-                    buttons: true,
-                    dangerMode: true,
-                })
-                .then((willDelete) => {
-                    if (willDelete) {
-                        form.submit();
-                    }
-                });
+                title: "¿Estás seguro de que quieres eliminar este registro?",
+                text: "Estos cambios no pueden deshacerse",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+                confirmButtonText: "Eliminar",
+                cancelButtonText: "Cancelar",
+            }).then((confimado) =>
+                if (confimado) form.submit());
         });
     </script>
 @endsection
