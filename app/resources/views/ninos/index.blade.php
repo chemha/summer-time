@@ -47,16 +47,15 @@
                             </a>
                         </td>
                         <td>
-
                             <!--
-                                                            <form method="POST" action="{{ route('ninos.destroy', $nino->id) }}">
-                                                                @csrf
-                                                                @method('DELETE')
-                                                                <button type="submit" class="btn btn-danger">
-                                                                    Eliminar
-                                                                </button>
-                                                            </form>
-                                                        -->
+                                                    <form method="POST" action="{{ route('ninos.destroy', $nino->id) }}">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="btn btn-danger">
+                                                            Eliminar
+                                                        </button>
+                                                    </form>
+                                                -->
                         </td>
                     </tr>
                 @endforeach
@@ -65,26 +64,23 @@
     </div>
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalBorrar">
-        Launch demo modal
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBorrar">
+        Borrar
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="modalBorrar" tabindex="-1" role="dialog" aria-labelledby="modalBorrarTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal fade" id="modalBorrar" tabindex="-1" aria-labelledby="modalBorrarLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalBorrarTitle">¿Seguro que quieres borrar el registro?</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <h5 class="modal-title" id="modalBorrarLabel">¿Estás seguro de que quieres borrar el registro?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     Esta acción no puede deshacerse.
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                     <button type="button" class="btn btn-danger">Borrar</button>
                 </div>
             </div>
