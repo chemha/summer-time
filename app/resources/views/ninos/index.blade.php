@@ -24,6 +24,7 @@
                     <th scope="col">Nombre</th>
                     <th scope="col">Apellidos</th>
                     <th scope="col">Tutor</th>
+                    <th scope="col">Telefono 1</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
                     <th scope="col"></th>
@@ -32,13 +33,20 @@
             <tbody>
                 @foreach ($ninos as $nino)
                     <tr>
+                        <td>{{ $nino->edad }}</td>
+                        <td>{{ $nino->hermanos }}</td>
+                        <td>{{ $nino->medicacion }}</td>
+                        <td>{{ $nino->observacionesMedicas }}</td>
+                        <td>{{ $nino->nombre }}</td>
+                        <td>{{ $nino->nombre }}</td>
                         <td>{{ $nino->nombre }}</td>
                         <td>{{ $nino->apellidos }}</td>
                         <td>{{ $nino->tutor }}</td>
+                        <td>{{ $nino->telefono1 }}</td>
+                        <td>{{ $nino->telefono2 }}</td>
 
                         <td>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#modalVer">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalVer">
                                 Ver
                             </button>
                         </td>
@@ -51,7 +59,7 @@
                             <form method="POST" action="{{ route('ninos.destroy', $nino->id) }}">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger">
+                                <button id="btnBorrar" type="submit" class="btn btn-danger">
                                     Eliminar
                                 </button>
                         </td>
@@ -87,6 +95,8 @@
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 
+    <script src="sweetalert2.all.min.js"></script>
+
     <script>
         //Preparación de datatables
         $(document).ready(() => {
@@ -102,6 +112,24 @@
                     [7, 12, 50, "Mostrar todo"]
                 ],
             });
+        });
+
+        $('#btnBorrar').click(function(event) {
+            var form = $(this).closest("form");
+            var name = $(this).data("name");
+            event.preventDefault();
+            swal({
+                    title: `Are you sure you want to delete this record?`,
+                    text: "If you delete this, it will be gone forever.",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        form.submit();
+                    }
+                });
         });
     </script>
 @endsection
