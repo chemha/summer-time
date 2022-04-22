@@ -75,6 +75,7 @@
                     <form action="{{ route('ninos.destroy', 'id') }}">
                         @csrf
                         @method('DELETE')
+                        <input id="id" name="id">
                         <button type="submit" class="btn btn-danger">Borrar</button>
                     </form>
                 </div>
@@ -104,6 +105,11 @@
                     [7, 12, 50, "Mostrar todo"]
                 ],
             });
+        });
+
+        $(document).on('click', '#modalBorrar', function() {
+            let id = $(this).attr('data-id');
+            $('#id').val(id);
         });
     </script>
 @endsection
