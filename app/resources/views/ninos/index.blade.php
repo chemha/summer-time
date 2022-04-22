@@ -122,7 +122,7 @@
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
 
-                confirmButtonText: 'Eliminar'
+                confirmButtonText: 'Eliminar',
                 cancelButtonText: "Cancelar",
             }).then((confimado) => {
                 if (confimado) form.submit();
