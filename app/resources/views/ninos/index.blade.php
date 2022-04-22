@@ -37,9 +37,10 @@
                         <td>{{ $nino->tutor }}</td>
 
                         <td>
-                            <a href="{{ route('ninos.show', $nino->id) }}" class="btn btn-primary">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modalVer">
                                 Ver
-                            </a>
+                            </button>
                         </td>
                         <td>
                             <a href="{{ route('ninos.edit', $nino->id) }}" class="btn btn-primary">
@@ -47,11 +48,12 @@
                             </a>
                         </td>
                         <td>
-                            <!-- Button trigger modal -->
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#modalBorrar" data-id={{ $nino->id }}>
-                                Borrar
-                            </button>
+                            <form method="POST" action="{{ route('ninos.destroy', $nino->id) }}">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">
+                                    Eliminar
+                                </button>
                         </td>
                     </tr>
                 @endforeach
@@ -59,25 +61,20 @@
         </table>
     </div>
 
-    <!-- Modal para borrar -->
-    <div class="modal fade" id="modalBorrar" tabindex="-1" aria-labelledby="modalBorrarLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+    <!-- Modal -->
+    <div class="modal fade" id="modalVer" tabindex="-1" aria-labelledby="modalVerLabel" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalBorrarLabel">¿Estás seguro de que quieres borrar el registro?</h5>
+                    <h5 class="modal-title" id="modalVerLabel">Modal title</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    Esta acción no puede deshacerse.
+                    ...
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
-                    <form action="{{ route('ninos.destroy', 'id') }}">
-                        @csrf
-                        @method('DELETE')
-                        <input id="id" name="id">
-                        <button type="submit" class="btn btn-danger">Borrar</button>
-                    </form>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
@@ -105,11 +102,6 @@
                     [7, 12, 50, "Mostrar todo"]
                 ],
             });
-        });
-
-        $(document).on('click', '#modalBorrar', function() {
-            let id = $(this).attr('data-id');
-            $('#id').val(id);
         });
     </script>
 @endsection
