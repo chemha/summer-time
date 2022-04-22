@@ -72,7 +72,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
-                    <form action="{{ route('ninos.destroy') }}">
+                    <form action="{{ route('ninos.destroy', 'id') }}">
                         @csrf
                         @method('DELETE')
                         <button type="button" class="btn btn-danger">Borrar</button>
