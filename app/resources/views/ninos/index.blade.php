@@ -33,13 +33,6 @@
             <tbody>
                 @foreach ($ninos as $nino)
                     <tr>
-                        <!--
-                                        <td>{{ $nino->edad }}</td>
-                                        <td>{{ $nino->hermanos }}</td>
-                                        <td>{{ $nino->medicacion }}</td>
-                                        <td>{{ $nino->observacionesMedicas }}</td>
-                                        -->
-
                         <td>{{ $nino->nombre }}</td>
                         <td>{{ $nino->apellidos }}</td>
                         <td>{{ $nino->tutor }}</td>
@@ -125,9 +118,11 @@
                 title: "¿Estás seguro de que quieres eliminar este registro?",
                 text: "Estos cambios no pueden deshacerse",
                 icon: "warning",
-                buttons: true,
-                dangerMode: true,
-                confirmButtonText: "Eliminar",
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+
+                confirmButtonText: 'Eliminar'
                 cancelButtonText: "Cancelar",
             }).then((confimado) => {
                 if (confimado) form.submit();
