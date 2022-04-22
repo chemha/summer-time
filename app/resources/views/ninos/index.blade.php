@@ -47,19 +47,16 @@
                             </a>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#exampleModalCenter">
-                                Launch demo modal
-                            </button>
+
                             <!--
-                                                    <form method="POST" action="{{ route('ninos.destroy', $nino->id) }}">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger">
-                                                            Eliminar
-                                                        </button>
-                                                    </form>
-                                                -->
+                                                        <form method="POST" action="{{ route('ninos.destroy', $nino->id) }}">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit" class="btn btn-danger">
+                                                                Eliminar
+                                                            </button>
+                                                        </form>
+                                                    -->
                         </td>
                     </tr>
                 @endforeach
@@ -68,7 +65,9 @@
     </div>
 
     <!-- Button trigger modal -->
-
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+        Launch demo modal
+    </button>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
