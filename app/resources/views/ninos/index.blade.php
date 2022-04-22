@@ -56,10 +56,6 @@
                             </a>
                         </td>
                         <td>
-
-                            <a href="/ninos-delete/{{ $data->id }}" class="btn btn-danger delete-confirm"
-                                role="button">Delete</a>
-
                             <form method="POST" action="{{ route('ninos.destroy', $nino->id) }}">
                                 @csrf
                                 @method('DELETE')
