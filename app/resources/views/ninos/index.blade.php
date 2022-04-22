@@ -98,6 +98,22 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
     <script type="text/javascript">
+        //Preparación de datatables
+        $(document).ready(() => {
+            $('#ninos').DataTable({
+                //Traducciones al español
+                language: {
+                    url: "//cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"
+                },
+
+                //Opciones para cuantos registros mostar
+                lengthMenu: [
+                    [7, 12, 50, -1],
+                    [7, 12, 50, "Mostrar todo"]
+                ],
+            });
+        });
+
         $('.show_confirm').click(function(event) {
             var form = $(this).closest("form");
             var name = $(this).data("name");
@@ -115,23 +131,5 @@
                     }
                 });
         });
-
-        <
-        script >
-            //Preparación de datatables
-            $(document).ready(() => {
-                $('#ninos').DataTable({
-                    //Traducciones al español
-                    language: {
-                        url: "//cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"
-                    },
-
-                    //Opciones para cuantos registros mostar
-                    lengthMenu: [
-                        [7, 12, 50, -1],
-                        [7, 12, 50, "Mostrar todo"]
-                    ],
-                });
-            });
-    </>
+    </script>
 @endsection
