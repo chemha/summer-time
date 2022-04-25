@@ -24,37 +24,37 @@
 
                     <!-- Campos ocultos -->
                     <!-- 0 -->
-                    <th scope="col">Edad</th>
+                    <th class="d-none" scope="col">Edad</th>
                     <!-- 1 -->
-                    <th scope="col">Hermanos</th>
+                    <th class="d-none" scope="col">Hermanos</th>
                     <!-- 2 -->
-                    <th scope="col">Medicacion</th>
+                    <th class="d-none" scope="col">Medicacion</th>
                     <!-- 3 -->
-                    <th scope="col">Especial</th>
+                    <th class="d-none" scope="col">Especial</th>
                     <!-- 4 -->
-                    <th scope="col">Observaciones Medicas</th>
+                    <th class="d-none" scope="col">Observaciones Medicas</th>
                     <!-- 5 -->
-                    <th scope="col">Email</th>
+                    <th class="d-none" scope="col">Email</th>
                     <!-- 6 -->
-                    <th scope="col">Telefono 2</th>
+                    <th class="d-none" scope="col">Telefono 2</th>
                     <!-- 7 -->
-                    <th scope="col">Grupo</th>
+                    <th class="d-none" scope="col">Grupo</th>
                     <!-- 8 -->
-                    <th scope="col">Horario</th>
+                    <th class="d-none" scope="col">Horario</th>
                     <!-- 9 -->
-                    <th scope="col">Quincena 1</th>
+                    <th class="d-none" scope="col">Quincena 1</th>
                     <!-- 10 -->
-                    <th scope="col">Quincena 2</th>
+                    <th class="d-none" scope="col">Quincena 2</th>
                     <!-- 11 -->
-                    <th scope="col">Quincena 3</th>
+                    <th class="d-none" scope="col">Quincena 3</th>
                     <!-- 12 -->
-                    <th scope="col">Quincena 4</th>
+                    <th class="d-none" scope="col">Quincena 4</th>
                     <!-- 13 -->
-                    <th scope="col">Autorizacion datos</th>
+                    <th class="d-none" scope="col">Autorizacion datos</th>
                     <!-- 14 -->
-                    <th scope="col">Autorizacion fotos</th>
+                    <th class="d-none" scope="col">Autorizacion fotos</th>
                     <!-- 15 -->
-                    <th scope="col">Anotaciones</th>
+                    <th class="d-none" scope="col">Anotaciones</th>
 
                     <!-- Campos visibles -->
                     <!-- 16 -->
@@ -78,22 +78,22 @@
                 @foreach ($ninos as $nino)
                     <tr>
                         <!-- Campos ocultos -->
-                        <td>{{ $nino->edad }}</td>
-                        <td>{{ $nino->hermanos }}</td>
-                        <td>{{ $nino->medicacion }}</td>
-                        <td>{{ $nino->especial }}</td>
-                        <td>{{ $nino->observacionesMedicas }}</td>
-                        <td>{{ $nino->email }}</td>
-                        <td>{{ $nino->telefono2 }}</td>
-                        <td>{{ $nino->grupo }}</td>
-                        <td>{{ $nino->horario }}</td>
-                        <td>{{ $nino->quincena1 }}</td>
-                        <td>{{ $nino->quincena2 }}</td>
-                        <td>{{ $nino->quincena3 }}</td>
-                        <td>{{ $nino->quincena4 }}</td>
-                        <td>{{ $nino->datos }}</td>
-                        <td>{{ $nino->fotos }}</td>
-                        <td>{{ $nino->anotaciones }}</td>
+                        <td class="d-none">{{ $nino->edad }}</td>
+                        <td class="d-none">{{ $nino->hermanos }}</td>
+                        <td class="d-none">{{ $nino->medicacion }}</td>
+                        <td class="d-none">{{ $nino->especial }}</td>
+                        <td class="d-none">{{ $nino->observacionesMedicas }}</td>
+                        <td class="d-none">{{ $nino->email }}</td>
+                        <td class="d-none">{{ $nino->telefono2 }}</td>
+                        <td class="d-none">{{ $nino->grupo }}</td>
+                        <td class="d-none">{{ $nino->horario }}</td>
+                        <td class="d-none">{{ $nino->quincena1 }}</td>
+                        <td class="d-none">{{ $nino->quincena2 }}</td>
+                        <td class="d-none">{{ $nino->quincena3 }}</td>
+                        <td class="d-none">{{ $nino->quincena4 }}</td>
+                        <td class="d-none">{{ $nino->datos }}</td>
+                        <td class="d-none">{{ $nino->fotos }}</td>
+                        <td class="d-none">{{ $nino->anotaciones }}</td>
 
                         <!-- Campos visibles -->
                         <td>{{ $nino->nombre }}</td>
