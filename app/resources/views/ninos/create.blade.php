@@ -42,7 +42,7 @@
                         <div class="col">
                             <label for="edad">Edad</label>
                             <input type="number" class="form-control w-25 @error('edad') is-invalid @enderror" name="edad"
-                                value="{{ old('edad') }}" required autocomplete="off" autofocus>
+                                value="{{ old('edad') }}" required autocomplete="off" autofocus min="1" max="18">
                             @error('edad')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -53,7 +53,7 @@
                         <div class="col">
                             <label for="hermanos">Hermanos</label>
                             <input type="number" class="form-control w-25 @error('hermanos') is-invalid @enderror"
-                                name="hermanos" value="{{ old('hermanos') }}" autocomplete="off" autofocus>
+                                name="hermanos" value="{{ old('hermanos') }}" autocomplete="off" autofocus min="0">
                             @error('hermanos')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -165,8 +165,8 @@
                     <div class="row my-2 ">
                         <div class="col">
                             <label for="grupo">Grupo</label>
-                            <select class="form-select w-50 float-left @error('grupo') is-invalid @enderror" name="grupo" id="grupo"
-                                value="{{ old('grupo') }}" required autocomplete="off" autofocus>
+                            <select class="form-select w-50 float-left @error('grupo') is-invalid @enderror" name="grupo"
+                                id="grupo" value="{{ old('grupo') }}" required autocomplete="off" autofocus>
                                 <option disabled selected value>Elige un grupo</option>
                                 <option value="1">Grupo 1</option>
                                 <option value="2">Grupo 2</option>

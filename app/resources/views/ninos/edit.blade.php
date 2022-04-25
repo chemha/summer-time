@@ -42,7 +42,7 @@
                         <div class="col">
                             <label for="edad">Edad</label>
                             <input type="number" class="form-control w-25 @error('edad') is-invalid @enderror" name="edad"
-                                value="{{ $nino->edad }}" required autocomplete="off" autofocus>
+                                value="{{ $nino->edad }}" required autocomplete="off" autofocus min="1" max="18">
                             @error('edad')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -53,7 +53,7 @@
                         <div class="col">
                             <label for="hermanos">Hermanos</label>
                             <input type="number" class="form-control w-25 @error('hermanos') is-invalid @enderror"
-                                name="hermanos" value="{{ $nino->hermanos }}" autocomplete="off" autofocus>
+                                name="hermanos" value="{{ $nino->hermanos }}" autocomplete="off" autofocus min="0">
                             @error('hermanos')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>

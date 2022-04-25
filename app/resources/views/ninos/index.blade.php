@@ -108,7 +108,7 @@
             });
         });
 
-        //Preparación de evento para el modal
+        //Preparación de evento para el modal de eliminación
         $('.show_confirm').click(function(event) {
             event.preventDefault();
 
