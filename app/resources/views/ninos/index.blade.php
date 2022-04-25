@@ -166,7 +166,7 @@
     <script type="text/javascript">
         //Preparación de datatables
         $(document).ready(() => {
-            $('#ninos').DataTable({
+            const tabla = $('#ninos').DataTable({
                 //Traducciones al español
                 language: {
                     url: "//cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json"
@@ -184,23 +184,23 @@
                     searchable: false,
                 }],
             });
-        });
 
-        $('#ninos tbody').on('click', 'tr', function() {
-            const datos = table.row(this).data();
-            /*
-            $("#mTipo .modal-title").text("Tipo: " + datos[1]);
-            $('#fModComunicacion').attr('action', 'comunicaciones/' + datos[0]);
+            $('#ninos tbody').on('click', 'tr', function() {
+                const datos = table.row(this).data();
+                /*
+                $("#mTipo .modal-title").text("Tipo: " + datos[1]);
+                $('#fModComunicacion').attr('action', 'comunicaciones/' + datos[0]);
 
-            $("#mComunicacion .modal-title").text(datos[1]);
-            $("#mComunicacion #lEmisor").text("Emisor: " + datos[4]);
-            $("#mComunicacion #lTipo").text("Tipo: " + datos[3]);
-            //$("#mComunicacion #lDepartamento").text("Departamento: " + data[5]);
-            $("#mComunicacion #lFecha").text("Fecha: " + datos[6]);
-            $("#mComunicacion #lEstado").text("Estado: " + datos[7]);
-            $("#mComunicacion #asunto").text(datos[2]);
-            */
-            $('#modalVer').modal("show");
+                $("#mComunicacion .modal-title").text(datos[1]);
+                $("#mComunicacion #lEmisor").text("Emisor: " + datos[4]);
+                $("#mComunicacion #lTipo").text("Tipo: " + datos[3]);
+                //$("#mComunicacion #lDepartamento").text("Departamento: " + data[5]);
+                $("#mComunicacion #lFecha").text("Fecha: " + datos[6]);
+                $("#mComunicacion #lEstado").text("Estado: " + datos[7]);
+                $("#mComunicacion #asunto").text(datos[2]);
+                */
+                $('#modalVer').modal("show");
+            });
         });
 
         //Preparación de evento para el modal de eliminación
