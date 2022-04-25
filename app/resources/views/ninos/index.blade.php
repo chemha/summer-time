@@ -206,7 +206,7 @@
             });
 
             //Preparacion del evento para mostra los datos en el modal
-            $("#ninos tbody").on("click", "tr", () => {
+            $("#ninos tbody").on("click", "tr", function() {
                 const fila = tabla.row(this).data();
                 console.log(fila);
                 const nino = {
