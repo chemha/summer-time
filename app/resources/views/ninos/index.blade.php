@@ -54,6 +54,7 @@
             <tbody>
                 @foreach ($ninos as $nino)
                     <tr>
+                        <!-- Campos ocultos -->
                         <td>{{ $nino->hermanos }}</td>
                         <td>{{ $nino->medicacion }}</td>
                         <td>{{ $nino->especial }}</td>
@@ -70,6 +71,7 @@
                         <td>{{ $nino->fotos }}</td>
                         <td>{{ $nino->anotaciones }}</td>
 
+                        <!-- Campos visibles -->
                         <td>{{ $nino->nombre }}</td>
                         <td>{{ $nino->apellidos }}</td>
                         <td>{{ $nino->tutor }}</td>
@@ -107,11 +109,42 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalVerLabel">Modal title</h5>
+                    <h5 class="modal-title" id="modalVerLabel">Visualizar registro</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <div class="row">
+                        <div class="col">
+                            <ul>
+                                <li id="nombre">Nombre:</li>
+                                <li id="apellidos">apellidos:</li>
+                                <li id="edad">edad:</li>
+                                <li id="hermanos">hermanos:</li>
+                                <li id="medicacion">medicacion:</li>
+                                <li id="especial">especial:</li>
+                                <li id="observacionesMedicas">observacionesMedicas:</li>
+                                <li id="tutor">tutor:</li>
+                                <li id="email">email:</li>
+                                <li id="telefono1">telefono1:</li>
+                                <li id="telefono2">telefono2:</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <ul>
+                                <li id="grupo">grupo:</li>
+                                <li id="horario">horario:</li>
+                                <li id="quincena1">quincena1:</li>
+                                <li id="quincena2">quincena2:</li>
+                                <li id="quincena3">quincena3:</li>
+                                <li id="quincena4">quincena4:</li>
+                                <li id="datos">datos:</li>
+                                <li id="fotos">fotos:</li>
+                                <li id="anotaciones">anotaciones:</li>
+                                <li id="recibo">recibo:</li>
+                                <li id="pago">pago:</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -149,8 +182,25 @@
                     targets: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
                     visible: false,
                     searchable: false,
-                }, ],
+                }],
             });
+        });
+
+        $('#ninos tbody').on('click', 'tr', function() {
+            const datos = table.row(this).data();
+            /*
+            $("#mTipo .modal-title").text("Tipo: " + datos[1]);
+            $('#fModComunicacion').attr('action', 'comunicaciones/' + datos[0]);
+
+            $("#mComunicacion .modal-title").text(datos[1]);
+            $("#mComunicacion #lEmisor").text("Emisor: " + datos[4]);
+            $("#mComunicacion #lTipo").text("Tipo: " + datos[3]);
+            //$("#mComunicacion #lDepartamento").text("Departamento: " + data[5]);
+            $("#mComunicacion #lFecha").text("Fecha: " + datos[6]);
+            $("#mComunicacion #lEstado").text("Estado: " + datos[7]);
+            $("#mComunicacion #asunto").text(datos[2]);
+            */
+            $('#modalVer').modal("show");
         });
 
         //Preparación de evento para el modal de eliminación
