@@ -23,29 +23,53 @@
                 <tr>
 
                     <!-- Campos ocultos -->
+                    <!-- 0 -->
+                    <th scope="col">Edad</th>
+                    <!-- 1 -->
                     <th scope="col">Hermanos</th>
+                    <!-- 2 -->
                     <th scope="col">Medicacion</th>
+                    <!-- 3 -->
                     <th scope="col">Especial</th>
+                    <!-- 4 -->
                     <th scope="col">Observaciones Medicas</th>
+                    <!-- 5 -->
                     <th scope="col">Email</th>
+                    <!-- 6 -->
                     <th scope="col">Telefono 2</th>
+                    <!-- 7 -->
                     <th scope="col">Grupo</th>
+                    <!-- 8 -->
                     <th scope="col">Horario</th>
+                    <!-- 9 -->
                     <th scope="col">Quincena 1</th>
+                    <!-- 10 -->
                     <th scope="col">Quincena 2</th>
+                    <!-- 11 -->
                     <th scope="col">Quincena 3</th>
+                    <!-- 12 -->
                     <th scope="col">Quincena 4</th>
+                    <!-- 13 -->
                     <th scope="col">Autorizacion datos</th>
+                    <!-- 14 -->
                     <th scope="col">Autorizacion fotos</th>
+                    <!-- 15 -->
                     <th scope="col">Anotaciones</th>
 
                     <!-- Campos visibles -->
+                    <!-- 16 -->
                     <th scope="col">Nombre</th>
+                    <!-- 17 -->
                     <th scope="col">Apellidos</th>
+                    <!-- 18 -->
                     <th scope="col">Tutor</th>
+                    <!-- 19 -->
                     <th scope="col">Telefono 1</th>
+                    <!-- 20 -->
                     <th scope="col">Estado del recibo</th>
+                    <!-- 21 -->
                     <th scope="col">Pago</th>
+
                     <th scope="col">Editar</th>
                     <th scope="col">Eliminar</th>
                 </tr>
@@ -54,6 +78,7 @@
                 @foreach ($ninos as $nino)
                     <tr>
                         <!-- Campos ocultos -->
+                        <td>{{ $nino->edad }}</td>
                         <td>{{ $nino->hermanos }}</td>
                         <td>{{ $nino->medicacion }}</td>
                         <td>{{ $nino->especial }}</td>
@@ -79,7 +104,7 @@
                         <td>{{ $nino->pago }}</td>
 
                         <td>
-                            <a href="{{ route('ninos.edit', $nino->id) }}" class="btn btn-primary">
+                            <a id="btnEditar" href="{{ route('ninos.edit', $nino->id) }}" class="btn btn-primary">
                                 Editar
                             </a>
                         </td>
@@ -87,7 +112,7 @@
                             <form method="POST" action="{{ route('ninos.destroy', $nino->id) }}">
                                 @csrf
                                 @method('DELETE')
-                                <button id="btnBorrar" type="submit" class="btn btn-danger show_confirm">
+                                <button id="btnBorrar" type="submit" class="btn btn-danger">
                                     Eliminar
                                 </button>
                             </form>
@@ -125,17 +150,17 @@
                         </div>
                         <div class="col">
                             <ul>
-                                <li id="grupo">grupo:</li>
-                                <li id="horario">horario:</li>
-                                <li id="quincena1">quincena1:</li>
-                                <li id="quincena2">quincena2:</li>
-                                <li id="quincena3">quincena3:</li>
-                                <li id="quincena4">quincena4:</li>
-                                <li id="datos">datos:</li>
-                                <li id="fotos">fotos:</li>
-                                <li id="anotaciones">anotaciones:</li>
-                                <li id="recibo">recibo:</li>
-                                <li id="pago">pago:</li>
+                                <li>Grupo: <span id="grupo">prueba</span></li>
+                                <li>Horario: <span id="horario">prueba</span></li>
+                                <li>¿Quincena 1?: <span id="quincena1">prueba</span></li>
+                                <li>¿Quincena 2?: <span id="quincena2">prueba</span></li>
+                                <li>¿Quincena 3?: <span id="quincena3">prueba</span></li>
+                                <li>¿Quincena 4?: <span id="quincena4">prueba</span></li>
+                                <li>¿Autorización datos?: <span id="datos">prueba</span></li>
+                                <li>¿Autorización fotos?: <span id="fotos">prueba</span></li>
+                                <li>Anotaciones: <span id="anotaciones">prueba</span></li>
+                                <li>Estado del recibo: <span id="recibo">prueba</span></li>
+                                <li>Pago: <span id="pago">prueba</span></li>
                             </ul>
                         </div>
                     </div>
@@ -158,8 +183,9 @@
     <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 
     <script type="text/javascript">
-        //Preparación de datatables
+        //Preparaciones despues de cargar el HTML
         $(document).ready(() => {
+            //Preparación de datatable
             const tabla = $('#ninos').DataTable({
                 //Traducciones al español
                 language: {
@@ -173,44 +199,85 @@
                 ],
 
                 columnDefs: [{
-                    targets: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+                    targets: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
                     visible: false,
                     searchable: false,
                 }],
             });
 
-            $('#ninos tbody').on('click', 'tr', function() {
-                const datos = tabla.row(this).data();
-                /*
-                $("#mTipo .modal-title").text("Tipo: " + datos[1]);
-                $('#fModComunicacion').attr('action', 'comunicaciones/' + datos[0]);
+            //Preparacion del evento para mostra los datos en el modal
+            $("#ninos tbody").on("click", "tr", () => {
+                const fila = tabla.row(this).data();
+                const nino = {
+                    nombre: fila[16],
+                    apellidos: fila[17],
+                    edad: fila[0],
+                    hermanos: fila[1],
+                    medicacion: fila[2],
+                    especial: fila[3],
+                    observacionesMedicas: fila[4],
+                    tutor: fila[18],
+                    email: fila[5],
+                    telefono1: fila[19],
+                    telefono2: fila[6],
 
-                $("#mComunicacion .modal-title").text(datos[1]);
-                $("#mComunicacion #lEmisor").text("Emisor: " + datos[4]);
-                $("#mComunicacion #lTipo").text("Tipo: " + datos[3]);
-                //$("#mComunicacion #lDepartamento").text("Departamento: " + data[5]);
-                $("#mComunicacion #lFecha").text("Fecha: " + datos[6]);
-                $("#mComunicacion #lEstado").text("Estado: " + datos[7]);
-                $("#mComunicacion #asunto").text(datos[2]);
-                */
-                $('#modalVer').modal("show");
+                    grupo: fila[7],
+                    horario: fila[8],
+                    quincena1: fila[9],
+                    quincena2: fila[10],
+                    quincena3: fila[11],
+                    quincena4: fila[12],
+                    datos: fila[13],
+                    fotos: fila[14],
+                    anotaciones: fila[15],
+                    recibo: fila[20],
+                    pago: fila[21],
+                }
+
+                $("#modalVer #nombre").text(nino.nombre);
+                $("#modalVer #apellidos").text(nino.apellidos);
+                $("#modalVer #edad").text(nino.edad);
+                $("#modalVer #hermanos").text(nino.hermanos);
+                $("#modalVer #medicacion").text(nino.medicacion);
+                $("#modalVer #especial").text(nino.especial);
+                $("#modalVer #observacionesMedicas").text(nino.observacionesMedicas);
+                $("#modalVer #tutor").text(nino.tutor);
+                $("#modalVer #email").text(nino.email);
+                $("#modalVer #telefono1").text(nino.telefono1);
+                $("#modalVer #telefono2").text(nino.telefono2);
+                $("#modalVer #grupo").text(nino.grupo);
+                $("#modalVer #horario").text(nino.horario);
+                $("#modalVer #quincena1").text(nino.quincena1);
+                $("#modalVer #quincena2").text(nino.quincena2);
+                $("#modalVer #quincena3").text(nino.quincena3);
+                $("#modalVer #quincena4").text(nino.quincena4);
+                $("#modalVer #datos").text(nino.datos);
+                $("#modalVer #fotos").text(nino.fotos);
+                $("#modalVer #anotaciones").text(nino.anotaciones);
+                $("#modalVer #recibo").text(nino.recibo);
+                $("#modalVer #pago").text(nino.pago);
+
+                $("#modalVer").modal("show");
             });
-        });
 
-        //Preparación de evento para el modal de eliminación
-        $('.show_confirm').click(function(event) {
-            event.preventDefault();
+            //Preparación de evento para el boton de edición
+            $("btnEditar").click((e) => e.stopPropagation());
 
-            const form = $(this).closest("form");
+            //Preparación de evento para el modal de eliminación
+            $("#btnBorrar").click((e) => {
+                e.stopPropagation();
+                e.preventDefault();
+                const form = $(this).closest("form");
 
-            swal({
-                title: "¿Estás seguro de que quieres eliminar este registro?",
-                text: "Estos cambios no pueden deshacerse",
-                icon: "warning",
-                buttons: ["Cancelar", "Eliminar"],
-                dangerMode: true,
-            }).then((confimado) => {
-                if (confimado) form.submit();
+                swal({
+                    title: "¿Estás seguro de que quieres eliminar este registro?",
+                    text: "Estos cambios no pueden deshacerse",
+                    icon: "warning",
+                    buttons: ["Cancelar", "Eliminar"],
+                    dangerMode: true,
+                }).then((confimado) => {
+                    if (confimado) form.submit();
+                });
             });
         });
     </script>
