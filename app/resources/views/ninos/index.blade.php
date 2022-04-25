@@ -208,7 +208,6 @@
             //Preparacion del evento para mostra los datos en el modal
             $("#ninos tbody").on("click", "tr", function() {
                 const fila = tabla.row(this).data();
-                console.log(fila);
                 const nino = {
                     nombre: fila[16],
                     apellidos: fila[17],
@@ -239,8 +238,12 @@
                 $("#modalVer #apellidos").text(nino.apellidos);
                 $("#modalVer #edad").text(nino.edad);
                 $("#modalVer #hermanos").text(nino.hermanos);
-                $("#modalVer #medicacion").text(nino.medicacion);
-                $("#modalVer #especial").text(nino.especial);
+
+                if (nino.medicacion) $("#modalVer #medicacion").text("sí");
+                else $("#modalVer #medicacion").text("no");
+                if (nino.especial) $("#modalVer #especial").text("sí");
+                else $("#modalVer #especial").text("no");
+
                 $("#modalVer #observacionesMedicas").text(nino.observacionesMedicas);
                 $("#modalVer #tutor").text(nino.tutor);
                 $("#modalVer #email").text(nino.email);
@@ -248,12 +251,21 @@
                 $("#modalVer #telefono2").text(nino.telefono2);
                 $("#modalVer #grupo").text(nino.grupo);
                 $("#modalVer #horario").text(nino.horario);
-                $("#modalVer #quincena1").text(nino.quincena1);
-                $("#modalVer #quincena2").text(nino.quincena2);
-                $("#modalVer #quincena3").text(nino.quincena3);
-                $("#modalVer #quincena4").text(nino.quincena4);
-                $("#modalVer #datos").text(nino.datos);
-                $("#modalVer #fotos").text(nino.fotos);
+
+                if (nino.quincena1) $("#modalVer #quincena1").text("sí");
+                else $("#modalVer #quincena1").text("no");
+                if (nino.quincena2) $("#modalVer #quincena2").text("sí");
+                else $("#modalVer #quincena2").text("no");
+                if (nino.quincena3) $("#modalVer #quincena3").text("sí");
+                else $("#modalVer #quincena3").text("no");
+                if (nino.quincena4) $("#modalVer #quincena4").text("sí");
+                else $("#modalVer #quincena4").text("no");
+
+                if (nino.datos) $("#modalVer #datos").text("sí");
+                else $("#modalVer #datos").text("no");
+                if (nino.fotos) $("#modalVer #fotos").text("sí");
+                else $("#modalVer #fotos").text("no");
+                
                 $("#modalVer #anotaciones").text(nino.anotaciones);
                 $("#modalVer #recibo").text(nino.recibo);
                 $("#modalVer #pago").text(nino.pago);
