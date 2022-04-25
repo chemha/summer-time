@@ -124,8 +124,8 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="modalVer" tabindex="-1" aria-labelledby="modalVerLabel" aria-hidden="true">
-        <div class="modal-dialog">
+    <div class="modal modal-lg" id="modalVer" tabindex="-1" aria-labelledby="modalVerLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalVerLabel">Visualizar registro</h5>
@@ -164,10 +164,6 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
