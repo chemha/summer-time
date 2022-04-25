@@ -124,7 +124,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal modal-lg" id="modalVer" tabindex="-1" aria-labelledby="modalVerLabel" aria-hidden="true">
+    <div class="modal" id="modalVer" tabindex="-1" aria-labelledby="modalVerLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
