@@ -186,7 +186,7 @@
             });
 
             $('#ninos tbody').on('click', 'tr', function() {
-                const datos = table.row(this).data();
+                const datos = tabla.row(this).data();
                 /*
                 $("#mTipo .modal-title").text("Tipo: " + datos[1]);
                 $('#fModComunicacion').attr('action', 'comunicaciones/' + datos[0]);
