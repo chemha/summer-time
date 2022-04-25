@@ -53,7 +53,7 @@
                         <div class="col">
                             <label for="hermanos">Hermanos</label>
                             <input type="number" class="form-control w-25 @error('hermanos') is-invalid @enderror"
-                                name="hermanos" value="{{ old('hermanos') }}" autocomplete="off" autofocus min="0">
+                                name="hermanos" value="0" autocomplete="off" autofocus min="0">
                             @error('hermanos')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
