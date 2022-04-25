@@ -239,9 +239,9 @@
                 $("#modalVer #edad").text(nino.edad);
                 $("#modalVer #hermanos").text(nino.hermanos);
 
-                if (nino.medicacion) $("#modalVer #medicacion").text("sí");
+                if (nino.medicacion == 1) $("#modalVer #medicacion").text("sí");
                 else $("#modalVer #medicacion").text("no");
-                if (nino.especial) $("#modalVer #especial").text("sí");
+                if (nino.especial == 1) $("#modalVer #especial").text("sí");
                 else $("#modalVer #especial").text("no");
 
                 $("#modalVer #observacionesMedicas").text(nino.observacionesMedicas);
@@ -252,20 +252,20 @@
                 $("#modalVer #grupo").text(nino.grupo);
                 $("#modalVer #horario").text(nino.horario);
 
-                if (nino.quincena1) $("#modalVer #quincena1").text("sí");
+                if (nino.quincena1 == 1) $("#modalVer #quincena1").text("sí");
                 else $("#modalVer #quincena1").text("no");
-                if (nino.quincena2) $("#modalVer #quincena2").text("sí");
+                if (nino.quincena2 == 1) $("#modalVer #quincena2").text("sí");
                 else $("#modalVer #quincena2").text("no");
-                if (nino.quincena3) $("#modalVer #quincena3").text("sí");
+                if (nino.quincena3 == 1) $("#modalVer #quincena3").text("sí");
                 else $("#modalVer #quincena3").text("no");
                 if (nino.quincena4) $("#modalVer #quincena4").text("sí");
                 else $("#modalVer #quincena4").text("no");
 
-                if (nino.datos) $("#modalVer #datos").text("sí");
+                if (nino.datos == 1) $("#modalVer #datos").text("sí");
                 else $("#modalVer #datos").text("no");
-                if (nino.fotos) $("#modalVer #fotos").text("sí");
+                if (nino.fotos == 1) $("#modalVer #fotos").text("sí");
                 else $("#modalVer #fotos").text("no");
-                
+
                 $("#modalVer #anotaciones").text(nino.anotaciones);
                 $("#modalVer #recibo").text(nino.recibo);
                 $("#modalVer #pago").text(nino.pago);
