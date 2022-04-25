@@ -18,7 +18,7 @@
 
         <a href="{{ route('ninos.create') }}" class="btn btn-primary">Crear nino</a>
 
-        <table id="ninos" class="table table-striped table-bordered shadow-lg">
+        <table id="ninos" class="table table-striped table-bordered shadow-lg table-hover">
             <thead class="">
                 <tr>
 
@@ -46,9 +46,8 @@
                     <th scope="col">Telefono 1</th>
                     <th scope="col">Estado del recibo</th>
                     <th scope="col">Pago</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Eliminar</th>
                 </tr>
             </thead>
             <tbody>
@@ -79,11 +78,6 @@
                         <td>{{ $nino->recibo }}</td>
                         <td>{{ $nino->pago }}</td>
 
-                        <td>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalVer">
-                                Ver
-                            </button>
-                        </td>
                         <td>
                             <a href="{{ route('ninos.edit', $nino->id) }}" class="btn btn-primary">
                                 Editar
@@ -116,17 +110,17 @@
                     <div class="row">
                         <div class="col">
                             <ul>
-                                <li id="nombre">Nombre:</li>
-                                <li id="apellidos">apellidos:</li>
-                                <li id="edad">edad:</li>
-                                <li id="hermanos">hermanos:</li>
-                                <li id="medicacion">medicacion:</li>
-                                <li id="especial">especial:</li>
-                                <li id="observacionesMedicas">observacionesMedicas:</li>
-                                <li id="tutor">tutor:</li>
-                                <li id="email">email:</li>
-                                <li id="telefono1">telefono1:</li>
-                                <li id="telefono2">telefono2:</li>
+                                <li>Nombre: <span id="nombre">prueba</span></li>
+                                <li>Apellidos: <span id="apellidos">prueba</span></li>
+                                <li>Edad: <span id="edad">prueba</span></li>
+                                <li>Hermanos: <span id="hermanos">prueba</span></li>
+                                <li>¿Medicación?: <span id="medicacion">prueba</span></li>
+                                <li>¿Especial?: <span id="especial">prueba</span></li>
+                                <li>Observaciones médicas: <span id="observacionesMedicas">prueba</span></li>
+                                <li>Tutor: <span id="tutor">prueba</span></li>
+                                <li>Email: <span id="email">prueba</span></li>
+                                <li>Teléfono 1: <span id="telefono1">prueba</span></li>
+                                <li>Teléfono 2: <span id="telefono2">prueba</span></li>
                             </ul>
                         </div>
                         <div class="col">
