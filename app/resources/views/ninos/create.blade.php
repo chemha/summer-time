@@ -42,7 +42,7 @@
                         <div class="col">
                             <label for="edad">Edad</label>
                             <input type="number" class="form-control w-25 @error('edad') is-invalid @enderror" name="edad"
-                                value="{{ old('edad') }}" required autocomplete="off" autofocus min="1" max="18">
+                                value="1" required autocomplete="off" autofocus min="1" max="18">
                             @error('edad')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -325,7 +325,7 @@
                         </span>
                     @enderror
                 </div>
-                <!-- Campo de edad y hermanos -->
+                
                 <div class="col">
                     <label for="pago">Pago</label>
 
