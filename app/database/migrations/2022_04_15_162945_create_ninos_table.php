@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('nombre', 100);
             $table->string('apellidos', 100);
             $table->integer('edad')->unsigned();
-            $table->integer('hermanos')->unsigned()->nullable()->default(0);
+            $table->integer('hermanos')->unsigned()->default(0);
             $table->boolean('medicacion')->default(false);
             $table->boolean('especial')->default(false);
             $table->string('observacionesMedicas')->nullable();
