@@ -234,6 +234,8 @@
                     pago: fila[21],
                 }
 
+                console.log(nino);
+
                 $("#modalVer #nombre").text(nino.nombre);
                 $("#modalVer #apellidos").text(nino.apellidos);
                 $("#modalVer #edad").text(nino.edad);
@@ -258,7 +260,7 @@
                 else $("#modalVer #quincena2").text("no");
                 if (nino.quincena3 == 1) $("#modalVer #quincena3").text("sí");
                 else $("#modalVer #quincena3").text("no");
-                if (nino.quincena4) $("#modalVer #quincena4").text("sí");
+                if (nino.quincena4 == 1) $("#modalVer #quincena4").text("sí");
                 else $("#modalVer #quincena4").text("no");
 
                 if (nino.datos == 1) $("#modalVer #datos").text("sí");
