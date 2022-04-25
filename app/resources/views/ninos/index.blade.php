@@ -21,10 +21,31 @@
         <table id="ninos" class="table table-striped table-bordered shadow-lg">
             <thead class="">
                 <tr>
+
+                    <!-- Campos ocultos -->
+                    <th scope="col">Hermanos</th>
+                    <th scope="col">Medicacion</th>
+                    <th scope="col">Especial</th>
+                    <th scope="col">Observaciones Medicas</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Telefono 2</th>
+                    <th scope="col">Grupo</th>
+                    <th scope="col">Horario</th>
+                    <th scope="col">Quincena 1</th>
+                    <th scope="col">Quincena 2</th>
+                    <th scope="col">Quincena 3</th>
+                    <th scope="col">Quincena 4</th>
+                    <th scope="col">Autorizacion datos</th>
+                    <th scope="col">Autorizacion fotos</th>
+                    <th scope="col">Anotaciones</th>
+                    
+                    <!-- Campos visibles -->
                     <th scope="col">Nombre</th>
                     <th scope="col">Apellidos</th>
                     <th scope="col">Tutor</th>
                     <th scope="col">Telefono 1</th>
+                    <th scope="col">Estado del recibo</th>
+                    <th scope="col">Pago</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
                     <th scope="col"></th>
@@ -33,10 +54,28 @@
             <tbody>
                 @foreach ($ninos as $nino)
                     <tr>
+                        <td>{{ $nino->hermanos }}</td>
+                        <td>{{ $nino->medicacion }}</td>
+                        <td>{{ $nino->especial }}</td>
+                        <td>{{ $nino->observacionesMedicas }}</td>
+                        <td>{{ $nino->email }}</td>
+                        <td>{{ $nino->telefono2 }}</td>
+                        <td>{{ $nino->grupo }}</td>
+                        <td>{{ $nino->horario }}</td>
+                        <td>{{ $nino->quincena1 }}</td>
+                        <td>{{ $nino->quincena2 }}</td>
+                        <td>{{ $nino->quincena3 }}</td>
+                        <td>{{ $nino->quincena4 }}</td>
+                        <td>{{ $nino->datos }}</td>
+                        <td>{{ $nino->fotos }}</td>
+                        <td>{{ $nino->anotaciones }}</td>
+
                         <td>{{ $nino->nombre }}</td>
                         <td>{{ $nino->apellidos }}</td>
                         <td>{{ $nino->tutor }}</td>
                         <td>{{ $nino->telefono1 }}</td>
+                        <td>{{ $nino->recibo }}</td>
+                        <td>{{ $nino->pago }}</td>
 
                         <td>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalVer">
