@@ -38,7 +38,7 @@
                     <th scope="col">Autorizacion datos</th>
                     <th scope="col">Autorizacion fotos</th>
                     <th scope="col">Anotaciones</th>
-                    
+
                     <!-- Campos visibles -->
                     <th scope="col">Nombre</th>
                     <th scope="col">Apellidos</th>
@@ -145,11 +145,11 @@
                     [7, 12, 50, "Mostrar todo"]
                 ],
 
-                columnDefs: {
+                columnDefs: [{
                     targets: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
                     visible: false,
                     searchable: false,
-                },
+                }, ],
             });
         });
 
