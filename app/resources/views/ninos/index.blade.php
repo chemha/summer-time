@@ -208,6 +208,7 @@
             //Preparacion del evento para mostra los datos en el modal
             $("#ninos tbody").on("click", "tr", () => {
                 const fila = tabla.row(this).data();
+                console.log(fila);
                 const nino = {
                     nombre: fila[16],
                     apellidos: fila[17],
@@ -261,7 +262,7 @@
             });
 
             //Preparación de evento para el boton de edición
-            $("btnEditar").click((e) => e.stopPropagation());
+            $("#btnEditar").click((e) => e.stopPropagation());
 
             //Preparación de evento para el modal de eliminación
             $("#btnBorrar").click((e) => {
