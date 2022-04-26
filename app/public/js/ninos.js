@@ -13,6 +13,7 @@ $(document).ready(() => {
             [7, 12, 50, "Mostrar todo"],
         ],
 
+        //Campos ocultos para luego utilizarlos para mostrar los datos
         columnDefs: [
             {
                 targets: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
@@ -91,10 +92,10 @@ $(document).ready(() => {
     });
 
     //Preparación de evento para el boton de edición
-    $("#btnEditar").click((e) => e.stopPropagation());
+    $("#btnEditar").on("click", (e) => e.stopPropagation());
 
     //Preparación de evento para el modal de eliminación
-    $("#btnBorrar").click((e) => {
+    $("#btnBorrar").on("click", (e) => {
         e.stopPropagation();
         e.preventDefault();
         const form = $(this).closest("form");
