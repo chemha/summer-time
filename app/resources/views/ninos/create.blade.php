@@ -90,6 +90,7 @@
                         </div>
                     </div>
 
+                    <!-- Campo de observaciones médicas -->
                     <div class="row my-2">
                         <div class="col">
                             <label for="observacionesMedicas">Observaciones médicas</label>
@@ -162,6 +163,8 @@
 
                 <!-- Panel derecho -->
                 <div class="col">
+
+                    <!-- Selects de grupos y horarios -->
                     <div class="row my-2 ">
                         <div class="col">
                             <label for="grupo">Grupo</label>
@@ -186,10 +189,10 @@
                             <select class="form-select w-50  @error('horario') is-invalid @enderror" name="horario"
                                 id="horario" value="{{ old('horario') }}" required autocomplete="off" autofocus>
                                 <option disabled selected value>Elige un horario</option>
-                                <option value="1">1 - 2</option>
-                                <option value="2">2 - 3</option>
-                                <option value="3">3 - 4</option>
-                                <option value="4">5 - 6</option>
+                                <option value="1 - 2">1 - 2</option>
+                                <option value="2 - 3">2 - 3</option>
+                                <option value="3 - 4">3 - 4</option>
+                                <option value="4 - 5">4 - 5</option>
                             </select>
 
                             @error('horario')
@@ -256,6 +259,7 @@
                         </div>
                     </div>
 
+                    <!-- Checkboxes de autorización de datos y fotos -->
                     <div class="row my-2">
                         <div class="col my-1">
                             <input type="checkbox" class="form-check-input @error('datos') is-invalid @enderror"
@@ -286,6 +290,7 @@
                         </div>
                     </div>
 
+                    <!-- Campo de anotaciones -->
                     <div class="row">
                         <div class="col">
                             <label for="anotaciones">
@@ -308,6 +313,7 @@
 
             <!-- Panel inferior -->
             <div class="row">
+                <!-- Select de estado del recibo -->
                 <div class="col">
                     <label for="recibo">
                         Estado del recibo
@@ -315,8 +321,8 @@
                     <select class="form-select @error('recibo') is-invalid @enderror" name="recibo" id="recibo"
                         value="{{ old('recibo') }}" required autocomplete="off" autofocus>
                         <option disabled selected value>Elige un estado</option>
-                        <option value="1">Pagado</option>
-                        <option value="2">Pendiente</option>
+                        <option value="pagado">Pagado</option>
+                        <option value="pendiente">Pendiente</option>
                     </select>
 
                     @error('recibo')
@@ -325,7 +331,8 @@
                         </span>
                     @enderror
                 </div>
-                
+
+                <!-- Campo de pago -->
                 <div class="col">
                     <label for="pago">Pago</label>
 
@@ -337,6 +344,8 @@
                         </span>
                     @enderror
                 </div>
+
+                <!-- Boton para guardar el registro -->
                 <div class="col">
                     <button type="submit" class="btn btn-primary">
                         Crear registro
