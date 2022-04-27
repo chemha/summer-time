@@ -41,7 +41,7 @@ $(document).ready(() => {
             telefono1: fila[19],
             telefono2: fila[6],
 
-            grupo: fila[7],
+            grupo: fila[21],
             horario: fila[8],
             quincena1: fila[9],
             quincena2: fila[10],
@@ -51,7 +51,7 @@ $(document).ready(() => {
             fotos: fila[14],
             anotaciones: fila[15],
             recibo: fila[20],
-            pago: fila[21],
+            pago: fila[7],
         };
 
         $("#modalVer #nombre").text(nino.nombre);

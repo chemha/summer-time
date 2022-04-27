@@ -1,8 +1,25 @@
 @extends('layouts.app')
 
+@section('title')
+    <title>Summer Time - Niños</title>
+@endsection
+
 <!-- CSS para datatables -->
 @section('css')
     <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+@endsection
+
+<!-- Scripts para datatables y modales -->
+@section('js')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+
+    <script src="{{ asset('js/ninos.js') }}"></script>
+        
+    </script>
 @endsection
 
 @section('content')
@@ -38,7 +55,7 @@
                     <!-- 6 -->
                     <th class="d-none" scope="col">Telefono 2</th>
                     <!-- 7 -->
-                    <th class="d-none" scope="col">Grupo</th>
+                    <th class="d-none" scope="col">Pago</th>
                     <!-- 8 -->
                     <th class="d-none" scope="col">Horario</th>
                     <!-- 9 -->
@@ -68,7 +85,7 @@
                     <!-- 20 -->
                     <th scope="col">Estado del recibo</th>
                     <!-- 21 -->
-                    <th scope="col">Pago</th>
+                    <th scope="col">Grupo</th>
 
                     <th scope="col">Editar</th>
                     <th scope="col">Eliminar</th>
@@ -85,7 +102,7 @@
                         <td class="d-none">{{ $nino->observacionesMedicas }}</td>
                         <td class="d-none">{{ $nino->email }}</td>
                         <td class="d-none">{{ $nino->telefono2 }}</td>
-                        <td class="d-none">{{ $nino->grupo }}</td>
+                        <td class="d-none">{{ $nino->pago }}</td>
                         <td class="d-none">{{ $nino->horario }}</td>
                         <td class="d-none">{{ $nino->quincena1 }}</td>
                         <td class="d-none">{{ $nino->quincena2 }}</td>
@@ -101,7 +118,7 @@
                         <td>{{ $nino->tutor }}</td>
                         <td>{{ $nino->telefono1 }}</td>
                         <td>{{ $nino->recibo }}</td>
-                        <td>{{ $nino->pago }}</td>
+                        <td>Grupo {{ $nino->grupo }}</td>
 
                         <td>
                             <a id="btnEditar" href="{{ route('ninos.edit', $nino->id) }}" class="btn btn-primary">
@@ -168,17 +185,4 @@
             </div>
         </div>
     </div>
-@endsection
-
-<!-- Scripts para datatables y modales -->
-@section('js')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
-
-    <script src="{{ asset('js/ninos.js') }}"></script>
-        
-    </script>
 @endsection

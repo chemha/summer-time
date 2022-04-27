@@ -8,10 +8,14 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    @yield('title')
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Añadir scripts especificos para cada página -->
+    <!-- Esto hace que la web sea más eficiente -->
+    @yield('js')
     
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -91,10 +95,6 @@
             @yield('content')
         </main>
     </div>
-
-    <!-- Añadir scripts especificos para cada página -->
-    <!-- Esto hace que la web sea más eficiente -->
-    @yield('js')
 </body>
 
 </html>

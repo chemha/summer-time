@@ -14,7 +14,7 @@ class AnuncioController extends Controller
      */
     public function index()
     {
-        //
+        return view('anuncios.index', ['anuncios' => Anuncio::all()]);
     }
 
     /**

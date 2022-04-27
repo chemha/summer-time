@@ -7,5 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Anuncio extends Model
 {
+    protected $fillable = [
+        'titulo',
+        'descripcion',
+    ];
+
     use HasFactory;
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

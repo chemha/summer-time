@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnuncioController;
 use App\Http\Controllers\NinoController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,3 +38,4 @@ Route::delete('/ninos/{nino}', [NinoController::class, 'destroy'])->name('ninos.
 
 //Solo esta linea sustituye a todas las demás
 Route::resource('ninos', NinoController::class);
+Route::resource('anuncios', AnuncioController::class);
