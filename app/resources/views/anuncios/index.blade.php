@@ -47,7 +47,7 @@
                 @foreach ($anuncios as $anuncio)
                     <tr>
                         <td>{{ $anuncio->titulo }}</td>
-                        <td>{{ User::find($anuncio->user_id)->name }}</td>
+                        <td>{{ App/Models/User::find($anuncio->user_id)->name }}</td>
 
                         <td>
                             <button id="btnEditar" type="button" class="btn btn-primary">
