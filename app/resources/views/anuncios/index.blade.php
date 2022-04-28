@@ -16,7 +16,25 @@
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 
-    <script src="{{ asset('js/anuncios.js') }}"></script>
+    <script>
+        $(window).on("load", () => {
+            //Preparación de datatable
+            const tabla = $("#anuncios").DataTable({
+                //Traducciones al español
+                language: {
+                    url: "//cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json",
+                },
+
+                responsive: true,
+
+                //Opciones para cuantos registros mostar
+                lengthMenu: [
+                    [7, 12, 50, -1],
+                    [7, 12, 50, "Mostrar todo"],
+                ],
+            });
+        });
+    </script>
 
     </script>
 @endsection
