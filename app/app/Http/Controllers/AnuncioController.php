@@ -50,7 +50,7 @@ class AnuncioController extends Controller
 
         return redirect()->route('anuncios.index')->with('alert', [
             'type' => 'success',
-            'message' => "Registro guardado correctamente.",
+            'message' => "Anuncio creado correctamente.",
         ]);
     }
 
@@ -97,9 +97,9 @@ class AnuncioController extends Controller
     public function destroy(Anuncio $anuncio)
     {
         $anuncio->delete();
-        return redirect()->route('ninos.index')->with('alert', [
+        return redirect()->route('anuncios.index')->with('alert', [
             'type' => 'success',
-            'message' => "El registro se ha borrado correctamente.",
+            'message' => "El anuncio se ha borrado correctamente.",
         ]);
     }
 }
