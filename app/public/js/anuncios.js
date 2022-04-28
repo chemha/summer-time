@@ -1,7 +1,7 @@
 //Preparaciones despues de cargar el HTML
 $(window).on("load", () => {
     //Preparación de datatable
-    const tabla = $("#anuncios").DataTable({
+    const tabla = $("#tabla-anuncios").DataTable({
         //Traducciones al español
         language: {
             url: "//cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json",
@@ -16,11 +16,9 @@ $(window).on("load", () => {
         ],
     });
 
-/*
     //Preparacion del evento para mostra los datos en el modal
     $("#anuncios tbody").on("click", "tr", function () {
         const fila = tabla.row(this).data();
-
         
         const nino = {
             nombre: fila[16],
@@ -105,5 +103,4 @@ $(window).on("load", () => {
             if (confimado) form.submit();
         });
     });
-    */
 });

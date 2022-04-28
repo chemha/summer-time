@@ -17,10 +17,6 @@
     <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 
     <script>
-        $(window).on("load", () => {
-            //Preparación de datatable
-            $("#tabla").DataTable();
-        });
     </script>
 
     </script>
@@ -41,7 +37,7 @@
             Crear anuncio
         </button>
 
-        <table id="tabla" class="table table-striped table-bordered shadow-lg table-hover">
+        <table id="tabla-anuncios" class="table table-striped table-bordered shadow-lg table-hover">
             <thead class="">
                 <tr>
                     <th scope="col">Título</th>
