@@ -88,7 +88,7 @@ $(window).on("load", () => {
     $("#btnEditar").on("click", (e) => e.stopPropagation());
 
     //Preparación de evento para el modal de eliminación
-    $("#btnBorrar").on("click", (e) => {
+    $("#btnBorrar").on("click", function(e) {
         e.stopPropagation();
         e.preventDefault();
         const form = $(this).closest("form");
