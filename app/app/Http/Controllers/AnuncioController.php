@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class AnuncioController extends Controller
 {
+
+    //Requerir autenticación para acceder a las páginas
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -35,7 +42,15 @@ class AnuncioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        auth()->user()->anuncios()->create([
+            'titulo' => request('titulo'),
+            'descripcion' => request('descripcion'),
+        ]);
+
+        return redirect()->route('ninos.index')->with('alert', [
+            'type' => 'success',
+            'message' => "Registro guardado correctamente.",
+        ]);
     }
 
     /**
@@ -80,6 +95,10 @@ class AnuncioController extends Controller
      */
     public function destroy(Anuncio $anuncio)
     {
-        //
+        $anuncio->delete();
+        return redirect()->route('ninos.index')->with('alert', [
+            'type' => 'success',
+            'message' => "El registro se ha borrado correctamente.",
+        ]);
     }
 }
