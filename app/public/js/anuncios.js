@@ -100,7 +100,7 @@ $(window).on("load", () => {
             buttons: ["Cancelar", "Eliminar"],
             dangerMode: true,
         }).then((confimado) => {
-            if (confimado) form.submit();
+            if (confimado) form.trigger("submit");
         });
     });
 });

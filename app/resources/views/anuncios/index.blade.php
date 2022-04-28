@@ -58,7 +58,7 @@
                             <form method="POST" action="{{ route('anuncios.destroy', $anuncio->id) }}">
                                 @csrf
                                 @method('DELETE')
-                                <button id="btnBorrar" type="submit" class="btn btn-danger">
+                                <button id="btnBorrar" type="button" class="btn btn-danger">
                                     Eliminar
                                 </button>
                             </form>
