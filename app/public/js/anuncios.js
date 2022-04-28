@@ -17,8 +17,10 @@ $(window).on("load", () => {
     });
 
     //Preparacion del evento para mostra los datos en el modal
-    $("#tabla-anuncios #btnEditar").on("click", function (e) {
+    $("#tabla-anuncios #btnEditar").on("click", function () {
         const fila = tabla.row(this.closest("tr")).data();
+
+        console.log(fila);
 
         $("#modalEditar #titulo").value = fila[2];
         $("#modalEditar #descripcion").text = fila[3];

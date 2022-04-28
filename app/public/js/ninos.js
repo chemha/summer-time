@@ -99,7 +99,6 @@ $(window).on("load", () => {
     //Preparación de evento para el modal de eliminación
     $("#btnBorrar").on("click", function (e) {
         e.stopPropagation();
-        e.preventDefault();
         const form = $(this).closest("form");
 
         swal({
