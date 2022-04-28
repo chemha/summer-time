@@ -50,9 +50,9 @@
                         <td>{{ $anuncio->descripcion }}</td>
 
                         <td>
-                            <a id="btnEditar" href="{{ route('anuncios.edit', $anuncio->id) }}" class="btn btn-primary">
+                            <button id="btnEditar" type="button" class="btn btn-primary">
                                 Editar
-                            </a>
+                            </button>
                         </td>
                         <td>
                             <form method="POST" action="{{ route('anuncios.destroy', $anuncio->id) }}">
@@ -71,10 +71,38 @@
 
     <!-- Modal -->
     <div class="modal fade" id="modalCrear" tabindex="-1" aria-labelledby="modalCrearLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalCrearLabel">Crear nuevo anuncio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="{{ route('anuncios.store') }}" method="POST">
+                    @csrf
+                    <div class="modal-body">
+                        <div class="col">
+                            <label for="titulo">Título</label>
+                            <input type="text" name="titulo" required autocomplete="off" class="form-control">
+                            <label for="descripcion">Descripción</label>
+                            <textarea name="descripcion" id="descripcion" cols="30" rows="10" autocomplete="off" required
+                                class=" form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Crear anuncio</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEditarLabel">Crear nuevo anuncio</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action="{{ route('anuncios.store') }}" method="POST">
