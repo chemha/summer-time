@@ -1,5 +1,5 @@
 //Preparaciones despues de cargar el HTML
-$(document).on("", () => {
+$(window).on("load", () => {
     //Preparación de datatable
     const tabla = $("#anuncios").DataTable({
         //Traducciones al español
