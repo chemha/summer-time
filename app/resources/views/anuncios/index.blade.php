@@ -37,8 +37,12 @@
         <table id="tabla-anuncios" class="table table-striped table-bordered shadow-lg table-hover">
             <thead class="">
                 <tr>
+                    <th class="d-none" scope="col">ID</th>
+                    <th class="d-none" scope="col">Descripción</th>
+
                     <th scope="col">Título</th>
                     <th scope="col">Autor</th>
+                    <th scope="col">Fecha</th>
                     <th scope="col">Editar</th>
                     <th scope="col">Eliminar</th>
                 </tr>
@@ -46,8 +50,12 @@
             <tbody>
                 @foreach ($anuncios as $anuncio)
                     <tr>
+                        <td class="d-none">{{ $anuncio->id }}</td>
+                        <td class="d-none">{{ $anuncio->descripcion }}</td>
+
                         <td>{{ $anuncio->titulo }}</td>
                         <td>{{ App\Models\User::find($anuncio->user_id)->name }}</td>
+                        <td>{{ $anuncio->created_at }}</td>
 
                         <td>
                             <button id="btnEditar" type="button" class="btn btn-primary">
@@ -102,7 +110,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalEditarLabel">Crear nuevo anuncio</h5>
+                    <h5 class="modal-title" id="modalEditarLabel">Editar anuncio</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action="{{ route('anuncios.store') }}" method="POST">
@@ -118,7 +126,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-primary">Crear anuncio</button>
+                        <button type="submit" class="btn btn-primary">Editar anuncio</button>
                     </div>
                 </form>
             </div>

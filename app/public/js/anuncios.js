@@ -17,16 +17,19 @@ $(window).on("load", () => {
     });
 
     //Preparacion del evento para mostra los datos en el modal
-    $("#btnEditar").on("click", function (e) {
+    $("#tabla-anuncios #btnEditar").on("click", function (e) {
         e.stopPropagation();
-        const fila = this.closest("tr");
-        const datos = tabla.row(fila).data();
+        const fila = tabla.row(this.closest("tr")).data();
         console.log(datos);
+
+        $("#modalEditar #titulo").value = fila[2];
+        $("#modalEditar #descripcion").text = fila[3];
+
         $("#modalEditar").modal("show");
     });
 
     //Preparación de evento para el modal de eliminación
-    $("#btnBorrar").on("click", function (e) {
+    $("#tabla-anuncios #btnBorrar").on("click", function (e) {
         e.stopPropagation();
         e.preventDefault();
         const form = $(this).closest("form");
