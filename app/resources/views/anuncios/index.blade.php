@@ -19,20 +19,7 @@
     <script>
         $(window).on("load", () => {
             //Preparación de datatable
-            const tabla = $("#anuncios").DataTable({
-                //Traducciones al español
-                language: {
-                    url: "//cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json",
-                },
-
-                responsive: true,
-
-                //Opciones para cuantos registros mostar
-                lengthMenu: [
-                    [7, 12, 50, -1],
-                    [7, 12, 50, "Mostrar todo"],
-                ],
-            });
+            $("#anuncios").DataTable();
         });
     </script>
 
@@ -116,51 +103,7 @@
             </div>
         </div>
     </div>
-
-    <!-- Modal -->
-    <div class="modal" id="modalVer" tabindex="-1" aria-labelledby="modalVerLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalVerLabel">Visualizar registro</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col">
-                            <ul>
-                                <li>Nombre: <span id="nombre">prueba</span></li>
-                                <li>Apellidos: <span id="apellidos">prueba</span></li>
-                                <li>Edad: <span id="edad">prueba</span></li>
-                                <li>Hermanos: <span id="hermanos">prueba</span></li>
-                                <li>¿Medicación?: <span id="medicacion">prueba</span></li>
-                                <li>¿Especial?: <span id="especial">prueba</span></li>
-                                <li>Observaciones médicas: <span id="observacionesMedicas">prueba</span></li>
-                                <li>Tutor: <span id="tutor">prueba</span></li>
-                                <li>Email: <span id="email">prueba</span></li>
-                                <li>Teléfono 1: <span id="telefono1">prueba</span></li>
-                                <li>Teléfono 2: <span id="telefono2">prueba</span></li>
-                            </ul>
-                        </div>
-                        <div class="col">
-                            <ul>
-                                <li>Grupo: <span id="grupo">prueba</span></li>
-                                <li>Horario: <span id="horario">prueba</span></li>
-                                <li>¿Quincena 1?: <span id="quincena1">prueba</span></li>
-                                <li>¿Quincena 2?: <span id="quincena2">prueba</span></li>
-                                <li>¿Quincena 3?: <span id="quincena3">prueba</span></li>
-                                <li>¿Quincena 4?: <span id="quincena4">prueba</span></li>
-                                <li>¿Autorización datos?: <span id="datos">prueba</span></li>
-                                <li>¿Autorización fotos?: <span id="fotos">prueba</span></li>
-                                <li>Anotaciones: <span id="anotaciones">prueba</span></li>
-                                <li>Estado del recibo: <span id="recibo">prueba</span></li>
-                                <li>Pago: <span id="pago">prueba</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
     </div>
 @endsection
 
