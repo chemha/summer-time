@@ -19,7 +19,7 @@
     <script>
         $(window).on("load", () => {
             //Preparación de datatable
-            $("#anuncios").DataTable();
+            $("#tabla").DataTable();
         });
     </script>
 
@@ -41,7 +41,7 @@
             Crear anuncio
         </button>
 
-        <table id="anuncios" class="table table-striped table-bordered shadow-lg table-hover">
+        <table id="tabla" class="table table-striped table-bordered shadow-lg table-hover">
             <thead class="">
                 <tr>
                     <th scope="col">Título</th>
@@ -103,7 +103,7 @@
             </div>
         </div>
     </div>
-    
+
     </div>
 @endsection
 
