@@ -18,7 +18,6 @@ $(window).on("load", () => {
 
     //Preparacion del evento para mostra los datos en el modal
     $("#tabla-anuncios #btnEditar").on("click", function (e) {
-        e.stopPropagation();
         const fila = tabla.row(this.closest("tr")).data();
 
         $("#modalEditar #titulo").value = fila[2];
@@ -29,8 +28,6 @@ $(window).on("load", () => {
 
     //Preparación de evento para el modal de eliminación
     $("#tabla-anuncios #btnBorrar").on("click", function (e) {
-        e.stopPropagation();
-        e.preventDefault();
         const form = $(this).closest("form");
 
         swal({
