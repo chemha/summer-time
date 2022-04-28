@@ -20,7 +20,6 @@ $(window).on("load", () => {
     $("#tabla-anuncios #btnEditar").on("click", function (e) {
         e.stopPropagation();
         const fila = tabla.row(this.closest("tr")).data();
-        console.log(datos);
 
         $("#modalEditar #titulo").value = fila[2];
         $("#modalEditar #descripcion").text = fila[3];
