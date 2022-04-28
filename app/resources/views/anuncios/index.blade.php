@@ -113,7 +113,7 @@
                     <h5 class="modal-title" id="modalEditarLabel">Editar anuncio</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="{{ route('anuncios.store') }}" method="POST">
+                <form action="" method="POST">
                     @csrf
                     <div class="modal-body">
                         <div class="col">
@@ -126,7 +126,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-primary">Editar anuncio</button>
+                        <button id="btnEditar" type="button" class="btn btn-primary">Editar anuncio</button>
                     </div>
                 </form>
             </div>

@@ -85,7 +85,11 @@ class AnuncioController extends Controller
      */
     public function update(Request $request, Anuncio $anuncio)
     {
-        //
+        $anuncio->update($request->all());
+        return redirect()->route('anuncios.index')->with('alert', [
+            'type' => 'success',
+            'message' => "Anuncio modificado correctamente.",
+        ]);
     }
 
     /**
