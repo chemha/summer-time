@@ -82,10 +82,13 @@
                 <form action="{{ route('anuncios.store') }}" method="POST">
                     @csrf
                     <div class="modal-body">
-                        <label for="titulo">Título</label>
-                        <input type="text" name="titulo" required>
-                        <label for="descripcion">Descripción</label>
-                        <textarea name="descripcion" id="descripcion" cols="30" rows="10" required></textarea>
+                        <div class="col">
+                            <label for="titulo">Título</label>
+                            <input type="text" name="titulo" required autocomplete="off" class="form-control">
+                            <label for="descripcion">Descripción</label>
+                            <textarea name="descripcion" id="descripcion" cols="30" rows="10" autocomplete="off" required
+                                class=" form-control"></textarea>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
