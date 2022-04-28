@@ -32,7 +32,7 @@
             </div>
         @endif
 
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCrear">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCrear">
             Crear anuncio
         </button>
 
@@ -72,24 +72,24 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="modalCrear" tabindex="-1" role="dialog" aria-labelledby="modalCrearLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
+    <div class="modal fade" id="modalCrear" tabindex="-1" aria-labelledby="modalCrearLabel" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalCrearLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="">
+                <form action="{{ route('anuncios.store') }}" method="POST">
+                    @csrf
                     <div class="modal-body">
-                        <input type="text" name="titulo" id="titulo" required>
+                        <label for="titulo">Título</label>
+                        <input type="text" name="titulo" required>
+                        <label for="descripcion">Descripción</label>
                         <textarea name="descripcion" id="descripcion" cols="30" rows="10" required></textarea>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Crear anuncio</button>
                     </div>
                 </form>
             </div>

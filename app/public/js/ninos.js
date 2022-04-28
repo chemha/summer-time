@@ -1,5 +1,5 @@
 //Preparaciones despues de cargar el HTML
-$(document).ready(() => {
+$(window).on("load", () => {
     //Preparación de datatable
     const tabla = $("#ninos").DataTable({
         //Traducciones al español
