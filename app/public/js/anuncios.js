@@ -99,8 +99,8 @@ $(window).on("load", () => {
             icon: "warning",
             buttons: ["Cancelar", "Eliminar"],
             dangerMode: true,
-        }).then((confimado) => {
-            if (confimado) form.trigger("submit");
+        }).then((confirmado) => {
+            if (confirmado) form.trigger("submit");
         });
     });
 });
