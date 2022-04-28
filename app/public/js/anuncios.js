@@ -22,10 +22,16 @@ $(window).on("load", () => {
 
         console.log(fila);
 
-        $("#modalEditar #titulo").text(fila[2]);
+        $("#modalEditar #titulo").val(fila[2]);
         $("#modalEditar #descripcion").text(fila[1]);
 
         $("#modalEditar").modal("show");
+    });
+
+    $("#modalEditar #btnEditar").on("click", function (e) {
+        const form = $(this).closest("form");
+
+        form.attr("action", "74.134/anuncios/1/update");
     });
 
     //Preparación de evento para el modal de eliminación
