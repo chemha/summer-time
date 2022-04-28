@@ -22,8 +22,8 @@ $(window).on("load", () => {
 
         console.log(fila);
 
-        $("#modalEditar #titulo").value = fila[2];
-        $("#modalEditar #descripcion").text = fila[3];
+        $("#modalEditar #titulo").text = fila[2];
+        $("#modalEditar #descripcion").text = fila[1];
 
         $("#modalEditar").modal("show");
     });
