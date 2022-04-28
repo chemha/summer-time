@@ -42,7 +42,8 @@ class AnuncioController extends Controller
      */
     public function store(Request $request)
     {
-        auth()->user()->anuncios()->create([
+        $usuario = auth()->user();
+        $usuario->anuncios()->create([
             'titulo' => request('titulo'),
             'descripcion' => request('descripcion'),
         ]);
