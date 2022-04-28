@@ -48,7 +48,7 @@ class AnuncioController extends Controller
             'descripcion' => request('descripcion'),
         ]);
 
-        return redirect()->route('ninos.index')->with('alert', [
+        return redirect()->route('anuncios.index')->with('alert', [
             'type' => 'success',
             'message' => "Registro guardado correctamente.",
         ]);

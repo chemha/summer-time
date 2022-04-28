@@ -16,11 +16,12 @@ $(window).on("load", () => {
         ],
     });
 
+/*
     //Preparacion del evento para mostra los datos en el modal
     $("#anuncios tbody").on("click", "tr", function () {
         const fila = tabla.row(this).data();
 
-        /*
+        
         const nino = {
             nombre: fila[16],
             apellidos: fila[17],
@@ -82,7 +83,6 @@ $(window).on("load", () => {
         $("#modalVer #anotaciones").text(nino.anotaciones);
         $("#modalVer #recibo").text(nino.recibo);
         $("#modalVer #pago").text(nino.pago);
-        */
         $("#modalVer").modal("show");
     });
 
@@ -105,4 +105,5 @@ $(window).on("load", () => {
             if (confimado) form.submit();
         });
     });
+    */
 });
