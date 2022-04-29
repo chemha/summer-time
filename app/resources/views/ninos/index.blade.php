@@ -146,13 +146,13 @@
 
                         <td>
                             <div class="row">
-                                <div class="col">
+                                <div class="col-xs-6">
                                     <a id="btnEditar" href="{{ route('ninos.edit', $nino->id) }}"
                                         class="btn btn-primary">
                                         <i class="bi bi-pencil-square"></i>
                                     </a>
                                 </div>
-                                <div class="col">
+                                <div class="col-xs-6">
                                     <form method="POST" action="{{ route('ninos.destroy', $nino->id) }}">
                                         @csrf
                                         @method('DELETE')
