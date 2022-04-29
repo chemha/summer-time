@@ -35,7 +35,7 @@
             <div class="container-fluid px-4">
                 <a class="navbar-brand text-white" href="{{ url('/') }}">
                     <!--{{ config('app.name', 'Laravel') }}-->
-                    <img class="logo" src="{{ asset('img/logo.png') }}">
+                    <img class="img-fluid" src="{{ asset('img/logo.png') }}">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
