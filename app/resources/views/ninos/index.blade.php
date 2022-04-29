@@ -39,7 +39,6 @@
         <table id="ninos" class="table table-striped table-bordered shadow-lg table-hover w-100">
             <thead class="">
                 <tr>
-
                     <!-- Campos ocultos -->
                     <!-- 0 -->
                     <th class="d-none">Edad</th>
