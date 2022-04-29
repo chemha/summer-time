@@ -7,6 +7,7 @@
 <!-- CSS para datatables -->
 @section('css')
     <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 @endsection
 
 <!-- Scripts para datatables y modales -->
