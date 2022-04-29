@@ -80,13 +80,13 @@
                     <!-- 17 -->
                     <th scope="col">Horario</th>
                     <!-- 18 -->
-                    <th scope="col">Quincena 1</th>
+                    <th scope="col">Quin 1</th>
                     <!-- 19 -->
-                    <th scope="col">Quincena 2</th>
+                    <th scope="col">Quin 2</th>
                     <!-- 20 -->
-                    <th scope="col">Quincena 3</th>
+                    <th scope="col">Quin 3</th>
                     <!-- 21 -->
-                    <th scope="col">Quincena 4</th>
+                    <th scope="col">Quin 4</th>
 
                     <th scope="col">Acción</th>
                 </tr>
@@ -120,17 +120,21 @@
                         <td>{{ $nino->quincena3 }}</td>
                         <td>{{ $nino->quincena4 }}</td>
 
-                        <td>
-                            <a id="btnEditar" href="{{ route('ninos.edit', $nino->id) }}" class="btn btn-primary">
-                                <i class="bi bi-pencil-square"></i>
-                            </a>
-                            <form method="POST" action="{{ route('ninos.destroy', $nino->id) }}">
-                                @csrf
-                                @method('DELETE')
-                                <button id="btnBorrar" type="button" class="btn btn-danger">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </form>
+                        <td class="row">
+                            <div class="col">
+                                <a id="btnEditar" href="{{ route('ninos.edit', $nino->id) }}" class="btn btn-primary">
+                                    <i class="bi bi-pencil-square"></i>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <form method="POST" action="{{ route('ninos.destroy', $nino->id) }}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button id="btnBorrar" type="button" class="btn btn-danger">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </form>
+                            </div>
                         </td>
                     </tr>
                 @endforeach
