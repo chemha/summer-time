@@ -43,7 +43,7 @@ class NinoFactory extends Factory
             "fotos" => $this->faker->boolean,
             "anotaciones" => $this->faker->realText,
 
-            "recibo" => $this->faker->text,
+            "recibo" => $this->faker->text(10),
             "pago" => $this->faker->biasedNumberBetween,
         ];
     }
