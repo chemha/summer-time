@@ -17,10 +17,10 @@ class NinoFactory extends Factory
     public function definition()
     {
         return [
-            "nombre" => $this->faker->name,
+            "nombre" => $this->faker->firstName,
             "apellidos" => $this->faker->lastName,
-            "edad" => $this->faker->biasedNumberBetween,
-            "hermanos" => $this->faker->biasedNumberBetween,
+            "edad" => $this->faker->numberBetween(0, 17),
+            "hermanos" => $this->faker->numberBetween(0, 20),
 
             //En los campos booleanos es necesario usar has(), si no los checkboxes vacios devuelven null
             "medicacion" => $this->faker->boolean,
@@ -32,8 +32,8 @@ class NinoFactory extends Factory
             "telefono1" => $this->faker->phoneNumber,
             "telefono2" => $this->faker->phoneNumber,
 
-            "grupo" => $this->faker->text(10),
-            "horario" => $this->faker->time,
+            "grupo" => $this->faker->numberBetween(1, 4),
+            "horario" => $this->faker->randomElement(['8:00-14:00', '8:00-15:00', '9:00-14:00', '9:00-15:00']),
             "quincena1" => $this->faker->boolean,
             "quincena2" => $this->faker->boolean,
             "quincena3" => $this->faker->boolean,
@@ -43,8 +43,8 @@ class NinoFactory extends Factory
             "fotos" => $this->faker->boolean,
             "anotaciones" => $this->faker->realText,
 
-            "recibo" => $this->faker->text(10),
-            "pago" => $this->faker->biasedNumberBetween,
+            "recibo" => $this->faker->randomElement(["pagado", "pendiente"]),
+            "pago" => $this->faker->numberBetween(0, 999),
         ];
     }
 }
