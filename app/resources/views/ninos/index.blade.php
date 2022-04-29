@@ -88,10 +88,7 @@
                     <!-- 21 -->
                     <th scope="col">Quincena 4</th>
 
-                    <th scope="col">Editar</th>
-                    <th scope="col">Eliminar</th>
-
-
+                    <th scope="col">Acción</th>
                 </tr>
             </thead>
             <tbody>
@@ -127,8 +124,6 @@
                             <a id="btnEditar" href="{{ route('ninos.edit', $nino->id) }}" class="btn btn-primary">
                                 <i class="bi bi-pencil-square"></i>
                             </a>
-                        </td>
-                        <td>
                             <form method="POST" action="{{ route('ninos.destroy', $nino->id) }}">
                                 @csrf
                                 @method('DELETE')
