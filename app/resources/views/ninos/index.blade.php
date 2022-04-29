@@ -39,7 +39,7 @@
             </div>
         @endif
 
-        <a href="{{ route('ninos.create') }}" class="btn btn-primary">Crear nino</a>
+        <a href="{{ route('ninos.create') }}" class="btn btn-primary mb-2">Crear nino</a>
 
         <table id="tabla-ninos" class="table table-bordered table-striped shadow-lg">
             <thead class="">
