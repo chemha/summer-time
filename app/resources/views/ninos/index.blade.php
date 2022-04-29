@@ -41,7 +41,7 @@
 
         <a href="{{ route('ninos.create') }}" class="btn btn-primary">Crear nino</a>
 
-        <table id="tabla-ninos" class="table table-striped table-responsive">
+        <table id="tabla-ninos" class="table table-bordered table-striped shadow-lg">
             <thead class="">
                 <tr>
                     <!-- Campos ocultos -->
