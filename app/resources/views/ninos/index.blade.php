@@ -143,21 +143,24 @@
                                 <i class="bi bi-x-square-fill"></i>
                             @endif
                         </td>
-                        
-                        <td class="row">
-                            <div class="col">
-                                <a id="btnEditar" href="{{ route('ninos.edit', $nino->id) }}" class="btn btn-primary">
-                                    <i class="bi bi-pencil-square"></i>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <form method="POST" action="{{ route('ninos.destroy', $nino->id) }}">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button id="btnBorrar" type="button" class="btn btn-danger">
-                                        <i class="bi bi-trash"></i>
-                                    </button>
-                                </form>
+
+                        <td>
+                            <div class="row">
+                                <div class="col">
+                                    <a id="btnEditar" href="{{ route('ninos.edit', $nino->id) }}"
+                                        class="btn btn-primary">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <form method="POST" action="{{ route('ninos.destroy', $nino->id) }}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button id="btnBorrar" type="button" class="btn btn-danger">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </form>
+                                </div>
                             </div>
                         </td>
                     </tr>
