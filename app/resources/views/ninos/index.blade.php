@@ -115,11 +115,35 @@
                         <td>{{ $nino->recibo }}</td>
                         <td>Grupo {{ $nino->grupo }}</td>
                         <td>{{ $nino->horario }}</td>
-                        <td>{{ $nino->quincena1 == 1 ? <i class="bi bi-check-square-fill"></i> : <i class="bi bi-x-square-fill"></i> }}</td>
-                        <td>{{ $nino->quincena2 == 1 ? <i class="bi bi-check-square-fill"></i> : <i class="bi bi-x-square-fill"></i> }}</td>
-                        <td>{{ $nino->quincena3 == 1 ? <i class="bi bi-check-square-fill"></i> : <i class="bi bi-x-square-fill"></i> }}</td>
-                        <td>{{ $nino->quincena4 == 1 ? <i class="bi bi-check-square-fill"></i> : <i class="bi bi-x-square-fill"></i> }}</td>
-
+                        <td>
+                            @if ($nino->quincena1 == 1)
+                                <i class="bi bi-check-square-fill"></i>
+                            @else
+                                <i class="bi bi-x-square-fill"></i>
+                            @endif
+                        </td>
+                        <td>
+                            @if ($nino->quincena2 == 1)
+                                <i class="bi bi-check-square-fill"></i>
+                            @else
+                                <i class="bi bi-x-square-fill"></i>
+                            @endif
+                        </td>
+                        <td>
+                            @if ($nino->quincena3 == 1)
+                                <i class="bi bi-check-square-fill"></i>
+                            @else
+                                <i class="bi bi-x-square-fill"></i>
+                            @endif
+                        </td>
+                        <td>
+                            @if ($nino->quincena4 == 1)
+                                <i class="bi bi-check-square-fill"></i>
+                            @else
+                                <i class="bi bi-x-square-fill"></i>
+                            @endif
+                        </td>
+                        
                         <td class="row">
                             <div class="col">
                                 <a id="btnEditar" href="{{ route('ninos.edit', $nino->id) }}" class="btn btn-primary">
