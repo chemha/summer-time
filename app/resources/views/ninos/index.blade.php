@@ -108,35 +108,35 @@
                         <td class="d-none">{{ $nino->anotaciones }}</td>
 
                         <!-- Campos visibles -->
-                        <td>{{ $nino->nombre }}</td>
-                        <td>{{ $nino->apellidos }}</td>
-                        <td>{{ $nino->tutor }}</td>
-                        <td>{{ $nino->telefono1 }}</td>
-                        <td>{{ $nino->recibo }}</td>
-                        <td>Grupo {{ $nino->grupo }}</td>
-                        <td>{{ $nino->horario }}</td>
-                        <td>
+                        <td class="text-center">{{ $nino->nombre }}</td>
+                        <td class="text-center">{{ $nino->apellidos }}</td>
+                        <td class="text-center">{{ $nino->tutor }}</td>
+                        <td class="text-center">{{ $nino->telefono1 }}</td>
+                        <td class="text-center">{{ $nino->recibo }}</td>
+                        <td class="text-center">Grupo {{ $nino->grupo }}</td>
+                        <td class="text-center">{{ $nino->horario }}</td>
+                        <td class="text-center">
                             @if ($nino->quincena1 == 1)
                                 <i class="bi bi-check-square-fill"></i>
                             @else
                                 <i class="bi bi-x-square-fill"></i>
                             @endif
                         </td>
-                        <td>
+                        <td class="text-center">
                             @if ($nino->quincena2 == 1)
                                 <i class="bi bi-check-square-fill"></i>
                             @else
                                 <i class="bi bi-x-square-fill"></i>
                             @endif
                         </td>
-                        <td>
+                        <td class="text-center">
                             @if ($nino->quincena3 == 1)
                                 <i class="bi bi-check-square-fill"></i>
                             @else
                                 <i class="bi bi-x-square-fill"></i>
                             @endif
                         </td>
-                        <td>
+                        <td class="text-center">
                             @if ($nino->quincena4 == 1)
                                 <i class="bi bi-check-square-fill"></i>
                             @else
