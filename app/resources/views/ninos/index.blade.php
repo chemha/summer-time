@@ -105,11 +105,6 @@
                         <td class="d-none">{{ $nino->email }}</td>
                         <td class="d-none">{{ $nino->telefono2 }}</td>
                         <td class="d-none">{{ $nino->pago }}</td>
-                        <td class="d-none">{{ $nino->horario }}</td>
-
-
-
-
                         <td class="d-none">{{ $nino->datos }}</td>
                         <td class="d-none">{{ $nino->fotos }}</td>
                         <td class="d-none">{{ $nino->anotaciones }}</td>
@@ -121,10 +116,11 @@
                         <td>{{ $nino->telefono1 }}</td>
                         <td>{{ $nino->recibo }}</td>
                         <td>Grupo {{ $nino->grupo }}</td>
-                        <td class="d-none">{{ $nino->quincena1 }}</td>
-                        <td class="d-none">{{ $nino->quincena2 }}</td>
-                        <td class="d-none">{{ $nino->quincena3 }}</td>
-                        <td class="d-none">{{ $nino->quincena4 }}</td>
+                        <td>{{ $nino->horario }}</td>
+                        <td>{{ $nino->quincena1 }}</td>
+                        <td>{{ $nino->quincena2 }}</td>
+                        <td>{{ $nino->quincena3 }}</td>
+                        <td>{{ $nino->quincena4 }}</td>
 
                         <td>
                             <a id="btnEditar" href="{{ route('ninos.edit', $nino->id) }}" class="btn btn-primary">
