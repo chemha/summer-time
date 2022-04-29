@@ -115,10 +115,10 @@
                         <td>{{ $nino->recibo }}</td>
                         <td>Grupo {{ $nino->grupo }}</td>
                         <td>{{ $nino->horario }}</td>
-                        <td>{{ $nino->quincena1 == 1 ? '<i class="bi bi-check-square-fill"></i>' : '<i class="bi bi-x-square-fill"></i>' }}</td>
-                        <td>{{ $nino->quincena2 == 1 ? '<i class="bi bi-check-square-fill"></i>' : '<i class="bi bi-x-square-fill"></i>' }}</td>
-                        <td>{{ $nino->quincena3 == 1 ? '<i class="bi bi-check-square-fill"></i>' : '<i class="bi bi-x-square-fill"></i>' }}</td>
-                        <td>{{ $nino->quincena4 == 1 ? '<i class="bi bi-check-square-fill"></i>' : '<i class="bi bi-x-square-fill"></i>' }}</td>
+                        <td>{{ $nino->quincena1 == 1 ? <i class="bi bi-check-square-fill"></i> : <i class="bi bi-x-square-fill"></i> }}</td>
+                        <td>{{ $nino->quincena2 == 1 ? <i class="bi bi-check-square-fill"></i> : <i class="bi bi-x-square-fill"></i> }}</td>
+                        <td>{{ $nino->quincena3 == 1 ? <i class="bi bi-check-square-fill"></i> : <i class="bi bi-x-square-fill"></i> }}</td>
+                        <td>{{ $nino->quincena4 == 1 ? <i class="bi bi-check-square-fill"></i> : <i class="bi bi-x-square-fill"></i> }}</td>
 
                         <td class="row">
                             <div class="col">
