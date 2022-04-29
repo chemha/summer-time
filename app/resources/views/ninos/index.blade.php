@@ -36,59 +36,59 @@
 
         <a href="{{ route('ninos.create') }}" class="btn btn-primary">Crear nino</a>
 
-        <table id="ninos" class="table table-responsive dt-responsive table-striped table-bordered shadow-lg table-hover">
+        <table id="ninos" class="table table-striped table-bordered shadow-lg table-hover w-100">
             <thead class="">
                 <tr>
 
                     <!-- Campos ocultos -->
                     <!-- 0 -->
-                    <th class="d-none" scope="col">Edad</th>
+                    <th class="d-none">Edad</th>
                     <!-- 1 -->
-                    <th class="d-none" scope="col">Hermanos</th>
+                    <th class="d-none">Hermanos</th>
                     <!-- 2 -->
-                    <th class="d-none" scope="col">Medicacion</th>
+                    <th class="d-none">Medicacion</th>
                     <!-- 3 -->
-                    <th class="d-none" scope="col">Especial</th>
+                    <th class="d-none">Especial</th>
                     <!-- 4 -->
-                    <th class="d-none" scope="col">Observaciones Medicas</th>
+                    <th class="d-none">Observaciones Medicas</th>
                     <!-- 5 -->
-                    <th class="d-none" scope="col">Email</th>
+                    <th class="d-none">Email</th>
                     <!-- 6 -->
-                    <th class="d-none" scope="col">Telefono 2</th>
+                    <th class="d-none">Telefono 2</th>
                     <!-- 7 -->
-                    <th class="d-none" scope="col">Pago</th>
+                    <th class="d-none">Pago</th>
                     <!-- 8 -->
-                    <th class="d-none" scope="col">Autorizacion datos</th>
+                    <th class="d-none">Autorizacion datos</th>
                     <!-- 9 -->
-                    <th class="d-none" scope="col">Autorizacion fotos</th>
+                    <th class="d-none">Autorizacion fotos</th>
                     <!-- 10 -->
-                    <th class="d-none" scope="col">Anotaciones</th>
+                    <th class="d-none">Anotaciones</th>
 
                     <!-- Campos visibles -->
                     <!-- 11 -->
-                    <th scope="col">Nombre</th>
+                    <th>Nombre</th>
                     <!-- 12 -->
-                    <th scope="col">Apellidos</th>
+                    <th>Apellidos</th>
                     <!-- 13 -->
-                    <th scope="col">Tutor</th>
+                    <th>Tutor</th>
                     <!-- 14 -->
-                    <th scope="col">Telefono 1</th>
+                    <th>Telefono 1</th>
                     <!-- 15 -->
-                    <th scope="col">Estado del recibo</th>
+                    <th>Estado del recibo</th>
                     <!-- 16 -->
-                    <th scope="col">Grupo</th>
+                    <th>Grupo</th>
                     <!-- 17 -->
-                    <th scope="col">Horario</th>
+                    <th>Horario</th>
                     <!-- 18 -->
-                    <th scope="col">Q1</th>
+                    <th>Q1</th>
                     <!-- 19 -->
-                    <th scope="col">Q2</th>
+                    <th>Q2</th>
                     <!-- 20 -->
-                    <th scope="col">Q3</th>
+                    <th>Q3</th>
                     <!-- 21 -->
-                    <th scope="col">Q4</th>
+                    <th>Q4</th>
 
-                    <th scope="col">Acción</th>
+                    <th>Acción</th>
                 </tr>
             </thead>
             <tbody>
