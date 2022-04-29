@@ -189,10 +189,10 @@
                             <select class="form-select w-50  @error('horario') is-invalid @enderror" name="horario"
                                 id="horario" value="{{ old('horario') }}" required autocomplete="off" autofocus>
                                 <option disabled selected value>Elige un horario</option>
-                                <option value="8:00->14:00">8:00->14:00</option>
-                                <option value="8:00->15:00">8:00->15:00</option>
-                                <option value="9:00->14:00">9:00->14:00</option>
-                                <option value="9:00->15:00">9:00->15:00</option>
+                                <option value="8:00-14:00">8:00-14:00</option>
+                                <option value="8:00-15:00">8:00-15:00</option>
+                                <option value="9:00-14:00">9:00-14:00</option>
+                                <option value="9:00-15:00">9:00-15:00</option>
                             </select>
 
                             @error('horario')

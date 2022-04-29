@@ -189,13 +189,13 @@
                             <select class="form-select w-50  @error('horario') is-invalid @enderror" name="horario"
                                 id="horario" required autocomplete="off" autofocus>
                                 <option disabled value>Elige un horario</option>
-                                <option value="8:00->14:00" {{ $nino->horario == '8:00->14:00' ? 'selected' : '' }}>
+                                <option value="8:00-14:00" {{ $nino->horario == '8:00-14:00' ? 'selected' : '' }}>
                                     8:00->14:00</option>
-                                <option value="8:00->15:00" {{ $nino->horario == '8:00->15:00' ? 'selected' : '' }}>
+                                <option value="8:00-15:00" {{ $nino->horario == '8:00-15:00' ? 'selected' : '' }}>
                                     8:00->15:00</option>
-                                <option value="9:00->14:00" {{ $nino->horario == '9:00->14:00' ? 'selected' : '' }}>
+                                <option value="9:00-14:00" {{ $nino->horario == '9:00-14:00' ? 'selected' : '' }}>
                                     9:00->14:00</option>
-                                <option value="9:00->15:00" {{ $nino->horario == '9:00->15:00' ? 'selected' : '' }}>
+                                <option value="9:00-15:00" {{ $nino->horario == '9:00-15:00' ? 'selected' : '' }}>
                                     9:00->15:00</option>
                             </select>
 
