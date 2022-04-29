@@ -32,7 +32,7 @@ class NinoFactory extends Factory
             "telefono1" => $this->faker->phoneNumber,
             "telefono2" => $this->faker->phoneNumber,
 
-            "grupo" => $this->faker->text,
+            "grupo" => $this->faker->text(10),
             "horario" => $this->faker->time,
             "quincena1" => $this->faker->boolean,
             "quincena2" => $this->faker->boolean,
