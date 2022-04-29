@@ -163,7 +163,7 @@
 
                 <!-- Panel derecho -->
                 <div class="col">
-                    
+
                     <!-- Selects de grupos y horarios -->
                     <div class="row my-2 ">
                         <div class="col">
@@ -189,10 +189,14 @@
                             <select class="form-select w-50  @error('horario') is-invalid @enderror" name="horario"
                                 id="horario" required autocomplete="off" autofocus>
                                 <option disabled value>Elige un horario</option>
-                                <option value="1 - 2" {{ $nino->horario == 1 ? 'selected' : '' }}>1 - 2</option>
-                                <option value="2 - 3" {{ $nino->horario == 2 ? 'selected' : '' }}>2 - 3</option>
-                                <option value="3 - 4" {{ $nino->horario == 3 ? 'selected' : '' }}>3 - 4</option>
-                                <option value="4 - 5" {{ $nino->horario == 4 ? 'selected' : '' }}>4 - 5</option>
+                                <option value="8:00->14:00" {{ $nino->horario == '8:00->14:00' ? 'selected' : '' }}>
+                                    8:00->14:00</option>
+                                <option value="8:00->15:00" {{ $nino->horario == '8:00->15:00' ? 'selected' : '' }}>
+                                    8:00->15:00</option>
+                                <option value="9:00->14:00" {{ $nino->horario == '9:00->14:00' ? 'selected' : '' }}>
+                                    9:00->14:00</option>
+                                <option value="9:00->15:00" {{ $nino->horario == '9:00->15:00' ? 'selected' : '' }}>
+                                    9:00->15:00</option>
                             </select>
 
                             @error('horario')
@@ -325,8 +329,8 @@
                     <select class="form-select @error('recibo') is-invalid @enderror" name="recibo" id="recibo" required
                         autocomplete="off" autofocus>
                         <option disabled value>Elige un estado</option>
-                        <option value="pagado" {{ $nino->recibo == 1 ? 'selected' : '' }}>Pagado</option>
-                        <option value="pendiente" {{ $nino->recibo == 2 ? 'selected' : '' }}>Pendiente</option>
+                        <option value="pagado" {{ $nino->recibo == 'pagado' ? 'selected' : '' }}>Pagado</option>
+                        <option value="pendiente" {{ $nino->recibo == 'pendiente' ? 'selected' : '' }}>Pendiente</option>
                     </select>
 
                     @error('recibo')

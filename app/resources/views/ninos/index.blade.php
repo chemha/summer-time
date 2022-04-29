@@ -18,7 +18,7 @@
     <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 
     <script src="{{ asset('js/ninos.js') }}"></script>
-        
+
     </script>
 @endsection
 
@@ -57,38 +57,40 @@
                     <!-- 7 -->
                     <th class="d-none" scope="col">Pago</th>
                     <!-- 8 -->
-                    <th class="d-none" scope="col">Horario</th>
-                    <!-- 9 -->
-                    <th class="d-none" scope="col">Quincena 1</th>
-                    <!-- 10 -->
-                    <th class="d-none" scope="col">Quincena 2</th>
-                    <!-- 11 -->
-                    <th class="d-none" scope="col">Quincena 3</th>
-                    <!-- 12 -->
-                    <th class="d-none" scope="col">Quincena 4</th>
-                    <!-- 13 -->
                     <th class="d-none" scope="col">Autorizacion datos</th>
-                    <!-- 14 -->
+                    <!-- 9 -->
                     <th class="d-none" scope="col">Autorizacion fotos</th>
-                    <!-- 15 -->
+                    <!-- 10 -->
                     <th class="d-none" scope="col">Anotaciones</th>
 
                     <!-- Campos visibles -->
-                    <!-- 16 -->
+                    <!-- 11 -->
                     <th scope="col">Nombre</th>
-                    <!-- 17 -->
+                    <!-- 12 -->
                     <th scope="col">Apellidos</th>
-                    <!-- 18 -->
+                    <!-- 13 -->
                     <th scope="col">Tutor</th>
-                    <!-- 19 -->
+                    <!-- 14 -->
                     <th scope="col">Telefono 1</th>
-                    <!-- 20 -->
+                    <!-- 15 -->
                     <th scope="col">Estado del recibo</th>
-                    <!-- 21 -->
+                    <!-- 16 -->
                     <th scope="col">Grupo</th>
+                    <!-- 17 -->
+                    <th scope="col">Horario</th>
+                    <!-- 18 -->
+                    <th scope="col">Quincena 1</th>
+                    <!-- 19 -->
+                    <th scope="col">Quincena 2</th>
+                    <!-- 20 -->
+                    <th scope="col">Quincena 3</th>
+                    <!-- 21 -->
+                    <th scope="col">Quincena 4</th>
 
                     <th scope="col">Editar</th>
                     <th scope="col">Eliminar</th>
+
+
                 </tr>
             </thead>
             <tbody>
@@ -104,10 +106,10 @@
                         <td class="d-none">{{ $nino->telefono2 }}</td>
                         <td class="d-none">{{ $nino->pago }}</td>
                         <td class="d-none">{{ $nino->horario }}</td>
-                        <td class="d-none">{{ $nino->quincena1 }}</td>
-                        <td class="d-none">{{ $nino->quincena2 }}</td>
-                        <td class="d-none">{{ $nino->quincena3 }}</td>
-                        <td class="d-none">{{ $nino->quincena4 }}</td>
+
+
+
+
                         <td class="d-none">{{ $nino->datos }}</td>
                         <td class="d-none">{{ $nino->fotos }}</td>
                         <td class="d-none">{{ $nino->anotaciones }}</td>
@@ -119,6 +121,10 @@
                         <td>{{ $nino->telefono1 }}</td>
                         <td>{{ $nino->recibo }}</td>
                         <td>Grupo {{ $nino->grupo }}</td>
+                        <td class="d-none">{{ $nino->quincena1 }}</td>
+                        <td class="d-none">{{ $nino->quincena2 }}</td>
+                        <td class="d-none">{{ $nino->quincena3 }}</td>
+                        <td class="d-none">{{ $nino->quincena4 }}</td>
 
                         <td>
                             <a id="btnEditar" href="{{ route('ninos.edit', $nino->id) }}" class="btn btn-primary">
