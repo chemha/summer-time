@@ -80,13 +80,13 @@
                     <!-- 17 -->
                     <th scope="col">Horario</th>
                     <!-- 18 -->
-                    <th scope="col">Quin 1</th>
+                    <th scope="col">Q1</th>
                     <!-- 19 -->
-                    <th scope="col">Quin 2</th>
+                    <th scope="col">Q2</th>
                     <!-- 20 -->
-                    <th scope="col">Quin 3</th>
+                    <th scope="col">Q3</th>
                     <!-- 21 -->
-                    <th scope="col">Quin 4</th>
+                    <th scope="col">Q4</th>
 
                     <th scope="col">Acción</th>
                 </tr>
@@ -115,10 +115,10 @@
                         <td>{{ $nino->recibo }}</td>
                         <td>Grupo {{ $nino->grupo }}</td>
                         <td>{{ $nino->horario }}</td>
-                        <td>{{ $nino->quincena1 }}</td>
-                        <td>{{ $nino->quincena2 }}</td>
-                        <td>{{ $nino->quincena3 }}</td>
-                        <td>{{ $nino->quincena4 }}</td>
+                        <td>{{ $nino->quincena1 == 1 ? '<i class="bi bi-check-square-fill"></i>' : '<i class="bi bi-x-square-fill"></i>' }}</td>
+                        <td>{{ $nino->quincena2 == 1 ? '<i class="bi bi-check-square-fill"></i>' : '<i class="bi bi-x-square-fill"></i>' }}</td>
+                        <td>{{ $nino->quincena3 == 1 ? '<i class="bi bi-check-square-fill"></i>' : '<i class="bi bi-x-square-fill"></i>' }}</td>
+                        <td>{{ $nino->quincena4 == 1 ? '<i class="bi bi-check-square-fill"></i>' : '<i class="bi bi-x-square-fill"></i>' }}</td>
 
                         <td class="row">
                             <div class="col">
