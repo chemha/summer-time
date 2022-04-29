@@ -36,7 +36,7 @@
 
         <a href="{{ route('ninos.create') }}" class="btn btn-primary">Crear nino</a>
 
-        <table id="ninos" class="table table-responsive table-striped table-bordered shadow-lg table-hover">
+        <table id="ninos" class="table table-responsive dt-responsive table-striped table-bordered shadow-lg table-hover">
             <thead class="">
                 <tr>
 
