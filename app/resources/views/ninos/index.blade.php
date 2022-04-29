@@ -6,11 +6,10 @@
 
 <!-- CSS para datatables -->
 @section('css')
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" >
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap5.min.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    
 @endsection
 
 <!-- Scripts para datatables y modales -->
@@ -39,7 +38,7 @@
             </div>
         @endif
 
-        <a href="{{ route('ninos.create') }}" class="btn btn-primary mb-2">Crear nino</a>
+        <a href="{{ route('ninos.create') }}" class="btn btn-secondary mb-2">Crear nino</a>
 
         <table id="tabla-ninos" class="table table-bordered table-striped shadow-lg">
             <thead class="">
