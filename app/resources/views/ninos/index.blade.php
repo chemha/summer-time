@@ -38,7 +38,7 @@
             </div>
         @endif
 
-        <a href="{{ route('ninos.create') }}" class="btn btn-secondary mb-2">Crear nino</a>
+        <a href="{{ route('ninos.create') }}" class="btn btn-secondary mb-2">Crear nuevo registro</a>
 
         <table id="tabla-ninos" class="table table-bordered table-striped shadow-lg">
             <thead class="">
@@ -73,7 +73,7 @@
                     <!-- 12 -->
                     <th>Apellidos</th>
                     <!-- 13 -->
-                    <th>Tutor</th>
+                    <th>Madre / Padre / Tutor</th>
                     <!-- 14 -->
                     <th>Telefono 1</th>
                     <!-- 15 -->

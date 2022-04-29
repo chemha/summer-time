@@ -108,7 +108,7 @@
                     <!-- Campo de tutor -->
                     <div class="row my-2">
                         <div class="col">
-                            <label for="tutor">Tutor</label>
+                            <label for="tutor">Madre / Padre / Tutor</label>
                             <input type="text" class="form-control @error('tutor') is-invalid @enderror" name="tutor"
                                 value="{{ old('tutor') }}" required autocomplete="off" autofocus>
                             @error('tutor')
