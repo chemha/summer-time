@@ -71,10 +71,10 @@ $(window).on("load", () => {
         $("#modalVer #telefono2").text(nino.telefono2);
         $("#modalVer #grupo").text(nino.grupo);
         $("#modalVer #horario").text(nino.horario);
-        $("#modalVer #quincena1").text(nino.quincena1);
-        $("#modalVer #quincena2").text(nino.quincena2);
-        $("#modalVer #quincena3").text(nino.quincena3);
-        $("#modalVer #quincena4").text(nino.quincena4);
+        $("#modalVer #quincena1").append(nino.quincena1);
+        $("#modalVer #quincena2").append(nino.quincena2);
+        $("#modalVer #quincena3").append(nino.quincena3);
+        $("#modalVer #quincena4").append(nino.quincena4);
 
         if (nino.datos == 1) $("#modalVer #datos").text("sí");
         else $("#modalVer #datos").text("no");
