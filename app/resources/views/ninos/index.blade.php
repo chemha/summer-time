@@ -124,7 +124,7 @@
 
                         <td>
                             <a id="btnEditar" href="{{ route('ninos.edit', $nino->id) }}" class="btn btn-primary">
-                                Editar
+                                <i class="bi bi-pencil-square"></i>
                             </a>
                         </td>
                         <td>
@@ -132,7 +132,7 @@
                                 @csrf
                                 @method('DELETE')
                                 <button id="btnBorrar" type="button" class="btn btn-danger">
-                                    Eliminar
+                                    <i class="bi bi-trash"></i>
                                 </button>
                             </form>
                         </td>
