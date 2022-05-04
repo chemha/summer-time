@@ -48,13 +48,13 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{{ route('ninos') }}">Gestión de niños</a>
+                            <a class="nav-link text-white" href="{{ route('/ninos') }}">Gestión de niños</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{{ route('anuncios') }}">Gestión de anuncios</a>
+                            <a class="nav-link text-white" href="{{ route('/anuncios') }}">Gestión de anuncios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{{ route('anuncios') }}">Gestión de usuarios</a>
+                            <a class="nav-link text-white" href="{{ route('/anuncios') }}">Gestión de usuarios</a>
                         </li>
                     </ul>
 
