@@ -2,12 +2,12 @@
 $(window).on("load", () => {
     //Preparación de datatable
     const tabla = $("#tabla-anuncios").DataTable({
+        responsive: true,
+
         //Traducciones al español
         language: {
             url: "//cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json",
         },
-
-        responsive: true,
 
         //Opciones para cuantos registros mostar
         lengthMenu: [

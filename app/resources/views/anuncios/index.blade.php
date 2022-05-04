@@ -39,7 +39,7 @@
             Crear anuncio
         </button>
 
-        <table id="tabla-anuncios" class="table table-striped table-bordered shadow-lg table-hover">
+        <table id="tabla-anuncios" class="table table-striped table-bordered shadow-lg w-100">
             <thead class="">
                 <tr>
                     <th class="d-none" scope="col">ID</th>
