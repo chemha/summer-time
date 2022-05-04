@@ -145,7 +145,7 @@
                             @endif
                         </td>
 
-                        <td>
+                        <td class="w-auto">
                             <div class="row">
                                 <div class="col">
                                     <button id="btnVer" class="btn btn-primary">
