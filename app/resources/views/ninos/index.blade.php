@@ -180,7 +180,7 @@
                     <h5 class="modal-title" id="modalVerLabel">Visualizar registro</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                < class="modal-body">
+                <div class="modal-body">
                     <div class="row">
                         <h3>Datos identificativos</h3>
                         <ul>
@@ -226,8 +226,8 @@
                             <li>Pago: <span id="pago"></span></li>
                         </ul>
                     </div>
+                </div>
             </div>
         </div>
-    </div>
     </div>
 @endsection
