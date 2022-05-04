@@ -185,49 +185,44 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <h5>Datos identificativos</h5>
-                        <ul class="list-unstyled">
-                            <li>Nombre: <span id="nombre"></span></li>
-                            <li>Apellidos: <span id="apellidos"></span></li>
-                            <li>Edad: <span id="edad"></span></li>
-                            <li>Hermanos: <span id="hermanos"></span></li>
-                            <li>Tutor: <span id="tutor"></span></li>
-                        </ul>
-
-                    </div>
-                    <div class="row">
-                        <h5>Datos de contacto</h5>
-                        <ul class="list-unstyled">
-                            <li>Email: <span id="email"></span></li>
-                            <li>Teléfono 1: <span id="telefono1"></span></li>
-                            <li>Teléfono 2: <span id="telefono2"></span></li>
-                        </ul>
-                    </div>
-
-                    <div class="row">
-                        <h5>Datos médicos</h5>
-                        <ul class="list-unstyled">
-                            <li>¿Medicación?: <span id="medicacion"></span></li>
-                            <li>¿Especial?: <span id="especial"></span></li>
-                            <li>Observaciones médicas: <span id="observacionesMedicas"></span></li>
-                        </ul>
-                    </div>
-                    <div class="row">
-
-                        <h5>Datos de la escuela</h5>
-                        <ul class="list-unstyled">
-                            <li>Grupo: <span id="grupo"></span></li>
-                            <li>Horario: <span id="horario"></span></li>
-                            <li>¿Quincena 1?: <span id="quincena1"></span></li>
-                            <li>¿Quincena 2?: <span id="quincena2"></span></li>
-                            <li>¿Quincena 3?: <span id="quincena3"></span></li>
-                            <li>¿Quincena 4?: <span id="quincena4"></span></li>
-                            <li>¿Autorización datos?: <span id="datos"></span></li>
-                            <li>¿Autorización fotos?: <span id="fotos"></span></li>
-                            <li>Anotaciones: <span id="anotaciones"></span></li>
-                            <li>Estado del recibo: <span id="recibo"></span></li>
-                            <li>Pago: <span id="pago"></span></li>
-                        </ul>
+                        <div class="col">
+                            <h5>Datos identificativos</h5>
+                            <ul class="list-unstyled">
+                                <li>Nombre: <span id="nombre"></span></li>
+                                <li>Apellidos: <span id="apellidos"></span></li>
+                                <li>Edad: <span id="edad"></span></li>
+                                <li>Hermanos: <span id="hermanos"></span></li>
+                                <li>Tutor: <span id="tutor"></span></li>
+                            </ul>
+                            <h5>Datos de contacto</h5>
+                            <ul class="list-unstyled">
+                                <li>Email: <span id="email"></span></li>
+                                <li>Teléfono 1: <span id="telefono1"></span></li>
+                                <li>Teléfono 2: <span id="telefono2"></span></li>
+                            </ul>
+                            <h5>Datos médicos</h5>
+                            <ul class="list-unstyled">
+                                <li>¿Medicación?: <span id="medicacion"></span></li>
+                                <li>¿Especial?: <span id="especial"></span></li>
+                                <li>Observaciones médicas: <span id="observacionesMedicas"></span></li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <h5>Datos de la escuela</h5>
+                            <ul class="list-unstyled">
+                                <li>Grupo: <span id="grupo"></span></li>
+                                <li>Horario: <span id="horario"></span></li>
+                                <li>¿Quincena 1?: <span id="quincena1"></span></li>
+                                <li>¿Quincena 2?: <span id="quincena2"></span></li>
+                                <li>¿Quincena 3?: <span id="quincena3"></span></li>
+                                <li>¿Quincena 4?: <span id="quincena4"></span></li>
+                                <li>¿Autorización datos?: <span id="datos"></span></li>
+                                <li>¿Autorización fotos?: <span id="fotos"></span></li>
+                                <li>Anotaciones: <span id="anotaciones"></span></li>
+                                <li>Estado del recibo: <span id="recibo"></span></li>
+                                <li>Pago: <span id="pago"></span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
