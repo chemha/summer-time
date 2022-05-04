@@ -101,6 +101,7 @@ $(window).on("load", () => {
     //Preparacion del evento para mostra los datos en el modal
 
     $("#tabla-ninos #btnVer").on("click", function () {
+        console.log("AAAAAA");
         mostrarDatos(tabla.row(this).data());
     });
 
