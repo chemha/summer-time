@@ -148,10 +148,15 @@
                         <td>
                             <div class="row">
                                 <div class="col">
+                                    <button id="btnEditar" class="btn btn-primary">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </button>
+                                </div>
+                                <div class="col">
                                     <a id="btnEditar" href="{{ route('ninos.edit', $nino->id) }}"
                                         class="btn btn-primary">
                                         <i class="bi bi-pencil-square"></i>
-                                    </a>
+                                    </button>
                                 </div>
                                 <div class="col">
                                     <form method="POST" action="{{ route('ninos.destroy', $nino->id) }}">
