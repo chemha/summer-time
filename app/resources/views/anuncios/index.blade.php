@@ -15,6 +15,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap5.min.js"></script>
 
     <script src="{{ asset('js/anuncios.js') }}"></script>
 @endsection
@@ -43,8 +45,7 @@
                     <th scope="col">Título</th>
                     <th scope="col">Autor</th>
                     <th scope="col">Fecha</th>
-                    <th scope="col">Editar</th>
-                    <th scope="col">Eliminar</th>
+                    <th scope="col">Acción</th>
                 </tr>
             </thead>
             <tbody>
@@ -56,20 +57,28 @@
                         <td>{{ $anuncio->titulo }}</td>
                         <td>{{ App\Models\User::find($anuncio->user_id)->name }}</td>
                         <td>{{ $anuncio->created_at }}</td>
-
                         <td>
-                            <button id="btnEditar" type="button" class="btn btn-primary">
-                                Editar
-                            </button>
-                        </td>
-                        <td>
-                            <form method="POST" action="{{ route('anuncios.destroy', $anuncio->id) }}">
-                                @csrf
-                                @method('DELETE')
-                                <button id="btnBorrar" type="button" class="btn btn-danger">
-                                    Eliminar
-                                </button>
-                            </form>
+                            <div class="row">
+                                <div class="col">
+                                    <button id="btnVer" class="btn btn-primary">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="col">
+                                    <button id="btnEditar" type="button" class="btn btn-primary">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </button>
+                                </div>
+                                <div class="col">
+                                    <form method="POST" action="{{ route('anuncios.destroy', $anuncio->id) }}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button id="btnBorrar" type="button" class="btn btn-danger">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
                         </td>
                     </tr>
                 @endforeach
