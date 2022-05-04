@@ -99,9 +99,9 @@ $(window).on("load", () => {
     });
 
     //Preparacion del evento para mostra los datos en el modal
-    
-    $("#tabla-ninos tbody").on("click", "#btnVer", function () {
-        mostrarDatos(tabla.row(this).data());
+
+    $("#tabla-ninos #btnVer").on("click", function () {
+        mostrarDatos(tabla.row($(this).closest("tr")).data());
     });
 
     //Preparación de evento para el boton de edición
