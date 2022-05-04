@@ -99,14 +99,16 @@ $(window).on("load", () => {
     });
 
     //Preparacion del evento para mostra los datos en el modal
-
-    $("#tabla-ninos #btnVer").on("click", function () {
-        console.log("AAAAAA");
+    
+    $("#tabla-ninos tbody").on("click", "#btnVer", function () {
         mostrarDatos(tabla.row(this).data());
     });
 
+    //Preparación de evento para el boton de edición
+    $("#tabla-ninos #btnEditar").on("click", (e) => e.stopPropagation());
+
     //Preparación de evento para el modal de eliminación
-    $("#tabla-ninos #btnBorrar").on("click", function () {
+    $("#tabla-ninos #btnBorrar").on("click", function (e) {
         confirmarEliminar($(this).closest("form"));
     });
 });
