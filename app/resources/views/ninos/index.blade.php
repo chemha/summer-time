@@ -38,7 +38,7 @@
 
         <a href="{{ route('ninos.create') }}" class="btn btn-secondary mb-2">Crear nuevo registro</a>
 
-        <table id="tabla-ninos" class="table table-bordered table-striped shadow-lg">
+        <table id="tabla-ninos" class="table table-bordered table-striped shadow-lg w-100">
             <thead class="">
                 <tr>
                     <!-- Campos ocultos -->
