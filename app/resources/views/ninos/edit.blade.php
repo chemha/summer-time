@@ -42,7 +42,7 @@
                         <div class="col">
                             <label for="edad">Edad</label>
                             <input type="number" class="form-control w-25 @error('edad') is-invalid @enderror" name="edad"
-                                value="{{ $nino->edad }}" required autocomplete="off" autofocus min="1" max="18">
+                                value="{{ $nino->edad }}" required autocomplete="off" autofocus min="1" max="18" placeholder="1">
                             @error('edad')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -53,7 +53,7 @@
                         <div class="col">
                             <label for="hermanos">Hermanos</label>
                             <input type="number" class="form-control w-25 @error('hermanos') is-invalid @enderror"
-                                name="hermanos" value="{{ $nino->hermanos }}" autocomplete="off" autofocus min="0">
+                                name="hermanos" value="{{ $nino->hermanos }}" autocomplete="off" autofocus min="0" max="15" placeholder="0">
                             @error('hermanos')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -345,7 +345,7 @@
                     <label for="pago">Pago</label>
 
                     <input type="number" class="form-control @error('pago') is-invalid @enderror" name="pago"
-                        value="{{ $nino->pago }}" required autocomplete="off" autofocus>
+                        value="{{ $nino->pago }}" required autocomplete="off" autofocus placeholder="0.00" step="any" max="999.99" min="-999.99">
                     @error('pago')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

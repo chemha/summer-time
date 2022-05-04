@@ -183,21 +183,29 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col">
+                            <h3>Datos identificativos</h3>
                             <ul>
                                 <li>Nombre: <span id="nombre"></span></li>
                                 <li>Apellidos: <span id="apellidos"></span></li>
                                 <li>Edad: <span id="edad"></span></li>
                                 <li>Hermanos: <span id="hermanos"></span></li>
-                                <li>¿Medicación?: <span id="medicacion"></span></li>
-                                <li>¿Especial?: <span id="especial"></span></li>
-                                <li>Observaciones médicas: <span id="observacionesMedicas"></span></li>
                                 <li>Tutor: <span id="tutor"></span></li>
+                            </ul>
+                            <h3>Datos de contacto</h3>
+                            <ul>
                                 <li>Email: <span id="email"></span></li>
                                 <li>Teléfono 1: <span id="telefono1"></span></li>
                                 <li>Teléfono 2: <span id="telefono2"></span></li>
                             </ul>
                         </div>
                         <div class="col">
+                            <h3>Datos médicos</h3>
+                            <ul>
+                                <li>¿Medicación?: <span id="medicacion"></span></li>
+                                <li>¿Especial?: <span id="especial"></span></li>
+                                <li>Observaciones médicas: <span id="observacionesMedicas"></span></li>
+                            </ul>
+                            <h3>Datos de la escuela</h3>
                             <ul>
                                 <li>Grupo: <span id="grupo"></span></li>
                                 <li>Horario: <span id="horario"></span></li>
