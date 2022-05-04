@@ -89,7 +89,7 @@
                     <!-- 21 -->
                     <th>Q4</th>
 
-                    <th>Acción</th>
+                    <th class="sm">Acción</th>
                 </tr>
             </thead>
             <tbody>
@@ -145,7 +145,7 @@
                             @endif
                         </td>
 
-                        <td class="w-auto">
+                        <td>
                             <div class="row">
                                 <div class="col">
                                     <button id="btnVer" class="btn btn-primary">
