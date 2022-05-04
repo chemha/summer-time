@@ -44,7 +44,7 @@ class NinoFactory extends Factory
             "anotaciones" => $this->faker->realText,
 
             "recibo" => $this->faker->randomElement(["pagado", "pendiente"]),
-            "pago" => $this->faker->numberBetween(0, 999),
+            "pago" => $this->faker->numberBetween(0.00, 999.99),
         ];
     }
 }
