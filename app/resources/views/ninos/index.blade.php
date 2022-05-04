@@ -154,7 +154,7 @@
                                 </div>
                                 <div class="col">
                                     <a id="btnEditar" href="{{ route('ninos.edit', $nino->id) }}"
-                                        class="btn btn-primary">
+                                        class="btn btn-warning">
                                         <i class="bi bi-pencil-square"></i>
                                     </a>
                                 </div>
