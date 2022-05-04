@@ -182,7 +182,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <h3>Datos identificativos</h3>
+                        <h6>Datos identificativos</h6>
                         <ul>
                             <li>Nombre: <span id="nombre"></span></li>
                             <li>Apellidos: <span id="apellidos"></span></li>
@@ -193,7 +193,7 @@
 
                     </div>
                     <div class="row">
-                        <h3>Datos de contacto</h3>
+                        <h6>Datos de contacto</h6>
                         <ul>
                             <li>Email: <span id="email"></span></li>
                             <li>Teléfono 1: <span id="telefono1"></span></li>
@@ -202,7 +202,7 @@
                     </div>
 
                     <div class="row">
-                        <h3>Datos médicos</h3>
+                        <h6>Datos médicos</h6>
                         <ul>
                             <li>¿Medicación?: <span id="medicacion"></span></li>
                             <li>¿Especial?: <span id="especial"></span></li>
@@ -211,7 +211,7 @@
                     </div>
                     <div class="row">
 
-                        <h3>Datos de la escuela</h3>
+                        <h6>Datos de la escuela</h6>
                         <ul>
                             <li>Grupo: <span id="grupo"></span></li>
                             <li>Horario: <span id="horario"></span></li>
