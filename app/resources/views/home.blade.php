@@ -16,8 +16,7 @@
 
                         {{ __('Aquí irán los contadores') }}
 
-                        <table>
-
+                        <table class="table table-striped table-bordered">
                             <thead>
                                 <tr>
                                     <th></th>
