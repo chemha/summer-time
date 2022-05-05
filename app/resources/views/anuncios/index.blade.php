@@ -63,12 +63,8 @@
                         <td>
                             <div class="row">
                                 <div class="col">
-                                    <button id="btnVer" class="btn btn-primary">
+                                    <button id="btnEditar" type="button" class="btn btn-warning">
                                         <i class="bi bi-eye"></i>
-                                    </button>
-                                </div>
-                                <div class="col">
-                                    <button id="btnEditar" type="button" class="btn btn-primary">
                                         <i class="bi bi-pencil-square"></i>
                                     </button>
                                 </div>
