@@ -48,7 +48,7 @@ $(window).on("load", () => {
 
     //Preparacion del evento para mostra los datos en el modal
     $("#tabla-anuncios #btnEditar").on("click", function () {
-        mostratDatos(tabla.row(this.closest("tr")).data());
+        mostrarDatos(tabla.row(this.closest("tr")).data());
     });
 
     $("#modalEditar #btnEditar").on("click", function () {
