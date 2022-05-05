@@ -116,7 +116,7 @@
                         <td class="text-center">{{ $nino->recibo }}</td>
                         <td class="text-center">Grupo {{ $nino->grupo }}</td>
                         <td class="text-center">{{ $nino->horario }}</td>
-                        <td class="text-center">>
+                        <td class="text-center">
                             @if ($nino->quincena1 == 1)
                                 <span class="d-none">q1</span>
                                 <i class="bi bi-check-square-fill"></i>
