@@ -96,6 +96,8 @@ $(window).on("load", () => {
                 searchable: false,
             },
         ],
+
+        order: [[13, "desc"]],
     });
 
     //Preparacion del evento para mostra los datos en el modal
