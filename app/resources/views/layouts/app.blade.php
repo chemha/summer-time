@@ -55,16 +55,17 @@
                                 <a class="nav-link text-white" href="/tarifas">Tarifas</a>
                             </li>
                         @else
-                        <li>{{ Auth::user()->admin }}</li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="/ninos">Gestión de niños</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="/anuncios">Gestión de anuncios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="/anuncios">Gestión de usuarios</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/anuncios">Gestión de anuncios</a>
+                            </li>
+                            @if (Auth::user()->admin == 1)
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="/ninos">Gestión de niños</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="/anuncios">Gestión de usuarios</a>
+                                </li>
+                            @endif1
                         @endguest
                     </ul>
 
@@ -92,8 +93,8 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item text-white" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                             document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item text-white" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
