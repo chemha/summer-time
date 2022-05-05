@@ -55,7 +55,7 @@
                                 <a class="nav-link text-white" href="/tarifas">Tarifas</a>
                             </li>
                         @else
-                        <li>{{ Auth::user->admin }}</li>
+                        <li>{{ Auth::user()->admin }}</li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="/ninos">Gestión de niños</a>
                         </li>
