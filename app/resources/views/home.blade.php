@@ -30,7 +30,7 @@
                             <tbody>
                                 <tr>
                                     <td>Q1</td>
-                                    <td>{{ count(DB::table('ninos')->select()->where('grupo', 1)->and()->where('quincena1', true)) }}</td>
+                                    <td>{{ count(DB::table('ninos')->select()->where('grupo', 1)->where('quincena1', true)) }}</td>
                                 </tr>
                             </tbody>
                         </table>
