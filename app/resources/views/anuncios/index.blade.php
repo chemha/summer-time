@@ -124,6 +124,7 @@
                 </div>
                 <form action="" method="POST">
                     @csrf
+                    @method("PUT")
                     <div class="modal-body">
                         <div class="col">
                             <label for="titulo">Título</label>
@@ -135,6 +136,8 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+
+                        <span class="d-none" id="id"></span>
                         <button id="btnEditar" type="button" class="btn btn-primary">Editar anuncio</button>
                     </div>
                 </form>

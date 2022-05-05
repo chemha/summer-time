@@ -106,7 +106,7 @@ $(window).on("load", () => {
    });
 
     //Preparación de evento para el modal de eliminación
-    $("#tabla-ninos #btnBorrar").on("click", function (e) {
+    $("#tabla-ninos #btnBorrar").on("click", function () {
         confirmarEliminar($(this).closest("form"));
     });
 });
