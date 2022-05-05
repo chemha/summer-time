@@ -54,8 +54,9 @@ $(window).on("load", () => {
     $("#modalEditar #btnEditar").on("click", function () {
         const form = $(this).closest("form");
         const id = $(this).closest("#id").text();
+        console.log(id);
         form.attr("action", "/anuncios/" + id);
-        form.trigger("submit");
+        //form.trigger("submit");
     });
 
     //Preparación de evento para el modal de eliminación
