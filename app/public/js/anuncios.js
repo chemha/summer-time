@@ -53,7 +53,7 @@ $(window).on("load", () => {
 
     $("#modalEditar #btnEditar").on("click", function () {
         const form = $(this).closest("form");
-        const id = $(this).closest("#id").text();
+        const id = $("#modalEditar #id").text();
         console.log(id);
         form.attr("action", "/anuncios/" + id);
         //form.trigger("submit");
