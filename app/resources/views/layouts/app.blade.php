@@ -16,7 +16,7 @@
     <!-- Añadir scripts especificos para cada página -->
     <!-- Esto hace que la web sea más eficiente -->
     @yield('js')
-    
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -47,6 +47,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/tarifas">Tarifas</a>
+                            </li>
+                        @else
+                        <li>{{ Auth::user->admin }}</li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="/ninos">Gestión de niños</a>
                         </li>
@@ -56,6 +65,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" href="/anuncios">Gestión de usuarios</a>
                         </li>
+                        @endguest
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -83,7 +93,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item text-white" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
+                                                             document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
