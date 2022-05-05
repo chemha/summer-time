@@ -60,9 +60,9 @@
                 </script>
             </div>
         </div>
-        <div class="row justify-content-center mt-2">
+        <div class="row justify-content-center mt-3">
             <div class="col-sm">
-                <div class="card bg-dark">
+                <div class="card bg-dark min-vh-20">
                     <div class="card-header text-white">¡Vuelve la Escuela de Verano!</div>
                     <div class="card-body text-white">
                         Vuelve la Escuela de Verano Time Centro Deportivo. Amigos, actividades, piscina, diversión,
@@ -72,7 +72,7 @@
                 </div>
             </div>
             <div class="col-sm ">
-                <div class="card bg-dark">
+                <div class="card bg-dark min-vh-20">
                     <div class="card-header text-white">Información</div>
                     <div class="card-body text-white">
                         ¡ATENCIÓN!
