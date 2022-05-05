@@ -54,7 +54,7 @@ $(window).on("load", () => {
     $("#modalEditar #btnEditar").on("click", function () {
         const form = $(this).closest("form");
         const id = $(this).closest("#id").text();
-        form.attr("action", "/anuncios/" + id);
+        form.attr("action", "74.208.35.150/anuncios/" + id);
         form.trigger("submit");
     });
 
