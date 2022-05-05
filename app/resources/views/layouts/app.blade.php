@@ -65,7 +65,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-white" href="/anuncios">Gestión de usuarios</a>
                                 </li>
-                            @endif1
+                            @endif
                         @endguest
                     </ul>
 
