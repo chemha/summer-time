@@ -60,7 +60,7 @@
                 </script>
             </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mt-2">
             <div class="col-sm">
                 <div class="card bg-dark">
                     <div class="card-header text-white">¡Vuelve la Escuela de Verano!</div>
