@@ -56,6 +56,9 @@
                             </li>
                         @else
                             <li class="nav-item">
+                                <a class="nav-link text-white" href="/home">Inicio</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link text-white" href="/anuncios">Gestión de anuncios</a>
                             </li>
                             @if (Auth::user()->admin == 1)
