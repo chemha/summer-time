@@ -114,7 +114,10 @@
                         <td class="text-center">{{ $nino->tutor }}</td>
                         <td class="text-center">{{ $nino->telefono1 }}</td>
                         <td class="text-center">{{ $nino->recibo }}</td>
-                        <td class="text-center">Grupo {{ $nino->grupo }}</td>
+                        <td class="text-center">
+                            <span class="d-none">grupo{{ $nino->grupo }}</span>
+                            grupo {{ $nino->grupo }}
+                        </td>
                         <td class="text-center">{{ $nino->horario }}</td>
                         <td class="text-center">
                             @if ($nino->quincena1 == 1)
