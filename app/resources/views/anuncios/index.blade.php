@@ -65,6 +65,7 @@
                                 <div class="col">
                                     <button id="btnEditar" type="button" class="btn btn-warning">
                                         <i class="bi bi-eye"></i>
+                                        /
                                         <i class="bi bi-pencil-square"></i>
                                     </button>
                                 </div>
