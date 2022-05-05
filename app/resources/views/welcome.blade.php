@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-xxl">
+            <div class="col">
                 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner  mh-100">
                         <div class="carousel-item active" data-bs-interval="10000">
@@ -63,25 +63,25 @@
         <div class="row justify-content-center">
             <div class="col-sm">
                 <div class="card bg-dark">
-                    <div class="card-header text-white">Anuncio 2</div>
+                    <div class="card-header text-white">¡Vuelve la Escuela de Verano!</div>
                     <div class="card-body text-white">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum."
+                        Vuelve la Escuela de Verano Time Centro Deportivo. Amigos, actividades, piscina, diversión,
+                        aprendizaje. ¡Reserva tus plazas antes de que se agoten! En recepción o llamando al 958 82 29 25
+
                     </div>
                 </div>
             </div>
             <div class="col-sm ">
                 <div class="card bg-dark">
-                    <div class="card-header text-white">Anuncio 2</div>
+                    <div class="card-header text-white">Información</div>
                     <div class="card-body text-white">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum."
+                        ¡ATENCIÓN!
+                        Este miércoles día 4 de Mayo abrimos plazo de inscripción para nuestra escuela de verano. Plazas
+                        limitadas.
+                        Para más información les atenderemos en nuestras instalaciones y mandanos un contacto desde esta web
+                        #TimeCentroDeportivo
+                        #escueladeverano
+                        #deporteydiversión
                     </div>
                 </div>
             </div>
