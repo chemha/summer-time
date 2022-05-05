@@ -117,6 +117,7 @@
                         <td class="text-center">Grupo {{ $nino->grupo }}</td>
                         <td class="text-center">{{ $nino->horario }}</td>
                         <td class="text-center">
+                            <span class="d-none">{{ $nino->quincena1 }}</span>
                             @if ($nino->quincena1 == 1)
                                 <i class="bi bi-check-square-fill"></i>
                             @else
@@ -124,6 +125,7 @@
                             @endif
                         </td>
                         <td class="text-center">
+                            <span class="d-none">{{ $nino->quincena2 }}</span>
                             @if ($nino->quincena2 == 1)
                                 <i class="bi bi-check-square-fill"></i>
                             @else
@@ -131,6 +133,7 @@
                             @endif
                         </td>
                         <td class="text-center">
+                            <span class="d-none">{{ $nino->quincena3 }}</span>
                             @if ($nino->quincena3 == 1)
                                 <i class="bi bi-check-square-fill"></i>
                             @else
@@ -138,6 +141,7 @@
                             @endif
                         </td>
                         <td class="text-center">
+                            <span class="d-none">{{ $nino->quincena4 }}</span>
                             @if ($nino->quincena4 == 1)
                                 <i class="bi bi-check-square-fill"></i>
                             @else

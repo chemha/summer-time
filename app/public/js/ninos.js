@@ -14,7 +14,7 @@ function mostrarDatos(datos) {
 
         grupo: datos[16],
         horario: datos[17],
-        quincena1: datos[18],
+        quincena1: datos[18].,
         quincena2: datos[19],
         quincena3: datos[20],
         quincena4: datos[21],
