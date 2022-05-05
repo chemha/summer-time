@@ -29,9 +29,9 @@ $(window).on("load", () => {
     });
 
     $("#modalEditar #btnEditar").on("click", function (e) {
-        const form = $(this).closest("form");
+        const form = $(this).closest("form").attr("action")
 
-        form.attr("action", "74.134/anuncios/1/update");
+        form.attr("action", "/anuncios/1");
     });
 
     //Preparación de evento para el modal de eliminación

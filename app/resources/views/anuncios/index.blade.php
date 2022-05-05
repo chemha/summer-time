@@ -130,7 +130,7 @@
                     <div class="modal-body">
                         <div class="col">
                             <label for="titulo">Título</label>
-                            <input type="text" name="titulo" required autocomplete="off" class="form-control">
+                            <input type="text" id="titulo" name="titulo" required autocomplete="off" class="form-control">
                             <label for="descripcion">Descripción</label>
                             <textarea name="descripcion" id="descripcion" cols="30" rows="10" autocomplete="off" required
                                 class=" form-control"></textarea>
