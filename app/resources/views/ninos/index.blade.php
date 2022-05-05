@@ -116,33 +116,34 @@
                         <td class="text-center">{{ $nino->recibo }}</td>
                         <td class="text-center">Grupo {{ $nino->grupo }}</td>
                         <td class="text-center">{{ $nino->horario }}</td>
-                        <td class="text-center">
-                            <span class="d-none">{{ $nino->quincena1 }}</span>
+                        <td class="text-center">>
                             @if ($nino->quincena1 == 1)
+                                <span class="d-none">q1</span>
                                 <i class="bi bi-check-square-fill"></i>
                             @else
                                 <i class="bi bi-x-square-fill"></i>
                             @endif
                         </td>
                         <td class="text-center">
-                            <span class="d-none">{{ $nino->quincena2 }}</span>
+
                             @if ($nino->quincena2 == 1)
+                                <span class="d-none">q2</span>
                                 <i class="bi bi-check-square-fill"></i>
                             @else
                                 <i class="bi bi-x-square-fill"></i>
                             @endif
                         </td>
                         <td class="text-center">
-                            <span class="d-none">{{ $nino->quincena3 }}</span>
                             @if ($nino->quincena3 == 1)
+                                <span class="d-none">q3</span>
                                 <i class="bi bi-check-square-fill"></i>
                             @else
                                 <i class="bi bi-x-square-fill"></i>
                             @endif
                         </td>
                         <td class="text-center">
-                            <span class="d-none">{{ $nino->quincena4 }}</span>
                             @if ($nino->quincena4 == 1)
+                                <span class="d-none">q4</span>
                                 <i class="bi bi-check-square-fill"></i>
                             @else
                                 <i class="bi bi-x-square-fill"></i>
