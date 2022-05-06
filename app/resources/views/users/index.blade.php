@@ -127,7 +127,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalEditarLabel">Editar user</h5>
+                    <h5 class="modal-title" id="modalEditarLabel">Editar usuario</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action="" method="POST">
@@ -136,20 +136,19 @@
                     <div class="modal-body">
                         <div class="col">
                             <label for="name">Nombre</label>
-                            <input type="text" name="name" required autocomplete="off" class="form-control">
+                            <input type="text" name="name" id="email" required autocomplete="off" class="form-control">
                             <label for="email">Email</label>
-                            <input type="email" name="email" required autocomplete="off" class="form-control">
-                            <label for="password">Contraseña</label>
-                            <input type="password" name="password" required autocomplete="off" class="form-control">
+                            <input type="email" name="email" id="email" required autocomplete="off" class="form-control">
                             <label for="admin">Rol</label>
-                            <select class="form-select w-50 float-left" name="admin" id="" required autocomplete="off">
+                            <select class="form-select w-50 float-left" name="admin" id="admin" required autocomplete="off">
                                 <option selected disabled value>Elige un rol</option>
+                                <option value="1">Administrador</option>
+                                <option value="0">Monitor</option>
                             </select>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-
                         <span class="d-none" id="id"></span>
                         <button id="btnEditar" type="button" class="btn btn-primary">Editar user</button>
                     </div>

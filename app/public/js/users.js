@@ -1,4 +1,8 @@
 function mostrarDatos(datos) {
+    datos[3] == "administrador"
+        ? $("#modalEditar #admin").val(1)
+        : $("#modalEditar #admin").val(0);
+
     $("#modalEditar #email").val(datos[2]);
     $("#modalEditar #name").val(datos[1]);
     $("#modalEditar #id").text(datos[0]);
