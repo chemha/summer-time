@@ -66,7 +66,7 @@
                                     </button>
                                 </div>
                                 <div class="col">
-                                    <button id="btnEditar" type="button" class="btn btn-warning">
+                                    <button id="btnClave" type="button" class="btn btn-warning">
                                         <i class="bi bi-pencil-square">Contraseña</i>
                                     </button>
                                 </div>
@@ -150,7 +150,34 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                         <span class="d-none" id="id"></span>
-                        <button id="btnEditar" type="button" class="btn btn-primary">Editar user</button>
+                        <button id="btnEditar" type="button" class="btn btn-primary">Editar usuario</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalClave" tabindex="-1" aria-labelledby="modalClaveLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalClaveLabel">Cambiar contraseña</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" method="POST">
+                    @csrf
+                    @method("PUT")
+                    <div class="modal-body">
+                        <div class="col">
+                            <label for="name">Nueva contraseña</label>
+                            <input type="password" name="password" required autocomplete="off" class="form-control">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <span class="d-none" id="id"></span>
+                        <button id="btnEditar" type="button" class="btn btn-primary">Cambiar contraseña</button>
                     </div>
                 </form>
             </div>

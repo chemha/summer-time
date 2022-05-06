@@ -10,6 +10,10 @@ function mostrarDatos(datos) {
     $("#modalEditar").modal("show");
 }
 
+function cambiarContraseña(datos) {
+    $("#modalClave #id").text(datos[0]);
+}
+
 function confirmarEliminar(form) {
     swal({
         title: "¿Estás seguro de que quieres eliminar este usuario?",
@@ -55,11 +59,22 @@ $(window).on("load", () => {
         mostrarDatos(tabla.row(this.closest("tr")).data());
     });
 
+    $("#tabla-users #btnClave").on("click", function () {
+        mostrarDatos(tabla.row(this.closest("tr")).data());
+    });
+
     $("#modalEditar #btnEditar").on("click", function () {
         const form = $(this).closest("form");
         form.attr("action", "/users/" + $("#modalEditar #id").text());
         form.trigger("submit");
     });
+
+    $("#modalClave #btnEditar").on("click", function () {
+        const form = $(this).closest("form");
+        form.attr("action", "/users/" + $("#modalClave #id").text());
+        form.trigger("submit");
+    });
+
 
     //Preparación de evento para el modal de eliminación
     $("#tabla-users #btnBorrar").on("click", function () {
