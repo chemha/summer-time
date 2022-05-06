@@ -10,8 +10,9 @@ function mostrarDatos(datos) {
     $("#modalEditar").modal("show");
 }
 
-function cambiarContraseña(datos) {
+function cambiarClave(datos) {
     $("#modalClave #id").text(datos[0]);
+    $("#modalEditar").modal("show");
 }
 
 function confirmarEliminar(form) {
@@ -60,7 +61,7 @@ $(window).on("load", () => {
     });
 
     $("#tabla-users #btnClave").on("click", function () {
-        mostrarDatos(tabla.row(this.closest("tr")).data());
+        cambiarClave(tabla.row(this.closest("tr")).data());
     });
 
     $("#modalEditar #btnEditar").on("click", function () {
