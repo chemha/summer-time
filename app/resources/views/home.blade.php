@@ -60,6 +60,14 @@
                                     <td>{{ count(DB::table('ninos')->select()->where('grupo', 4)->where('quincena4', true)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->select()->where('quincena4', true)->get()) }}</td>
                                 </tr>
+                                <tr>
+                                    <th>Total</th>
+                                    <td>{{ count(DB::table('ninos')->select()->where('grupo', 1)->get()) }}</td>
+                                    <td>{{ count(DB::table('ninos')->select()->where('grupo', 2)->get()) }}</td>
+                                    <td>{{ count(DB::table('ninos')->select()->where('grupo', 3)->get()) }}</td>
+                                    <td>{{ count(DB::table('ninos')->select()->where('grupo', 4)->get()) }}</td>
+                                    <td></td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
