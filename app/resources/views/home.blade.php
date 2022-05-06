@@ -24,6 +24,7 @@
                                     <th>G2</th>
                                     <th>G3</th>
                                     <th>G4</th>
+                                    <th>Total</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -33,6 +34,7 @@
                                     <td>{{ count(DB::table('ninos')->select()->where('grupo', 2)->where('quincena1', true)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->select()->where('grupo', 3)->where('quincena1', true)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->select()->where('grupo', 4)->where('quincena1', true)->get()) }}</td>
+                                    <td>{{ count(DB::table('ninos')->select()->where('quincena1', true)->get()) }}</td>
                                 </tr>
                                 <tr>
                                     <th>Q2</th>
@@ -40,6 +42,7 @@
                                     <td>{{ count(DB::table('ninos')->select()->where('grupo', 2)->where('quincena2', true)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->select()->where('grupo', 3)->where('quincena2', true)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->select()->where('grupo', 4)->where('quincena2', true)->get()) }}</td>
+                                    <td>{{ count(DB::table('ninos')->select()->where('quincena2', true)->get()) }}</td>
                                 </tr>
                                 <tr>
                                     <th>Q3</th>
@@ -47,6 +50,7 @@
                                     <td>{{ count(DB::table('ninos')->select()->where('grupo', 2)->where('quincena3', true)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->select()->where('grupo', 3)->where('quincena3', true)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->select()->where('grupo', 4)->where('quincena3', true)->get()) }}</td>
+                                    <td>{{ count(DB::table('ninos')->select()->where('quincena3', true)->get()) }}</td>
                                 </tr>
                                 <tr>
                                     <th>Q4</th>
@@ -54,6 +58,7 @@
                                     <td>{{ count(DB::table('ninos')->select()->where('grupo', 2)->where('quincena4', true)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->select()->where('grupo', 3)->where('quincena4', true)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->select()->where('grupo', 4)->where('quincena4', true)->get()) }}</td>
+                                    <td>{{ count(DB::table('ninos')->select()->where('quincena4', true)->get()) }}</td>
                                 </tr>
                             </tbody>
                         </table>
