@@ -41,7 +41,17 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'admin' => $request->admin,
+        ]);
+
+        return redirect()->route('users.index')->with('alert', [
+            'type' => 'success',
+            'message' => "Usuario creado correctamente.",
+        ]);
     }
 
     /**

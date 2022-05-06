@@ -27,7 +27,7 @@
 @section('content')
     <div class="container-fluid">
 
-        <h1>Listado de users</h1>
+        <h1>Listado de usuarios</h1>
 
         @if (session('alert'))
             <div class="alert alert-{{ session('alert')['type'] }}" role="alert">
@@ -98,16 +98,23 @@
                     @csrf
                     <div class="modal-body">
                         <div class="col">
-                            <label for="titulo">Título</label>
-                            <input type="text" name="titulo" required autocomplete="off" class="form-control">
-                            <label for="descripcion">Descripción</label>
-                            <textarea name="descripcion" id="descripcion" cols="30" rows="10" autocomplete="off" required
-                                class=" form-control"></textarea>
+                            <label for="name">Nombre</label>
+                            <input type="text" name="name" required autocomplete="off" class="form-control">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" required autocomplete="off" class="form-control">
+                            <label for="password">Contraseña</label>
+                            <input type="password" name="password" required autocomplete="off" class="form-control">
+                            <label for="admin">Rol</label>
+                            <select class="form-select w-50 float-left" name="admin" id="">
+                                <option selected disabled value>Elige un rol</option>
+                                <option value="1">Administrador</option>
+                                <option value="0">Monitor</option>
+                            </select>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-primary">Crear user</button>
+                        <button type="submit" class="btn btn-primary">Crear usuario</button>
                     </div>
                 </form>
             </div>
@@ -127,8 +134,8 @@
                     @method("PUT")
                     <div class="modal-body">
                         <div class="col">
-                            <label for="titulo">Título</label>
-                            <input type="text" id="titulo" name="titulo" required autocomplete="off" class="form-control">
+                            <label for="name">Título</label>
+                            <input type="text" id="name" name="name" required autocomplete="off" class="form-control">
                             <label for="descripcion">Descripción</label>
                             <textarea name="descripcion" id="descripcion" cols="30" rows="10" autocomplete="off" required
                                 class=" form-control"></textarea>
