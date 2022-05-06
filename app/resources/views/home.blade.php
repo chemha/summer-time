@@ -24,7 +24,7 @@
                                     <th>G2</th>
                                     <th>G3</th>
                                     <th>G4</th>
-                                    <th>Total</th>
+                                    <th>Total quincenas</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -61,7 +61,7 @@
                                     <td>{{ count(DB::table('ninos')->select()->where('quincena4', true)->get()) }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Total</th>
+                                    <th>Total grupos</th>
                                     <td>{{ count(DB::table('ninos')->select()->where('grupo', 1)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->select()->where('grupo', 2)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->select()->where('grupo', 3)->get()) }}</td>
