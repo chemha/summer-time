@@ -59,7 +59,7 @@
 
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
-                        <td>{{ $user->admin }}</td>
+                        <td>{{ $user->admin == 1 ? 'administrador' : 'monitor' }}</td>
                         <td>
                             <div class="row">
                                 <div class="col">
