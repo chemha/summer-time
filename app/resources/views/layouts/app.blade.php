@@ -67,7 +67,7 @@
                                     <a class="nav-link text-white" href="/ninos">Gestión de niños</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-white" href="/anuncios">Gestión de usuarios</a>
+                                    <a class="nav-link text-white" href="/users">Gestión de usuarios</a>
                                 </li>
                             @endif
                         @endguest
