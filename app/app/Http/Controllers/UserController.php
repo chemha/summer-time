@@ -87,8 +87,14 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $user->update($request->all());
-
+        if ($request->has('password')) {
+            $user->update([
+                'password' => Hash::make($request->password),
+            ]);
+        } else {
+            $user->update($request->all());
+        }
+        
         return redirect()->route('users.index')->with('alert', [
             'type' => 'success',
             'message' => "El usuario se ha modificado correctamente.",
