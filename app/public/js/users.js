@@ -8,7 +8,7 @@ function mostrarDatos(datos) {
 
 function confirmarEliminar(form) {
     swal({
-        title: "¿Estás seguro de que quieres eliminar este registro?",
+        title: "¿Estás seguro de que quieres eliminar este usuario?",
         text: "Estos cambios no pueden deshacerse",
         icon: "warning",
         buttons: ["Cancelar", "Eliminar"],
