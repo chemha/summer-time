@@ -1,6 +1,6 @@
 function mostrarDatos(datos) {
-    $("#modalEditar #titulo").val(datos[2]);
-    $("#modalEditar #descripcion").text(datos[1]);
+    $("#modalEditar #email").val(datos[2]);
+    $("#modalEditar #name").val(datos[1]);
     $("#modalEditar #id").text(datos[0]);
 
     $("#modalEditar").modal("show");

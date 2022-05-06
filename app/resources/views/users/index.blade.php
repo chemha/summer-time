@@ -43,7 +43,6 @@
             <thead class="">
                 <tr>
                     <th class="d-none" scope="col">ID</th>
-                    <th class="d-none" scope="col">Descripción</th>
 
                     <th scope="col">Nombre</th>
                     <th scope="col">Email</th>
@@ -55,7 +54,6 @@
                 @foreach ($users as $user)
                     <tr>
                         <td class="d-none">{{ $user->id }}</td>
-                        <td class="d-none">{{ $user->descripcion }}</td>
 
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
@@ -64,9 +62,12 @@
                             <div class="row">
                                 <div class="col">
                                     <button id="btnEditar" type="button" class="btn btn-warning">
-                                        <i class="bi bi-eye"></i>
-                                        /
                                         <i class="bi bi-pencil-square"></i>
+                                    </button>
+                                </div>
+                                <div class="col">
+                                    <button id="btnEditar" type="button" class="btn btn-warning">
+                                        <i class="bi bi-pencil-square">Contraseña</i>
                                     </button>
                                 </div>
                                 <div class="col">
@@ -105,7 +106,7 @@
                             <label for="password">Contraseña</label>
                             <input type="password" name="password" required autocomplete="off" class="form-control">
                             <label for="admin">Rol</label>
-                            <select class="form-select w-50 float-left" name="admin" id="">
+                            <select class="form-select w-50 float-left" name="admin" id="" required autocomplete="off">
                                 <option selected disabled value>Elige un rol</option>
                                 <option value="1">Administrador</option>
                                 <option value="0">Monitor</option>
@@ -134,11 +135,16 @@
                     @method("PUT")
                     <div class="modal-body">
                         <div class="col">
-                            <label for="name">Título</label>
-                            <input type="text" id="name" name="name" required autocomplete="off" class="form-control">
-                            <label for="descripcion">Descripción</label>
-                            <textarea name="descripcion" id="descripcion" cols="30" rows="10" autocomplete="off" required
-                                class=" form-control"></textarea>
+                            <label for="name">Nombre</label>
+                            <input type="text" name="name" required autocomplete="off" class="form-control">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" required autocomplete="off" class="form-control">
+                            <label for="password">Contraseña</label>
+                            <input type="password" name="password" required autocomplete="off" class="form-control">
+                            <label for="admin">Rol</label>
+                            <select class="form-select w-50 float-left" name="admin" id="" required autocomplete="off">
+                                <option selected disabled value>Elige un rol</option>
+                            </select>
                         </div>
                     </div>
                     <div class="modal-footer">
