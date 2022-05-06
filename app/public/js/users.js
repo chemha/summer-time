@@ -12,7 +12,7 @@ function mostrarDatos(datos) {
 
 function cambiarClave(datos) {
     $("#modalClave #id").text(datos[0]);
-    $("#modalEditar").modal("show");
+    $("#modalClave").modal("show");
 }
 
 function confirmarEliminar(form) {
