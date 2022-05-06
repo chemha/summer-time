@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AnuncioController;
 use App\Http\Controllers\NinoController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
