@@ -35,7 +35,7 @@
             </div>
         @endif
 
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCrear">
+        <button type="button" class="btn btn-secondary mb-2" data-bs-toggle="modal" data-bs-target="#modalCrear">
             Crear anuncio
         </button>
 
