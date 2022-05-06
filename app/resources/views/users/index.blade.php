@@ -136,7 +136,7 @@
                     <div class="modal-body">
                         <div class="col">
                             <label for="name">Nombre</label>
-                            <input type="text" name="name" id="email" required autocomplete="off" class="form-control">
+                            <input type="text" name="name" id="name" required autocomplete="off" class="form-control">
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email" required autocomplete="off" class="form-control">
                             <label for="admin">Rol</label>
