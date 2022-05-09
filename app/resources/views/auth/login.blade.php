@@ -65,7 +65,7 @@
                                     </button>
 
                                     @if (Route::has('password.request'))
-                                        <button class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalClave">
+                                        <button class="btn btn-link" type="button" data-bs-toggle="modal" data-bs-target="#modalClave">
                                             {{ __('Forgot Your Password?') }}
                                         </button>
                                     @endif
