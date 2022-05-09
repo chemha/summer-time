@@ -114,7 +114,7 @@
                     <div class="modal-body">
                         <div class="col">
                             <label for="name">Nuevo avatar</label>
-                            <input type="file" accept="image/png image/jpeg" name="image" required autocomplete="off" class="form-control-file">
+                            <input type="file" accept="image/*" name="image" required autocomplete="off" class="form-control-file">
                         </div>
                     </div>
                     <div class="modal-footer">
