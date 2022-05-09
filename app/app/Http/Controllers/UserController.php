@@ -91,8 +91,8 @@ class UserController extends Controller
         if ($request->has('password') || $request->has('image')) {
             if ($request->has('password')) $user->update(['password' => Hash::make($request->password)]);
             if ($request->has('image')) {
-                $avatar = $request['image']->store('avatares', 'public');
-                Image::make(public_path("/storage/$avatar"))->fit(320, 320)->save();
+                $avatar = '/storage/' + $request['image']->store('avatares', 'public');
+                Image::make(public_path("storage/$avatar"))->fit(320, 320)->save();
                 $user->update(['image' => $avatar]);
             }
         } else $user->update($request->all());
