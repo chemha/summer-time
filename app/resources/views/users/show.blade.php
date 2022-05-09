@@ -113,8 +113,8 @@
                     @method("PUT")
                     <div class="modal-body">
                         <div class="col">
-                            <label for="name">Nuevo avatar</label>
-                            <input type="file" accept="image/*" name="image" required autocomplete="off" class="form-control-file">
+                            <label for="image">Nuevo avatar</label>
+                            <input type="file" accept="image/*" name="image" required autocomplete="off" class="form-control">
                         </div>
                     </div>
                     <div class="modal-footer">
