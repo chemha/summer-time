@@ -40,7 +40,7 @@
             <li>Imagen: <span>{{ $user->image }}</span></li>
             <li>Nombre: <span>{{ $user->name }}</span></li>
             <li>Email: <span>{{ $user->email }}</span></li>
-
+            <li><button>Cambiar contraseña</button></li>
         </ul>
         @endforeach
     </div>
