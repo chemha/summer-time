@@ -105,7 +105,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalFotoLabel">Cambiar contraseña</h5>
+                    <h5 class="modal-title" id="modalFotoLabel">Cambiar avatar</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action="{{ route('users.update', $user->id) }}" method="POST" enctype="multipart/form-data">
@@ -114,13 +114,13 @@
                     <div class="modal-body">
                         <div class="col">
                             <label for="name">Nuevo avatar</label>
-                            <input type="file" name="image" required autocomplete="off" class="form-control-file">
+                            <input type="file" accept="image/png image/jpeg" name="image" required autocomplete="off" class="form-control-file">
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                         <span class="d-none" id="id"></span>
-                        <button id="btnEditar" type="submit" class="btn btn-primary">Cambiar contraseña</button>
+                        <button id="btnEditar" type="submit" class="btn btn-primary">Cambiar avatar</button>
                     </div>
                 </form>
             </div>
