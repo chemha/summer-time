@@ -77,19 +77,18 @@
             </div>
         </div>
     </div>
-@endsection
-
-<!-- Modal -->
-<div class="modal fade" id="modalClave" tabindex="-1" aria-labelledby="modalClaveLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalClaveLabel">Resetear contraseña</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <span>Contacte con cualquiera de los administradores para resetear su contraseña</span>
+    <!-- Modal -->
+    <div class="modal fade" id="modalClave" tabindex="-1" aria-labelledby="modalClaveLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalClaveLabel">Resetear contraseña</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <span>Contacte con cualquiera de los administradores para resetear su contraseña</span>
+                </div>
             </div>
         </div>
     </div>
-</div>
+@endsection
