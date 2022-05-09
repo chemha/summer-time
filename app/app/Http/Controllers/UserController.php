@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Hash;
+use Intervention\Image\Facades\Image;
 
 class UserController extends Controller
 {
@@ -87,14 +88,15 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        if ($request->has('password')) {
-            $user->update([
-                'password' => Hash::make($request->password),
-            ]);
-        } else {
-            $user->update($request->all());
-        }
-        
+        if ($request->has('password') || $request->has('image')) {
+            if ($request->has('password')) $user->update(['password' => Hash::make($request->password)]);
+            if ($request->has('image')) {
+                $avatar = $request['image']->store('avatares', 'public');
+                Image::make(public_path("storage/$avatar"))->fit(320, 320)->save();
+                $user->update(['image' => $avatar]);
+            }
+        } else $user->update($request->all());
+
         return redirect()->route('users.index')->with('alert', [
             'type' => 'success',
             'message' => "El usuario se ha modificado correctamente.",

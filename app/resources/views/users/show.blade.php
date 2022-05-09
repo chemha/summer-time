@@ -21,9 +21,14 @@
         @endif
 
         <ul>
-            <li>Imagen: <span>{{ $user->image }}</span></li>
+            <li>Imagen: <img src="{{ $user->image }}"></li>
             <li>Nombre: <span>{{ $user->name }}</span></li>
             <li>Email: <span>{{ $user->email }}</span></li>
+            <li>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalFoto">
+                    Cambiar foto de perfil
+                </button>
+            </li>
             <li>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditar">
                     Modificar datos
@@ -51,9 +56,11 @@
                     <div class="modal-body">
                         <div class="col">
                             <label for="name">Nombre</label>
-                            <input type="text" name="name" id="name" value="{{ $user->name }}" required autocomplete="off" class="form-control">
+                            <input type="text" name="name" id="name" value="{{ $user->name }}" required autocomplete="off"
+                                class="form-control">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email" value="{{ $user->email }}" required autocomplete="off" class="form-control">
+                            <input type="email" name="email" id="email" value="{{ $user->email }}" required
+                                autocomplete="off" class="form-control">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -93,5 +100,30 @@
         </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="modalFoto" tabindex="-1" aria-labelledby="modalFotoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalFotoLabel">Cambiar contraseña</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="{{ route('users.update', $user->id) }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    @method("PUT")
+                    <div class="modal-body">
+                        <div class="col">
+                            <label for="name">Nuevo avatar</label>
+                            <input type="file" name="image" required autocomplete="off" class="form-control-file">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <span class="d-none" id="id"></span>
+                        <button id="btnEditar" type="submit" class="btn btn-primary">Cambiar contraseña</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 @endsection
