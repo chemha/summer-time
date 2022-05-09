@@ -44,41 +44,6 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="modalCrear" tabindex="-1" aria-labelledby="modalCrearLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalCrearLabel">Crear nuevo user</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form action="{{ route('users.store') }}" method="POST">
-                    @csrf
-                    <div class="modal-body">
-                        <div class="col">
-                            <label for="name">Nombre</label>
-                            <input type="text" name="name" required autocomplete="off" class="form-control">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" required autocomplete="off" class="form-control">
-                            <label for="password">Contraseña</label>
-                            <input type="password" name="password" required autocomplete="off" class="form-control">
-                            <label for="admin">Rol</label>
-                            <select class="form-select w-50 float-left" name="admin" id="" required autocomplete="off">
-                                <option selected disabled value>Elige un rol</option>
-                                <option value="1">Administrador</option>
-                                <option value="0">Monitor</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-primary">Crear usuario</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal -->
     <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -86,7 +51,7 @@
                     <h5 class="modal-title" id="modalEditarLabel">Editar usuario</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="" method="POST">
+                <form action="{{ route('users.update', $user->id) }}" method="POST">
                     @csrf
                     @method("PUT")
                     <div class="modal-body">
@@ -95,18 +60,12 @@
                             <input type="text" name="name" id="name" required autocomplete="off" class="form-control">
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email" required autocomplete="off" class="form-control">
-                            <label for="admin">Rol</label>
-                            <select class="form-select w-50 float-left" name="admin" id="admin" required autocomplete="off">
-                                <option selected disabled value>Elige un rol</option>
-                                <option value="1">Administrador</option>
-                                <option value="0">Monitor</option>
-                            </select>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                         <span class="d-none" id="id"></span>
-                        <button id="btnEditar" type="button" class="btn btn-primary">Editar usuario</button>
+                        <button id="btnEditar" type="submit" class="btn btn-primary">Editar usuario</button>
                     </div>
                 </form>
             </div>
@@ -121,7 +80,7 @@
                     <h5 class="modal-title" id="modalClaveLabel">Cambiar contraseña</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="" method="POST">
+                <form action="{{ route('users.update', $user->id) }}" method="POST">
                     @csrf
                     @method("PUT")
                     <div class="modal-body">
@@ -133,7 +92,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                         <span class="d-none" id="id"></span>
-                        <button id="btnEditar" type="button" class="btn btn-primary">Cambiar contraseña</button>
+                        <button id="btnEditar" type="submit" class="btn btn-primary">Cambiar contraseña</button>
                     </div>
                 </form>
             </div>
