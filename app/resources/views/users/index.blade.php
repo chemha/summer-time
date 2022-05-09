@@ -186,5 +186,3 @@
 
     </div>
 @endsection
-
-<!-- Scripts para datatables y modales -->
