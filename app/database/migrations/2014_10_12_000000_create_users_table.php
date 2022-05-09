@@ -38,7 +38,7 @@ return new class extends Migration
         //Inserción de usuario administrador al hacer la migración
         DB::table('users')->insert(
             array(
-                'name' => 'admin',
+                'name' => 'Administrador',
                 'email' => 'admin',
                 'password' => Hash::make('admin'),
                 'admin' => true,
