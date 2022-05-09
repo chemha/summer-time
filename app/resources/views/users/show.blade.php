@@ -1,27 +1,12 @@
 @extends('layouts.app')
 
 @section('title')
-    <title>Summer Time - users</title>
+    <title>Summer Time - Perfil</title>
 @endsection
 
 <!-- CSS para datatables -->
 @section('css')
-    <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap5.min.css">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-@endsection
-
-@section('js')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap5.min.js"></script>
-
-    <script src="{{ asset('js/users.js') }}"></script>
 @endsection
 
 @section('content')
@@ -39,7 +24,16 @@
             <li>Imagen: <span>{{ $user->image }}</span></li>
             <li>Nombre: <span>{{ $user->name }}</span></li>
             <li>Email: <span>{{ $user->email }}</span></li>
-            <li><button>Cambiar contraseña</button></li>
+            <li>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditar">
+                    Modificar datos
+                </button>
+            </li>
+            <li>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalClave">
+                    Cambiar contraseña
+                </button>
+            </li>
         </ul>
     </div>
 
@@ -57,9 +51,9 @@
                     <div class="modal-body">
                         <div class="col">
                             <label for="name">Nombre</label>
-                            <input type="text" name="name" id="name" required autocomplete="off" class="form-control">
+                            <input type="text" name="name" id="name" value="{{ $user->name }}" required autocomplete="off" class="form-control">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email" required autocomplete="off" class="form-control">
+                            <input type="email" name="email" id="email" value="{{ $user->email }}" required autocomplete="off" class="form-control">
                         </div>
                     </div>
                     <div class="modal-footer">
