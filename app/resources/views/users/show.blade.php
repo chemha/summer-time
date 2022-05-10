@@ -25,7 +25,7 @@
 
             <div class="card-body">
                 <div class="row">
-                    <div class="col"><img class="rounded" src="{{ $user->image }}"></div>
+                    <div class="col"><img class="circulo" src="{{ $user->image }}"></div>
                     <div class="col">
                         <h1>{{ $user->name }}</h1>
                     </div>
