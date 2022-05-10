@@ -10,43 +10,46 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid justify-content-center align-content-center">
-
-        <h1>Perfil</h1>
+    <div class="container-fluid position-relative">
 
         @if (session('alert'))
             <div class="alert alert-{{ session('alert')['type'] }}" role="alert">
                 {{ session('alert')['message'] }}
             </div>
         @endif
-        <div class="card w-25">
-            <div class="card-header">Perfil de usuario</div>
+        <div class="position-absolute top-50 start-50 translate-middle">
+            <div class="card w-25">
+                <div class="card-header">Perfil de usuario</div>
 
-            <div class="card-body">
-                <div class="row">
-                    <div class="col"><img class="avatar-perfil circulo" src="{{ $user->image }}"></div>
-                </div>
-                <div class="row">
-                    <h1>{{ $user->name }}</h1>
-                </div>
-                <div class="row">
-                    <h3>{{ $user->email }}</h3>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalFoto">
-                            <i class="bi bi-pencil-square">Foto</i>
-                        </button>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col"><img class="avatar-perfil circulo" src="{{ $user->image }}"></div>
                     </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditar">
-                            <i class="bi bi-pencil-square">Datos</i>
-                        </button>
+                    <div class="row">
+                        <h1>{{ $user->name }}</h1>
                     </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalClave">
-                            <i class="bi bi-pencil-square">Contraseña</i>
-                        </button>
+                    <div class="row">
+                        <h3>{{ $user->email }}</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                                data-bs-target="#modalFoto">
+                                <i class="bi bi-pencil-square">Foto</i>
+                            </button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                data-bs-target="#modalEditar">
+                                <i class="bi bi-pencil-square">Datos</i>
+                            </button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                data-bs-target="#modalClave">
+                                <i class="bi bi-pencil-square">Contraseña</i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
