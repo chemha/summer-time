@@ -1,8 +1,3 @@
-.carrousel-ittem img {
-    height: 450px !important;
-    width: 850px !important;
-}
-
 .circulo {
     border-radius: 100%;
 }
@@ -10,5 +5,10 @@
 .avatar-nav {
     width: 2rem;
     height: auto;
+    margin-right: 2rem;
 }
 
+.avatar-perfil {
+    width: 10rem;
+    height: auto;
+}
