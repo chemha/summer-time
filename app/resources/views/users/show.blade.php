@@ -20,7 +20,7 @@
             </div>
         @endif
         <div class="row justify-content-center align-content-center">
-            <div class="card w-75">
+            <div class="card w-50">
                 <div class="card-header">Perfil de usuario</div>
 
                 <div class="card-body">
@@ -35,18 +35,18 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalFoto">
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalFoto">
                                 <i class="bi bi-pencil-square">Foto</i>
                             </button>
                         </div>
                         <div class="col">
-                            <button type="button" class="btn" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-warning" data-bs-toggle="modal"
                                 data-bs-target="#modalEditar">
                                 <i class="bi bi-pencil-square">Datos</i>
                             </button>
                         </div>
                         <div class="col">
-                            <button type="button" class="btn" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-warning" data-bs-toggle="modal"
                                 data-bs-target="#modalClave">
                                 <i class="bi bi-pencil-square">Contraseña</i>
                             </button>
