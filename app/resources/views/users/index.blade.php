@@ -59,7 +59,13 @@
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->admin == 1 ? 'administrador' : 'monitor' }}</td>
-                        <td><img class="avatar-nav circulo" src="{{ $user->image }}"></td>
+                        <td>
+                            @if ($user->image)
+                                <img class="avatar-nav circulo" src="{{ $user->image }}">
+                            @else
+                                <img class="avatar-nav circulo" src="{{ asset('img/sinavatar.jpg') }}">
+                            @endif
+                        </td>
                         <td>
                             <div class="row">
                                 <div class="col">
