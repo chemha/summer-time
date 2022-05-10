@@ -87,9 +87,9 @@
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     @if (Auth::user()->image)
-                                    <img class="avatar circulo" src="{{ Auth::user()->image }}">
+                                    <img class="avatar-nav circulo mr-1" src="{{ Auth::user()->image }}">
                                     @else
-                                    <img class="avatar circulo" src="{{ asset('img/sinavatar.jpg') }}">
+                                    <img class="avatar-nav circulo" src="{{ asset('img/sinavatar.jpg') }}">
                                     @endif
                                     {{ Auth::user()->name }}
                                 </a>
