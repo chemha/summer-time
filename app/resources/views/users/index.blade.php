@@ -47,6 +47,7 @@
                     <th scope="col">Nombre</th>
                     <th scope="col">Email</th>
                     <th scope="col">Rol</th>
+                    <th scope="col">Avatar</th>
                     <th scope="col">Acción</th>
                 </tr>
             </thead>
@@ -58,6 +59,7 @@
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->admin == 1 ? 'administrador' : 'monitor' }}</td>
+                        <td><img class="avatar-nav circulo" src="{{ $user->image }}"></td>
                         <td>
                             <div class="row">
                                 <div class="col">
