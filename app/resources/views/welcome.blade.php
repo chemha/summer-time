@@ -90,7 +90,7 @@
                     <div class="card-header text-white">
                         <div class="row">
                             <div class="col">
-                                <img src="{{ asset('img/sinavatar.jpg') }}">
+                                <img class="avatar-nav circulo" src="{{ asset('img/sinavatar.jpg') }}">
                             </div>
                             <div class="col">Tarjeta de prueba</div>
 
