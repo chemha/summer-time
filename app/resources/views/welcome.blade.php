@@ -91,8 +91,9 @@
                         <div class="row">
                             <div class="col">
                                 <img class="avatar-nav circulo" src="{{ asset('img/sinavatar.jpg') }}">
+                                Tarjeta de prueba
                             </div>
-                            <div class="col">Tarjeta de prueba</div>
+                            <div class="col"></div>
 
                         </div>
                         <div class="row">
