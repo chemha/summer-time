@@ -98,7 +98,7 @@
                         </div>
                         <div class="row">
                             <div class="col">Por: Administrador</div>
-                            <div class="col">05/12/1942</div>
+                            <div class="col text-right">05/12/1942</div>
                         </div>
                     </div>
                     <div class="card-body text-white">
