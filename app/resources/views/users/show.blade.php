@@ -25,7 +25,7 @@
 
             <div class="card-body">
                 <div class="row">
-                    <div class="col"><img class="circulo" src="{{ $user->image }}"></div>
+                    <div class="col"><img class="avatar-perfil circulo" src="{{ $user->image }}"></div>
                     <div class="col">
                         <h1>{{ $user->name }}</h1>
                     </div>
@@ -35,18 +35,18 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalFoto">
-                            Cambiar foto de perfil
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalFoto">
+                            <i class="bi bi-pencil-square">Foto</i> 
                         </button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditar">
-                            Modificar datos
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalEditar">
+                            <i class="bi bi-pencil-square">Datos</i>
                         </button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalClave">
-                            Cambiar contraseña
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalClave">
+                            <i class="bi bi-pencil-square">Contraseña</i>  
                         </button>
                     </div>
                 </div>
