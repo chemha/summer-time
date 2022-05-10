@@ -85,7 +85,26 @@
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="col-sm ">
+                <div class="card bg-dark min-vh-20">
+                    <div class="card-header text-white">
+                        <div class="row">
+                            <div class="col">
+                                <img src="{{ asset('img/sinavatar.jpg') }}">
+                            </div>
+                            <div class="col">Tarjeta de prueba</div>
 
+                        </div>
+                        <div class="row">
+                            <div class="col">Por: Administrador</div>
+                            <div class="col">05/12/1942</div>
+                        </div>
+                    </div>
+                    <div class="card-body text-white">
+                        Esto es una prueba Esto es una prueba Esto es una prueba Esto es una prueba Esto es una prueba
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection
