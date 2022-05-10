@@ -20,26 +20,38 @@
             </div>
         @endif
 
-        <ul>
-            <li>Imagen: <img src="{{ $user->image }}"></li>
-            <li>Nombre: <span>{{ $user->name }}</span></li>
-            <li>Email: <span>{{ $user->email }}</span></li>
-            <li>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalFoto">
-                    Cambiar foto de perfil
-                </button>
-            </li>
-            <li>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditar">
-                    Modificar datos
-                </button>
-            </li>
-            <li>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalClave">
-                    Cambiar contraseña
-                </button>
-            </li>
-        </ul>
+        <div class="card">
+            <div class="card-header">Perfil de usuario</div>
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col"><img class="img-circle" src="{{ $user->image }}"></div>
+                    <div class="col">
+                        <h1>{{ $user->name }}</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <h3>{{ $user->email }}</h3>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalFoto">
+                            Cambiar foto de perfil
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditar">
+                            Modificar datos
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalClave">
+                            Cambiar contraseña
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Modal -->
@@ -114,7 +126,8 @@
                     <div class="modal-body">
                         <div class="col">
                             <label for="image">Nuevo avatar</label>
-                            <input type="file" accept="image/*" name="image" required autocomplete="off" class="form-control">
+                            <input type="file" accept="image/*" name="image" required autocomplete="off"
+                                class="form-control">
                         </div>
                     </div>
                     <div class="modal-footer">
