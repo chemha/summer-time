@@ -10,31 +10,29 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid position-relative">
+    <div class="container-fluid">
+
+        <h1>Perfil</h1>
 
         @if (session('alert'))
             <div class="alert alert-{{ session('alert')['type'] }}" role="alert">
                 {{ session('alert')['message'] }}
             </div>
         @endif
-        <div class="position-absolute top-50 start-50 translate-middle">
+        <div class="row justify-content-center align-content-center">
             <div class="card w-25">
                 <div class="card-header">Perfil de usuario</div>
-
                 <div class="card-body">
                     <div class="row">
                         <div class="col"><img class="avatar-perfil circulo" src="{{ $user->image }}"></div>
                     </div>
-                    <div class="row">
-                        <h1>{{ $user->name }}</h1>
-                    </div>
+                    <div class="row"><h1>{{ $user->name }}</h1></div>
                     <div class="row">
                         <h3>{{ $user->email }}</h3>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
-                                data-bs-target="#modalFoto">
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalFoto">
                                 <i class="bi bi-pencil-square">Foto</i>
                             </button>
                         </div>
