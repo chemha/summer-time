@@ -6,3 +6,8 @@
 .circulo {
     border-radius: 100%;
 }
+
+.avatar {
+    width: 5rem;
+    height: auto;
+}
