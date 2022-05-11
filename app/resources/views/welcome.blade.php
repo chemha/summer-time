@@ -85,7 +85,7 @@
                     </div>
                 </div>
             </div>
-            @foreach ($anuncios = DB::table('anuncios')->select()->get as $anuncio)
+            @foreach ($anuncios = DB::table('anuncios')->select()->get() as $anuncio)
                 <div class="col-sm ">
                     <div class="card bg-dark min-vh-20">
                         <div class="card-header text-white">
