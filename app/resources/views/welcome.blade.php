@@ -107,7 +107,7 @@
                             </div>
                         </div>
                         <div class="card-body text-white">
-                            Esto es una prueba Esto es una prueba Esto es una prueba Esto es una prueba Esto es una prueba
+                            {{ $anuncio->descripcion }}
                         </div>
                     </div>
                 </div>
