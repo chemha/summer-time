@@ -1,3 +1,8 @@
+/**
+ * Recibe un array de datos y los muestra en un modal
+ * de edición
+ * @param {Array} datos 
+ */
 function mostrarDatos(datos) {
     $("#modalEditar #titulo").val(datos[2]);
     $("#modalEditar #descripcion").text(datos[1]);
@@ -6,6 +11,12 @@ function mostrarDatos(datos) {
     $("#modalEditar").modal("show");
 }
 
+/**
+ * Recibe un formulario y muestra un popup pidiendo que
+ * se confirme la eliminación. Una vez confirmada, el
+ * formulario se sube.
+ * @param {Element} form 
+ */
 function confirmarEliminar(form) {
     swal({
         title: "¿Estás seguro de que quieres eliminar este registro?",

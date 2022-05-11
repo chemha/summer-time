@@ -1,3 +1,8 @@
+/**
+ * Recibe un array de datos y los muestra en un modal
+ * de edición
+ * @param {Array} datos
+ */
 function mostrarDatos(datos) {
     datos[3] == "administrador"
         ? $("#modalEditar #admin").val(1)
@@ -10,11 +15,23 @@ function mostrarDatos(datos) {
     $("#modalEditar").modal("show");
 }
 
+/**
+ * Recibe un array de datos en el que va el ID del usuario
+ * Inserta ese id en un span invisible para su futura utilización
+ * Muestra el modal con el formulario para modificar la contraseña
+ * @param {Array} datos
+ */
 function cambiarClave(datos) {
     $("#modalClave #id").text(datos[0]);
     $("#modalClave").modal("show");
 }
 
+/**
+ * Recibe un formulario y muestra un popup pidiendo que
+ * se confirme la eliminación. Una vez confirmada, el
+ * formulario se sube.
+ * @param {Object} form
+ */
 function confirmarEliminar(form) {
     swal({
         title: "¿Estás seguro de que quieres eliminar este usuario?",
@@ -60,22 +77,24 @@ $(window).on("load", () => {
         mostrarDatos(tabla.row(this.closest("tr")).data());
     });
 
+    //Preparación del evento para mostrar el modal para cambiar la clave
     $("#tabla-users #btnClave").on("click", function () {
         cambiarClave(tabla.row(this.closest("tr")).data());
     });
 
+    //Preparación del evento para subir el formulario de edición de datos
     $("#modalEditar #btnEditar").on("click", function () {
         const form = $(this).closest("form");
         form.attr("action", "/users/" + $("#modalEditar #id").text());
         form.trigger("submit");
     });
 
+    //Preparación del evento para subir el formulario de edición de contraseña
     $("#modalClave #btnEditar").on("click", function () {
         const form = $(this).closest("form");
         form.attr("action", "/users/" + $("#modalClave #id").text());
         form.trigger("submit");
     });
-
 
     //Preparación de evento para el modal de eliminación
     $("#tabla-users #btnBorrar").on("click", function () {

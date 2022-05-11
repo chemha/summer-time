@@ -1,3 +1,9 @@
+/**
+ * Recibe un array de datos y los asigna a un objeto para
+ * poder utilizar los datos del array de forma más intuitiva.
+ * Después inserta los datos en un modal y lo muestra.
+ * @param {Array} datos 
+ */
 function mostrarDatos(datos) {
     const nino = {
         nombre: datos[11],
@@ -59,6 +65,12 @@ function mostrarDatos(datos) {
     $("#modalVer").modal("show");
 }
 
+/**
+ * Recibe un formulario y muestra un popup pidiendo que
+ * se confirme la eliminación. Una vez confirmada, el
+ * formulario se sube.
+ * @param {Element} form 
+ */
 function confirmarEliminar(form) {
     swal({
         title: "¿Estás seguro de que quieres eliminar este registro?",

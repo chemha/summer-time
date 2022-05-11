@@ -36,7 +36,7 @@
         @endif
 
         <button type="button" class="btn btn-secondary mb-2" data-bs-toggle="modal" data-bs-target="#modalCrear">
-            Crear user
+            Crear usuario
         </button>
 
         <table id="tabla-users" class="table table-striped table-bordered shadow-lg w-100">
