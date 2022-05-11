@@ -95,8 +95,6 @@
                                     @endif
                                     <span>{{ $anuncio->titulo }}</span>
                                 </div>
-                                <div class="col"></div>
-
                             </div>
                             <div class="row">
                                 <div class="col">
