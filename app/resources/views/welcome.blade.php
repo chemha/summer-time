@@ -61,30 +61,6 @@
             </div>
         </div>
         <div class="row justify-content-center mt-3">
-            <div class="col-sm">
-                <div class="card bg-dark min-vh-20">
-                    <div class="card-header text-white">¡Vuelve la Escuela de Verano!</div>
-                    <div class="card-body text-white">
-                        Vuelve la Escuela de Verano Time Centro Deportivo. Amigos, actividades, piscina, diversión,
-                        aprendizaje. ¡Reserva tus plazas antes de que se agoten! En recepción o llamando al 958 82 29 25
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm ">
-                <div class="card bg-dark min-vh-20">
-                    <div class="card-header text-white">Información</div>
-                    <div class="card-body text-white">
-                        ¡ATENCIÓN!
-                        Este miércoles día 4 de Mayo abrimos plazo de inscripción para nuestra escuela de verano. Plazas
-                        limitadas.
-                        Para más información les atenderemos en nuestras instalaciones y mandanos un contacto desde esta web
-                        #TimeCentroDeportivo
-                        #escueladeverano
-                        #deporteydiversión
-                    </div>
-                </div>
-            </div>
             @foreach ($anuncios = DB::table('anuncios')->select()->take(3)->get()
         as $anuncio)
                 <div class="col-sm ">
