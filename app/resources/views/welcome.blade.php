@@ -80,7 +80,7 @@
 
         <!-- Tarjetas para los anuncios -->
         <div class="row justify-content-center">
-            @foreach ($anuncios = DB::table('anuncios')->orderBy('id, desc')->take(3)->get()
+            @foreach ($anuncios = DB::table('anuncios')->orderBy('id', 'desc')->take(3)->get()
         as $anuncio)
                 <div class="col-sm ">
                     <div class="card bg-dark min-vh-20">
