@@ -60,6 +60,7 @@
                 </script>
             </div>
         </div>
+        <h1>Ultimos 3 anuncios de nuestros empleados</h1>
         <div class="row justify-content-center mt-3">
             @foreach ($anuncios = DB::table('anuncios')->select()->take(3)->get()
         as $anuncio)
