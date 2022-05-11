@@ -93,7 +93,8 @@
                                     @else
                                         <img class="avatar-nav circulo" src="{{ asset('img/sinavatar.jpg') }}">
                                     @endif
-                                    <h4>{{ $anuncio->titulo }}</h5>
+                                    <span><h4>{{ $anuncio->titulo }}</h4></span>
+                                    
                                 </div>
                             </div>
                             <div class="row">
