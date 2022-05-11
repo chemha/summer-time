@@ -59,7 +59,7 @@
 
                         <td>{{ $anuncio->titulo }}</td>
                         <td>{{ App\Models\User::find($anuncio->user_id)->name }}</td>
-                        <td>{{ $anuncio->created_at }}</td>
+                        <td>{{ date('d-m-Y', strtotime($anuncio->created_at)) }}</td>
                         <td>
                             <div class="row">
                                 <div class="col">
