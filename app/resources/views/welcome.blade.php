@@ -87,14 +87,15 @@
                         <div class="card-header text-white">
                             <div class="row">
                                 <div class="col">
-                                    @if (App\Models\User::find($anuncio->user_id)->image)
-                                        <img class="avatar-nav circulo"
-                                            src="{{ App\Models\User::find($anuncio->user_id)->image }}">
-                                    @else
-                                        <img class="avatar-nav circulo" src="{{ asset('img/sinavatar.jpg') }}">
-                                    @endif
-                                    <span><h4>{{ $anuncio->titulo }}</h4></span>
-                                    
+                                    <h4>
+                                        @if (App\Models\User::find($anuncio->user_id)->image)
+                                            <img class="avatar-nav circulo"
+                                                src="{{ App\Models\User::find($anuncio->user_id)->image }}">
+                                        @else
+                                            <img class="avatar-nav circulo" src="{{ asset('img/sinavatar.jpg') }}">
+                                        @endif
+                                        {{ $anuncio->titulo }}
+                                    </h4>
                                 </div>
                             </div>
                             <div class="row">
