@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('title')
+    <title>Summer Time - Niños - Editar</title>
+@endsection
 @section('content')
     <div class="container-fluid ">
         <h1>Editar registro de niño</h1>

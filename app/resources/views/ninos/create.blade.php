@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('title')
+    <title>Summer Time - Niños - Crear</title>
+@endsection
 
 @section('content')
     <div class="container-fluid ">

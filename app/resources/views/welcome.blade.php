@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('title')
+    <title>Summer Time</title>
+@endsection
 @section('js')
     <script src="{{ asset('js/welcome.js') }}"></script>
 @endsection

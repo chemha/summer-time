@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    <title>Summer Time - users</title>
+    <title>Summer Time - Usuarios</title>
 @endsection
 
 <!-- CSS para datatables -->
