@@ -24,7 +24,7 @@ return new class extends Migration
             $table->integer('hermanos');
             $table->boolean('medicacion');
             $table->boolean('especial');
-            $table->string('observacionesMedicas')->nullable();
+            $table->text('observacionesMedicas')->nullable();
 
             $table->string('tutor', 200);
             $table->string('email', 100)->nullable();
@@ -43,7 +43,7 @@ return new class extends Migration
             $table->boolean('datos');
             $table->boolean('fotos');
 
-            $table->string('anotaciones')->nullable();
+            $table->text('anotaciones')->nullable();
 
             $table->float('pago');
             $table->string('recibo', 20);
