@@ -85,6 +85,33 @@
                     </div>
                 </div>
             </div>
+            @foreach ($anuncios = DB::table('anuncios')->select()->get as $anuncio)
+                <div class="col-sm ">
+                    <div class="card bg-dark min-vh-20">
+                        <div class="card-header text-white">
+                            <div class="row">
+                                <div class="col">
+                                    <img class="avatar-nav circulo" src="{{ asset('img/sinavatar.jpg') }}">
+                                    <span>{{ $anuncio->titulo }}</span>
+                                </div>
+                                <div class="col"></div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <span>Por:
+                                        {{ App\Models\User::find($anuncio->user_id)->name }}
+                                    </span>
+                                </div>
+                                <div class="col text-right"><span>{{ $anuncio->created_at }}</span></div>
+                            </div>
+                        </div>
+                        <div class="card-body text-white">
+                            Esto es una prueba Esto es una prueba Esto es una prueba Esto es una prueba Esto es una prueba
+                        </div>
+                    </div>
+                </div>
+            @endforeach
             <div class="col-sm ">
                 <div class="card bg-dark min-vh-20">
                     <div class="card-header text-white">
