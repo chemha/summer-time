@@ -85,13 +85,19 @@
                     </div>
                 </div>
             </div>
-            @foreach ($anuncios = DB::table('anuncios')->select()->get() as $anuncio)
+            @foreach ($anuncios = DB::table('anuncios')->select()->take(3)->get()
+        as $anuncio)
                 <div class="col-sm ">
                     <div class="card bg-dark min-vh-20">
                         <div class="card-header text-white">
                             <div class="row">
                                 <div class="col">
-                                    <img class="avatar-nav circulo" src="{{ asset('img/sinavatar.jpg') }}">
+                                    @if (App\Models\User::find($anuncio->user_id)->image)
+                                        <img class="avatar-nav circulo"
+                                            src="{{ App\Models\User::find($anuncio->user_id)->image }}">
+                                    @else
+                                        <img class="avatar-nav circulo" src="{{ asset('img/sinavatar.jpg') }}">
+                                    @endif
                                     <span>{{ $anuncio->titulo }}</span>
                                 </div>
                                 <div class="col"></div>
