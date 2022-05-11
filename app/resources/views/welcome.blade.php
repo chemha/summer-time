@@ -1,10 +1,13 @@
 @extends('layouts.app')
-
+@section('js')
+    <script src="{{ asset('js/welcome.js') }}"></script>
+@endsection
 @section('content')
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col">
-                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <!-- Carrusel de imágenes -->
+                <div id="carrusel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner  mh-100">
                         <div class="carousel-item active" data-bs-interval="10000">
                             <img src="{{ asset('img/ninos/a1.jpg') }}" class="d-block w-100" alt="...">
@@ -61,42 +64,37 @@
                             <img src="{{ asset('img/ninos/f12.jpg') }}" class="d-block w-100" alt="...">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-                        data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-                        data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-                <script>
-                    const myCarousel = document.querySelector('#myCarousel');
-                    const carousel = new bootstrap.Carousel(myCarousel);
-                </script>
             </div>
         </div>
-        <h1>Ultimos 3 anuncios de nuestros empleados</h1>
-        <div class="row justify-content-center mt-3">
+
+        <h1 class="m-2">Ultimos 3 anuncios de nuestros empleados</h1>
+
+        <!-- Tarjetas para los anuncios -->
+        <div class="row justify-content-center">
             @foreach ($anuncios = DB::table('anuncios')->select()->take(3)->get()
         as $anuncio)
                 <div class="col-sm ">
                     <div class="card bg-dark min-vh-20">
                         <div class="card-header text-white">
                             <div class="row">
-                                <div class="col">
-                                    <h4>
-                                        @if (App\Models\User::find($anuncio->user_id)->image)
-                                            <img class="avatar-nav circulo"
-                                                src="{{ App\Models\User::find($anuncio->user_id)->image }}">
-                                        @else
-                                            <img class="avatar-nav circulo" src="{{ asset('img/sinavatar.jpg') }}">
-                                        @endif
-                                        {{ $anuncio->titulo }}
-                                    </h4>
-                                </div>
+                                <h4>
+                                    @if (App\Models\User::find($anuncio->user_id)->image)
+                                        <img class="avatar-tarjeta circulo"
+                                            src="{{ App\Models\User::find($anuncio->user_id)->image }}">
+                                    @else
+                                        <img class="avatar-tarjeta circulo" src="{{ asset('img/sinavatar.jpg') }}">
+                                    @endif
+                                    {{ $anuncio->titulo }}
+                                </h4>
                             </div>
                             <div class="row">
                                 <div class="col">
@@ -105,7 +103,8 @@
                                     </span>
                                 </div>
                                 <div class="col text-right">
-                                    <span>{{ date('d-m-Y', strtotime($anuncio->created_at)) }}</span></div>
+                                    <span>{{ date('d-m-Y', strtotime($anuncio->created_at)) }}</span>
+                                </div>
                             </div>
                         </div>
                         <div class="card-body text-white">
@@ -119,7 +118,7 @@
                     <div class="card-header text-white">
                         <div class="row">
                             <div class="col">
-                                <img class="avatar-nav circulo" src="{{ asset('img/sinavatar.jpg') }}">
+                                <img class="avatar-tarjeta circulo" src="{{ asset('img/sinavatar.jpg') }}">
                                 Tarjeta de prueba
                             </div>
                             <div class="col"></div>

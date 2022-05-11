@@ -12,3 +12,9 @@
     width: 10rem;
     height: auto;
 }
+
+.avatar-tarjeta {
+    width: 3rem;
+    height: auto;
+    margin-right: 0.5rem;
+}
