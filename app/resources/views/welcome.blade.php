@@ -104,7 +104,8 @@
                                         {{ App\Models\User::find($anuncio->user_id)->name }}
                                     </span>
                                 </div>
-                                <div class="col text-right"><span>{{ $anuncio->created_at }}</span></div>
+                                <div class="col text-right">
+                                    <span>{{ date('d-m-Y', strtotime($anuncio->created_at)) }}</span></div>
                             </div>
                         </div>
                         <div class="card-body text-white">
