@@ -7,6 +7,24 @@
                 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner  mh-100">
                         <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="{{ asset('img/ninos/a1.jpg') }}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="{{ asset('img/ninos/a2.jpg') }}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="{{ asset('img/ninos/a3.jpg') }}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="{{ asset('img/ninos/a4.jpg') }}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="{{ asset('img/ninos/a5.jpg') }}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="{{ asset('img/ninos/a6.jpg') }}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item active" data-bs-interval="10000">
                             <img src="{{ asset('img/ninos/f1.jpg') }}" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
