@@ -108,32 +108,11 @@
                             </div>
                         </div>
                         <div class="card-body text-white">
-                            {{ $anuncio->descripcion }}
+                            <p>{{ $anuncio->descripcion }}</p>
                         </div>
                     </div>
                 </div>
             @endforeach
-            <div class="col-sm ">
-                <div class="card bg-dark min-vh-20">
-                    <div class="card-header text-white">
-                        <div class="row">
-                            <div class="col">
-                                <img class="avatar-tarjeta circulo" src="{{ asset('img/sinavatar.jpg') }}">
-                                Tarjeta de prueba
-                            </div>
-                            <div class="col"></div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col">Por: Administrador</div>
-                            <div class="col text-right">05/12/1942</div>
-                        </div>
-                    </div>
-                    <div class="card-body text-white">
-                        Esto es una prueba Esto es una prueba Esto es una prueba Esto es una prueba Esto es una prueba
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 @endsection
