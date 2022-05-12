@@ -49,7 +49,7 @@
                         <div class="col">
                             <button type="button" class="btn btn-warning" data-bs-toggle="modal"
                                 data-bs-target="#modalClave">
-                                <i class="bi bi-pencil-square">Contraseña</i>
+                                <i class="bi bi-pencil-square">Clave</i>
                             </button>
                         </div>
                     </div>
