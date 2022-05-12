@@ -36,36 +36,22 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button type="button" class="btn btn-secondary p-1" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
                                 data-bs-target="#modalFoto">
-                                <div class="row">
-                                    <i class="bi bi-pencil-square"></i>
-                                </div>
-                                <div class="row">
-                                    Foto
-                                </div>
+                                <i class="bi bi-pencil-square"><span>Foto</span></i>
                             </button>
                         </div>
                         <div class="col">
-                            <button type="button" class="btn btn-warning p-1" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-warning" data-bs-toggle="modal"
                                 data-bs-target="#modalEditar">
-                                <div class="row">
-                                    <i class="bi bi-pencil-square"></i>
-                                </div>
-                                <div class="row">
-                                    Datos
-                                </div>
+                                <i class="bi bi-pencil-square"><span>Datos</span></i>
+
                             </button>
                         </div>
                         <div class="col">
-                            <button type="button" class="btn btn-warning p-1" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-warning" data-bs-toggle="modal"
                                 data-bs-target="#modalClave">
-                                <div class="row">
-                                    <i class="bi bi-pencil-square"></i>
-                                </div>
-                                <div class="row">
-                                    Contraseña
-                                </div>
+                                <i class="bi bi-pencil-square"><span>Contraseña</span></i>
                             </button>
                         </div>
                     </div>
