@@ -56,7 +56,7 @@
                                 data-bs-target="#modalClave">
                                 <i class="bi bi-pencil-square"></i>
                                 <br>
-                                Contraseñ<applet></applet>
+                                Contraseña
                             </button>
                         </div>
                     </div>
