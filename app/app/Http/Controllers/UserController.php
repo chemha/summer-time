@@ -97,10 +97,7 @@ class UserController extends Controller
             }
         } else $user->update($request->all());
 
-        return redirect()->route('users.index')->with('alert', [
-            'type' => 'success',
-            'message' => "El usuario se ha modificado correctamente.",
-        ]);
+        return redirect()->url()->current();
     }
 
     /**
