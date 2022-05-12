@@ -87,7 +87,7 @@ class UserPerfilController extends Controller
             }
         } else $user->update($request->all());
 
-        return redirect()->route('usersPerfil.show', $user->id)->with('alert', [
+        return redirect()->route('perfil.show', $user->id)->with('alert', [
             'type' => 'success',
             'message' => "El usuario se ha modificado correctamente.",
         ]);
