@@ -38,21 +38,21 @@
                             <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
                                 data-bs-target="#modalFoto">
                                 <i class="bi bi-pencil-square"></i>
-                                <p>Foto</p>
+                                Foto
                             </button>
                         </div>
                         <div class="col">
                             <button type="button" class="btn btn-warning" data-bs-toggle="modal"
                                 data-bs-target="#modalEditar">
                                 <i class="bi bi-pencil-square"></i>
-                                <p>Datos</p>
+                                Datos
                             </button>
                         </div>
                         <div class="col">
                             <button type="button" class="btn btn-warning" data-bs-toggle="modal"
                                 data-bs-target="#modalClave">
                                 <i class="bi bi-pencil-square"></i>
-                                <p>Contraseña</p>
+                                Contraseña
                             </button>
                         </div>
                     </div>
