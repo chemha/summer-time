@@ -38,20 +38,25 @@
                         <div class="col">
                             <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
                                 data-bs-target="#modalFoto">
-                                <i class="bi bi-pencil-square"><span>Foto</span></i>
+                                <i class="bi bi-pencil-square"></i>
+                                <br>
+                                Foto
                             </button>
                         </div>
                         <div class="col">
                             <button type="button" class="btn btn-warning" data-bs-toggle="modal"
                                 data-bs-target="#modalEditar">
-                                <i class="bi bi-pencil-square"><span>Datos</span></i>
-
+                                <i class="bi bi-pencil-square"></i>
+                                <br>
+                                Datos
                             </button>
                         </div>
                         <div class="col">
                             <button type="button" class="btn btn-warning" data-bs-toggle="modal"
                                 data-bs-target="#modalClave">
-                                <i class="bi bi-pencil-square"><span>Contraseña</span></i>
+                                <i class="bi bi-pencil-square"></i>
+                                <br>
+                                Contraseñ<applet></applet>
                             </button>
                         </div>
                     </div>
