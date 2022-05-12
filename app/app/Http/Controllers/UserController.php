@@ -23,6 +23,7 @@ class UserController extends Controller
      */
     public function index()
     {
+        $this->authorize('viewAny', auth()->user());
         return view('users.index', ['users' => User::all()]);
     }
 
@@ -44,6 +45,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('viewAny', auth()->user());
         User::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -88,6 +90,7 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        $this->authorize('viewAny', auth()->user());
         if ($request->has('password')) $user->update(['password' => Hash::make($request->password)]);
         else $user->update($request->all());
 
@@ -105,6 +108,7 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
+        $this->authorize('viewAny', auth()->user());
         $user->delete();
         return redirect()->route('users.index')->with('alert', [
             'type' => 'success',
