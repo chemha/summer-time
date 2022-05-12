@@ -97,7 +97,7 @@ class UserController extends Controller
             }
         } else $user->update($request->all());
 
-        return redirect()->url()->current();
+        return redirect(url()->current());
     }
 
     /**
