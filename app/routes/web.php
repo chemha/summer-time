@@ -27,4 +27,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('ninos', NinoController::class);
 Route::resource('anuncios', AnuncioController::class);
 Route::resource('users', UserController::class);
-Route::resource('usersPerfil', UserPerfilController::class);
+Route::resource('perfil', UserPerfilController::class);
