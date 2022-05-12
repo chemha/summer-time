@@ -41,7 +41,7 @@ class NinoPolicy
      */
     public function create(User $user)
     {
-        return $user->admin != 1;
+        return $user->admin;
     }
 
     /**
