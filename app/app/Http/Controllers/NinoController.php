@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Nino;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Auth;
 
 class NinoController extends Controller
 {
@@ -22,7 +21,7 @@ class NinoController extends Controller
      */
     public function index()
     {
-        $this->authorize('viewAny', Auth::user()->id);
+        $this->authorize('viewAny', auth()->user()->id);
         return view('ninos.index', ['ninos' => Nino::all()]);
     }
 
