@@ -55,6 +55,7 @@ class UserPerfilController extends Controller
      */
     public function show(User $user)
     {
+        if (auth()->user()->id != $user->id) abort(403);
         return view('users.perfil', compact('user'));
     }
 
@@ -78,6 +79,8 @@ class UserPerfilController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        if (auth()->user()->id != $user->id) abort(403);
+
         if ($request->has('password') || $request->has('image')) {
             if ($request->has('password')) $user->update(['password' => Hash::make($request->password)]);
             if ($request->has('image')) {
@@ -101,10 +104,6 @@ class UserPerfilController extends Controller
      */
     public function destroy(User $user)
     {
-        $user->delete();
-        return redirect()->route('users.index')->with('alert', [
-            'type' => 'success',
-            'message' => "El usuario se ha borrado correctamente.",
-        ]);
+        //
     }
 }
