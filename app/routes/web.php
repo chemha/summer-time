@@ -29,4 +29,4 @@ Route::resource('anuncios', AnuncioController::class);
 Route::resource('users', UserController::class);
 
 Route::get('/perfil/{user}', [UserPerfilController::class, 'show'])->name('perfil.show');
-Route::put('/perfil/{user}', [PersonajeController::class, 'update'])->name('perfil.update');
+Route::put('/perfil/{user}', [UserPerfilController::class, 'update'])->name('perfil.update');
