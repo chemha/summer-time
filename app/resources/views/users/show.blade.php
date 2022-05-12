@@ -21,15 +21,22 @@
                 <div class="card-header">Perfil de usuario</div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col"><img class="avatar-perfil circulo" src="{{ $user->image }}"></div>
+                        @if ($user->image)
+                            <div class="col"><img class="avatar-perfil circulo" src="{{ $user->image }}"></div>
+                        @else
+                            <div class="col"><img class="avatar-perfil circulo" src="{{ asset('img/sinavatar.jpg') }}"></div>
+                        @endif
                     </div>
-                    <div class="row"><h1>{{ $user->name }}</h1></div>
+                    <div class="row">
+                        <h1>{{ $user->name }}</h1>
+                    </div>
                     <div class="row">
                         <h3>{{ $user->email }}</h3>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalFoto">
+                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                                data-bs-target="#modalFoto">
                                 <i class="bi bi-pencil-square">Foto</i>
                             </button>
                         </div>
