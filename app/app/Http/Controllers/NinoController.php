@@ -32,7 +32,7 @@ class NinoController extends Controller
      */
     public function create()
     {
-        $this->authorize('create', auth()->user());
+        $this->authorize('viewAny', auth()->user());
         //Redirección al formulario
         return view('ninos.create');
     }
