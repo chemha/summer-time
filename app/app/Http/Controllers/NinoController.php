@@ -32,7 +32,7 @@ class NinoController extends Controller
      */
     public function create()
     {
-        $this->authorize('create', auth()->user();
+        $this->authorize('create', auth()->user());
         //Redirección al formulario
         return view('ninos.create');
     }
@@ -45,7 +45,7 @@ class NinoController extends Controller
      */
     public function store(Request $request)
     {
-        $this->authorize('create', auth()->user();
+        $this->authorize('create', auth()->user());
 
         //Inserción de datos
         Nino::create([
@@ -105,7 +105,7 @@ class NinoController extends Controller
      */
     public function edit(Nino $nino)
     {
-        $this->authorize('edit', auth()->user();
+        $this->authorize('edit', auth()->user());
         return view('ninos.edit', compact('nino'));
     }
 
@@ -118,7 +118,7 @@ class NinoController extends Controller
      */
     public function update(Request $request, Nino $nino)
     {
-        $this->authorize('edit', auth()->user();
+        $this->authorize('edit', auth()->user());
         $nino->update([
             "nombre" => $request->nombre,
             "apellidos" => $request->apellidos,
@@ -164,7 +164,7 @@ class NinoController extends Controller
      */
     public function destroy(Nino $nino)
     {
-        $this->authorize('delete', auth()->user();
+        $this->authorize('delete', auth()->user());
         $nino->delete();
         return redirect()->route('ninos.index')->with('alert', [
             'type' => 'success',
