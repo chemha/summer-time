@@ -18,7 +18,7 @@ class NinoPolicy
      */
     public function viewAny(User $user)
     {
-        //
+        return $user->admin === true;
     }
 
     /**
@@ -41,7 +41,7 @@ class NinoPolicy
      */
     public function create(User $user)
     {
-        //
+        return $user->admin === true;
     }
 
     /**
@@ -53,7 +53,7 @@ class NinoPolicy
      */
     public function update(User $user, Nino $nino)
     {
-        //
+        return $user->admin === true;
     }
 
     /**
@@ -65,7 +65,7 @@ class NinoPolicy
      */
     public function delete(User $user, Nino $nino)
     {
-        //
+        return $user->admin === true;
     }
 
     /**
