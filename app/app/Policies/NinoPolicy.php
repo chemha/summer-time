@@ -41,7 +41,7 @@ class NinoPolicy
      */
     public function create(User $user)
     {
-        return $user->admin;
+        //
     }
 
     /**
@@ -53,7 +53,7 @@ class NinoPolicy
      */
     public function update(User $user, Nino $nino)
     {
-        return $user->admin;
+        //
     }
 
     /**
@@ -65,7 +65,7 @@ class NinoPolicy
      */
     public function delete(User $user, Nino $nino)
     {
-        return $user->admin;
+        //
     }
 
     /**
