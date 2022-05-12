@@ -3,6 +3,7 @@
 use App\Http\Controllers\AnuncioController;
 use App\Http\Controllers\NinoController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserPerfilController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('ninos', NinoController::class);
 Route::resource('anuncios', AnuncioController::class);
 Route::resource('users', UserController::class);
+Route::resource('usersPerfil', UserPerfilController::class);
