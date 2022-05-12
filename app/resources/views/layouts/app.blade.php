@@ -96,7 +96,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-end bg-dark" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item text-white bg-dark"
-                                        href="{{ route('usersPerfil.show', Auth::user()->id) }}">
+                                        href="{{ route('perfil.show', Auth::user()->id) }}">
                                         Perfil
                                     </a>
 
