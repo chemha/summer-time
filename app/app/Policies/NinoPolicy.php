@@ -18,7 +18,7 @@ class NinoPolicy
      */
     public function viewAny(User $user)
     {
-        return $user->admin === true;
+        return $user->admin;
     }
 
     /**
