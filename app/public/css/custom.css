@@ -18,3 +18,7 @@
     height: auto;
     margin-right: 0.5rem;
 }
+
+.tarjeta {
+    min-height: 20rem;
+}
