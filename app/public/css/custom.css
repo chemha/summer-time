@@ -22,3 +22,7 @@
 .tarjeta {
     min-height: 20rem;
 }
+
+.perfil {
+    width: fit-content;
+}

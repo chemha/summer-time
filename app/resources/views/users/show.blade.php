@@ -17,7 +17,7 @@
             </div>
         @endif
         <div class="row justify-content-center align-content-center">
-            <div class="card w-25">
+            <div class="card perfil">
                 <div class="card-header">Perfil de usuario</div>
                 <div class="card-body">
                     <div class="row">
