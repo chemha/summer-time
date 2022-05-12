@@ -45,7 +45,6 @@ class NinoController extends Controller
      */
     public function store(Request $request)
     {
-        $this->authorize('create', auth()->user());
 
         //Inserción de datos
         Nino::create([
