@@ -24,7 +24,8 @@
                         @if ($user->image)
                             <div class="col"><img class="avatar-perfil circulo" src="{{ $user->image }}"></div>
                         @else
-                            <div class="col"><img class="avatar-perfil circulo" src="{{ asset('img/sinavatar.jpg') }}"></div>
+                            <div class="col"><img class="avatar-perfil circulo"
+                                    src="{{ asset('img/sinavatar.jpg') }}"></div>
                         @endif
                     </div>
                     <div class="row">
@@ -37,22 +38,34 @@
                         <div class="col">
                             <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
                                 data-bs-target="#modalFoto">
-                                <i class="bi bi-pencil-square"></i>
-                                Foto
+                                <div class="row">
+                                    <i class="bi bi-pencil-square"></i>
+                                </div>
+                                <div class="row">
+                                    Foto
+                                </div>
                             </button>
                         </div>
                         <div class="col">
                             <button type="button" class="btn btn-warning" data-bs-toggle="modal"
                                 data-bs-target="#modalEditar">
-                                <i class="bi bi-pencil-square"></i>
-                                Datos
+                                <div class="row">
+                                    <i class="bi bi-pencil-square"></i>
+                                </div>
+                                <div class="row">
+                                    Datos
+                                </div>
                             </button>
                         </div>
                         <div class="col">
                             <button type="button" class="btn btn-warning" data-bs-toggle="modal"
                                 data-bs-target="#modalClave">
-                                <i class="bi bi-pencil-square"></i>
-                                Contraseña
+                                <div class="row">
+                                    <i class="bi bi-pencil-square"></i>
+                                </div>
+                                <div class="row">
+                                    Contraseña
+                                </div>
                             </button>
                         </div>
                     </div>
