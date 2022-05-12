@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Nino;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Auth;
 
 class NinoController extends Controller
 {
