@@ -46,7 +46,7 @@ function mostrarDatos(datos) {
     $("#modalVer #email").text(nino.email);
     $("#modalVer #telefono1").text(nino.telefono1);
     $("#modalVer #telefono2").text(nino.telefono2);
-    $("#modalVer #grupo").text(nino.grupo);
+    $("#modalVer #grupo").html(nino.grupo);
     $("#modalVer #horario").text(nino.horario);
     $("#modalVer #quincena1").html(nino.quincena1);
     $("#modalVer #quincena2").html(nino.quincena2);
