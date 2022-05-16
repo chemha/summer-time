@@ -64,12 +64,12 @@ $(window).on("load", () => {
         mostrarDatos(tabla.row(fila).data());
     });
 
-    $("#modalEditar ").on("click", "#btnEditar", (e) => {
+    $("#modalEditar").on("click", "#btnEditar", (e) => {
         const form = $(e.target).closest("form");
         form.attr("action", "/anuncios/" + $("#modalEditar #id").text());
         form.trigger("submit");
     });
 
     //Preparación de evento para el modal de eliminación
-    $("#tabla-anuncios #btnBorrar").on("click", "#btnBorrar", (e) => confirmarEliminar($(e.target).closest("form")));
+    $("#tabla-anuncios").on("click", "#btnBorrar", (e) => confirmarEliminar($(e.target).closest("form")));
 });
