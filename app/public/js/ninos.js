@@ -85,16 +85,6 @@ function confirmarEliminar(form) {
 
 //Preparaciones despues de cargar el HTML
 $(window).on("load", () => {
-    //Preparacion del evento para mostra los datos en el modal
-    $("#tabla-ninos #btnVer").click(function () {
-        mostrarDatos(tabla.row($(this).closest("tr")).data());
-    });
-
-    //Preparación de evento para el modal de eliminación
-    $("#tabla-ninos #btnBorrar").on("click touch", function () {
-        confirmarEliminar($(this).closest("form"));
-    });
-
     //Preparación de datatable
     const tabla = $("#tabla-ninos").DataTable({
         responsive: true,
@@ -120,5 +110,15 @@ $(window).on("load", () => {
         ],
 
         order: [[12, "asc"]],
+    });
+
+    //Preparacion del evento para mostra los datos en el modal
+    $("#tabla-ninos #btnVer").click(function () {
+        mostrarDatos(tabla.row($(this).closest("tr")).data());
+    });
+
+    //Preparación de evento para el modal de eliminación
+    $("#tabla-ninos #btnBorrar").on("click touch", function () {
+        confirmarEliminar($(this).closest("form"));
     });
 });
