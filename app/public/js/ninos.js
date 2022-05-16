@@ -113,12 +113,12 @@ $(window).on("load", () => {
     });
 
     //Preparacion del evento para mostra los datos en el modal
-    $("#tabla-ninos #btnVer").on("click", function () {
+    $("#tabla-ninos #btnVer").on("click touch", function () {
         mostrarDatos(tabla.row($(this).closest("tr")).data());
    });
 
     //Preparación de evento para el modal de eliminación
-    $("#tabla-ninos #btnBorrar").on("click", function () {
+    $("#tabla-ninos #btnBorrar").on("click touch", function () {
         confirmarEliminar($(this).closest("form"));
     });
 });
