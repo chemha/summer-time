@@ -113,13 +113,13 @@ $(window).on("load", () => {
     });
 
     //Preparacion del evento para mostra los datos en el modal
-    $("#tabla-ninos #btnVer").on("click touchstart tap", function () {
+    $("#tabla-ninos").on("click", "#btnVer", function () {
         console.log("hola");
         mostrarDatos(tabla.row($(this).closest("tr")).data());
    });
 
     //Preparación de evento para el modal de eliminación
-    $("#tabla-ninos #btnBorrar").on("click touch", function () {
+    $("#tabla-ninos #btnBorrar").on("click", function () {
         confirmarEliminar($(this).closest("form"));
     });
 });

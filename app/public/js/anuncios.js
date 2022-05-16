@@ -58,18 +58,18 @@ $(window).on("load", () => {
     });
 
     //Preparacion del evento para mostra los datos en el modal
-    $("#tabla-anuncios #btnEditar").on("click touch", function () {
+    $("#tabla-anuncios #btnEditar").on("click", function () {
         mostrarDatos(tabla.row(this.closest("tr")).data());
     });
 
-    $("#modalEditar #btnEditar").on("click touch", function () {
+    $("#modalEditar #btnEditar").on("click", function () {
         const form = $(this).closest("form");
         form.attr("action", "/anuncios/" + $("#modalEditar #id").text());
         form.trigger("submit");
     });
 
     //Preparación de evento para el modal de eliminación
-    $("#tabla-anuncios #btnBorrar").on("click touch", function () {
+    $("#tabla-anuncios #btnBorrar").on("click", function () {
         confirmarEliminar($(this).closest("form"));
     });
 });
