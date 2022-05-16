@@ -73,14 +73,14 @@ $(window).on("load", () => {
     });
 
     //Preparacion del evento para mostra los datos en el modal
-    $("#tabla-users #btnEditar").on("click", "#btnEditar", (e) => {
+    $("#tabla-users").on("click", "#btnEditar", (e) => {
         let fila = $(e.target).parents("tr");
         if (fila.hasClass("child")) fila = fila.prev();
         mostrarDatos(tabla.row(fila).data());
     });
 
     //Preparación del evento para mostrar el modal para cambiar la clave
-    $("#tabla-users ").on("click", "#btnClave", (e) => {
+    $("#tabla-users").on("click", "#btnClave", (e) => {
         let fila = $(e.target).parents("tr");
         if (fila.hasClass("child")) fila = fila.prev();
         cambiarClave(tabla.row(fila).data());
