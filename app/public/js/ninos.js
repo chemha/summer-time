@@ -2,7 +2,7 @@
  * Recibe un array de datos y los asigna a un objeto para
  * poder utilizar los datos del array de forma más intuitiva.
  * Después inserta los datos en un modal y lo muestra.
- * @param {Array} datos
+ * @param {Array} datos 
  */
 function mostrarDatos(datos) {
     const nino = {
@@ -69,7 +69,7 @@ function mostrarDatos(datos) {
  * Recibe un formulario y muestra un popup pidiendo que
  * se confirme la eliminación. Una vez confirmada, el
  * formulario se sube.
- * @param {Element} form
+ * @param {Element} form 
  */
 function confirmarEliminar(form) {
     swal({
@@ -113,9 +113,9 @@ $(window).on("load", () => {
     });
 
     //Preparacion del evento para mostra los datos en el modal
-    $("#tabla-ninos #btnVer").click(function () {
+    $("#tabla-ninos #btnVer").on("click touchstart tap", function () {
         mostrarDatos(tabla.row($(this).closest("tr")).data());
-    });
+   });
 
     //Preparación de evento para el modal de eliminación
     $("#tabla-ninos #btnBorrar").on("click touch", function () {
