@@ -79,7 +79,7 @@
             </div>
         </div>
 
-        <h1 class="m-2">Ultimos 3 anuncios de nuestros empleados</h1>
+        <h1 class="m-2">Últimas noticias y actividades</h1>
 
         <!-- Tarjetas para los anuncios -->
         <div class="row justify-content-center">
