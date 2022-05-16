@@ -113,12 +113,14 @@ $(window).on("load", () => {
     });
 
     //Preparacion del evento para mostra los datos en el modal
-    $("#tabla-ninos").on("click", "#btnVer", function (e) {
-        mostrarDatos(tabla.row($(e.target).closest("tr")).data());
+    $("#tabla-ninos").on("click", "#btnVer", (e) => {
+        let fila = $(e.target).parents("tr");
+        if (fila.hasClass("child")) fila = fila.prev();
+        mostrarDatos(table.row(fila).data());
    });
 
     //Preparación de evento para el modal de eliminación
-    $("#tabla-ninos #btnBorrar").on("click", function () {
-        confirmarEliminar($(this).closest("form"));
+    $("#tabla-ninos #btnBorrar").on("click", (e) => {
+        confirmarEliminar($(e.target).closest("form"));
     });
 });
