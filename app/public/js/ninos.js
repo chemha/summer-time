@@ -116,7 +116,7 @@ $(window).on("load", () => {
     $("#tabla-ninos").on("click", "#btnVer", (e) => {
         let fila = $(e.target).parents("tr");
         if (fila.hasClass("child")) fila = fila.prev();
-        mostrarDatos(table.row(fila).data());
+        mostrarDatos(tabla.row(fila).data());
    });
 
     //Preparación de evento para el modal de eliminación
