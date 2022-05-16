@@ -1,7 +1,7 @@
 /**
  * Recibe un array de datos y los muestra en un modal
  * de edición
- * @param {Array} datos 
+ * @param {Array} datos
  */
 function mostrarDatos(datos) {
     $("#modalEditar #titulo").val(datos[2]);
@@ -15,7 +15,7 @@ function mostrarDatos(datos) {
  * Recibe un formulario y muestra un popup pidiendo que
  * se confirme la eliminación. Una vez confirmada, el
  * formulario se sube.
- * @param {Element} form 
+ * @param {Element} form
  */
 function confirmarEliminar(form) {
     swal({
@@ -58,18 +58,18 @@ $(window).on("load", () => {
     });
 
     //Preparacion del evento para mostra los datos en el modal
-    $("#tabla-anuncios #btnEditar").on("click", function () {
-        mostrarDatos(tabla.row(this.closest("tr")).data());
+    $("#tabla-anuncios").on("click", "#btnEditar", (e) => {
+        let fila = $(e.target).parents("tr");
+        if (fila.hasClass("child")) fila = fila.prev();
+        mostrarDatos(tabla.row(fila).data());
     });
 
-    $("#modalEditar #btnEditar").on("click", function () {
-        const form = $(this).closest("form");
+    $("#modalEditar ").on("click", "#btnEditar", (e) => {
+        const form = $(e.target).closest("form");
         form.attr("action", "/anuncios/" + $("#modalEditar #id").text());
         form.trigger("submit");
     });
 
     //Preparación de evento para el modal de eliminación
-    $("#tabla-anuncios #btnBorrar").on("click", function () {
-        confirmarEliminar($(this).closest("form"));
-    });
+    $("#tabla-anuncios #btnBorrar").on("click", "#btnBorrar", (e) => confirmarEliminar($(e.target).closest("form")));
 });

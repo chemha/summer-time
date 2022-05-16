@@ -73,31 +73,33 @@ $(window).on("load", () => {
     });
 
     //Preparacion del evento para mostra los datos en el modal
-    $("#tabla-users #btnEditar").on("click", function () {
-        mostrarDatos(tabla.row(this.closest("tr")).data());
+    $("#tabla-users #btnEditar").on("click", "#btnEditar", (e) => {
+        let fila = $(e.target).parents("tr");
+        if (fila.hasClass("child")) fila = fila.prev();
+        mostrarDatos(tabla.row(fila).data());
     });
 
     //Preparación del evento para mostrar el modal para cambiar la clave
-    $("#tabla-users #btnClave").on("click", function () {
-        cambiarClave(tabla.row(this.closest("tr")).data());
+    $("#tabla-users ").on("click", "#btnClave", (e) => {
+        let fila = $(e.target).parents("tr");
+        if (fila.hasClass("child")) fila = fila.prev();
+        cambiarClave(tabla.row(fila).data());
     });
 
     //Preparación del evento para subir el formulario de edición de datos
-    $("#modalEditar #btnEditar").on("click", function () {
-        const form = $(this).closest("form");
+    $("#modalEditar").on("click", "#btnEditar", (e) => {
+        const form = $(e.target).closest("form");
         form.attr("action", "/users/" + $("#modalEditar #id").text());
         form.trigger("submit");
     });
 
     //Preparación del evento para subir el formulario de edición de contraseña
-    $("#modalClave #btnEditar").on("click", function () {
-        const form = $(this).closest("form");
+    $("#modalClave").on("click", "#btnEditar", (e) => {
+        const form = $(e.target).closest("form");
         form.attr("action", "/users/" + $("#modalClave #id").text());
         form.trigger("submit");
     });
 
     //Preparación de evento para el modal de eliminación
-    $("#tabla-users #btnBorrar").on("click", function () {
-        confirmarEliminar($(this).closest("form"));
-    });
+    $("#tabla-users").on("click", "#btnBorrar", (e) => confirmarEliminar($(e.target).closest("form")));
 });
