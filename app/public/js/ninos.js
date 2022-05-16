@@ -113,9 +113,8 @@ $(window).on("load", () => {
     });
 
     //Preparacion del evento para mostra los datos en el modal
-    $("#tabla-ninos #btnVer").on("click", "#btnVer", function () {
-        console.log("hola");
-        mostrarDatos(tabla.row($(this).closest("tr")).data());
+    $("#tabla-ninos").on("click", "#btnVer", function (e) {
+        mostrarDatos(tabla.row($(e.target).closest("tr")).data());
    });
 
     //Preparación de evento para el modal de eliminación
