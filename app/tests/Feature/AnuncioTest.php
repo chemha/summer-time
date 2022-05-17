@@ -19,16 +19,16 @@ class AnuncioTest extends TestCase
             'descripcion' => 'Este es un anuncio de prueba',
         ];
 
-        $response = $this->actingAs($user)->anuncios('/anuncios', $anuncio_test);
+        $response = $user->anuncios('/anuncios', $anuncio_test);
         $response->assertSessionHas('status', 'anuncio has been created sucessfully');
 
         $anuncio = Anuncio::where('titulo', $anuncio_test['titulo'])->first();
 
         $this->assertNotNull($anuncio);
 
-        $this->anuncios('/logout');
+        $user->anuncios('/logout');
 
-        $response = $this->anuncio('/anuncios');
+        $response = $user->anuncio('/anuncios');
         $response->assertStatus(403);
     }
 }
