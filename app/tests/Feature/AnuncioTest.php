@@ -39,7 +39,7 @@ class AnuncioTest extends TestCase
     public function testCreateAnuncioNoUser()
     {
         $anuncio_test = [
-            'titulo' => 'Test anuncio con descripcción',
+            'titulo' => 'Test anuncio sin usuario',
             'descripcion' => 'Este es un anuncio de prueba',
         ];
 
