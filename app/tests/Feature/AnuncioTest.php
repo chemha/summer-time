@@ -16,7 +16,7 @@ class AnuncioTest extends TestCase
      *
      * @return void
      */
-    public function testCreateAnuncio()
+    public function testCrearAnuncio()
     {
         $user = User::factory()->create();
         $anuncio_test = [
@@ -36,7 +36,7 @@ class AnuncioTest extends TestCase
      *
      * @return void
      */
-    public function testCreateAnuncioNoUser()
+    public function testCrearAnuncioSinUsuario()
     {
         $anuncio_test = [
             'titulo' => 'Test anuncio sin usuario',
@@ -48,5 +48,17 @@ class AnuncioTest extends TestCase
         $anuncio = Anuncio::where('titulo', $anuncio_test['titulo'])->first();
 
         $this->assertNull($anuncio);
+    }
+
+    /**
+     * Intenta crear un anuncio sin usuario
+     *
+     * @return void
+     */
+    public function testVerGestionDeAnuncioSinUsuario()
+    {
+        $respuesta = $this->get('/anuncios');
+
+        $this->assertStatus(403);
     }
 }
