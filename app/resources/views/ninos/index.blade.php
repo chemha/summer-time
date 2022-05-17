@@ -43,51 +43,51 @@
                 <tr>
                     <!-- Campos ocultos -->
                     <!-- 0 -->
-                    <th class="d-none">Edad</th>
+                    <th class="d-none" scope="col">Edad</th>
                     <!-- 1 -->
-                    <th class="d-none">Hermanos</th>
+                    <th class="d-none" scope="col">Hermanos</th>
                     <!-- 2 -->
-                    <th class="d-none">Medicacion</th>
+                    <th class="d-none" scope="col">Medicacion</th>
                     <!-- 3 -->
-                    <th class="d-none">Especial</th>
+                    <th class="d-none" scope="col">Especial</th>
                     <!-- 4 -->
-                    <th class="d-none">Observaciones Medicas</th>
+                    <th class="d-none" scope="col">Observaciones Medicas</th>
                     <!-- 5 -->
-                    <th class="d-none">Email</th>
+                    <th class="d-none" scope="col">Email</th>
                     <!-- 6 -->
-                    <th class="d-none">Telefono 2</th>
+                    <th class="d-none" scope="col">Telefono 2</th>
                     <!-- 7 -->
-                    <th class="d-none">Pago</th>
+                    <th class="d-none" scope="col">Pago</th>
                     <!-- 8 -->
-                    <th class="d-none">Autorizacion datos</th>
+                    <th class="d-none" scope="col">Autorizacion datos</th>
                     <!-- 9 -->
-                    <th class="d-none">Autorizacion fotos</th>
+                    <th class="d-none" scope="col">Autorizacion fotos</th>
                     <!-- 10 -->
-                    <th class="d-none">Anotaciones</th>
+                    <th class="d-none" scope="col">Anotaciones</th>
 
                     <!-- Campos visibles -->
                     <!-- 11 -->
-                    <th>Nombre</th>
+                    <th scope="col">Nombre</th>
                     <!-- 12 -->
-                    <th>Apellidos</th>
+                    <th scope="col">Apellidos</th>
                     <!-- 13 -->
-                    <th>Madre / Padre / Tutor</th>
+                    <th scope="col">Madre / Padre / Tutor</th>
                     <!-- 14 -->
-                    <th>Telefono 1</th>
+                    <th scope="col">Telefono 1</th>
                     <!-- 15 -->
-                    <th>Estado del recibo</th>
+                    <th scope="col">Estado del recibo</th>
                     <!-- 16 -->
-                    <th>Grupo</th>
+                    <th scope="col">Grupo</th>
                     <!-- 17 -->
-                    <th>Horario</th>
+                    <th scope="col">Horario</th>
                     <!-- 18 -->
-                    <th>Q1</th>
+                    <th scope="col">Q1</th>
                     <!-- 19 -->
-                    <th>Q2</th>
+                    <th scope="col">Q2</th>
                     <!-- 20 -->
-                    <th>Q3</th>
+                    <th scope="col">Q3</th>
                     <!-- 21 -->
-                    <th>Q4</th>
+                    <th scope="col">Q4</th>
 
                     <th class="sm">Acción</th>
                 </tr>

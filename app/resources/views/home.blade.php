@@ -13,17 +13,17 @@
                         <table class="table table-striped table-bordered text-center">
                             <thead>
                                 <tr>
-                                    <th></th>
-                                    <th>G1</th>
-                                    <th>G2</th>
-                                    <th>G3</th>
-                                    <th>G4</th>
-                                    <th>Total quincenas</th>
+                                    <th scope="col"></th>
+                                    <th scope="col">G1</th>
+                                    <th scope="col">G2</th>
+                                    <th scope="col">G3</th>
+                                    <th scope="col">G4</th>
+                                    <th scope="col">Total quincenas</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th>Q1</th>
+                                    <th scope="row">Q1</th>
                                     <td>{{ count(DB::table('ninos')->where('grupo', 1)->where('quincena1', true)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->where('grupo', 2)->where('quincena1', true)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->where('grupo', 3)->where('quincena1', true)->get()) }}</td>
@@ -31,7 +31,7 @@
                                     <td>{{ count(DB::table('ninos')->where('quincena1', true)->get()) }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Q2</th>
+                                    <th scope="row">Q2</th>
                                     <td>{{ count(DB::table('ninos')->where('grupo', 1)->where('quincena2', true)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->where('grupo', 2)->where('quincena2', true)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->where('grupo', 3)->where('quincena2', true)->get()) }}</td>
@@ -39,7 +39,7 @@
                                     <td>{{ count(DB::table('ninos')->where('quincena2', true)->get()) }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Q3</th>
+                                    <th scope="row">Q3</th>
                                     <td>{{ count(DB::table('ninos')->where('grupo', 1)->where('quincena3', true)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->where('grupo', 2)->where('quincena3', true)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->where('grupo', 3)->where('quincena3', true)->get()) }}</td>
@@ -47,7 +47,7 @@
                                     <td>{{ count(DB::table('ninos')->where('quincena3', true)->get()) }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Q4</th>
+                                    <th scope="row">Q4</th>
                                     <td>{{ count(DB::table('ninos')->where('grupo', 1)->where('quincena4', true)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->where('grupo', 2)->where('quincena4', true)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->where('grupo', 3)->where('quincena4', true)->get()) }}</td>
@@ -55,7 +55,7 @@
                                     <td>{{ count(DB::table('ninos')->where('quincena4', true)->get()) }}</td>
                                 </tr>
                                 <tr>
-                                    <th>Total grupos</th>
+                                    <th scope="row">Total grupos</th>
                                     <td>{{ count(DB::table('ninos')->where('grupo', 1)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->where('grupo', 2)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->where('grupo', 3)->get()) }}</td>
