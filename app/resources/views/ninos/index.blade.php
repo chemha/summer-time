@@ -75,7 +75,7 @@
                     <!-- 14 -->
                     <th scope="col">Telefono 1</th>
                     <!-- 15 -->
-                    <th scope="col">Estado del recibo</th>
+                    <th scope="col">Recibo</th>
                     <!-- 16 -->
                     <th scope="col">Grupo</th>
                     <!-- 17 -->
