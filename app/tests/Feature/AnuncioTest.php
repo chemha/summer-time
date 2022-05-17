@@ -20,7 +20,6 @@ class AnuncioTest extends TestCase
         ];
 
         $response = $this->actingAs($user)->post('/anuncios', $anuncio_test);
-        $response->assertSessionHas('status', 'anuncio has been created sucessfully');
 
         $anuncio = Anuncio::where('titulo', $anuncio_test['titulo'])->first();
 
