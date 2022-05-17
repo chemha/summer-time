@@ -58,7 +58,6 @@ class AnuncioTest extends TestCase
     public function testVerGestionDeAnuncioSinUsuario()
     {
         $respuesta = $this->get('/anuncios');
-
-        $this->assertStatus(403);
+        $respuesta->assertStatus(403);
     }
 }
