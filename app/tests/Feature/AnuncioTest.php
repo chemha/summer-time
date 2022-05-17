@@ -26,9 +26,9 @@ class AnuncioTest extends TestCase
 
         $this->assertNotNull($anuncio);
 
-        $this->anuncios('/logout');
+        $this->post('/logout');
 
-        $response = $this->anuncio('/anuncios');
+        $response = $this->post('/anuncios');
         $response->assertStatus(403);
     }
 }
