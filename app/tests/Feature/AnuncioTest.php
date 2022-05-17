@@ -33,7 +33,7 @@ class AnuncioTest extends TestCase
 
     /**
      * Intenta crear un anuncio sin usuario
-     *
+     * No debe crearlo por lo tanto debe ser null
      * @return void
      */
     public function testCrearAnuncioSinUsuario()
@@ -52,12 +52,12 @@ class AnuncioTest extends TestCase
 
     /**
      * Intenta crear un anuncio sin usuario
-     *
+     * Debe redireccionar al login
      * @return void
      */
     public function testVerGestionDeAnuncioSinUsuario()
     {
         $respuesta = $this->get('/anuncios');
-        $respuesta->assertStatus(403);
+        $respuesta->assertStatus(302);
     }
 }
