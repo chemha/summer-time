@@ -5,18 +5,30 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use App\Models\User;
+use App\Models\Anuncio;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 class AnuncioTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
-    public function test_example()
+    public function testCreateAnuncio()
     {
-        $response = $this->get('/');
+        $user = User::factory()->create();
+        $anuncio_test = [
+            'titulo' => 'Test anuncio con descripcción',
+            'descripcion' => 'Este es un anuncio de prueba',
+        ];
 
-        $response->assertStatus(200);
+        $response = $this->actingAs($user)->anuncio('/anuncios', $anuncio_test);
+        $response->assertSessionHas('status', 'anuncio has been created sucessfully');
+
+        $anuncio = Anuncio::where('titulo', $anuncio_test['titulo'])->first();
+
+        $this->assertNotNull($anuncio);
+
+        $this->anuncio('/logout');
+
+        $response = $this->anuncio('/anuncios');
+        $response->assertStatus(403);
     }
 }
