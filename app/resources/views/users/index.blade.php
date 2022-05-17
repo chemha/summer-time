@@ -73,7 +73,7 @@
                                         <i class="bi bi-pencil-square"></i>
                                     </button>
                                 </div>
-                                <div class="col">
+                                <div class="col-6">
                                     <button id="btnClave" type="button" class="btn btn-warning">
                                         <i class="bi bi-pencil-square">Contraseña</i>
                                     </button>
