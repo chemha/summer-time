@@ -95,7 +95,7 @@
         </table>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal para crear usuarios -->
     <div class="modal fade" id="modalCrear" tabindex="-1" aria-labelledby="modalCrearLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -130,7 +130,7 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal para editar usuarios -->
     <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -165,7 +165,7 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal para cambiar la contraseña -->
     <div class="modal fade" id="modalClave" tabindex="-1" aria-labelledby="modalClaveLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">

@@ -10,7 +10,7 @@
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
-                            <img class="img-responsive center-block d-block mx-auto mb-4"
+                            <img class="img-responsive center-block d-block mx-auto mb-4 w-75"
                                 src="{{ asset('img/logo.png') }}">
                             <div class="row mb-3">
                                 <label for="email"
