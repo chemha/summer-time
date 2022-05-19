@@ -34,7 +34,7 @@ function cambiarClave(datos) {
  */
 function confirmarEliminar(form) {
     swal({
-        title: "¿Estás seguro de que quieres eliminar este usuario?",
+        title: "¿Estás seguro de que quieres eliminar a este usuario?",
         text: "Estos cambios no pueden deshacerse",
         icon: "warning",
         buttons: ["Cancelar", "Eliminar"],
