@@ -39,7 +39,7 @@
             Crear usuario
         </button>
 
-        <table id="tabla-users" class="table table-striped table-bordered shadow-lg w-100">
+        <table id="tabla-users" class="table table-striped table-bordered shadow-lg w-100 text-center">
             <thead class="">
                 <tr>
                     <th class="d-none" scope="col">ID</th>
