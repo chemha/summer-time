@@ -107,6 +107,13 @@ $(window).on("load", () => {
                 visible: false,
                 searchable: false,
             },
+            
+            //Columna de recibo
+            {
+                target: 15,
+                visible: false,
+                searchable: true,
+            }
         ],
 
         order: [[12, "asc"]],

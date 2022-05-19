@@ -38,7 +38,7 @@
 
         <a href="{{ route('ninos.create') }}" class="btn btn-secondary mb-2">Crear nuevo registro</a>
 
-        <table id="tabla-ninos" class="table table-bordered table-striped shadow-lg w-100 text-nowrap">
+        <table id="tabla-ninos" class="table table-bordered table-striped shadow-lg w-100 text-nowrap text-center">
             <thead class="">
                 <tr>
                     <!-- Campos ocultos -->
@@ -109,17 +109,17 @@
                         <td class="d-none">{{ $nino->anotaciones }}</td>
 
                         <!-- Campos visibles -->
-                        <td class="text-center">{{ $nino->nombre }}</td>
-                        <td class="text-center">{{ $nino->apellidos }}</td>
-                        <td class="text-center">{{ $nino->tutor }}</td>
-                        <td class="text-center">{{ $nino->telefono1 }}</td>
-                        <td class="text-center">{{ $nino->recibo }}</td>
-                        <td class="text-center">
+                        <td>{{ $nino->nombre }}</td>
+                        <td>{{ $nino->apellidos }}</td>
+                        <td>{{ $nino->tutor }}</td>
+                        <td>{{ $nino->telefono1 }}</td>
+                        <td class="d-none">{{ $nino->recibo }}</td>
+                        <td>
                             <span class="d-none">grupo{{ $nino->grupo }}</span>
                             grupo {{ $nino->grupo }}
                         </td>
-                        <td class="text-center">{{ $nino->horario }}</td>
-                        <td class="text-center">
+                        <td>{{ $nino->horario }}</td>
+                        <td>
                             @if ($nino->quincena1 == 1)
                                 <span class="d-none">q1</span>
                                 <i class="bi bi-check-square-fill"></i>
@@ -127,7 +127,7 @@
                                 <i class="bi bi-x-square-fill"></i>
                             @endif
                         </td>
-                        <td class="text-center">
+                        <td>
 
                             @if ($nino->quincena2 == 1)
                                 <span class="d-none">q2</span>
@@ -136,7 +136,7 @@
                                 <i class="bi bi-x-square-fill"></i>
                             @endif
                         </td>
-                        <td class="text-center">
+                        <td>
                             @if ($nino->quincena3 == 1)
                                 <span class="d-none">q3</span>
                                 <i class="bi bi-check-square-fill"></i>
@@ -144,7 +144,7 @@
                                 <i class="bi bi-x-square-fill"></i>
                             @endif
                         </td>
-                        <td class="text-center">
+                        <td>
                             @if ($nino->quincena4 == 1)
                                 <span class="d-none">q4</span>
                                 <i class="bi bi-check-square-fill"></i>
