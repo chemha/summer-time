@@ -21,7 +21,6 @@ class NinoController extends Controller
      */
     public function index()
     {
-        $this->authorize('viewAny', auth()->user());
         return view('ninos.index', ['ninos' => Nino::all()]);
     }
 

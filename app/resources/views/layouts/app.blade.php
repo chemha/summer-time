@@ -56,10 +56,10 @@
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="/anuncios">Gestión de anuncios</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/ninos">Gestión de niños</a>
+                            </li>
                             @if (Auth::user()->admin == 1)
-                                <li class="nav-item">
-                                    <a class="nav-link text-white" href="/ninos">Gestión de niños</a>
-                                </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-white" href="/users">Gestión de usuarios</a>
                                 </li>
@@ -81,9 +81,9 @@
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     @if (Auth::user()->image)
-                                    <img class="avatar-nav circulo mr-1" src="{{ Auth::user()->image }}">
+                                        <img class="avatar-nav circulo mr-1" src="{{ Auth::user()->image }}">
                                     @else
-                                    <img class="avatar-nav circulo" src="{{ asset('img/sinavatar.jpg') }}">
+                                        <img class="avatar-nav circulo" src="{{ asset('img/sinavatar.jpg') }}">
                                     @endif
                                     {{ Auth::user()->name }}
                                 </a>
