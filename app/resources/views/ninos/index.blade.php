@@ -81,12 +81,14 @@
                     <!-- 17 -->
                     <th scope="col">Horario</th>
                     <!-- 18 -->
-                    <th scope="col">Q1</th>
+                    <th scope="col">Q0</th>
                     <!-- 19 -->
-                    <th scope="col">Q2</th>
+                    <th scope="col">Q1</th>
                     <!-- 20 -->
-                    <th scope="col">Q3</th>
+                    <th scope="col">Q2</th>
                     <!-- 21 -->
+                    <th scope="col">Q3</th>
+                    <!-- 22 -->
                     <th scope="col">Q4</th>
 
                     <th class="sm">Acción</th>
@@ -119,6 +121,14 @@
                             grupo {{ $nino->grupo }}
                         </td>
                         <td>{{ $nino->horario }}</td>
+                        <td>
+                            @if ($nino->quincena0 == 1)
+                                <span class="d-none">q0</span>
+                                <i class="bi bi-check-square-fill"></i>
+                            @else
+                                <i class="bi bi-x-square-fill"></i>
+                            @endif
+                        </td>
                         <td>
                             @if ($nino->quincena1 == 1)
                                 <span class="d-none">q1</span>
@@ -218,7 +228,7 @@
                         <div class="col">
                             <h5>Datos de la escuela</h5>
                             <ul class="list-unstyled">
-                                <li>Grupo: <span id="grupo"></span></li>
+                                <li class="bold">Grupo: <span id="grupo"></span></li>
                                 <li>Horario: <span id="horario"></span></li>
                                 <li>¿Quincena 1?: <span id="quincena1"></span></li>
                                 <li>¿Quincena 2?: <span id="quincena2"></span></li>

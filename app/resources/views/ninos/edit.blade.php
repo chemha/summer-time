@@ -15,13 +15,8 @@
                     <div class="row my-2">
                         <div class="col">
                             <label for="nombre">Nombre</label>
-                            <input type="text" class=" form-control @error('nombre') is-invalid @enderror" name="nombre"
-                                value="{{ $nino->nombre }}" required autocomplete="off" autofocus>
-                            @error('nombre')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <input type="text" class=" form-control" name="nombre" value="{{ $nino->nombre }}" required
+                                autocomplete="off" autofocus>
                         </div>
                     </div>
 
@@ -29,13 +24,8 @@
                     <div class="row my-2">
                         <div class="col">
                             <label for="apellidos">Apellidos</label>
-                            <input type="text" class="form-control @error('apellidos') is-invalid @enderror" name="apellidos"
-                                value="{{ $nino->apellidos }}" required autocomplete="off" autofocus>
-                            @error('apellidos')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <input type="text" class="form-control" name="apellidos" value="{{ $nino->apellidos }}"
+                                required autocomplete="off" autofocus>
                         </div>
                     </div>
 
@@ -43,52 +33,28 @@
                     <div class="row my-2">
                         <div class="col">
                             <label for="edad">Edad</label>
-                            <input type="number" class="form-control w-25 @error('edad') is-invalid @enderror" name="edad"
-                                value="{{ $nino->edad }}" required autocomplete="off" autofocus min="1" max="18" placeholder="1">
-                            @error('edad')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <input type="number" class="form-control w-25" name="edad" value="{{ $nino->edad }}" required
+                                autocomplete="off" autofocus min="1" max="18" placeholder="1">
                         </div>
 
                         <div class="col">
                             <label for="hermanos">Hermanos</label>
-                            <input type="number" class="form-control w-25 @error('hermanos') is-invalid @enderror"
-                                name="hermanos" value="{{ $nino->hermanos }}" autocomplete="off" autofocus min="0" max="15" placeholder="0">
-                            @error('hermanos')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <input type="number" class="form-control w-25" name="hermanos" value="{{ $nino->hermanos }}"
+                                autocomplete="off" autofocus min="0" max="15" placeholder="0">
                         </div>
                     </div>
 
                     <!-- Checkboxes de medicacion y especial -->
                     <div class="row my-2">
-
                         <div class="col my-1">
-
-                            <input type="checkbox" class="form-check-input @error('medicacion') is-invalid @enderror"
-                                name="medicacion" autocomplete="off" autofocus
+                            <input type="checkbox" class="form-check-input" name="medicacion" autocomplete="off" autofocus
                                 {{ $nino->medicacion == 1 ? 'checked' : '' }}>
-                            @error('medicacion')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
                             <label for="medicacion" class="form-check-label">Medicación</label>
                         </div>
 
                         <div class="col my-1">
-
-                            <input type="checkbox" class="form-check-input @error('especial') is-invalid @enderror"
-                                name="especial" autocomplete="off" autofocus {{ $nino->especial == 1 ? 'checked' : '' }}>
-                            @error('especial')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <input type="checkbox" class="form-check-input" name="especial" autocomplete="off" autofocus
+                                {{ $nino->especial == 1 ? 'checked' : '' }}>
                             <label for="especial" class="form-check-label">Especial</label>
                         </div>
                     </div>
@@ -96,14 +62,8 @@
                     <div class="row my-2">
                         <div class="col">
                             <label for="observacionesMedicas">Observaciones médicas</label>
-                            <input type="text" class="form-control @error('observacionesMedicas') is-invalid @enderror"
-                                name="observacionesMedicas" value="{{ $nino->observacionesMedicas }}" autocomplete="off"
-                                autofocus>
-                            @error('observacionesMedicas')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <input type="text" class="form-control" name="observacionesMedicas"
+                                value="{{ $nino->observacionesMedicas }}" autocomplete="off" autofocus>
                         </div>
                     </div>
 
@@ -111,13 +71,8 @@
                     <div class="row my-2">
                         <div class="col">
                             <label for="tutor">Madre / Padre / Tutor</label>
-                            <input type="text" class="form-control @error('tutor') is-invalid @enderror" name="tutor"
-                                value="{{ $nino->tutor }}" required autocomplete="off" autofocus>
-                            @error('tutor')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <input type="text" class="form-control" name="tutor" value="{{ $nino->tutor }}" required
+                                autocomplete="off" autofocus>
                         </div>
                     </div>
 
@@ -125,13 +80,8 @@
                     <div class="row my-2">
                         <div class="col">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control @error('email') is-invalid @enderror" name="email"
-                                value="{{ $nino->email }}" autocomplete="off" autofocus>
-                            @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <input type="email" class="form-control" name="email" value="{{ $nino->email }}"
+                                autocomplete="off" autofocus>
                         </div>
                     </div>
 
@@ -139,24 +89,14 @@
                     <div class="row my-2">
                         <div class="col">
                             <label for="telefono1">Teléfono 1</label>
-                            <input type="tel" class="form-control @error('telefono1') is-invalid @enderror" name="telefono1"
-                                value="{{ $nino->telefono1 }}" required autocomplete="off" autofocus>
-                            @error('telefono1')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <input type="tel" class="form-control" name="telefono1" value="{{ $nino->telefono1 }}"
+                                required autocomplete="off" autofocus>
                         </div>
 
                         <div class="col">
                             <label for="telefono2">Teléfono 2</label>
-                            <input type="tel" class="form-control @error('telefono2') is-invalid @enderror"
-                                name="telefono2" value="{{ $nino->telefono2 }}" autofocus>
-                            @error('telefono2')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <input type="tel" class="form-control" name="telefono2" value="{{ $nino->telefono2 }}"
+                                autofocus>
                         </div>
                     </div>
                 </div>
@@ -170,98 +110,66 @@
                     <div class="row my-2 ">
                         <div class="col">
                             <label for="grupo">Grupo</label>
-                            <select class="form-select w-50 float-left @error('grupo') is-invalid @enderror" name="grupo"
-                                id="grupo" required autocomplete="off" autofocus>
+                            <select class="form-select w-50 float-left" name="grupo" required autocomplete="off" autofocus>
                                 <option disabled value>Elige un grupo</option>
                                 <option value="1" {{ $nino->grupo == 1 ? 'selected' : '' }}>Grupo 1</option>
                                 <option value="2" {{ $nino->grupo == 2 ? 'selected' : '' }}>Grupo 2</option>
                                 <option value="3" {{ $nino->grupo == 3 ? 'selected' : '' }}>Grupo 3</option>
                                 <option value="4" {{ $nino->grupo == 4 ? 'selected' : '' }}>Grupo 4</option>
                             </select>
-
-                            @error('grupo')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
                         </div>
 
                         <div class="col">
                             <label for="horario">Horario</label>
-                            <select class="form-select w-50  @error('horario') is-invalid @enderror" name="horario"
-                                id="horario" required autocomplete="off" autofocus>
+                            <select class="form-select w-50" name="horario" required autocomplete="off" autofocus>
                                 <option disabled value>Elige un horario</option>
                                 <option value="8:00-14:00" {{ $nino->horario == '8:00-14:00' ? 'selected' : '' }}>
-                                    8:00->14:00</option>
+                                    8:00-14:00</option>
                                 <option value="8:00-15:00" {{ $nino->horario == '8:00-15:00' ? 'selected' : '' }}>
-                                    8:00->15:00</option>
+                                    8:00-15:00</option>
                                 <option value="9:00-14:00" {{ $nino->horario == '9:00-14:00' ? 'selected' : '' }}>
-                                    9:00->14:00</option>
+                                    9:00-14:00</option>
                                 <option value="9:00-15:00" {{ $nino->horario == '9:00-15:00' ? 'selected' : '' }}>
-                                    9:00->15:00</option>
+                                    9:00-15:00</option>
                             </select>
-
-                            @error('horario')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
                         </div>
                     </div>
 
                     <!-- Checkboxes de quincenas -->
                     <div class="row row-cols-2 my-2">
                         <div class="col my-1">
-                            <input type="checkbox" class="form-check-input @error('quincena1') is-invalid @enderror"
-                                name="quincena1" autocomplete="off" autofocus
+                            <input type="checkbox" class="form-check-input" name="quincena0" autocomplete="off" autofocus
+                                {{ $nino->quincena0 == 1 ? 'checked' : '' }}>
+
+                            <label for="quincena0" class="form-check-label">
+                                Quincena 0
+                            </label>
+                            <input type="checkbox" class="form-check-input" name="quincena1" autocomplete="off" autofocus
                                 {{ $nino->quincena1 == 1 ? 'checked' : '' }}>
-                            @error('quincena1')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
 
                             <label for="quincena1" class="form-check-label">
                                 Quincena 1
                             </label>
                         </div>
                         <div class="col my-1">
-                            <input type="checkbox" class="form-check-input @error('quincena2') is-invalid @enderror"
-                                name="quincena2" autocomplete="off" autofocus
+                            <input type="checkbox" class="form-check-input" name="quincena2" autocomplete="off" autofocus
                                 {{ $nino->quincena2 == 1 ? 'checked' : '' }}>
-                            @error('quincena1')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
 
                             <label for="quincena2" class="form-check-label">
                                 Quincena 2
                             </label>
                         </div>
                         <div class="col my-1">
-                            <input type="checkbox" class="form-check-input @error('quincena3') is-invalid @enderror"
-                                name="quincena3" autocomplete="off" autofocus
+                            <input type="checkbox" class="form-check-input" name="quincena3" autocomplete="off" autofocus
                                 {{ $nino->quincena3 == 1 ? 'checked' : '' }}>
-                            @error('quincena3')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
 
                             <label for="quincena3" class="form-check-label">
                                 Quincena 3
                             </label>
                         </div>
                         <div class="col my-1">
-                            <input type="checkbox" class="form-check-input @error('quincena4') is-invalid @enderror"
-                                name="quincena4" autocomplete="off" autofocus
+                            <input type="checkbox" class="form-check-input" name="quincena4" autocomplete="off" autofocus
                                 {{ $nino->quincena4 == 1 ? 'checked' : '' }}>
-                            @error('quincena4')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
 
                             <label for="quincena4" class="form-check-label">
                                 Quincena 4
@@ -272,13 +180,8 @@
                     <!-- Checkboxes de autorización de datos y fotos -->
                     <div class="row my-2">
                         <div class="col my-1">
-                            <input type="checkbox" class="form-check-input @error('datos') is-invalid @enderror"
-                                name="datos" autocomplete="off" autofocus {{ $nino->datos == 1 ? 'checked' : '' }}>
-                            @error('datos')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <input type="checkbox" class="form-check-input" name="datos" autocomplete="off" autofocus
+                                {{ $nino->datos == 1 ? 'checked' : '' }}>
 
                             <label for="datos" class="form-check-label">
                                 Autorización datos
@@ -286,13 +189,8 @@
                         </div>
 
                         <div class="col my-1">
-                            <input type="checkbox" class="form-check-input @error('fotos') is-invalid @enderror"
-                                name="fotos" autocomplete="off" autofocus {{ $nino->fotos == 1 ? 'checked' : '' }}>
-                            @error('fotos')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <input type="checkbox" class="form-check-input" name="fotos" autocomplete="off" autofocus
+                                {{ $nino->fotos == 1 ? 'checked' : '' }}>
 
                             <label for="fotos" class="form-check-label">
                                 Autorización fotos
@@ -306,14 +204,8 @@
                             <label for="anotaciones">
                                 Anotaciones
                             </label>
-                            <textarea name="anotaciones" rows="5" cols="52" class="form-control @error('anotaciones') is-invalid @enderror"
-                                autocomplete="off" autofocus>{{ $nino->anotaciones }}</textarea>
-
-                            @error('anotaciones')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                            <textarea name="anotaciones" rows="5" cols="52" class="form-control" autocomplete="off"
+                                autofocus>{{ $nino->anotaciones }}</textarea>
                         </div>
                     </div>
                 </div>
@@ -328,31 +220,19 @@
                     <label for="recibo">
                         Estado del recibo
                     </label>
-                    <select class="form-select @error('recibo') is-invalid @enderror" name="recibo" id="recibo" required
-                        autocomplete="off" autofocus>
+                    <select class="form-select" name="recibo" id="recibo" required autocomplete="off" autofocus>
                         <option disabled value>Elige un estado</option>
                         <option value="pagado" {{ $nino->recibo == 'pagado' ? 'selected' : '' }}>Pagado</option>
                         <option value="pendiente" {{ $nino->recibo == 'pendiente' ? 'selected' : '' }}>Pendiente</option>
                     </select>
-
-                    @error('recibo')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
                 </div>
 
                 <!-- Campo de pago -->
                 <div class="col">
                     <label for="pago">Pago</label>
 
-                    <input type="number" class="form-control @error('pago') is-invalid @enderror" name="pago"
-                        value="{{ $nino->pago }}" required autocomplete="off" autofocus placeholder="0.00" step="any" max="999.99" min="-999.99">
-                    @error('pago')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
+                    <input type="number" class="form-control" name="pago" value="{{ $nino->pago }}" required
+                        autocomplete="off" autofocus step="any" max="999.99" min="-999.99">
                 </div>
 
                 <!-- Boton para guardar el registro -->

@@ -17,6 +17,9 @@ return new class extends Migration
             //Id base de Laravel
             $table->id();
 
+            //Relación con el usuario
+            $table->foreignId('user_id')->references('id')->on('users');
+
             //Datos añadidos
             $table->string('nombre', 100);
             $table->string('apellidos', 100);
@@ -35,6 +38,7 @@ return new class extends Migration
             $table->string('grupo', 20);
             $table->string('horario', 20);
 
+            $table->boolean('quincena0');
             $table->boolean('quincena1');
             $table->boolean('quincena2');
             $table->boolean('quincena3');

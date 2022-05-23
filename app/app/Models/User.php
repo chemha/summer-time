@@ -48,4 +48,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Anuncio::class);
     }
+
+    public function ninos()
+    {
+        return $this->hasMany(Nino::class);
+    }
 }

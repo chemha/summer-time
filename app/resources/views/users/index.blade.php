@@ -179,7 +179,7 @@
                     <div class="modal-body">
                         <div class="col">
                             <label for="name">Nueva contraseña</label>
-                            <input type="password" name="password" required autocomplete="off" class="form-control">
+                            <input type="password" name="password" id="password" required autocomplete="off" class="form-control">
                         </div>
                     </div>
                     <div class="modal-footer">

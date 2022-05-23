@@ -26,6 +26,7 @@ class Nino extends Model
         'grupo',
         'hermanos',
         'horario',
+        'quincena0',
         'quincena1',
         'quincena3',
         'quincena2',
@@ -40,4 +41,9 @@ class Nino extends Model
     ];
 
     use HasFactory;
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
