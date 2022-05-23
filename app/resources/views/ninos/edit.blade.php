@@ -207,7 +207,7 @@
                             <label for="anotaciones">
                                 Anotaciones
                             </label>
-                            <textarea name="anotaciones" rows="5" cols="52" class="form-control" autocomplete="off"
+                            <textarea name="anotaciones" rows="11" class="form-control" autocomplete="off"
                                 autofocus>{{ $nino->anotaciones }}</textarea>
                         </div>
                     </div>
@@ -227,7 +227,8 @@
                         <option disabled value>Elige un estado</option>
                         <option value="pagado" {{ $nino->recibo == 'pagado' ? 'selected' : '' }}>Pagado</option>
                         <option value="pendiente" {{ $nino->recibo == 'pendiente' ? 'selected' : '' }}>Pendiente</option>
-                        <option value="devolución" {{ $nino->recibo == 'devolución' ? 'selected' : '' }}>Devolución</option>
+                        <option value="devolución" {{ $nino->recibo == 'devolución' ? 'selected' : '' }}>Devolución
+                        </option>
                     </select>
                 </div>
 
