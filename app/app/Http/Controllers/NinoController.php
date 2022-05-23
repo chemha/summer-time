@@ -46,8 +46,11 @@ class NinoController extends Controller
     public function store(Request $request)
     {
         $this->authorize('viewAny', auth()->user());
+
+        $usuario = auth()->user();
+        
         //Inserción de datos
-        Nino::create([
+        $usuario->ninos()->create([
             "nombre" => $request->nombre,
             "apellidos" => $request->apellidos,
             "edad" => $request->edad,
@@ -65,6 +68,7 @@ class NinoController extends Controller
 
             "grupo" => $request->grupo,
             "horario" => $request->horario,
+            "quincena0" => $request->has('quincena0'),
             "quincena1" => $request->has('quincena1'),
             "quincena2" => $request->has('quincena2'),
             "quincena3" => $request->has('quincena3'),
@@ -118,6 +122,7 @@ class NinoController extends Controller
     public function update(Request $request, Nino $nino)
     {
         $this->authorize('viewAny', auth()->user());
+
         $nino->update([
             "nombre" => $request->nombre,
             "apellidos" => $request->apellidos,
@@ -136,6 +141,7 @@ class NinoController extends Controller
 
             "grupo" => $request->grupo,
             "horario" => $request->horario,
+            "quincena0" => $request->has('quincena0'),
             "quincena1" => $request->has('quincena1'),
             "quincena2" => $request->has('quincena2'),
             "quincena3" => $request->has('quincena3'),

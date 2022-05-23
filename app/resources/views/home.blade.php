@@ -23,6 +23,14 @@
                             </thead>
                             <tbody>
                                 <tr>
+                                    <th scope="row">Q0</th>
+                                    <td>{{ count(DB::table('ninos')->where('grupo', 1)->where('quincena0', true)->get()) }}</td>
+                                    <td>{{ count(DB::table('ninos')->where('grupo', 2)->where('quincena0', true)->get()) }}</td>
+                                    <td>{{ count(DB::table('ninos')->where('grupo', 3)->where('quincena0', true)->get()) }}</td>
+                                    <td>{{ count(DB::table('ninos')->where('grupo', 4)->where('quincena0', true)->get()) }}</td>
+                                    <td>{{ count(DB::table('ninos')->where('quincena0', true)->get()) }}</td>
+                                </tr>
+                                <tr>
                                     <th scope="row">Q1</th>
                                     <td>{{ count(DB::table('ninos')->where('grupo', 1)->where('quincena1', true)->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->where('grupo', 2)->where('quincena1', true)->get()) }}</td>
