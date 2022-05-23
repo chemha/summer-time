@@ -128,6 +128,7 @@
                                 <span class="d-none">ds</span>
                                 <i class="bi bi-check-square-fill"></i>
                             @else
+                                <span class="d-none">dn</span>
                                 <i class="bi bi-x-square-fill"></i>
                             @endif
                         </td>
@@ -136,7 +137,7 @@
                                 <span class="d-none">fs</span>
                                 <i class="bi bi-check-square-fill"></i>
                             @else
-                                <span class="d-none">fs</span>
+                                <span class="d-none">fn</span>
                                 <i class="bi bi-x-square-fill"></i>
                             @endif
                         </td>
