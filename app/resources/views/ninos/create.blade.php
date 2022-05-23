@@ -201,7 +201,7 @@
                             <label for="anotaciones">
                                 Anotaciones
                             </label>
-                            <textarea name="anotaciones" rows="5" cols="52" class="form-control" autocomplete="off" autofocus></textarea>
+                            <textarea name="anotaciones" rows="11" class="form-control" autocomplete="off" autofocus></textarea>
                         </div>
                     </div>
                 </div>
