@@ -234,9 +234,6 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalVerLabel">Registro creado por: <span id="autor"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <div class="row">
-                        <h6 class="modal-title" id="modalVerLabel">Registro creado por: <span id="autor"></span></h6>
-                    </div>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -279,6 +276,9 @@
                             </ul>
                         </div>
                     </div>
+                </div>
+                <div class="modal-footer">
+                    <h6 class="modal-title" id="modalVerLabel">Registro creado por: <span id="autor"></span></h6>
                 </div>
             </div>
         </div>
