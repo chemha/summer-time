@@ -35,7 +35,7 @@ class NinoFactory extends Factory
             "grupo" => $this->faker->numberBetween(1, 4),
             "horario" => $this->faker->randomElement(['8:00-14:00', '8:00-15:00', '9:00-14:00', '9:00-15:00']),
             
-            "quincena9" => $this->faker->boolean,
+            "quincena0" => $this->faker->boolean,
             "quincena1" => $this->faker->boolean,
             "quincena2" => $this->faker->boolean,
             "quincena3" => $this->faker->boolean,
