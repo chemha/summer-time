@@ -235,7 +235,7 @@
                 </div>
 
                 <!-- Boton para guardar el registro -->
-                <div class="col justify-content-start">
+                <div class="col d-flex align-items-end">
                     <button type="submit" class="btn btn-primary">
                         Crear registro
                     </button>

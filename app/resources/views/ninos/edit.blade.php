@@ -240,7 +240,7 @@
                 </div>
 
                 <!-- Boton para guardar el registro -->
-                <div class="col">
+                <div class="col d-flex align-items-end">
                     <button type="submit" class="btn btn-primary">
                         Editar registro
                     </button>
