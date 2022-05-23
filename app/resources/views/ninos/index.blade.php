@@ -233,6 +233,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalVerLabel">Visualizar registro</h5>
+                    <br>
                     <h6 class="modal-title" id="modalVerLabel">Creado por: <span id="autor"></span></h6>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
