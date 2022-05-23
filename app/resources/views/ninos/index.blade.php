@@ -228,7 +228,7 @@
                         <div class="col">
                             <h5>Datos de la escuela</h5>
                             <ul class="list-unstyled">
-                                <li class="text-bold">Grupo: <span id="grupo"></span></li>
+                                <li><b>Grupo:</b><span id="grupo"></span></li>
                                 <li>Horario: <span id="horario"></span></li>
                                 <li>¿Quincena 1?: <span id="quincena1"></span></li>
                                 <li>¿Quincena 2?: <span id="quincena2"></span></li>
