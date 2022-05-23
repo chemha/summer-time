@@ -6,32 +6,34 @@
  */
 function mostrarDatos(datos) {
     const nino = {
-        nombre: datos[11],
-        apellidos: datos[12],
+        nombre: datos[13],
+        apellidos: datos[14],
         edad: datos[0],
         hermanos: datos[1],
         medicacion: datos[2],
         especial: datos[3],
         observacionesMedicas: datos[4],
-        tutor: datos[13],
+        tutor: datos[15],
         email: datos[5],
-        telefono1: datos[14],
+        telefono1: datos[16],
         telefono2: datos[6],
 
-        grupo: datos[16],
-        horario: datos[17],
-        quincena0: datos[18],
-        quincena1: datos[19],
-        quincena2: datos[20],
-        quincena3: datos[21],
-        quincena4: datos[22],
+        grupo: datos[17],
+        horario: datos[18],
+        quincena0: datos[19],
+        quincena1: datos[20],
+        quincena2: datos[21],
+        quincena3: datos[22],
+        quincena4: datos[23],
         datos: datos[8],
         fotos: datos[9],
         anotaciones: datos[10],
-        recibo: datos[15],
+        recibo: datos[11],
         pago: datos[7],
+        autor: datos[12],
     };
 
+    $("#modalVer #autor").text(nino.autor);
     $("#modalVer #nombre").text(nino.nombre);
     $("#modalVer #apellidos").text(nino.apellidos);
     $("#modalVer #edad").text(nino.edad);
@@ -53,12 +55,10 @@ function mostrarDatos(datos) {
     $("#modalVer #quincena2").html(nino.quincena2);
     $("#modalVer #quincena3").html(nino.quincena3);
     $("#modalVer #quincena4").html(nino.quincena4);
-
-    if (nino.datos == 1) $("#modalVer #datos").text("sí");
-    else $("#modalVer #datos").text("no");
-    if (nino.fotos == 1) $("#modalVer #fotos").text("sí");
-    else $("#modalVer #fotos").text("no");
-
+    $("#modalVer #fotos").html(nino.fotos);
+    $("#modalVer #datos").html(nino.datos);
+    $("#modalVer #especial").html(nino.especial);
+    $("#modalVer #medicacion").html(nino.medicacion);
     $("#modalVer #anotaciones").text(nino.anotaciones);
     $("#modalVer #recibo").text(nino.recibo);
     $("#modalVer #pago").text(nino.pago);
@@ -109,9 +109,8 @@ $(window).on("load", () => {
                 searchable: false,
             },
             
-            //Columna de recibo
             {
-                target: 15,
+                targets: [11, 12],
                 visible: false,
                 searchable: true,
             }

@@ -64,31 +64,33 @@
                     <th class="d-none" scope="col">Autorizacion fotos</th>
                     <!-- 10 -->
                     <th class="d-none" scope="col">Anotaciones</th>
+                    <!-- 11 -->
+                    <th scope="col" class="d-none">Recibo</th>
+                    <!-- 12 -->
+                    <th scope="col" class="d-none">Autor</th>
 
                     <!-- Campos visibles -->
-                    <!-- 11 -->
-                    <th scope="col">Nombre</th>
-                    <!-- 12 -->
-                    <th scope="col">Apellidos</th>
                     <!-- 13 -->
-                    <th scope="col">Madre / Padre / Tutor</th>
+                    <th scope="col">Nombre</th>
                     <!-- 14 -->
-                    <th scope="col">Telefono 1</th>
+                    <th scope="col">Apellidos</th>
                     <!-- 15 -->
-                    <th scope="col" class="d-none">Recibo</th>
+                    <th scope="col">Madre / Padre / Tutor</th>
                     <!-- 16 -->
-                    <th scope="col">Grupo</th>
+                    <th scope="col">Telefono 1</th>
                     <!-- 17 -->
-                    <th scope="col">Horario</th>
+                    <th scope="col">Grupo</th>
                     <!-- 18 -->
-                    <th scope="col">Q0</th>
+                    <th scope="col">Horario</th>
                     <!-- 19 -->
-                    <th scope="col">Q1</th>
+                    <th scope="col">Q0</th>
                     <!-- 20 -->
-                    <th scope="col">Q2</th>
+                    <th scope="col">Q1</th>
                     <!-- 21 -->
-                    <th scope="col">Q3</th>
+                    <th scope="col">Q2</th>
                     <!-- 22 -->
+                    <th scope="col">Q3</th>
+                    <!-- 23 -->
                     <th scope="col">Q4</th>
 
                     <th class="sm">Acción</th>
@@ -100,22 +102,53 @@
                         <!-- Campos ocultos -->
                         <td class="d-none">{{ $nino->edad }}</td>
                         <td class="d-none">{{ $nino->hermanos }}</td>
-                        <td class="d-none">{{ $nino->medicacion }}</td>
-                        <td class="d-none">{{ $nino->especial }}</td>
+                        <td class="d-none">
+                            @if ($nino->medicacion == 1)
+                                <span class="d-none">ms</span>
+                                <i class="bi bi-check-square-fill"></i>
+                            @else
+                                <span class="d-none">mn</span>
+                                <i class="bi bi-x-square-fill"></i>
+                            @endif
+                        </td>
+                        <td class="d-none">
+                            @if ($nino->especial == 1)
+                                <span class="d-none">especial</span>
+                                <i class="bi bi-check-square-fill"></i>
+                            @else
+                                <i class="bi bi-x-square-fill"></i>
+                            @endif
+                        </td>
                         <td class="d-none">{{ $nino->observacionesMedicas }}</td>
                         <td class="d-none">{{ $nino->email }}</td>
                         <td class="d-none">{{ $nino->telefono2 }}</td>
                         <td class="d-none">{{ $nino->pago }}</td>
-                        <td class="d-none">{{ $nino->datos }}</td>
-                        <td class="d-none">{{ $nino->fotos }}</td>
+                        <td class="d-none">
+                            @if ($nino->datos == 1)
+                                <span class="d-none">ds</span>
+                                <i class="bi bi-check-square-fill"></i>
+                            @else
+                                <i class="bi bi-x-square-fill"></i>
+                            @endif
+                        </td>
+                        <td class="d-none">
+                            @if ($nino->fotos == 1)
+                                <span class="d-none">fs</span>
+                                <i class="bi bi-check-square-fill"></i>
+                            @else
+                                <span class="d-none">fs</span>
+                                <i class="bi bi-x-square-fill"></i>
+                            @endif
+                        </td>
                         <td class="d-none">{{ $nino->anotaciones }}</td>
+                        <td class="d-none">{{ $nino->recibo }}</td>
+                        <td class="d-none">{{ App\Models\User::find($nino->user_id)->name }}</td>
 
                         <!-- Campos visibles -->
                         <td>{{ $nino->nombre }}</td>
                         <td>{{ $nino->apellidos }}</td>
                         <td>{{ $nino->tutor }}</td>
                         <td>{{ $nino->telefono1 }}</td>
-                        <td class="d-none">{{ $nino->recibo }}</td>
                         <td>
                             <span class="d-none">grupo{{ $nino->grupo }}</span>
                             grupo {{ $nino->grupo }}
@@ -199,6 +232,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalVerLabel">Visualizar registro</h5>
+                    <h6 class="modal-title" id="modalVerLabel">Creado por: <span id="autor"></span></h6>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
