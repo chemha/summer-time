@@ -104,13 +104,13 @@ $(window).on("load", () => {
         //Campos ocultos para luego utilizarlos para mostrar los datos
         columnDefs: [
             {
-                targets: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                targets: [0, 1, 4, 5, 6, 7, 10],
                 visible: false,
                 searchable: false,
             },
             
             {
-                targets: [11, 12],
+                targets: [2, 3, 8, 9, 11, 12],
                 visible: false,
                 searchable: true,
             }
