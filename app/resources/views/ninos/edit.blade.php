@@ -227,6 +227,7 @@
                         <option disabled value>Elige un estado</option>
                         <option value="pagado" {{ $nino->recibo == 'pagado' ? 'selected' : '' }}>Pagado</option>
                         <option value="pendiente" {{ $nino->recibo == 'pendiente' ? 'selected' : '' }}>Pendiente</option>
+                        <option value="devolución" {{ $nino->recibo == 'devolución' ? 'selected' : '' }}>Devolución</option>
                     </select>
                 </div>
 

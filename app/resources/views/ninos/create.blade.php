@@ -221,6 +221,7 @@
                         <option disabled selected value>Elige un estado</option>
                         <option value="pagado">Pagado</option>
                         <option value="pendiente">Pendiente</option>
+                        <option value="devolución">Devolución</option>
                     </select>
                 </div>
 
