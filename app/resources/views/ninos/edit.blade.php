@@ -144,6 +144,9 @@
                             <label for="quincena0" class="form-check-label">
                                 Quincena 0
                             </label>
+                        </div>
+
+                        <div class="col my-1">
                             <input type="checkbox" class="form-check-input" name="quincena1" autocomplete="off" autofocus
                                 {{ $nino->quincena1 == 1 ? 'checked' : '' }}>
 
