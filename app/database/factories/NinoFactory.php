@@ -17,6 +17,7 @@ class NinoFactory extends Factory
     public function definition()
     {
         return [
+            "user_id" => 1,
             "nombre" => $this->faker->firstName,
             "apellidos" => $this->faker->lastName,
             "edad" => $this->faker->numberBetween(0, 17),
