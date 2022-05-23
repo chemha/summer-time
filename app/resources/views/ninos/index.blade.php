@@ -232,9 +232,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalVerLabel">Visualizar registro</h5>
-                    <br>
-                    <h6 class="modal-title" id="modalVerLabel">Creado por: <span id="autor"></span></h6>
+                    <h5 class="modal-title" id="modalVerLabel">Registro creado por: <span id="autor"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
