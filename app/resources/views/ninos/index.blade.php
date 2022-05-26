@@ -204,21 +204,23 @@
                                         <i class="bi bi-eye"></i>
                                     </button>
                                 </div>
-                                <div class="col">
-                                    <a id="btnEditar" href="{{ route('ninos.edit', $nino->id) }}"
-                                        class="btn btn-warning">
-                                        <i class="bi bi-pencil-square"></i>
-                                    </a>
-                                </div>
-                                <div class="col">
-                                    <form method="POST" action="{{ route('ninos.destroy', $nino->id) }}">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button id="btnBorrar" type="button" class="btn btn-danger">
-                                            <i class="bi bi-trash"></i>
-                                        </button>
-                                    </form>
-                                </div>
+                                @if (Auth::user()->admin == 1)
+                                    <div class="col">
+                                        <a id="btnEditar" href="{{ route('ninos.edit', $nino->id) }}"
+                                            class="btn btn-warning">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <form method="POST" action="{{ route('ninos.destroy', $nino->id) }}">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button id="btnBorrar" type="button" class="btn btn-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                @endif
                             </div>
                         </td>
                     </tr>
