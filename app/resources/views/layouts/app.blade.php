@@ -28,6 +28,8 @@
     <!-- Añadir css especifico en cada pagina -->
     <!-- Esto hace que la web sea más eficiente -->
     @yield('css')
+
+    <link rel="shortcut icon" href="//www.timecentrodeportivo.com/wp-content/uploads/2016/11/favicon.png" type="image/x-icon">
 </head>
 
 <body>
