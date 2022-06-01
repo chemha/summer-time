@@ -143,35 +143,35 @@
                             <input type="checkbox" class="form-check-input" name="quincena0"
                                 value="{{ old('quincena0') }}" autocomplete="off" autofocus>
                             <label for="quincena1" class="form-check-label">
-                                Quincena 0
+                                Quincena 0 - 27 de junio a 30 de junio
                             </label>
                         </div>
                         <div class="col my-1">
                             <input type="checkbox" class="form-check-input" name="quincena1"
                                 value="{{ old('quincena1') }}" autocomplete="off" autofocus>
                             <label for="quincena1" class="form-check-label">
-                                Quincena 1
+                                Quincena 1 - 1 de julio a 15 de julio
                             </label>
                         </div>
                         <div class="col my-1">
                             <input type="checkbox" class="form-check-input" name="quincena2"
                                 value="{{ old('quincena2') }}" autocomplete="off" autofocus>
                             <label for="quincena2" class="form-check-label">
-                                Quincena 2
+                                Quincena 2 - 18 de julio a 29 de julio
                             </label>
                         </div>
                         <div class="col my-1">
                             <input type="checkbox" class="form-check-input" name="quincena3"
                                 value="{{ old('quincena3') }}" autocomplete="off" autofocus>
                             <label for="quincena3" class="form-check-label">
-                                Quincena 3
+                                Quincena 3 - 1 de agosto a 15 de agosto
                             </label>
                         </div>
                         <div class="col my-1">
                             <input type="checkbox" class="form-check-input" name="quincena4"
                                 value="{{ old('quincena4') }}" autocomplete="off" autofocus>
                             <label for="quincena4" class="form-check-label">
-                                Quincena 4
+                                Quincena 4 - 16 de agosto a 31 de agosto
                             </label>
                         </div>
                     </div>
