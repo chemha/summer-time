@@ -142,7 +142,7 @@
                                 {{ $nino->quincena0 == 1 ? 'checked' : '' }}>
 
                             <label for="quincena0" class="form-check-label">
-                                Quincena 0
+                                <b>Quincena 0</b> - del 27 de junio al 30 de junio
                             </label>
                         </div>
 
@@ -151,7 +151,7 @@
                                 {{ $nino->quincena1 == 1 ? 'checked' : '' }}>
 
                             <label for="quincena1" class="form-check-label">
-                                Quincena 1
+                                <b>Quincena 1</b> - del 1 de julio al 15 de julio
                             </label>
                         </div>
                         <div class="col my-1">
@@ -159,7 +159,7 @@
                                 {{ $nino->quincena2 == 1 ? 'checked' : '' }}>
 
                             <label for="quincena2" class="form-check-label">
-                                Quincena 2
+                                <b>Quincena 2</b> - del 18 de julio al 29 de julio
                             </label>
                         </div>
                         <div class="col my-1">
@@ -167,7 +167,7 @@
                                 {{ $nino->quincena3 == 1 ? 'checked' : '' }}>
 
                             <label for="quincena3" class="form-check-label">
-                                Quincena 3
+                                <b>Quincena 3</b> - del 1 de agosto al 15 de agosto
                             </label>
                         </div>
                         <div class="col my-1">
@@ -175,7 +175,7 @@
                                 {{ $nino->quincena4 == 1 ? 'checked' : '' }}>
 
                             <label for="quincena4" class="form-check-label">
-                                Quincena 4
+                                <b>Quincena 4</b> - del 16 de agosto al 31 de agosto
                             </label>
                         </div>
                     </div>
