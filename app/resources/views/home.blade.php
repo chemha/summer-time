@@ -96,21 +96,32 @@
                         </table>
                         <table class="table table-bordered text-center">
                             <thead>
+                                <th></th>
+                                <th scope="row">Total grupos</th>
                                 <th>G1</th>
                                 <th>G2</th>
                                 <th>G3</th>
                                 <th>G4</th>
                             </thead>
                             <tbody>
-
+                                <tr>
+                                    <th scope="row">G1</th>
+                                    <td>{{ DB::table('ninos')->where('grupo', 1)->count() }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">G2</th>
+                                    <td>{{ DB::table('ninos')->where('grupo', 2)->count() }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">G3</th>
+                                    <td>{{ DB::table('ninos')->where('grupo', 3)->count() }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">G4</th>
+                                    <td>{{ DB::table('ninos')->where('grupo', 4)->count() }}</td>
+                                </tr>
                             </tbody>
-                            <tr>
-                                <th scope="row">Total grupos</th>
-                                <td>{{ DB::table('ninos')->where('grupo', 1)->count() }}</td>
-                                <td>{{ DB::table('ninos')->where('grupo', 2)->count() }}</td>
-                                <td>{{ DB::table('ninos')->where('grupo', 3)->count() }}</td>
-                                <td>{{ DB::table('ninos')->where('grupo', 4)->count() }}</td>
-                            </tr>
+
                         </table>
                     </div>
                 </div>
