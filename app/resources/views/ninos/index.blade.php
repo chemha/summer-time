@@ -203,7 +203,7 @@
                         <td>
                             <div class="row">
                                 <div class="col">
-                                    <button id="btnVer" class="btn btn-primary">
+                                    <button id="btnVer" class="btn btn-primary btn-sm">
                                         <i class="bi bi-eye"></i>
                                     </button>
                                 </div>
@@ -211,14 +211,14 @@
                                     <div class="col">
                                         <a id="btnEditar" href="{{ route('ninos.edit', $nino->id) }}"
                                             class="btn btn-warning">
-                                            <i class="bi bi-pencil-square"></i>
+                                            <i class="bi bi-pencil-square btn-sm"></i>
                                         </a>
                                     </div>
                                     <div class="col">
                                         <form method="POST" action="{{ route('ninos.destroy', $nino->id) }}">
                                             @csrf
                                             @method('DELETE')
-                                            <button id="btnBorrar" type="button" class="btn btn-danger">
+                                            <button id="btnBorrar" type="button" class="btn btn-danger btn-sm">
                                                 <i class="bi bi-trash"></i>
                                             </button>
                                         </form>
