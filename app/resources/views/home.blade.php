@@ -147,31 +147,6 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <table class="table table-bordered text-center">
-                            <thead>
-                                <th></th>
-                                <th scope="row">Total grupos por persona individual</th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">G1</th>
-                                    <td>{{ DB::table('ninos')->where('grupo', 1)->count() }}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">G2</th>
-                                    <td>{{ DB::table('ninos')->where('grupo', 2)->count() }}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">G3</th>
-                                    <td>{{ DB::table('ninos')->where('grupo', 3)->count() }}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">G4</th>
-                                    <td>{{ DB::table('ninos')->where('grupo', 4)->count() }}</td>
-                                </tr>
-                            </tbody>
-
-                        </table>
                     </div>
                 </div>
             </div>
