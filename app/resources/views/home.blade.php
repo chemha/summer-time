@@ -150,7 +150,7 @@
                         <table class="table table-bordered text-center">
                             <thead>
                                 <th></th>
-                                <th scope="row">Total grupos por persona</th>
+                                <th scope="row">Total grupos por persona individual</th>
                             </thead>
                             <tbody>
                                 <tr>
