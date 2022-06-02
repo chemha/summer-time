@@ -71,26 +71,28 @@
 
                     <!-- Campos visibles -->
                     <!-- 13 -->
-                    <th scope="col">Nombre</th>
+                    <th scope="col">ID</th>
                     <!-- 14 -->
-                    <th scope="col">Apellidos</th>
+                    <th scope="col">Nombre</th>
                     <!-- 15 -->
-                    <th scope="col">Madre / Padre / Tutor</th>
+                    <th scope="col">Apellidos</th>
                     <!-- 16 -->
-                    <th scope="col">Telefono 1</th>
+                    <th scope="col">Madre / Padre / Tutor</th>
                     <!-- 17 -->
-                    <th scope="col">Grupo</th>
+                    <th scope="col">Telefono 1</th>
                     <!-- 18 -->
-                    <th scope="col">Horario</th>
+                    <th scope="col">Grupo</th>
                     <!-- 19 -->
-                    <th scope="col">Q0</th>
+                    <th scope="col">Horario</th>
                     <!-- 20 -->
-                    <th scope="col">Q1</th>
+                    <th scope="col">Q0</th>
                     <!-- 21 -->
-                    <th scope="col">Q2</th>
+                    <th scope="col">Q1</th>
                     <!-- 22 -->
-                    <th scope="col">Q3</th>
+                    <th scope="col">Q2</th>
                     <!-- 23 -->
+                    <th scope="col">Q3</th>
+                    <!-- 24 -->
                     <th scope="col">Q4</th>
 
                     <th class="sm">Acción</th>
@@ -146,6 +148,7 @@
                         <td class="d-none">{{ App\Models\User::find($nino->user_id)->name }}</td>
 
                         <!-- Campos visibles -->
+                        <td>{{ $nino->id }}</td>
                         <td>{{ $nino->nombre }}</td>
                         <td>{{ $nino->apellidos }}</td>
                         <td>{{ $nino->tutor }}</td>
