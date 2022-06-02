@@ -210,7 +210,7 @@
                                 @if (Auth::user()->admin == 1)
                                     <div class="col">
                                         <a id="btnEditar" href="{{ route('ninos.edit', $nino->id) }}"
-                                            class="btn btn-warning">
+                                            class="btn btn-warning btn-sm">
                                             <i class="bi bi-pencil-square btn-sm"></i>
                                         </a>
                                     </div>
