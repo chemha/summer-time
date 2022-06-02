@@ -24,11 +24,11 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">Q0 (27/06 -> 30/06) </th>
-                                    <td>{{ DB::table('ninos')->where('grupo', 1)->where('quincena0', true)->count()) }}</td>
-                                    <td>{{ DB::table('ninos')->where('grupo', 2)->where('quincena0', true)->count()) }}</td>
-                                    <td>{{ DB::table('ninos')->where('grupo', 3)->where('quincena0', true)->count()) }}</td>
-                                    <td>{{ DB::table('ninos')->where('grupo', 4)->where('quincena0', true)->count()) }}</td>
-                                    <td>{{ DB::table('ninos')->where('quincena0', true)->count()) }}</td>
+                                    <td>{{ DB::table('ninos')->where('grupo', 1)->where('quincena0', true)->count() }}</td>
+                                    <td>{{ DB::table('ninos')->where('grupo', 2)->where('quincena0', true)->count() }}</td>
+                                    <td>{{ DB::table('ninos')->where('grupo', 3)->where('quincena0', true)->count() }}</td>
+                                    <td>{{ DB::table('ninos')->where('grupo', 4)->where('quincena0', true)->count()}}</td>
+                                    <td>{{ DB::table('ninos')->where('quincena0', true)->count() }}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Q1 (01/07 -> 15/07)</th>
