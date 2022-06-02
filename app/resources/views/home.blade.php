@@ -111,7 +111,7 @@
                                         {{ DB::table('ninos')->where('grupo', 4)->where('quincena4', true)->count() }}
                                     </td>
                                     <td>
-                                        {{ DB::table('ninos')->where('quincena4', true)->get() }}
+                                        {{ DB::table('ninos')->where('quincena4', true)->count() }}
                                     </td>
                                 </tr>
                                 <tr>
