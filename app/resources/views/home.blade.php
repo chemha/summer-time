@@ -117,16 +117,32 @@
                                 <tr>
                                     <th scope="row">Total grupos</th>
                                     <td>
-                                        {{ DB::table('ninos')->where('grupo', 1)->where('quincena0', true)->count() + DB::table('ninos')->where('grupo', 1)->where('quincena1', true)->count() + DB::table('ninos')->where('grupo', 1)->where('quincena2', true)->count() + DB::table('ninos')->where('grupo', 1)->where('quincena3', true)->count() + DB::table('ninos')->where('grupo', 1)->where('quincena4', true)->count() }}
+                                        {{ DB::table('ninos')->where('grupo', 1)->where('quincena0', true)->count() +
+                                            DB::table('ninos')->where('grupo', 1)->where('quincena1', true)->count() +
+                                            DB::table('ninos')->where('grupo', 1)->where('quincena2', true)->count() +
+                                            DB::table('ninos')->where('grupo', 1)->where('quincena3', true)->count() +
+                                            DB::table('ninos')->where('grupo', 1)->where('quincena4', true)->count() }}
                                     </td>
                                     <td>
-                                        {{ DB::table('ninos')->where('grupo', 2)->where('quincena0', true)->count() + DB::table('ninos')->where('grupo', 2)->where('quincena1', true)->count() + DB::table('ninos')->where('grupo', 2)->where('quincena2', true)->count() + DB::table('ninos')->where('grupo', 2)->where('quincena3', true)->count() + DB::table('ninos')->where('grupo', 2)->where('quincena4', true)->count() }}
+                                        {{ DB::table('ninos')->where('grupo', 2)->where('quincena0', true)->count() +
+                                            DB::table('ninos')->where('grupo', 2)->where('quincena1', true)->count() +
+                                            DB::table('ninos')->where('grupo', 2)->where('quincena2', true)->count() +
+                                            DB::table('ninos')->where('grupo', 2)->where('quincena3', true)->count() +
+                                            DB::table('ninos')->where('grupo', 2)->where('quincena4', true)->count() }}
                                     </td>
                                     <td>
-                                        {{ DB::table('ninos')->where('grupo', 3)->where('quincena0', true)->count() + DB::table('ninos')->where('grupo', 3)->where('quincena1', true)->count() + DB::table('ninos')->where('grupo', 3)->where('quincena2', true)->count() + DB::table('ninos')->where('grupo', 3)->where('quincena3', true)->count() + DB::table('ninos')->where('grupo', 3)->where('quincena4', true)->count() }}
+                                        {{ DB::table('ninos')->where('grupo', 3)->where('quincena0', true)->count() +
+                                            DB::table('ninos')->where('grupo', 3)->where('quincena1', true)->count() +
+                                            DB::table('ninos')->where('grupo', 3)->where('quincena2', true)->count() +
+                                            DB::table('ninos')->where('grupo', 3)->where('quincena3', true)->count() +
+                                            DB::table('ninos')->where('grupo', 3)->where('quincena4', true)->count() }}
                                     </td>
                                     <td>
-                                        {{ DB::table('ninos')->where('grupo', 4)->where('quincena0', true)->count() + DB::table('ninos')->where('grupo', 4)->where('quincena1', true)->count() + DB::table('ninos')->where('grupo', 4)->where('quincena2', true)->count() + DB::table('ninos')->where('grupo', 4)->where('quincena3', true)->count() + DB::table('ninos')->where('grupo', 4)->where('quincena4', true)->count() }}
+                                        {{ DB::table('ninos')->where('grupo', 4)->where('quincena0', true)->count() +
+                                            DB::table('ninos')->where('grupo', 4)->where('quincena1', true)->count() +
+                                            DB::table('ninos')->where('grupo', 4)->where('quincena2', true)->count() +
+                                            DB::table('ninos')->where('grupo', 4)->where('quincena3', true)->count() +
+                                            DB::table('ninos')->where('grupo', 4)->where('quincena4', true)->count() }}
                                     </td>
                                 </tr>
                             </tbody>
@@ -134,7 +150,7 @@
                         <table class="table table-bordered text-center">
                             <thead>
                                 <th></th>
-                                <th scope="row">Total grupos</th>
+                                <th scope="row">Total grupos por persona</th>
                             </thead>
                             <tbody>
                                 <tr>
