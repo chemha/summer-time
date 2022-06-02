@@ -27,7 +27,7 @@
                                 <tr>
                                     <th scope="row">Q0 (27/06 -> 30/06) </th>
                                     <td>
-                                        {{ Nino::where('grupo', 1)->where('quincena0', true)->count() }}
+                                        {{ DB::table('ninos')->where('grupo', 1)->where('quincena0', true)->count() }}
                                     </td>
                                     <td>
                                         {{ DB::table('ninos')->where('grupo', 2)->where('quincena0', true)->count() }}
@@ -116,7 +116,8 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">Total grupos</th>
-                                    <td>{{ DB::table('ninos')->where('grupo', 1)->where('quincena1', true)->count() + DB::table('ninos')->where('grupo', 1)->where('quincena2', true)->count() }}
+                                    <td>
+                                            {{ DB::table('ninos')->where('grupo', 1)->where('quincena0', true)->count() + DB::table('ninos')->where('grupo', 1)->where('quincena1', true)->count() + DB::table('ninos')->where('grupo', 1)->where('quincena2', true)->count() + DB::table('ninos')->where('grupo', 1)->where('quincena3', true)->count() + DB::table('ninos')->where('grupo', 1)->where('quincena4', true)->count() }}
                                     </td>
                                 </tr>
                             </tbody>
