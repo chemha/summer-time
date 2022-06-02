@@ -98,10 +98,6 @@
                             <thead>
                                 <th></th>
                                 <th scope="row">Total grupos</th>
-                                <th>G1</th>
-                                <th>G2</th>
-                                <th>G3</th>
-                                <th>G4</th>
                             </thead>
                             <tbody>
                                 <tr>
