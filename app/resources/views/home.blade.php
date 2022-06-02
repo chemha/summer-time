@@ -24,10 +24,10 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">Q0 (27/06 -> 30/06) </th>
-                                    <td>{{ count(DB::table('ninos')->where(['grupo','=', 1], ['quincena0','=' true])->get()) }}</td>
-                                    <td>{{ count(DB::table('ninos')->where(['grupo','=', 2], ['quincena0','=' true])->get()) }}</td>
-                                    <td>{{ count(DB::table('ninos')->where(['grupo','=', 3], ['quincena0','=' true])->get()) }}</td>
-                                    <td>{{ count(DB::table('ninos')->where(['grupo','=', 4], ['quincena0','=' true])->get()) }}</td>
+                                    <td>{{ count(DB::table('ninos')->where(['grupo','=', 1], ['quincena0','=', true])->get()) }}</td>
+                                    <td>{{ count(DB::table('ninos')->where(['grupo','=', 2], ['quincena0','=', true])->get()) }}</td>
+                                    <td>{{ count(DB::table('ninos')->where(['grupo','=', 3], ['quincena0','=', true])->get()) }}</td>
+                                    <td>{{ count(DB::table('ninos')->where(['grupo','=', 4], ['quincena0','=', true])->get()) }}</td>
                                     <td>{{ count(DB::table('ninos')->where('quincena0', true)->get()) }}</td>
                                 </tr>
                                 <tr>
