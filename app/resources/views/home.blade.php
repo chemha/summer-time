@@ -64,10 +64,10 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">Total grupos</th>
-                                    <td>{{ count(DB::table('ninos')->where('grupo', 1)->get()) }}</td>
-                                    <td>{{ count(DB::table('ninos')->where('grupo', 2)->get()) }}</td>
-                                    <td>{{ count(DB::table('ninos')->where('grupo', 3)->get()) }}</td>
-                                    <td>{{ count(DB::table('ninos')->where('grupo', 4)->get()) }}</td>
+                                    <td>{{ DB::table('ninos')->where('grupo', 1)->count() }}</td>
+                                    <td>{{ DB::table('ninos')->where('grupo', 2)->count() }}</td>
+                                    <td>{{ DB::table('ninos')->where('grupo', 3)->count() }}</td>
+                                    <td>{{ DB::table('ninos')->where('grupo', 4)->count() }}</td>
                                     <td></td>
                                 </tr>
                             </tbody>
