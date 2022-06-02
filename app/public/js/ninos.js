@@ -44,7 +44,8 @@ function mostrarDatos(datos) {
     else $("#modalVer #medicacion").text("no");
     if (nino.especial == 1) $("#modalVer #especial").text("sí");
     else $("#modalVer #especial").text("no");
-
+    
+    $("#modalVer #id").text(nino.id);
     $("#modalVer #observacionesMedicas").text(nino.observacionesMedicas);
     $("#modalVer #tutor").text(nino.tutor);
     $("#modalVer #email").text(nino.email);
@@ -111,13 +112,13 @@ $(window).on("load", () => {
             },
             
             {
-                targets: [2, 3, 8, 9, 11, 12],
+                targets: [2, 3, 8, 9, 11, 12, 13],
                 visible: false,
                 searchable: true,
             }
         ],
 
-        order: [[12, "asc"]],
+        order: [[15, "asc"]],
     });
 
     //Preparacion del evento para mostra los datos en el modal

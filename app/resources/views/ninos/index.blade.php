@@ -68,10 +68,10 @@
                     <th scope="col" class="d-none">Recibo</th>
                     <!-- 12 -->
                     <th scope="col" class="d-none">Autor</th>
+                    <!-- 13 -->
+                    <th scope="col" class="d-none">ID</th>
 
                     <!-- Campos visibles -->
-                    <!-- 13 -->
-                    <th scope="col">ID</th>
                     <!-- 14 -->
                     <th scope="col">Nombre</th>
                     <!-- 15 -->
@@ -146,9 +146,10 @@
                         <td class="d-none">{{ $nino->anotaciones }}</td>
                         <td class="d-none">{{ $nino->recibo }}</td>
                         <td class="d-none">{{ App\Models\User::find($nino->user_id)->name }}</td>
+                        <td class="d-none">{{ $nino->id }}</td>
 
                         <!-- Campos visibles -->
-                        <td>{{ $nino->id }}</td>
+                        
                         <td>{{ $nino->nombre }}</td>
                         <td>{{ $nino->apellidos }}</td>
                         <td>{{ $nino->tutor }}</td>
@@ -237,7 +238,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalVerLabel">Visualizar datos del registro</h5>
+                    <h5 class="modal-title" id="modalVerLabel">Visualizar datos del registro: <span id="id"></span></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
