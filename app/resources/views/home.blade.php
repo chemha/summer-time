@@ -84,14 +84,6 @@
                                     </td>
                                     <td>{{ count(DB::table('ninos')->where('quincena4', true)->get()) }}</td>
                                 </tr>
-                                <tr>
-                                    <th scope="row">Total grupos</th>
-                                    <td>{{ DB::table('ninos')->where('grupo', 1)->count() }}</td>
-                                    <td>{{ DB::table('ninos')->where('grupo', 2)->count() }}</td>
-                                    <td>{{ DB::table('ninos')->where('grupo', 3)->count() }}</td>
-                                    <td>{{ DB::table('ninos')->where('grupo', 4)->count() }}</td>
-                                    <td></td>
-                                </tr>
                             </tbody>
                         </table>
                         <table class="table table-bordered text-center">
