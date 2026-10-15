@@ -1,14 +1,20 @@
 # Summer Time
 
+**[English](#english) · [Español](#español)**
+
+---
+
+## English
+
 A web app for managing a children's summer school. It replaced the outdated Microsoft Access database that **Escuela de Verano Time** (a sports centre in Spain) used to run enrollment, groups and payments.
 
 I built it during my FCT work placement for the DAW (Web Application Development) vocational degree, from March to June 2022. The school's staff used it in production that summer.
 
-## The problem
+### The problem
 
 The school tracked about 160 children per season in an Access 2003 database on a single office PC. Summer Time moves enrollment, groups, payments and staff announcements into a browser-based app with role-based access, so the whole team can use it from any device.
 
-## Features
+### Features
 
 **Children's records (admin)**
 - Full enrollment record: personal details, guardian contact, age, siblings
@@ -30,18 +36,18 @@ The school tracked about 160 children per season in an Access 2003 database on a
 **Interface**
 - Fully in Spanish (laravel-lang), responsive Bootstrap 5 layout
 
-## Tech stack
+### Tech stack
 
-| Layer      | Tools                                                         |
-|------------|---------------------------------------------------------------|
-| Backend    | PHP 8, Laravel 9, Eloquent ORM, policies, Laravel UI auth     |
-| Database   | MySQL 8                                                       |
+| Layer      | Tools                                                               |
+|------------|---------------------------------------------------------------------|
+| Backend    | PHP 8, Laravel 9, Eloquent ORM, policies, Laravel UI auth           |
+| Database   | MySQL 8                                                             |
 | Frontend   | Blade, Bootstrap 5, jQuery, DataTables, SweetAlert, Bootstrap Icons |
-| Build      | Laravel Mix (webpack), Sass                                   |
-| Dev env    | Laravel Sail (Docker Compose)                                 |
-| Testing    | PHPUnit feature tests                                         |
+| Build      | Laravel Mix (webpack), Sass                                         |
+| Dev env    | Laravel Sail (Docker Compose)                                       |
+| Testing    | PHPUnit feature tests                                               |
 
-## Data model
+### Data model
 
 ```
 users ──< ninos       (children's enrollment records, created by an admin)
@@ -50,7 +56,7 @@ users ──< anuncios    (announcements, authored by any staff member)
 
 `users.admin` is a boolean that separates admins from monitors. Authorization is handled by Laravel policies.
 
-## Project structure
+### Project structure
 
 ```
 app/                Laravel application
@@ -62,7 +68,7 @@ app/                Laravel application
 docs/               Project documentation, user manual and developer manual (Spanish)
 ```
 
-## Running locally
+### Running locally
 
 Requirements: PHP 8.0+, Composer, Node 16+ and MySQL. Alternatively, use Docker for Sail.
 
@@ -88,14 +94,14 @@ php artisan tinker
 >>> \App\Models\Nino::factory(50)->create();   // assigned to user id 1 (the seeded admin)
 ```
 
-## Tests
+### Tests
 
 ```bash
 cd app
 php artisan test
 ```
 
-## Screenshots
+### Screenshots
 
 <!-- TODO: add screenshots taken with fake data (Faker), never real children's records -->
 
@@ -103,14 +109,14 @@ php artisan test
 |---|---|---|
 | _coming soon_ | _coming soon_ | _coming soon_ |
 
-## Documentation
+### Documentation
 
 The `docs/` folder has the original deliverables, all in Spanish:
 - **Documentación del proyecto**: research, interviews, personas, user flows, wireframes and mockups
 - **Manual de usuario**: end-user guide for admins and monitors
 - **Manual de desarrollador**: architecture, controllers, policies and JS overview
 
-## Known limitations and what I'd improve
+### Known limitations and what I'd improve
 
 I built this as a student under a fixed deadline. Looking back, these are the things I would change before it went anywhere near production again:
 
@@ -122,6 +128,136 @@ I built this as a student under a fixed deadline. Looking back, these are the th
 - **Test coverage:** only the announcements feature is tested.
 - **Upgrades:** Laravel 9 is end-of-life. The next steps would be Laravel 11+, Vite instead of Mix, and assets bundled instead of loaded from CDNs.
 
-## License
+### License
+
+[MIT](https://opensource.org/licenses/MIT)
+
+---
+
+## Español
+
+Aplicación web para gestionar una escuela de verano infantil. Sustituyó a la base de datos de Microsoft Access, ya desfasada, con la que **Escuela de Verano Time** (un centro deportivo en España) llevaba las inscripciones, los grupos y los pagos.
+
+La desarrollé durante mis prácticas de FCT del ciclo de DAW (Desarrollo de Aplicaciones Web), entre marzo y junio de 2022. El personal de la escuela la usó en producción ese verano.
+
+### El problema
+
+La escuela gestionaba unos 160 niños por temporada en una base de datos de Access 2003 instalada en un único PC de la oficina. Summer Time lleva las inscripciones, los grupos, los pagos y los anuncios del personal a una aplicación web con acceso por roles, para que todo el equipo pueda usarla desde cualquier dispositivo.
+
+### Funcionalidades
+
+**Fichas de los niños (admin)**
+- Ficha de inscripción completa: datos personales, contacto del tutor, edad y hermanos
+- Indicadores médicos (medicación, necesidades especiales) y observaciones médicas en texto libre
+- Grupo, horario y a cuáles de las cuatro quincenas de verano asiste cada niño
+- Importe pagado y estado del recibo
+- Casillas de autorización de protección de datos y de fotos
+- Listado con búsqueda, ordenación y paginación (DataTables), y un modal con el detalle de cada ficha
+
+**Anuncios (todo el personal)**
+- Tablón de noticias y actividades que aparece en la página de inicio
+- Crear, editar y borrar, con diálogos de confirmación (SweetAlert)
+
+**Usuarios y roles**
+- Dos roles: **admin** (gestiona los niños y el personal) y **monitor** (consulta las fichas y publica anuncios)
+- Los administradores crean, editan y borran cuentas del personal y restablecen contraseñas
+- Cada usuario tiene una página de perfil donde puede subir su avatar, que se recorta a 320×320 con Intervention Image
+
+**Interfaz**
+- Totalmente en español (laravel-lang), con un diseño adaptable hecho con Bootstrap 5
+
+### Stack tecnológico
+
+| Capa          | Herramientas                                                        |
+|---------------|---------------------------------------------------------------------|
+| Backend       | PHP 8, Laravel 9, Eloquent ORM, policies, autenticación Laravel UI  |
+| Base de datos | MySQL 8                                                             |
+| Frontend      | Blade, Bootstrap 5, jQuery, DataTables, SweetAlert, Bootstrap Icons |
+| Build         | Laravel Mix (webpack), Sass                                         |
+| Entorno       | Laravel Sail (Docker Compose)                                       |
+| Tests         | Tests de funcionalidad con PHPUnit                                  |
+
+### Modelo de datos
+
+```
+users ──< ninos       (fichas de inscripción, creadas por un admin)
+users ──< anuncios    (anuncios, escritos por cualquier miembro del personal)
+```
+
+El booleano `users.admin` distingue a los administradores de los monitores. La autorización se gestiona con policies de Laravel.
+
+### Estructura del proyecto
+
+```
+app/                Aplicación Laravel
+  app/Http/Controllers   NinoController, AnuncioController, UserController, UserPerfilController
+  app/Policies           Comprobación de roles
+  database/migrations    Esquema (users, ninos, anuncios)
+  resources/views        Plantillas Blade
+  public/js              Scripts de cada página (tablas, modales, confirmaciones)
+docs/               Documentación del proyecto, manual de usuario y manual de desarrollador
+```
+
+### Ejecutarlo en local
+
+Requisitos: PHP 8.0+, Composer, Node 16+ y MySQL. Como alternativa, Docker para usar Sail.
+
+```bash
+cd app
+composer install
+cp .env.example .env          # configura las variables DB_*
+php artisan key:generate
+php artisan migrate
+php artisan storage:link      # necesario para subir avatares
+npm install && npm run dev
+php artisan serve
+```
+
+Con Sail, ejecuta `./vendor/bin/sail up -d` después de `composer install` y luego `./vendor/bin/sail artisan migrate`.
+
+**Acceso por defecto:** la migración de usuarios crea una cuenta de administrador con usuario `admin` y contraseña `admin`. Cámbiala en cuanto la uses en cualquier equipo que no sea el tuyo.
+
+Para rellenar la base de datos con niños ficticios de prueba:
+
+```bash
+php artisan tinker
+>>> \App\Models\Nino::factory(50)->create();   // se asignan al usuario con id 1 (el admin creado por la migración)
+```
+
+### Tests
+
+```bash
+cd app
+php artisan test
+```
+
+### Capturas
+
+<!-- TODO: añadir capturas hechas con datos ficticios (Faker), nunca con fichas reales de niños -->
+
+| Página de inicio | Listado de niños | Detalle de una ficha |
+|---|---|---|
+| _próximamente_ | _próximamente_ | _próximamente_ |
+
+### Documentación
+
+La carpeta `docs/` contiene los entregables originales:
+- **Documentación del proyecto**: investigación, entrevistas, proto personas, user flows, wireframes y mockups
+- **Manual de usuario**: guía de uso para administradores y monitores
+- **Manual de desarrollador**: arquitectura, controladores, policies y JavaScript
+
+### Limitaciones conocidas y qué mejoraría
+
+La hice como estudiante y con una fecha de entrega fija. Viéndola ahora, esto es lo que cambiaría antes de volver a ponerla en producción:
+
+- **Validación:** los controladores guardan los datos de la petición tal cual llegan. Deberían usar Form Requests con reglas de validación.
+- **Asignación masiva:** las actualizaciones de perfil y de usuario usan `$request->all()`, y `admin` está en `$fillable`. Un usuario que no es admin podría ascenderse a sí mismo enviando un campo extra. La solución es limitar los campos con `$request->only()` o con los datos validados, y quitar `admin` de `$fillable`.
+- **Autorización:** editar y borrar anuncios no está restringido a su autor o a un admin. Las rutas de niños se protegen con la policy de `User` en lugar de una `NinoPolicy` propia.
+- **Credenciales por defecto:** la cuenta `admin`/`admin` debería crearse con un comando artisan interactivo, no desde una migración.
+- **Rutas sin usar:** algunos controladores tienen rutas para `show`, `create` y `edit` que no están implementadas.
+- **Cobertura de tests:** solo están probados los anuncios.
+- **Actualización:** Laravel 9 ya no tiene soporte. Los siguientes pasos serían pasar a Laravel 11+, usar Vite en lugar de Mix y empaquetar las dependencias en vez de cargarlas desde CDNs.
+
+### Licencia
 
 [MIT](https://opensource.org/licenses/MIT)
