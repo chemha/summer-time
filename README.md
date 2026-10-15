@@ -101,14 +101,6 @@ cd app
 php artisan test
 ```
 
-### Screenshots
-
-<!-- TODO: add screenshots taken with fake data (Faker), never real children's records -->
-
-| Landing page | Children list | Record detail |
-|---|---|---|
-| _coming soon_ | _coming soon_ | _coming soon_ |
-
 ### Documentation
 
 The `docs/` folder has the original deliverables, all in Spanish:
@@ -218,14 +210,6 @@ php artisan tinker
 cd app
 php artisan test
 ```
-
-### Capturas
-
-<!-- TODO: añadir capturas hechas con datos ficticios (Faker), nunca con fichas reales de niños -->
-
-| Página de inicio | Listado de niños | Detalle de una ficha |
-|---|---|---|
-| _próximamente_ | _próximamente_ | _próximamente_ |
 
 ### Documentación
 
