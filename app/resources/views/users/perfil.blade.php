@@ -16,6 +16,13 @@
                 {{ session('alert')['message'] }}
             </div>
         @endif
+        @if ($errors->any())
+            <div class="alert alert-danger" role="alert">
+                @foreach ($errors->all() as $error)
+                    {{ $error }}<br>
+                @endforeach
+            </div>
+        @endif
         <div class="row justify-content-center align-content-center">
             <div class="card perfil">
                 <div class="card-header">Perfil de usuario</div>

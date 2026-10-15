@@ -88,7 +88,14 @@ class UserPerfilController extends Controller
                 Image::make(public_path($avatar))->fit(320, 320)->save();
                 $user->update(['image' => $avatar]);
             }
-        } else $user->update($request->all());
+        } else {
+            //Solo se guardan los campos del formulario, nunca 'admin'
+            $datos = $request->validate([
+                'name' => 'required|string|max:255',
+                'email' => 'required|string|max:255|unique:users,email,' . $user->id,
+            ]);
+            $user->update($datos);
+        }
 
         return redirect()->route('perfil.show', $user->id)->with('alert', [
             'type' => 'success',

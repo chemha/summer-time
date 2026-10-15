@@ -116,18 +116,6 @@ The `docs/` folder has the original deliverables, all in Spanish:
 - **Manual de usuario**: end-user guide for admins and monitors
 - **Manual de desarrollador**: architecture, controllers, policies and JS overview
 
-### Known limitations and what I'd improve
-
-I built this as a student under a fixed deadline. Looking back, these are the things I would change before it went anywhere near production again:
-
-- **Input validation:** controllers write request data directly. They should use Form Request classes with validation rules.
-- **Mass assignment:** profile and user updates use `$request->all()`, and `admin` is fillable. A non-admin could promote themselves by posting an extra field. The fix is to whitelist fields with `$request->only()` or a validated payload, and to take `admin` out of `$fillable`.
-- **Authorization:** announcement edit and delete aren't restricted to their author or an admin. Children's routes are checked through the User policy instead of a proper `NinoPolicy`.
-- **Seeded credentials:** the default `admin`/`admin` account should be created by an interactive artisan command, not a migration.
-- **Unused resource routes:** `show`, `create` and `edit` are routed on some controllers but not implemented.
-- **Test coverage:** only the announcements feature is tested.
-- **Upgrades:** Laravel 9 is end-of-life. The next steps would be Laravel 11+, Vite instead of Mix, and assets bundled instead of loaded from CDNs.
-
 ### License
 
 [MIT](https://opensource.org/licenses/MIT)
@@ -245,18 +233,6 @@ La carpeta `docs/` contiene los entregables originales:
 - **Documentación del proyecto**: investigación, entrevistas, proto personas, user flows, wireframes y mockups
 - **Manual de usuario**: guía de uso para administradores y monitores
 - **Manual de desarrollador**: arquitectura, controladores, policies y JavaScript
-
-### Limitaciones conocidas y qué mejoraría
-
-La hice como estudiante y con una fecha de entrega fija. Viéndola ahora, esto es lo que cambiaría antes de volver a ponerla en producción:
-
-- **Validación:** los controladores guardan los datos de la petición tal cual llegan. Deberían usar Form Requests con reglas de validación.
-- **Asignación masiva:** las actualizaciones de perfil y de usuario usan `$request->all()`, y `admin` está en `$fillable`. Un usuario que no es admin podría ascenderse a sí mismo enviando un campo extra. La solución es limitar los campos con `$request->only()` o con los datos validados, y quitar `admin` de `$fillable`.
-- **Autorización:** editar y borrar anuncios no está restringido a su autor o a un admin. Las rutas de niños se protegen con la policy de `User` en lugar de una `NinoPolicy` propia.
-- **Credenciales por defecto:** la cuenta `admin`/`admin` debería crearse con un comando artisan interactivo, no desde una migración.
-- **Rutas sin usar:** algunos controladores tienen rutas para `show`, `create` y `edit` que no están implementadas.
-- **Cobertura de tests:** solo están probados los anuncios.
-- **Actualización:** Laravel 9 ya no tiene soporte. Los siguientes pasos serían pasar a Laravel 11+, usar Vite en lugar de Mix y empaquetar las dependencias en vez de cargarlas desde CDNs.
 
 ### Licencia
 
