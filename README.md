@@ -34,7 +34,7 @@ The school tracked about 160 children per season in an Access 2003 database on a
 - Every user has a profile page with avatar upload, which is cropped to 320×320 with Intervention Image
 
 **Interface**
-- Fully in Spanish (laravel-lang), responsive Bootstrap 5 layout
+- Fully in Spanish, responsive Bootstrap 5 layout
 
 ### Tech stack
 
@@ -152,7 +152,7 @@ La escuela gestionaba unos 160 niños por temporada en una base de datos de Acce
 - Cada usuario tiene una página de perfil donde puede subir su avatar, que se recorta a 320×320 con Intervention Image
 
 **Interfaz**
-- Totalmente en español (laravel-lang), con un diseño adaptable hecho con Bootstrap 5
+- Totalmente en español, con un diseño adaptable hecho con Bootstrap 5
 
 ### Stack tecnológico
 
