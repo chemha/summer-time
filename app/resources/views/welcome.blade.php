@@ -13,58 +13,13 @@
                 <div id="carrusel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner  mh-100">
                         <div class="carousel-item active" data-bs-interval="10000">
-                            <img src="{{ asset('img/ninos/a1.jpg') }}" class="d-block w-100" alt="...">
+                            <img src="{{ asset('img/placeholder/slide-1.svg') }}" class="d-block w-100" alt="Escuela de Verano Time">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('img/ninos/a2.jpg') }}" class="d-block w-100" alt="...">
+                            <img src="{{ asset('img/placeholder/slide-2.svg') }}" class="d-block w-100" alt="Summer school management">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('img/ninos/a3.jpg') }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('img/ninos/a4.jpg') }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('img/ninos/a5.jpg') }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('img/ninos/a6.jpg') }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('img/ninos/f1.jpg') }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('img/ninos/f2.jpg') }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('img/ninos/f3.jpg') }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('img/ninos/f4.jpg') }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('img/ninos/f5.jpg') }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('img/ninos/f6.jpg') }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('img/ninos/f7.jpg') }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('img/ninos/f8.jpg') }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('img/ninos/f9.jpg') }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('img/ninos/f10.jpg') }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('img/ninos/f11.jpg') }}" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('img/ninos/f12.jpg') }}" class="d-block w-100" alt="...">
+                            <img src="{{ asset('img/placeholder/slide-3.svg') }}" class="d-block w-100" alt="Enrollment, groups and announcements">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
